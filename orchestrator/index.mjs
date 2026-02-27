@@ -1474,6 +1474,56 @@ async function chiefWatchdogLoop(signal) {
         }
         if (task.status === "in_progress") {
           const reviewer = agents.byName.get(config.reviewerAgentName);
+          const health = config.accountabilityLedgerEnabled
+            ? await q((api).accountability.taskHealth, {
+                taskId: task._id,
+                staleMinutes: config.accountabilityStepStaleMinutes,
+              })
+            : null;
+          const runningStep = health?.runningStep;
+          const runningStepAssignee = runningStep
+            ? agents.byId.get(String(runningStep.agentId))
+            : null;
+          if (health?.stale && runningStep) {
+            const stuckReason = `no_assignee_progress: no specialist proof in last ${config.accountabilityStepStaleMinutes}m`;
+            await blockAccountabilityStep(
+              task._id,
+              Number(runningStep.stepIndex),
+              stuckReason,
+              "blocked"
+            );
+            await m(api.tasks.updateStatus, {
+              id: task._id,
+              status: "blocked",
+              agentId: chief._id,
+              agentName: chief.name,
+            });
+            await m((api).automation.updateTaskAutomationState, {
+              taskId: task._id,
+              automationState: "errored",
+              reviewStatus: task.reviewStatus ?? "pending",
+              nextAction: `Blocked by accountability watchdog: ${runningStep.agentName} is stale`,
+            });
+            await m((api).messages.create, {
+              taskId: task._id,
+              fromAgentId: chief._id,
+              fromName: chief.name,
+              content:
+                `Chief watchdog: ${runningStep.agentName} step is stale for more than ${config.accountabilityStepStaleMinutes} minutes. ` +
+                `Task moved to blocked until assignee posts concrete evidence.`,
+            });
+            if (task.source === "telegram" && task.sourceRef?.chatId) {
+              try {
+                await sendTelegramText(
+                  task.sourceRef.chatId,
+                  `Alert: Task #${String(task._id)} blocked by watchdog (${runningStep.agentName} stale > ${config.accountabilityStepStaleMinutes}m).`
+                );
+              } catch (e) {
+                console.error("[watchdog] telegram stale alert failed", e);
+              }
+            }
+            continue;
+          }
           const evidence = await inspectTaskEvidence(task._id);
           const codingTask = isImplementationTask(task);
           const hasOutputPathEvidence = evidence.outputPaths.length > 0;
@@ -1481,7 +1531,7 @@ async function chiefWatchdogLoop(signal) {
             evidence.hasAssigneeEvidence && (!codingTask || hasOutputPathEvidence);
           const assignee = (task.assigneeIds ?? [])
             .map((id) => agents.byId.get(String(id)))
-            .find(Boolean);
+            .find(Boolean) ?? runningStepAssignee;
           const runs = await q((api).automation.listAutomationRunsByTask, { taskId: task._id });
           const latestSpecialistRun = (runs ?? []).find(
             (r) =>
@@ -1523,7 +1573,7 @@ async function chiefWatchdogLoop(signal) {
               prompt: retryPrompt,
               targetAgent: assignee,
             });
-            await m((api).automation.createAutomationRun, {
+            const retryRunId = await m((api).automation.createAutomationRun, {
               taskId: task._id,
               role: "specialist",
               agentName: assignee.name,
@@ -1542,6 +1592,9 @@ async function chiefWatchdogLoop(signal) {
               startedAt: retryStart,
               finishedAt: Date.now(),
             });
+            if (runningStep) {
+              await attachDispatchRunToStep(task._id, Number(runningStep.stepIndex), retryRunId);
+            }
 
             if (retryResult.code === 0) {
               await m((api).automation.recordAssigneeHeartbeat, {
@@ -1575,12 +1628,48 @@ async function chiefWatchdogLoop(signal) {
               const refreshedHasOutput = refreshedEvidence.outputPaths.length > 0;
               const refreshedReady =
                 refreshedEvidence.hasAssigneeEvidence && (!codingTask || refreshedHasOutput);
+              if (runningStep) {
+                const retryMessages = await q(api.messages.listByTask, { taskId: task._id });
+                const proofMessage = [...(retryMessages ?? [])]
+                  .reverse()
+                  .find(
+                    (msg) =>
+                      String(msg?.fromName || "").toLowerCase() ===
+                      String(assignee.name || "").toLowerCase()
+                  );
+                await recordAccountabilityProof({
+                  taskId: task._id,
+                  stepIndex: Number(runningStep.stepIndex),
+                  summary: summarizeOpenClawRunOutput(retryResult).lines.join(" | "),
+                  paths: refreshedEvidence.outputPaths,
+                  proofMessageId: proofMessage?._id,
+                  proofDocumentIds: [],
+                  dispatchRunId: retryRunId,
+                });
+              }
               if (
                 config.autoSubmitReadyTasksToReview &&
                 reviewer &&
                 refreshedReady &&
                 task.reviewStatus !== "approved"
               ) {
+                const refreshSteps = await listAccountabilitySteps(task._id);
+                const reviewerStep = refreshSteps.find((s) => s.role === "reviewer");
+                if (runningStep && reviewerStep) {
+                  await handoffAccountabilityStep(
+                    task._id,
+                    Number(runningStep.stepIndex),
+                    Number(reviewerStep.stepIndex),
+                    chief.name,
+                    true
+                  );
+                } else if (runningStep) {
+                  await completeAccountabilityStep(
+                    task._id,
+                    Number(runningStep.stepIndex),
+                    `Watchdog accepted specialist evidence from ${assignee.name}.`
+                  );
+                }
                 await m((api).automation.submitForReview, {
                   taskId: task._id,
                   reviewerAgentId: reviewer._id,
@@ -1616,6 +1705,14 @@ async function chiefWatchdogLoop(signal) {
               });
               continue;
             } else {
+              if (runningStep) {
+                await blockAccountabilityStep(
+                  task._id,
+                  Number(runningStep.stepIndex),
+                  "dispatch_failed: watchdog redispatch failed",
+                  "failed"
+                );
+              }
               await m((api).automation.updateTaskAutomationState, {
                 taskId: task._id,
                 automationState: "errored",
