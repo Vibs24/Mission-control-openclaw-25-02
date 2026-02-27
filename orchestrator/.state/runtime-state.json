@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "process": {
+    "pid": 39562,
+    "cwd": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control",
+    "lastStartedAt": 1772168215875,
+    "running": true,
+    "node": "v25.5.0",
+    "lastStopSignalAt": 1772168157949
+  },
+  "telegram": {
+    "lastInboundUpdateId": 334572402,
+    "lastInboundAt": 1772165505969,
+    "lastInboundVia": "poller",
+    "lastUpdateId": 334572402,
+    "offsetSavedAt": 1772165506818
+  },
+  "loops": {
+    "chiefTriage": {
+      "at": 1772170261547,
+      "status": "loop"
+    },
+    "chiefWatchdog": {
+      "at": 1772170204109,
+      "status": "loop"
+    },
+    "statusNotifier": {
+      "at": 1772170258528,
+      "status": "loop"
+    },
+    "poller": {
+      "at": 1772170252218,
+      "status": "polling",
+      "offset": 334572402
+    }
+  },
+  "lastError": {
+    "scope": "poller",
+    "at": 1772164440798,
+    "message": "fetch failed"
+  }
+}

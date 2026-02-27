@@ -1,0 +1,58 @@
+# WORKING.md — Peter
+
+<!-- BEGIN MC_SYNC:working_state -->
+## Current Working State
+
+### Active Tasks
+- No active tasks currently assigned.
+
+### Immediate Directives
+- Task context: [done/approved] Create car sales website using html and css -> Completed and approved. Deliverable stored in attached document with output paths.
+- Activity: Chief auto-submitted 'create login password website using html css and also create db using sqlite' for review after detecting evidence-ready progress in task comments/docs.
+- Activity: Document created: Bank Dashboard Deliverable (Project-local path)
+- Activity: Chief auto-submitted 'build fully functional bank management dashboard in python' for review after detecting evidence-ready progress in task comments/docs.
+- Activity: Chief auto-submitted 'smoke test: verify anti-stall watchdog for coding task hang' for review after detecting evidence-ready progress in task comments/docs.
+- Activity: Document created: Admin Dashboard Deliverable (Python/Flask)
+- Activity: Document created: Car Sales Website Deliverable (HTML/CSS)
+
+### Chief Directives
+- ### Chief Triage (Jarvis)
+- Priority: normal
+- Assumptions: Best-effort classification from Telegram intake / task context
+- Expected output: Concrete findings + status updates + evidence in comments/docs
+- Next action: Assigned to Natasha, Bruce for execution and updates
+- Review gate: Reviewer validates correctness before done
+- ### Chief Triage (Jarvis)
+- Priority: normal
+- Assumptions: Best-effort classification from Telegram intake / task context
+- Expected output: Concrete findings + status updates + evidence in comments/docs
+- Next action: Assigned to Natasha for execution and updates
+- Review gate: Reviewer validates correctness before done
+- ### Chief Triage (Jarvis)
+- Priority: normal
+- Assumptions: Best-effort classification from Telegram intake / task context
+- Expected output: Concrete findings + status updates + evidence in comments/docs
+- Next action: Sequential delegation planned (one agent at a time): Dev -> Natasha -> Bruce
+- Review gate: Reviewer validates correctness before done
+- ### Chief Triage (Jarvis)
+- Priority: normal
+- Assumptions: Best-effort classification from Telegram intake / task context
+- Expected output: Concrete findings + status updates + evidence in comments/docs
+- Next action: Assigned to Dev for execution and updates
+- Review gate: Reviewer validates correctness before done
+- Chief auto-blocked to prevent indefinite Active-state stall.
+Reason: No assignee evidence/comments/docs after 3 chief follow-up cycle(s).
+Required recovery: post concrete progress evidence and an explicit Output Path: /absolute/path, then reopen/retry.
+- ### Chief Triage (Jarvis)
+- Priority: normal
+- Assumptions: Best-effort classification from Telegram intake / task context
+- Expected output: Concrete findings + status updates + evidence in comments/docs
+- Next action: Sequential delegation planned (one agent at a time): Dev -> Natasha
+- Review gate: Reviewer validates correctness before done
+
+### User Instructions
+- No direct user instruction captured.
+
+### Evidence Paths
+- No output path evidence yet.
+<!-- END MC_SYNC:working_state -->

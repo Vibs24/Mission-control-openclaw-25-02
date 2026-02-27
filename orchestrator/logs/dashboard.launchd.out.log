@@ -1,0 +1,54 @@
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+[dashboard] port 5174 already in use; waiting for it to become free
+
+  VITE v5.4.21  ready in 153 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+11:20:54 PM [vite] hmr update /src/App.tsx, /src/index.css
+11:21:10 PM [vite] hmr update /src/components/tasks/MissionQueue.tsx, /src/index.css
+11:21:28 PM [vite] hmr update /src/components/tasks/KanbanBoard.tsx, /src/index.css
+11:21:48 PM [vite] hmr update /src/index.css
+11:32:59 PM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+11:43:22 PM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+11:43:22 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:43:22 PM [vite] hmr update /src/components/layout/Topbar.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 252 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 249 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 205 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 184 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:58:49 AM [vite] page reload src/types/index.ts
