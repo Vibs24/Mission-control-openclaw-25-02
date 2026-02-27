@@ -273,6 +273,7 @@ async function statusMessageForTask(task, agentsById = new Map()) {
     .join(", ");
   const reviewer = task.reviewerAgentId ? agentsById.get(String(task.reviewerAgentId))?.name : null;
   let completionBits = [];
+  let accountabilityBits = [];
 
   // For completed tasks, include exact output/storage paths extracted from task evidence.
   if (task.status === "done") {
@@ -304,6 +305,15 @@ async function statusMessageForTask(task, agentsById = new Map()) {
     }
   }
 
+  if (config.accountabilityLedgerEnabled) {
+    try {
+      const steps = await listAccountabilitySteps(task._id);
+      accountabilityBits = formatAccountabilityMatrix(steps);
+    } catch (error) {
+      console.error("[status] failed to load accountability steps", error);
+    }
+  }
+
   const bits = [
     `Task #${String(task._id)}`,
     `${task.title}`,
@@ -312,6 +322,7 @@ async function statusMessageForTask(task, agentsById = new Map()) {
     reviewer ? `Reviewer: ${reviewer}` : null,
     task.reviewStatus ? `Review: ${task.reviewStatus}` : null,
     task.nextAction ? `Next: ${task.nextAction}` : null,
+    ...accountabilityBits,
     ...completionBits,
   ].filter(Boolean);
   return bits.join("\n");
@@ -422,6 +433,160 @@ function formatDelegationQueue(specialists) {
   if (names.length === 0) return "No specialist selected";
   if (names.length === 1) return names[0];
   return names.join(" -> ");
+}
+
+function requiredProofForStep(task, role) {
+  if (role === "reviewer") return "comment_summary";
+  if (role === "specialist" && isImplementationTask(task)) return "output_path";
+  if (role === "specialist") return "comment_summary";
+  return "none";
+}
+
+function buildWorkflowSteps(task, specialists, reviewer) {
+  const steps = [];
+  for (let i = 0; i < specialists.length; i += 1) {
+    const specialist = specialists[i];
+    steps.push({
+      stepIndex: i,
+      agentId: specialist._id,
+      agentName: specialist.name,
+      role: "specialist",
+      requiredProof: requiredProofForStep(task, "specialist"),
+    });
+  }
+  if (reviewer) {
+    steps.push({
+      stepIndex: steps.length,
+      agentId: reviewer._id,
+      agentName: reviewer.name,
+      role: "reviewer",
+      requiredProof: "comment_summary",
+    });
+  }
+  return steps;
+}
+
+async function listAccountabilitySteps(taskId) {
+  if (!config.accountabilityLedgerEnabled) return [];
+  try {
+    return (await q((api).accountability.listByTask, { taskId })) ?? [];
+  } catch (error) {
+    console.warn(`[accountability] listByTask failed for ${String(taskId)}: ${String(error?.message || error)}`);
+    return [];
+  }
+}
+
+function findRunningStep(steps = []) {
+  return (steps ?? []).find((step) => String(step?.status) === "running");
+}
+
+async function ensureAccountabilityWorkflow(task, specialists, reviewer) {
+  if (!config.accountabilityLedgerEnabled) return [];
+  const steps = buildWorkflowSteps(task, specialists, reviewer);
+  if (steps.length === 0) return [];
+  try {
+    const result = await m((api).accountability.initTaskWorkflow, {
+      taskId: task._id,
+      steps,
+    });
+    return result?.steps ?? [];
+  } catch (error) {
+    console.warn(
+      `[accountability] initTaskWorkflow failed for ${String(task?._id || "")}: ${String(
+        error?.message || error
+      )}`
+    );
+    return [];
+  }
+}
+
+async function ensureRunningStepStart(taskId, stepIndex, agentId) {
+  if (!config.accountabilityLedgerEnabled) return { ok: true };
+  return await m((api).accountability.startStep, {
+    taskId,
+    stepIndex,
+    agentId,
+  });
+}
+
+async function attachDispatchRunToStep(taskId, stepIndex, dispatchRunId) {
+  if (!config.accountabilityLedgerEnabled || !dispatchRunId) return;
+  await m((api).accountability.attachDispatchRun, {
+    taskId,
+    stepIndex,
+    dispatchRunId,
+  });
+}
+
+async function recordAccountabilityProof({ taskId, stepIndex, summary, paths, proofMessageId, proofDocumentIds, dispatchRunId }) {
+  if (!config.accountabilityLedgerEnabled) return;
+  await m((api).accountability.recordProof, {
+    taskId,
+    stepIndex,
+    proofPayload: {
+      summary,
+      paths,
+      proofMessageId,
+      proofDocumentIds,
+      dispatchRunId,
+    },
+  });
+}
+
+async function handoffAccountabilityStep(taskId, fromStepIndex, toStepIndex, handoffBy, handoffValid = true) {
+  if (!config.accountabilityLedgerEnabled) return;
+  await m((api).accountability.handoffStep, {
+    taskId,
+    fromStepIndex,
+    toStepIndex,
+    handoffBy,
+    handoffValid,
+  });
+}
+
+async function completeAccountabilityStep(taskId, stepIndex, summary) {
+  if (!config.accountabilityLedgerEnabled) return;
+  await m((api).accountability.completeStep, {
+    taskId,
+    stepIndex,
+    summary,
+  });
+}
+
+async function blockAccountabilityStep(taskId, stepIndex, reason, status = "blocked") {
+  if (!config.accountabilityLedgerEnabled) return;
+  await m((api).accountability.blockStep, {
+    taskId,
+    stepIndex,
+    reason,
+    status,
+  });
+}
+
+async function agentHasRunningWorkElsewhere(agent, currentTaskId) {
+  if (!config.accountabilityLedgerEnabled || !agent?._id) return false;
+  const rows = await q((api).accountability.currentByAgent, { agentId: agent._id });
+  return (rows ?? []).some(
+    (row) => String(row.status) === "running" && String(row.taskId) !== String(currentTaskId)
+  );
+}
+
+function formatAccountabilityMatrix(steps = []) {
+  if (!steps || steps.length === 0) return [];
+  return [
+    "Accountability:",
+    ...steps.map((step) => {
+      const proof =
+        step.requiredProof === "output_path"
+          ? (step.proofPaths?.length ?? 0) > 0
+            ? "proof:path"
+            : "proof:missing_path"
+          : step.proofSummary || step.proofMessageId || (step.proofDocumentIds?.length ?? 0) > 0
+            ? "proof:ok"
+            : "proof:pending";
+      return `- [${step.stepIndex}] ${step.agentName} (${step.role}) => ${step.status} (${proof})`;
+    }),
+  ];
 }
 
 function isImplementationTask(task) {
@@ -932,10 +1097,64 @@ async function chiefTriageLoop(signal) {
       }
 
       const reviewer = agents.byName.get(config.reviewerAgentName);
+      const workflowSteps = await ensureAccountabilityWorkflow(claimed, specialists, reviewer);
+      const reviewerStep = workflowSteps.find((step) => step.role === "reviewer");
 
       for (let i = 0; i < specialists.length; i++) {
         const specialist = specialists[i];
         const nextSpecialist = specialists[i + 1];
+        const stepIndex = i;
+
+        const specialistBusyElsewhere = await agentHasRunningWorkElsewhere(specialist, claimed._id);
+        if (specialistBusyElsewhere) {
+          await m(api.tasks.updateStatus, {
+            id: claimed._id,
+            status: "assigned",
+            agentId: chief._id,
+            agentName: chief.name,
+          });
+          await m((api).automation.updateTaskAutomationState, {
+            taskId: claimed._id,
+            automationState: "assigned",
+            reviewStatus: "pending",
+            nextAction: `${specialist.name} already has an active task. Queued until that task completes.`,
+          });
+          await m((api).automation.setTaskNextCheck, {
+            taskId: claimed._id,
+            nextCheckAt: Date.now() + 2 * 60 * 1000,
+            nextAction: `Queued: waiting for ${specialist.name} to become available`,
+            chiefAgentId: chief._id,
+          });
+          await m((api).messages.create, {
+            taskId: claimed._id,
+            fromAgentId: chief._id,
+            fromName: chief.name,
+            content:
+              `Chief queue control: ${specialist.name} is already running another task. ` +
+              `This task is queued in assigned and will resume when ${specialist.name} is free.`,
+          });
+          break;
+        }
+
+        const started = await ensureRunningStepStart(claimed._id, stepIndex, specialist._id);
+        if (!started?.ok) {
+          await m((api).automation.setTaskNextCheck, {
+            taskId: claimed._id,
+            nextCheckAt: Date.now() + 2 * 60 * 1000,
+            nextAction: `Accountability step lock: waiting to start step ${stepIndex} for ${specialist.name}`,
+            chiefAgentId: chief._id,
+          });
+          await m((api).messages.create, {
+            taskId: claimed._id,
+            fromAgentId: chief._id,
+            fromName: chief.name,
+            content:
+              `Chief monitor: accountability lock prevented starting ${specialist.name}'s step (${stepIndex}). ` +
+              `A different step is still running.`,
+          });
+          break;
+        }
+
         if (i > 0) {
           // Enforce single-assignee execution: hand off to the next specialist only after the prior turn completes.
           await m(api.tasks.assign, {
@@ -990,7 +1209,7 @@ async function chiefTriageLoop(signal) {
           prompt,
           targetAgent: specialist,
         });
-        await m((api).automation.createAutomationRun, {
+        const specialistRunId = await m((api).automation.createAutomationRun, {
           taskId: claimed._id,
           role: "specialist",
           agentName: specialist.name,
@@ -1006,6 +1225,7 @@ async function chiefTriageLoop(signal) {
           startedAt: start,
           finishedAt: Date.now(),
         });
+        await attachDispatchRunToStep(claimed._id, stepIndex, specialistRunId);
 
         if (result.code === 0) {
           await m((api).automation.recordAssigneeHeartbeat, {
@@ -1050,7 +1270,26 @@ async function chiefTriageLoop(signal) {
             }
           }
 
+          const specialistProofMessage = [...(postDispatchMessages ?? [])]
+            .slice(preDispatchMessageCount)
+            .reverse()
+            .find(
+              (msg) =>
+                String(msg?.fromName || "").toLowerCase() ===
+                String(specialist.name || "").toLowerCase()
+            );
+          const evidenceAfterRun = await inspectTaskEvidence(claimed._id);
+          const summaryAfterRun = summarizeOpenClawRunOutput(result);
+
           if (!evidenceProgress && !taskLeftExecution) {
+            if (config.accountabilityStrictGate) {
+              await blockAccountabilityStep(
+                claimed._id,
+                stepIndex,
+                "missing_step_proof: no assignee evidence was posted after specialist dispatch",
+                "blocked"
+              );
+            }
             await m((api).automation.updateTaskAutomationState, {
               taskId: claimed._id,
               automationState: "executing",
@@ -1078,7 +1317,18 @@ async function chiefTriageLoop(signal) {
             break;
           }
 
+          await recordAccountabilityProof({
+            taskId: claimed._id,
+            stepIndex,
+            summary: summaryAfterRun.lines.join(" | "),
+            paths: evidenceAfterRun.outputPaths ?? [],
+            proofMessageId: specialistProofMessage?._id,
+            proofDocumentIds: [],
+            dispatchRunId: specialistRunId,
+          });
+
           if (nextSpecialist) {
+            await handoffAccountabilityStep(claimed._id, stepIndex, stepIndex + 1, chief.name, true);
             await m(api.agents.updateStatus, {
               id: specialist._id,
               status: "active",
@@ -1101,6 +1351,21 @@ async function chiefTriageLoop(signal) {
               reviewer &&
               hasReadyEvidence
             ) {
+              if (reviewerStep) {
+                await handoffAccountabilityStep(
+                  claimed._id,
+                  stepIndex,
+                  Number(reviewerStep.stepIndex),
+                  chief.name,
+                  true
+                );
+              } else {
+                await completeAccountabilityStep(
+                  claimed._id,
+                  stepIndex,
+                  `Final specialist proof accepted by ${chief.name}.`
+                );
+              }
               await m((api).automation.submitForReview, {
                 taskId: claimed._id,
                 reviewerAgentId: reviewer._id,
@@ -1139,10 +1404,26 @@ async function chiefTriageLoop(signal) {
                   ? `Chief monitor: ${specialist.name} finished a turn but final coding evidence is incomplete. Please post a concrete summary and an explicit \`Output Path:\` (or \`Stored Location:\`) so review can start immediately.`
                   : `Chief monitor: ${specialist.name} finished a turn but final evidence/update is still needed before review.`,
               });
+              if (config.accountabilityStrictGate) {
+                await blockAccountabilityStep(
+                  claimed._id,
+                  stepIndex,
+                  codingTask
+                    ? "missing_output_path: final specialist output path evidence not present"
+                    : "missing_assignee_evidence: final specialist evidence incomplete",
+                  "blocked"
+                );
+              }
             }
           }
         } else {
           const dispatchError = String(result.stderr || result.stdout || "Unknown dispatch error").slice(0, 500);
+          await blockAccountabilityStep(
+            claimed._id,
+            stepIndex,
+            `dispatch_failed: ${dispatchError}`,
+            "failed"
+          );
           await m((api).automation.updateTaskAutomationState, {
             taskId: claimed._id,
             automationState: "errored",
