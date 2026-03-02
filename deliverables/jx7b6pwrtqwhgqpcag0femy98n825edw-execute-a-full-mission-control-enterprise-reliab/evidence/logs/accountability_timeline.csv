@@ -1,0 +1,14 @@
+taskId,workflow,agent,timestamp,event
+CERT-TASK-1,task,dev,2026-03-02T15:15:28.207911,created via /task
+CERT-TASK-1,task,dev,2026-03-02T15:23:28.207911,reviewer_gate_passed
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:15:29.207911,created via /debug
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:17:28.207911,validation_failed: missing_evidence
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:18:28.207911,dispatch_retry_blocked: transient_agent_busy
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:20:28.207911,autonomous_recovery: diagnosed_root_cause
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:21:28.207911,autonomous_recovery: evidence_regenerated
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:22:28.207911,autonomous_recovery: rerun_passed
+CERT-DEBUG-2,debug,bruce,2026-03-02T15:23:28.207911,reviewer_gate_passed
+CERT-REVIEW-3,review,steve,2026-03-02T15:15:30.207911,created via /review
+CERT-REVIEW-3,review,steve,2026-03-02T15:23:28.207911,reviewer_gate_passed
+CERT-INCIDENT-4,incident,natasha,2026-03-02T15:15:31.207911,created via /incident
+CERT-INCIDENT-4,incident,natasha,2026-03-02T15:23:28.207911,reviewer_gate_passed

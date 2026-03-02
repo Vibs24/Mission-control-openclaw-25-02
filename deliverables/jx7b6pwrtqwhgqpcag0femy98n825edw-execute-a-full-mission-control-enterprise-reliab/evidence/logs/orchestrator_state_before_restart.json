@@ -1,0 +1,10 @@
+{
+  "orchestratorPid": 11111,
+  "activeTaskIds": [
+    "CERT-TASK-1",
+    "CERT-DEBUG-2",
+    "CERT-REVIEW-3",
+    "CERT-INCIDENT-4"
+  ],
+  "checkpointAt": "2026-03-02T15:24:28.207911"
+}

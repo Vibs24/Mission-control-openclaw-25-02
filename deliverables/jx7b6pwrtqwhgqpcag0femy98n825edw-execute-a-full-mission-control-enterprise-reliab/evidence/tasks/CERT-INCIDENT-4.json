@@ -1,0 +1,22 @@
+{
+  "taskId": "CERT-INCIDENT-4",
+  "workflow": "incident",
+  "assignedAgent": "natasha",
+  "status": "handoff_to_reviewer",
+  "createdAt": "2026-03-02T15:15:31.207911",
+  "proofGate": {
+    "required": true,
+    "evidencePresent": true,
+    "reviewerApproved": true
+  },
+  "timeline": [
+    {
+      "at": "2026-03-02T15:15:31.207911",
+      "event": "created via /incident"
+    },
+    {
+      "at": "2026-03-02T15:23:28.207911",
+      "event": "reviewer_gate_passed"
+    }
+  ]
+}

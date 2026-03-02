@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-02T15:30:28.207911",
+  "windowMinutes": 15,
+  "summary": {
+    "blocked": 1,
+    "stuck": 1,
+    "active": 4,
+    "recovered": 1
+  },
+  "blockedReasons": [
+    "missing_evidence"
+  ],
+  "stuckReasons": [
+    "transient_agent_busy"
+  ],
+  "tasks": [
+    {
+      "taskId": "CERT-TASK-1",
+      "workflow": "task",
+      "agent": "dev",
+      "status": "handoff_to_reviewer"
+    },
+    {
+      "taskId": "CERT-DEBUG-2",
+      "workflow": "debug",
+      "agent": "bruce",
+      "status": "handoff_to_reviewer"
+    },
+    {
+      "taskId": "CERT-REVIEW-3",
+      "workflow": "review",
+      "agent": "steve",
+      "status": "handoff_to_reviewer"
+    },
+    {
+      "taskId": "CERT-INCIDENT-4",
+      "workflow": "incident",
+      "agent": "natasha",
+      "status": "handoff_to_reviewer"
+    }
+  ]
+}
