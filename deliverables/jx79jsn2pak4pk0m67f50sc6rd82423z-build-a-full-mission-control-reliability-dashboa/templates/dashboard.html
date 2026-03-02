@@ -1,0 +1,57 @@
+<!doctype html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"><title>Reliability Dashboard</title></head>
+<body>
+<header class="top"><h1>Mission Control Reliability Dashboard</h1><div>{{ session.username }} ({{ session.role }}) <a href="{{ url_for('logout') }}">Logout</a></div></header>
+<section class="kpis">
+  <div class="tile"><h3>Total Tasks</h3><p>{{ metrics.total }}</p></div>
+  <div class="tile"><h3>Blocked</h3><p>{{ metrics.blocked }}</p></div>
+  <div class="tile"><h3>Stuck</h3><p>{{ metrics.stuck }}</p></div>
+  <div class="tile"><h3>In Progress</h3><p>{{ metrics.in_progress }}</p></div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Live Task Board</h2>
+    <a href="{{ url_for('export_csv') }}">Export CSV</a>
+    <table id="taskTable"><thead><tr><th>ID</th><th>Title</th><th>Workflow</th><th>Status</th><th>Agent</th><th>Util%</th><th>Updated</th><th>Action</th></tr></thead><tbody>
+      {% for t in tasks %}
+      <tr>
+        <td>{{ t.id }}</td><td>{{ t.title }}</td><td>{{ t.workflow }}</td><td>{{ t.status }}</td><td>{{ t.assigned_agent }}</td><td>{{ t.utilization_pct }}</td><td>{{ t.updated_at }}</td>
+        <td>
+          {% if session.role in ['admin','reviewer'] %}
+          <form method="post" action="{{ url_for('update_task', task_id=t.id) }}" class="inline">
+            <select name="status">
+              {% for s in ['todo','in_progress','blocked','stuck','review','done'] %}
+              <option value="{{ s }}" {% if s == t.status %}selected{% endif %}>{{ s }}</option>
+              {% endfor %}
+            </select>
+            <input name="blocked_reason" placeholder="blocked reason" value="{{ t.blocked_reason or '' }}">
+            <input name="rca" placeholder="rca" value="{{ t.rca or '' }}">
+            <input name="utilization_pct" type="number" min="0" max="100" value="{{ t.utilization_pct }}">
+            <button>Save</button>
+          </form>
+          {% else %}read-only{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody></table>
+  </div>
+
+  <div>
+    <div class="card"><h2>Blocked/Stuck RCA Panel</h2>
+      <ul>
+      {% for t in rca_panel %}
+      <li><strong>#{{ t.id }} {{ t.title }}</strong> — {{ t.status }}<br>Reason: {{ t.blocked_reason or 'n/a' }}<br>RCA: {{ t.rca or 'pending' }}</li>
+      {% else %}<li>No blocked/stuck tasks.</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="card"><h2>Agent Utilization Widgets</h2>
+      {% for w in widgets %}
+      <div class="widget"><span>{{ w.agent }}</span><span>{{ w.avg_utilization }}%</span><div class="bar"><i style="width:{{ w.avg_utilization }}%"></i></div><small>{{ w.task_count }} tasks</small></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
