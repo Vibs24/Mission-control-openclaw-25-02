@@ -1,0 +1,24 @@
+{
+  "generatedAt": 1772454274342,
+  "generatedAtIso": "2026-03-02T12:24:34.342Z",
+  "taskId": "jx7ed1tg4erfd86zqb5agvbhe5825nv5",
+  "taskTitle": "Create a production release-readiness pack for Mission Control (OpenClaw + bot +",
+  "source": "mission-control-orchestrator",
+  "reason": "specialist_evidence_snapshot",
+  "assigneeMessageCount": 1,
+  "assigneeDocumentCount": 0,
+  "reportedPaths": [
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/README.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/01-prechecks.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/02-rollout-plan.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/03-health-checks.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/04-rollback-plan.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/05-smoke-test.sh",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ed1tg4erfd86zqb5agvbhe5825nv5-create-a-production-release-readiness-pack-for-m/06-post-deploy-validation-checklist.md"
+  ],
+  "messageIds": [
+    "jn72rh6zpzsyy49k3awqr7qgy9825m5m"
+  ],
+  "documentIds": []
+}
