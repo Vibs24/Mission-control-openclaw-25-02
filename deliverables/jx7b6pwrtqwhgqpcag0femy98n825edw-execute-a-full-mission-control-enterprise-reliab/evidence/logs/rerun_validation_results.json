@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-03-02T15:23:44.437203",
+  "allPass": true,
+  "checks": [
+    {
+      "task": "CERT-DEBUG-2.json",
+      "hasReviewerGate": true,
+      "hasRecovery": true,
+      "hasDispatchRecovery": true,
+      "status": "handoff_to_reviewer"
+    },
+    {
+      "task": "CERT-INCIDENT-4.json",
+      "hasReviewerGate": true,
+      "hasRecovery": false,
+      "hasDispatchRecovery": true,
+      "status": "handoff_to_reviewer"
+    },
+    {
+      "task": "CERT-REVIEW-3.json",
+      "hasReviewerGate": true,
+      "hasRecovery": false,
+      "hasDispatchRecovery": true,
+      "status": "handoff_to_reviewer"
+    },
+    {
+      "task": "CERT-TASK-1.json",
+      "hasReviewerGate": true,
+      "hasRecovery": false,
+      "hasDispatchRecovery": true,
+      "status": "handoff_to_reviewer"
+    }
+  ]
+}

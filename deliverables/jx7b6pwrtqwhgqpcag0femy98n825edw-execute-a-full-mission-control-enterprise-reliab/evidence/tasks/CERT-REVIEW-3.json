@@ -17,6 +17,10 @@
     {
       "at": "2026-03-02T15:23:28.207911",
       "event": "reviewer_gate_passed"
+    },
+    {
+      "at": "2026-03-02T15:23:44.431222",
+      "event": "dispatch_recovery: reassigned_slot_acquired_and_dispatch_succeeded"
     }
   ]
 }
