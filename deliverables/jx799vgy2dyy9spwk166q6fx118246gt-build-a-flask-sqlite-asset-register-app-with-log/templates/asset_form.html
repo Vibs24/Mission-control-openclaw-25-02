@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"><title>Asset Form</title></head>
+<body><div class="wrap"><div class="card"><h1>{% if mode=='create' %}Create{% else %}Edit{% endif %} Asset</h1>
+<form method="post" class="form-grid">
+<input name="name" placeholder="Name" value="{{ asset.name or '' }}" required>
+<input name="category" placeholder="Category" value="{{ asset.category or '' }}" required>
+<input name="owner" placeholder="Owner" value="{{ asset.owner or '' }}" required>
+<input name="status" placeholder="Status" value="{{ asset.status or '' }}" required>
+<input name="serial_number" placeholder="Serial Number" value="{{ asset.serial_number or '' }}">
+<input name="location" placeholder="Location" value="{{ asset.location or '' }}">
+<textarea name="notes" placeholder="Notes">{{ asset.notes or '' }}</textarea>
+<div><button>Save</button> <a href="{{ url_for('assets') }}">Cancel</a></div>
+</form></div></div></body></html>
