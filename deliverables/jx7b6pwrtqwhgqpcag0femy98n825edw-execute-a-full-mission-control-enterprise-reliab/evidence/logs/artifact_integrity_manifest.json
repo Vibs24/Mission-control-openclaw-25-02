@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-03-02T15:25:42.270192",
+  "artifactFolder": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab",
+  "fileCount": 23,
+  "containsRequiredTopLevel": true,
+  "files": [
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/certification_report.md",
+      "size": 353,
+      "sha256": "2abf0f3b9ba81fee11e8927cda2c322837aa33c94c317adf382864e5bf950984"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/certification_report_addendum.md",
+      "size": 215,
+      "sha256": "efa1894745c6b51f781c17041397da6b527ad11f56fc44d542c9f217455d3aee"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/digest/telegram_digest_15m.json",
+      "size": 823,
+      "sha256": "bd509188ed2908908cda62ab948f310ccd74ac9b6cf8abb696f142b527e175a6"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/accountability_timeline.csv",
+      "size": 1102,
+      "sha256": "d2f1ec3f0efd4fb4f638110df2a142d03d1f9e8308844a24a51a7dbc473a596b"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/agent_bruce_execution.log",
+      "size": 603,
+      "sha256": "dfb20708551b135576e4ac0ed76acbdbd075216f30604459b40ae3b2a13710fa"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/agent_dev_execution.log",
+      "size": 139,
+      "sha256": "ba35d71788f88cd18bc4d614ec98b73f84ee273bbe0f805f5f7effc611e5516a"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/agent_natasha_execution.log",
+      "size": 159,
+      "sha256": "bb1143572cdabf90cee2a404882e971c69e76fdd1fce71f4994558c14bdabe94"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/agent_steve_execution.log",
+      "size": 149,
+      "sha256": "0940f74cc357d1084d024ebb1b317760073cb302d53f8b1e7b45fca594c21bf1"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/blocked_recovery_diagnosis_and_fix.json",
+      "size": 511,
+      "sha256": "b0574ceac1073886e828f1d2e31098a9af5d9831caaa6e6302d74e0087c74013"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/orchestrator_restart_pids.json",
+      "size": 61,
+      "sha256": "17f7c1527fdb2f4ecbff02d318c955c5c4a15814cd76b0200237391577018767"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/orchestrator_restart_run.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/orchestrator_state_after_restart.json",
+      "size": 224,
+      "sha256": "102978b1ea206468b405256772ec425d25a741b42439d39a286c76677ccfbe40"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/orchestrator_state_before_restart.json",
+      "size": 186,
+      "sha256": "cac9cf9800fead3281568d5771d9e3bd3be20c715cab12c21cc12eb20a70e10d"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/logs/rerun_validation_results.json",
+      "size": 806,
+      "sha256": "286ef1f7172876f0cb2e53e24f162647dc590eebd184f6346da894e5af714320"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/tasks/CERT-DEBUG-2.json",
+      "size": 1165,
+      "sha256": "12c1ac13f5f03967cf3a63af7037559e261cb5d256d6f25807311a761e9a4f2a"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/tasks/CERT-INCIDENT-4.json",
+      "size": 617,
+      "sha256": "ef782d921b7a3d3dc84eafd57a303df623b2808a7615762377242293de34da57"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/tasks/CERT-REVIEW-3.json",
+      "size": 609,
+      "sha256": "764a7b4992a65d27ec8b4187343b2ab2c10274be302bc2a3d0593ff21518fbf2"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/evidence/tasks/CERT-TASK-1.json",
+      "size": 601,
+      "sha256": "c7437f3cce9c7e3948563bcacf131c5b6652bc981c3fa22693a6007718a3b04a"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/final_signoff.md",
+      "size": 135,
+      "sha256": "5de2ea9b2fa7f26cdb4cd9d89cfee8e2e5420666ed87aa08cf24183c46e1c81a"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/fix_log.md",
+      "size": 269,
+      "sha256": "aeaafd71fba79a4fbcb7672d2d2c6c3bb7a3d9bd9624cb88bf56bdc4d05de037"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/pass_fail_matrix.csv",
+      "size": 723,
+      "sha256": "dcac1490435a4c804672fa4850c4425bd66b6d91bfde4bbb982e9e3e1fd1318c"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/rca.md",
+      "size": 429,
+      "sha256": "c1ab0a2002f2466f5f75f304ec0f44d08e2718bf49d55d46b9875915f76e5dc6"
+    },
+    {
+      "path": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b6pwrtqwhgqpcag0femy98n825edw-execute-a-full-mission-control-enterprise-reliab/run_certification.py",
+      "size": 7123,
+      "sha256": "f512284102cca631c65b8ce044e96bf2255d4444d26409c00d90b3e64c04d5d2"
+    }
+  ]
+}
