@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Podcast Repurposing Studio</title>
+<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<div class="container">
+  <h1>Podcast Repurposing Studio MVP</h1>
+  <div class="layout">
+    <section class="card">
+      <h2>Input</h2>
+      <label>Episode title<input id="episode_title" /></label>
+      <label>Guest name<input id="guest_name" /></label>
+      <label>Optional URL<input id="url" /></label>
+      <label>Full transcript<textarea id="transcript" rows="16"></textarea></label>
+      <div class="row">
+        <button id="generateBtn">Generate</button>
+        <button id="saveBtn" class="ghost">Save Local</button>
+        <button id="loadBtn" class="ghost">Load Local</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="tabs">
+        <button class="tab active" data-tab="x">X (10)</button>
+        <button class="tab" data-tab="li">LinkedIn (3)</button>
+        <button class="tab" data-tab="nl">Newsletter</button>
+        <button class="tab" data-tab="yt">YouTube</button>
+        <button class="tab" data-tab="clips">Clip Hooks (10)</button>
+      </div>
+      <div class="row right"><button id="copyBtn" class="ghost">Copy Section</button><button id="downloadBtn">Download Markdown</button></div>
+      <pre id="output" class="output"></pre>
+    </section>
+  </div>
+</div>
+<script src="/static/app.js"></script>
+</body></html>
