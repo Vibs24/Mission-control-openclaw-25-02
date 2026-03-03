@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "4fe4dd43-c73b-40fa-9748-06b437d62c20",
+      "agentId": "main",
+      "name": "jarvis-mission-control-check",
+      "description": "15-minute staggered heartbeat for Jarvis, Lead Agent / IT Chief of Staff",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772094983789,
+      "updatedAtMs": 1772123502704,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0,15,30,45 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Jarvis, Lead Agent / IT Chief of Staff. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on triage inbox tasks, assign specialists, monitor blockers and review queue. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124300000,
+        "lastRunAtMs": 1772123459121,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 43583,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "1c529773-fe85-4518-ba80-9f44130f208c",
+      "agentId": "it-analytics",
+      "name": "bruce-it-analytics-check",
+      "description": "15-minute staggered heartbeat for Bruce, IT Analytics & Infrastructure Monitoring",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772094983789,
+      "updatedAtMs": 1772123556020,
+      "schedule": {
+        "kind": "cron",
+        "expr": "2,17,32,47 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Bruce, IT Analytics & Infrastructure Monitoring. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on metrics, latency, capacity, anomalies and infrastructure-related tasks. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124420000,
+        "lastRunAtMs": 1772123520014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 36006,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "1a219358-c8ba-4956-9b55-f8beccbd71d2",
+      "agentId": "it-support",
+      "name": "natasha-it-support-check",
+      "description": "15-minute staggered heartbeat for Natasha, IT Support & Intelligence",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772094983789,
+      "updatedAtMs": 1772123666472,
+      "schedule": {
+        "kind": "cron",
+        "expr": "4,19,34,49 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Natasha, IT Support & Intelligence. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on support incidents, triage, root-cause investigation and recurring ticket patterns. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124540000,
+        "lastRunAtMs": 1772123640025,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 26447,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "29ba8c3b-deea-4764-a158-e866de525227",
+      "agentId": "it-ops",
+      "name": "steve-it-ops-check",
+      "description": "15-minute staggered heartbeat for Steve, Stability, Ops & Runbooks",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772094983789,
+      "updatedAtMs": 1772123799163,
+      "schedule": {
+        "kind": "cron",
+        "expr": "6,21,36,51 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Steve, Stability, Ops & Runbooks. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on stability, change management, runbooks, post-mortems and SLA follow-up. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124660000,
+        "lastRunAtMs": 1772123760020,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 39143,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "a369e34c-bdf6-406b-bfbf-65af731f323a",
+      "agentId": "it-docs",
+      "name": "peter-it-docs-check",
+      "description": "15-minute staggered heartbeat for Peter, IT Documentation & Content",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772094983789,
+      "updatedAtMs": 1772123943258,
+      "schedule": {
+        "kind": "cron",
+        "expr": "8,23,38,53 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Peter, IT Documentation & Content. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on runbooks, guides, changelogs and documentation gaps for completed work. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124780000,
+        "lastRunAtMs": 1772123880025,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 63233,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "5f4e9a41-7f0d-4b7b-9e1a-9fcd34b0de12",
+      "agentId": "it-dev",
+      "name": "dev-it-coding-check",
+      "description": "15-minute staggered heartbeat for Dev, Software Development & Automation",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772101200000,
+      "updatedAtMs": 1772123976479,
+      "schedule": {
+        "kind": "cron",
+        "expr": "9,24,39,54 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Dev, Software Development & Automation. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on coding, implementation, bug fixes, scripts, and concrete deliverables. Never mark coding work done without evidence and an explicit output path. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124840000,
+        "lastRunAtMs": 1772123943277,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 33202,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    },
+    {
+      "id": "142dfe6c-7f07-4844-a904-228da4b43b89",
+      "agentId": "reviewer",
+      "name": "reviewer-final-check",
+      "description": "15-minute staggered heartbeat for Reviewer, QA / Verification & Acceptance",
+      "enabled": true,
+      "deleteAfterRun": false,
+      "createdAtMs": 1772094983789,
+      "updatedAtMs": 1772124022314,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10,25,40,55 * * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Reviewer, QA / Verification & Acceptance. Read AGENTS.md and HEARTBEAT.md in the workspace. Follow HEARTBEAT.md strictly. Check Mission Control for @mentions, assigned tasks, and activity feed. Focus on tasks in review, validate evidence and approve or request changes. If nothing needs attention, reply HEARTBEAT_OK."
+      },
+      "state": {
+        "nextRunAtMs": 1772124900000,
+        "lastRunAtMs": 1772124000021,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 22293,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      },
+      "delivery": {
+        "mode": "announce"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>ai.missioncontrol.dashboard</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+      <key>NetworkState</key>
+      <true/>
+      <key>SuccessfulExit</key>
+      <false/>
+    </dict>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    <key>WorkingDirectory</key>
+    <string>/Users/syphaoffice1/Mission-control-openclaw-25:02</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/zsh</string>
+      <string>-lc</string>
+      <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/ops/bin/start-missioncontrol-dashboard.sh</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>HOME</key>
+      <string>/Users/syphaoffice1</string>
+      <key>PATH</key>
+      <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/logs/dashboard.launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/logs/dashboard.launchd.err.log</string>
+  </dict>
+</plist>

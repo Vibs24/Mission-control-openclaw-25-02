@@ -1,0 +1,20 @@
+{
+  "generatedAt": 1772454229615,
+  "generatedAtIso": "2026-03-02T12:23:49.615Z",
+  "taskId": "jx73k9d52xfjdt0p91910a5wjh8255hr",
+  "taskTitle": "Simulate a Sev-2 incident: intermittent Telegram delivery failure + Convex timeo",
+  "source": "mission-control-orchestrator",
+  "reason": "specialist_evidence_snapshot",
+  "assigneeMessageCount": 1,
+  "assigneeDocumentCount": 0,
+  "reportedPaths": [
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/incident-telegram-convex-rca",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/incident-telegram-convex-rca/incident_report.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/incident-telegram-convex-rca/mitigation_checklist.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/incident-telegram-convex-rca/incident_timeline.csv"
+  ],
+  "messageIds": [
+    "jn71n58k7xvwnt2dha8yvgyzh1825zp1"
+  ],
+  "documentIds": []
+}

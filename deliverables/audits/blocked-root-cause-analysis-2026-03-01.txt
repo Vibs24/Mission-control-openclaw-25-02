@@ -1,0 +1,66 @@
+Mission Control Blocked Task RCA - 2026-03-01
+
+Scope
+- Audited live blocked/in-progress tasks, accountability steps, automation runs, task comments, and orchestrator runtime logs.
+
+Primary Root Causes
+1) Non-verifiable evidence from specialists
+- Symptom: Tasks blocked with reason `no_verifiable_file_evidence`.
+- Evidence: Specialists repeatedly posted structured worklogs claiming file paths, but files were absent on disk.
+- Example: deliverable directories existed but were empty:
+  - /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/ticket-dashboard
+  - /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-full-regression-v2
+  - /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/orchestrator-review-pack
+
+2) Recovery loop could retry same assignee repeatedly
+- Symptom: repeated block cycles on same specialist for same proof failure reason.
+- Cause: auto-recovery continued retries but did not reliably rotate assignee after repeated failures.
+
+3) Workflow-step state corruption from late proof updates
+- Symptom: active tasks ending in inconsistent step states (e.g., waiting_handoff with terminal metadata, reviewer already terminal).
+- Cause: proof recording on already-terminal rows could re-mark step progress state in backend flow.
+
+4) Transient network outages disrupted watchdog/triage cycles
+- Symptom: periodic ENOTFOUND/ECONNRESET in orchestrator logs.
+- Evidence:
+  - ENOTFOUND secret-fox-493.convex.cloud
+  - ENOTFOUND api.telegram.org
+  - ECONNRESET on Telegram polling
+- Impact: delayed recovery/reconciliation loops (not silent completion).
+
+Permanent Fixes Applied
+A) Orchestrator hardening (/Mission-control/orchestrator/index.mjs)
+- Added non-terminal recovery policy for recoverable reasons.
+- Added specialist reassignment path after repeated recoverable failures.
+- Fixed reassignment candidate selection to exclude current assignee.
+- Hardened reconciliation against terminal-metadata inconsistencies.
+- Avoided waiting_handoff resume into already terminal next-steps.
+- Maintained strict artifact verification gate: no done/handoff without real file evidence.
+
+B) Monitoring cadence hardening
+- Reduced chief monitoring interval to 30s.
+- Reduced blocked recovery cooldown to 2m.
+- Files:
+  - /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/.env
+  - /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/.env.example
+
+C) Backend accountability logic hardening (source-level)
+- File: /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/convex/accountability.ts
+- Changes:
+  - startStep now clears terminal handoff metadata when restarting a step.
+  - recordProof preserves terminal statuses and avoids automatic waiting_handoff transition for output_path steps.
+
+Verification Snapshot After Fixes
+- Service status: running (launchd bot service healthy).
+- Active-state consistency check: no in_progress-without-running mismatch at last validation.
+- Block reasons now explicit and deterministic (mostly real missing-file evidence, not false completion).
+
+Important Deployment Note
+- Convex source patch was applied locally, but automatic push failed due path/config constraint in this environment:
+  - InvalidConfig path error involving `Mission-control-openclaw-25:02` path transformation during `convex dev --once`.
+- Orchestrator-side protections are active immediately.
+- Convex runtime patch requires successful Convex push/deploy to become active in cloud backend.
+
+Residual Operational Risk
+- If external network/DNS is unstable, recovery loops may be delayed but now preserve deterministic blocked states and retry behavior.
+- Tasks will remain blocked until specialists produce real files at declared paths; fake evidence can no longer pass gates.

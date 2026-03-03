@@ -1,0 +1,20 @@
+{
+  "generatedAt": 1772454280586,
+  "generatedAtIso": "2026-03-02T12:24:40.586Z",
+  "taskId": "jx7e06y90872sxs420agavye9x824a1j",
+  "taskTitle": "Generate a 24-hour Mission Control ops report with throughput, cycle time, block",
+  "source": "mission-control-orchestrator",
+  "reason": "specialist_evidence_snapshot",
+  "assigneeMessageCount": 1,
+  "assigneeDocumentCount": 0,
+  "reportedPaths": [
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-ops-24h-standup",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-ops-24h-standup/mc_ops_24h_kpi.md",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-ops-24h-standup/mc_ops_24h_metrics.csv",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-ops-24h-standup/executive_summary.md"
+  ],
+  "messageIds": [
+    "jn754d53bw1njrwjqnr7bhyhds825nkh"
+  ],
+  "documentIds": []
+}

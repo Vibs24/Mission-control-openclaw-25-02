@@ -1,0 +1,82 @@
+Invalid config at /Users/syphaoffice1/.openclaw/openclaw.json:\n- plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+(node:2315) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Config invalid
+File: ~/.openclaw/openclaw.json
+Problem:
+  - plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+
+Run: openclaw doctor --fix
+Invalid config at /Users/syphaoffice1/.openclaw/openclaw.json:\n- plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+(node:2414) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Config invalid
+File: ~/.openclaw/openclaw.json
+Problem:
+  - plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+
+Run: openclaw doctor --fix
+Invalid config at /Users/syphaoffice1/.openclaw/openclaw.json:\n- plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+(node:2461) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Config invalid
+File: ~/.openclaw/openclaw.json
+Problem:
+  - plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+
+Run: openclaw doctor --fix
+Invalid config at /Users/syphaoffice1/.openclaw/openclaw.json:\n- plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+(node:2500) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Config invalid
+File: ~/.openclaw/openclaw.json
+Problem:
+  - plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+
+Run: openclaw doctor --fix
+Invalid config at /Users/syphaoffice1/.openclaw/openclaw.json:\n- plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+(node:2540) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Config invalid
+File: ~/.openclaw/openclaw.json
+Problem:
+  - plugins.entries.openclaw-honcho: plugin not found: openclaw-honcho
+
+Run: openclaw doctor --fix
+(node:2570) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+2026-02-26T04:51:51.880Z [ws] unauthorized conn=d17fde78-fbc6-4b11-9d81-b0f34572b41a remote=127.0.0.1 client=openclaw-control-ui webchat vdev reason=token_missing
+2026-02-26T04:51:51.884Z [ws] closed before connect conn=d17fde78-fbc6-4b11-9d81-b0f34572b41a remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:45231 host=127.0.0.1:45231 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:51:53.043Z [bonjour] gateway name conflict resolved; newName="Office Mac 1 (OpenClaw) (4)"
+2026-02-26T04:51:53.047Z [bonjour] gateway hostname conflict resolved; newHostname="openclaw-(4)"
+2026-02-26T04:52:12.870Z [ws] closed before connect conn=c1784093-546c-4ac9-af10-2bad51c092f9 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:52:15.302Z [ws] unauthorized conn=4ee5b454-f410-41d8-b1c7-87ab4e24d80e remote=127.0.0.1 client=openclaw-control-ui webchat vdev reason=token_mismatch
+2026-02-26T04:52:15.305Z [ws] closed before connect conn=4ee5b454-f410-41d8-b1c7-87ab4e24d80e remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=unauthorized: gateway token mismatch (open the dashboard URL and paste the token in Control UI settings)
+2026-02-26T04:52:28.876Z [ws] closed before connect conn=3a16cf4b-b6ea-4f78-a3d6-784c0c0c74c1 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:52:44.901Z [ws] closed before connect conn=cf0568aa-0515-4cb6-a78a-26a137e94422 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:53:00.863Z [ws] closed before connect conn=3d13d556-e422-4714-b240-858abe533700 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:53:16.872Z [ws] closed before connect conn=df16a8f0-7e04-45e7-b415-a52b92e3e322 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:53:32.868Z [ws] closed before connect conn=0440ab14-c808-45a5-beb4-d5182a483b7f remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:53:48.896Z [ws] closed before connect conn=2ae86ab3-7790-4552-b73c-05bd0bbf3bf1 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:54:04.941Z [ws] closed before connect conn=1cfdd633-a6d7-4369-8598-cee0e404633f remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:54:20.895Z [ws] closed before connect conn=e1c971d5-219d-4875-b212-9231db869ea6 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:54:36.885Z [ws] closed before connect conn=406bb673-8698-44e7-861a-74ab52e166e7 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:54:52.900Z [ws] closed before connect conn=7319f49b-9abf-4228-9e28-292bfe8766b5 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:55:08.838Z [ws] closed before connect conn=e9b564f1-c1e0-46ea-a993-a57aa2b7f38e remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:55:24.873Z [ws] closed before connect conn=7e5aa4dc-0a97-4d72-806b-c86e24ed5812 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:55:40.906Z [ws] closed before connect conn=c26cd9c2-ba61-4617-84e5-e2d14560bdcd remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:55:56.866Z [ws] closed before connect conn=4ec22d27-09b0-4c14-b803-ecdf195a6e96 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:55:57.358Z [reload] config change requires gateway restart (gateway.port)
+2026-02-26T10:26:00.143+05:30 Gateway failed to start: another gateway instance is already listening on ws://127.0.0.1:18789
+If the gateway is supervised, stop it with: openclaw gateway stop
+2026-02-26T10:26:00.215+05:30 Port 18789 is already in use.
+2026-02-26T10:26:00.216+05:30 - pid 3910 syphaoffice1: openclaw-gateway (127.0.0.1:18789)
+2026-02-26T10:26:00.217+05:30 - Gateway already running locally. Stop it (openclaw gateway stop) or use a different port.
+2026-02-26T10:26:00.225+05:30 Gateway service appears loaded. Stop it first.
+2026-02-26T10:26:00.226+05:30 Tip: openclaw gateway stop
+2026-02-26T10:26:00.226+05:30 Or: launchctl bootout gui/$UID/ai.openclaw.gateway
+2026-02-26T04:56:12.895Z [ws] closed before connect conn=d44b002d-42a7-4b29-adf4-13ae0f8973df remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:56:28.882Z [ws] closed before connect conn=863094cd-7d55-4025-b746-788e90335a69 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:56:44.930Z [ws] closed before connect conn=3c546479-1751-46ac-bd1f-62b5008a6649 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=4008 reason=connect failed
+2026-02-26T04:57:00.874Z [ws] closed before connect conn=325426f6-f12f-422f-8329-df25832cfdf2 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf
+2026-02-26T04:57:16.868Z [ws] closed before connect conn=6e27e90f-470b-48bc-84b7-daab4923d9b4 remote=127.0.0.1 fwd=n/a origin=http://127.0.0.1:18789 host=127.0.0.1:18789 ua=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 code=1008 reason=invalid connect params: at /client/id: must be equal to constant; at /client/id: must match a schema in anyOf

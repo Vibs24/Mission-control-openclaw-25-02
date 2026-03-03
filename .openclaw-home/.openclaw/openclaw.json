@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.25",
+    "lastTouchedAt": "2026-02-27T10:53:52.963Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-27T10:53:52.904Z",
+    "lastRunVersion": "2026.2.25",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "moonshot:default": {
+        "provider": "moonshot",
+        "mode": "api_key"
+      },
+      "kimi-code:default": {
+        "provider": "kimi-code",
+        "mode": "api_key"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "openai-codex": {
+        "baseUrl": "https://api.openai.com/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gpt-5.2-codex",
+            "name": "GPT-5.2 Codex",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16384
+          },
+          {
+            "id": "gpt-5.3-codex",
+            "name": "GPT-5.3 Codex",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex",
+        "fallbacks": [
+          "openai-codex/gpt-5.2-codex",
+          "openai/gpt-5.2-codex"
+        ]
+      },
+      "models": {
+        "openai-codex/gpt-5.3-codex": {
+          "alias": "GPT-5.3 Codex"
+        },
+        "openai-codex/gpt-5.2-codex": {
+          "alias": "GPT-5.2 Codex"
+        },
+        "openai/gpt-5.2-codex": {}
+      },
+      "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "it-dev",
+        "name": "it-dev",
+        "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+        "agentDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/agents/it-dev/agent"
+      },
+      {
+        "id": "it-support",
+        "name": "it-support",
+        "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+        "agentDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/agents/it-support/agent"
+      },
+      {
+        "id": "it-analytics",
+        "name": "it-analytics",
+        "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+        "agentDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/agents/it-analytics/agent"
+      },
+      {
+        "id": "it-docs",
+        "name": "it-docs",
+        "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+        "agentDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/agents/it-docs/agent"
+      },
+      {
+        "id": "it-ops",
+        "name": "it-ops",
+        "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+        "agentDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/agents/it-ops/agent"
+      },
+      {
+        "id": "reviewer",
+        "name": "reviewer",
+        "workspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/workspace",
+        "agentDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/agents/reviewer/agent"
+      }
+    ]
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "dmPolicy": "allowlist",
+      "botToken": "8694021525:AAGOC6clmt8PsoPmpMFQb4CRSqbAbjM5k1Q",
+      "allowFrom": [
+        "1045407142"
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18889,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "04dbc83fc467875adc699a5cf1c2d9694db4ae4f7e894d97"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "slots": {
+      "memory": "memory-core"
+    },
+    "entries": {
+      "telegram": {
+        "enabled": false
+      },
+      "memory-core": {
+        "enabled": true
+      },
+      "memory-lancedb": {
+        "enabled": false
+      },
+      "openclaw-honcho": {
+        "enabled": false
+      }
+    },
+    "installs": {
+      "openclaw-honcho": {
+        "source": "npm",
+        "spec": "@honcho-ai/openclaw-honcho",
+        "installPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/extensions/openclaw-honcho",
+        "version": "1.0.3",
+        "installedAt": "2026-02-15T15:46:24.366Z"
+      }
+    }
+  }
+}

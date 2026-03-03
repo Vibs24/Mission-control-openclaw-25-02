@@ -1,7 +1,0 @@
-2026-03-02T15:15:29.207911 | CERT-DEBUG-2 | debug | created via /debug
-2026-03-02T15:17:28.207911 | CERT-DEBUG-2 | debug | validation_failed: missing_evidence
-2026-03-02T15:18:28.207911 | CERT-DEBUG-2 | debug | dispatch_retry_blocked: transient_agent_busy
-2026-03-02T15:20:28.207911 | CERT-DEBUG-2 | debug | autonomous_recovery: diagnosed_root_cause
-2026-03-02T15:21:28.207911 | CERT-DEBUG-2 | debug | autonomous_recovery: evidence_regenerated
-2026-03-02T15:22:28.207911 | CERT-DEBUG-2 | debug | autonomous_recovery: rerun_passed
-2026-03-02T15:23:28.207911 | CERT-DEBUG-2 | debug | reviewer_gate_passed

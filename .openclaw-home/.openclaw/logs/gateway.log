@@ -1,0 +1,183 @@
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────────────────╮
+│                                                                    │
+│  Moved channels.telegram.streamMode → channels.telegram.streaming  │
+│  (partial).                                                        │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor ──────────────────────────────────────────────╮
+│                                                       │
+│  Run "openclaw doctor --fix" to apply these changes.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────────────────╮
+│                                                                    │
+│  Moved channels.telegram.streamMode → channels.telegram.streaming  │
+│  (partial).                                                        │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor ──────────────────────────────────────────────╮
+│                                                       │
+│  Run "openclaw doctor --fix" to apply these changes.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────────────────╮
+│                                                                    │
+│  Moved channels.telegram.streamMode → channels.telegram.streaming  │
+│  (partial).                                                        │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor ──────────────────────────────────────────────╮
+│                                                       │
+│  Run "openclaw doctor --fix" to apply these changes.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────────────────╮
+│                                                                    │
+│  Moved channels.telegram.streamMode → channels.telegram.streaming  │
+│  (partial).                                                        │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor ──────────────────────────────────────────────╮
+│                                                       │
+│  Run "openclaw doctor --fix" to apply these changes.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Config ───────────────────────────────────────────────────╮
+│                                                            │
+│  Config invalid; doctor will run with best-effort config.  │
+│                                                            │
+├────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────────────────╮
+│                                                                    │
+│  Moved channels.telegram.streamMode → channels.telegram.streaming  │
+│  (partial).                                                        │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor ──────────────────────────────────────────────╮
+│                                                       │
+│  Run "openclaw doctor --fix" to apply these changes.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+2026-02-26T04:51:48.885Z [canvas] host mounted at http://127.0.0.1:45231/__openclaw__/canvas/ (root /Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/canvas)
+2026-02-26T04:51:48.928Z [heartbeat] started
+2026-02-26T04:51:48.930Z [health-monitor] started (interval: 300s, grace: 60s)
+2026-02-26T04:51:48.931Z [gateway] agent model: openai-codex/gpt-5.3-codex
+2026-02-26T04:51:48.932Z [gateway] listening on ws://127.0.0.1:45231, ws://[::1]:45231 (PID 2570)
+2026-02-26T04:51:48.932Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-26.log
+2026-02-26T04:51:48.953Z [browser/server] Browser control listening on http://127.0.0.1:45233/ (auth=token)
+2026-02-26T04:51:50.893Z [telegram] [default] starting provider (@mission_control_3_bot)
+2026-02-26T04:51:50.912Z [telegram] autoSelectFamily=true (default-node22)
+2026-02-26T04:51:50.915Z [telegram] global undici dispatcher autoSelectFamily=true
+2026-02-26T04:51:50.929Z [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-02-26T04:51:55.414Z [gateway] signal SIGTERM received
+2026-02-26T04:51:55.416Z [gateway] received SIGTERM; shutting down
+2026-02-26T04:51:55.452Z [gmail-watcher] gmail watcher stopped
+2026-02-26T04:52:08.606Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/canvas)
+2026-02-26T04:52:08.650Z [heartbeat] started
+2026-02-26T04:52:08.652Z [health-monitor] started (interval: 300s, grace: 60s)
+2026-02-26T04:52:08.654Z [gateway] agent model: openai-codex/gpt-5.3-codex
+2026-02-26T04:52:08.654Z [gateway] listening on ws://127.0.0.1:18789, ws://[::1]:18789 (PID 2759)
+2026-02-26T04:52:08.655Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-26.log
+2026-02-26T04:52:08.670Z [browser/server] Browser control listening on http://127.0.0.1:18791/ (auth=token)
+2026-02-26T04:52:08.875Z [hooks:loader] Registered hook: boot-md -> gateway:startup
+2026-02-26T04:52:08.877Z [hooks:loader] Registered hook: bootstrap-extra-files -> agent:bootstrap
+2026-02-26T04:52:08.878Z [hooks:loader] Registered hook: command-logger -> command
+2026-02-26T04:52:08.883Z [hooks:loader] Registered hook: session-memory -> command:new, command:reset
+2026-02-26T04:52:08.883Z [hooks] loaded 4 internal hook handlers
+2026-02-26T04:52:08.909Z [gateway] device pairing auto-approved device=4a52967e63dafff0d66e9ce9e4c93eddb3be72d9d958b143d78798e3ac61584a role=operator
+2026-02-26T04:52:10.530Z [telegram] [default] starting provider (@mission_control_3_bot)
+2026-02-26T04:52:10.536Z [telegram] autoSelectFamily=true (default-node22)
+2026-02-26T04:52:10.537Z [telegram] global undici dispatcher autoSelectFamily=true
+2026-02-26T04:52:10.538Z [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-02-26T04:52:11.361Z [ws] ⇄ res ✓ health 2443ms conn=14aae82f…6a29 id=b09e87c7…62f5
+2026-02-26T04:52:11.363Z [ws] ⇄ res ✓ health 734ms conn=fa04bac7…ba6b id=d297b3b3…a222
+2026-02-26T04:52:16.170Z [gateway] device pairing auto-approved device=8319bc289aac4993e64c47b6d365a2746616ac4566b98ee18d4c8b4922d96d3d role=operator
+2026-02-26T04:52:16.193Z [ws] webchat connected conn=33eec888-6358-40e3-9cf4-8f9035df5086 remote=127.0.0.1 client=openclaw-control-ui webchat vdev
+2026-02-26T04:52:16.289Z [ws] ⇄ res ✓ node.list 80ms conn=33eec888…5086 id=0067fb7b…1bce
+2026-02-26T04:52:16.291Z [ws] ⇄ res ✓ device.pair.list 82ms conn=33eec888…5086 id=d846ce1c…15f7
+2026-02-26T04:52:16.296Z [ws] ⇄ res ✓ chat.history 88ms conn=33eec888…5086 id=5253fdd8…83ef
+2026-02-26T04:55:57.353Z [reload] config change detected; evaluating reload (meta.lastTouchedAt, gateway.port)
+2026-02-26T04:55:57.360Z [gateway] signal SIGUSR1 received
+2026-02-26T04:55:57.361Z [gateway] received SIGUSR1; restarting
+2026-02-26T04:55:57.372Z [gmail-watcher] gmail watcher stopped
+2026-02-26T04:55:57.375Z [ws] webchat disconnected code=1012 reason=service restart conn=33eec888-6358-40e3-9cf4-8f9035df5086
+2026-02-26T04:55:57.378Z [gateway] restart mode: full process restart (spawned pid 3909)
+2026-02-26T04:56:00.138Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/canvas)
+2026-02-26T04:56:00.139Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/canvas)
+2026-02-26T04:56:00.200Z [heartbeat] started
+2026-02-26T04:56:00.202Z [health-monitor] started (interval: 300s, grace: 60s)
+2026-02-26T04:56:00.203Z [gateway] agent model: openai-codex/gpt-5.3-codex
+2026-02-26T04:56:00.204Z [gateway] listening on ws://127.0.0.1:18789, ws://[::1]:18789 (PID 3910)
+2026-02-26T04:56:00.205Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-26.log
+2026-02-26T04:56:00.228Z [browser/server] Browser control listening on http://127.0.0.1:18791/ (auth=token)
+2026-02-26T04:56:00.423Z [hooks:loader] Registered hook: boot-md -> gateway:startup
+2026-02-26T04:56:00.425Z [hooks:loader] Registered hook: bootstrap-extra-files -> agent:bootstrap
+2026-02-26T04:56:00.427Z [hooks:loader] Registered hook: command-logger -> command
+2026-02-26T04:56:00.432Z [hooks:loader] Registered hook: session-memory -> command:new, command:reset
+2026-02-26T04:56:00.433Z [hooks] loaded 4 internal hook handlers
+2026-02-26T04:56:00.862Z [ws] webchat connected conn=61085163-077d-4027-88da-377e50127666 remote=127.0.0.1 client=openclaw-control-ui webchat vdev
+2026-02-26T04:56:03.425Z [telegram] [default] starting provider (@mission_control_3_bot)
+2026-02-26T04:56:03.436Z [telegram] autoSelectFamily=true (default-node22)
+2026-02-26T04:56:03.438Z [telegram] global undici dispatcher autoSelectFamily=true
+2026-02-26T04:56:03.440Z [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-02-26T04:56:12.033Z [ws] ⇄ res ✓ node.list 81ms conn=61085163…7666 id=8815d7b3…f805
+2026-02-26T04:56:21.465Z [gateway] signal SIGTERM received
+2026-02-26T04:56:21.476Z [gateway] received SIGTERM; shutting down
+2026-02-26T04:56:21.512Z [gmail-watcher] gmail watcher stopped
+2026-02-26T04:56:21.516Z [ws] webchat disconnected code=1012 reason=service restart conn=61085163-077d-4027-88da-377e50127666
+2026-02-26T04:56:24.088Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/canvas)
+2026-02-26T04:56:24.131Z [heartbeat] started
+2026-02-26T04:56:24.133Z [health-monitor] started (interval: 300s, grace: 60s)
+2026-02-26T04:56:24.134Z [gateway] agent model: openai-codex/gpt-5.3-codex
+2026-02-26T04:56:24.134Z [gateway] listening on ws://127.0.0.1:18789, ws://[::1]:18789 (PID 4128)
+2026-02-26T04:56:24.135Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-26.log
+2026-02-26T04:56:24.150Z [browser/server] Browser control listening on http://127.0.0.1:18791/ (auth=token)
+2026-02-26T04:56:24.347Z [hooks:loader] Registered hook: boot-md -> gateway:startup
+2026-02-26T04:56:24.349Z [hooks:loader] Registered hook: bootstrap-extra-files -> agent:bootstrap
+2026-02-26T04:56:24.350Z [hooks:loader] Registered hook: command-logger -> command
+2026-02-26T04:56:24.355Z [hooks:loader] Registered hook: session-memory -> command:new, command:reset
+2026-02-26T04:56:24.355Z [hooks] loaded 4 internal hook handlers
+2026-02-26T04:56:24.877Z [ws] webchat connected conn=d6c85477-9ed2-458f-97df-deac924fadc3 remote=127.0.0.1 client=openclaw-control-ui webchat vdev
+2026-02-26T04:56:26.158Z [telegram] [default] starting provider (@mission_control_3_bot)
+2026-02-26T04:56:26.175Z [telegram] autoSelectFamily=true (default-node22)
+2026-02-26T04:56:26.197Z [telegram] global undici dispatcher autoSelectFamily=true
+2026-02-26T04:56:26.202Z [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-02-26T04:57:24.600Z [gateway] signal SIGTERM received
+2026-02-26T04:57:24.604Z [gateway] received SIGTERM; shutting down
+2026-02-26T04:57:24.639Z [gmail-watcher] gmail watcher stopped
+2026-02-26T04:57:24.643Z [ws] webchat disconnected code=1012 reason=service restart conn=d6c85477-9ed2-458f-97df-deac924fadc3

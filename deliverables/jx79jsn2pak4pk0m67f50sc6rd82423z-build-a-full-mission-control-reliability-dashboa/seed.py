@@ -19,7 +19,7 @@ with app.app_context():
     for u, p, r in USERS:
         db.execute(
             "INSERT OR IGNORE INTO users (username,password_hash,role) VALUES (?,?,?)",
-            (u, generate_password_hash(p), r),
+            (u, generate_password_hash(p, method="pbkdf2:sha256"), r),
         )
     for t in TASKS:
         db.execute(

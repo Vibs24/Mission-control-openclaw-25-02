@@ -1,0 +1,17 @@
+MISSION CONTROL AUDIT (POST-REMEDIATION SNAPSHOT)
+Generated: 2026-03-01T11:43:26.383Z
+
+TaskID | Status | Review | RunningStep | FilesAtExpectedPath | Verdict
+---------------------------------------------------------------------
+jx75k3fhcax5c3d16x2kfpyqt58230rr | review | in_review | 1:Reviewer | 0 | NOT_COMPLETE
+jx7e3m7npspft33t6xaeqbg01s823msr | review | in_review | 2:Reviewer | 0 | NOT_COMPLETE
+jx7873m30s70ajm6mba1kbyhm9823h07 | review | in_review | 3:Reviewer | 0 | NOT_COMPLETE
+jx7evfyhqcysbsc5afdt2z6gd5822kmz | done | approved | none | 3 | PASS
+jx7fpywh0gxg1qg9bbxgqq69a1823p54 | in_progress | changes_requested | 2:Peter | 0 | NOT_COMPLETE
+jx795e3t9x2bg515zv0t5ga64d822act | waiting | changes_requested | none | 0 | NOT_COMPLETE
+jx7feejzkdyndwcqv1xn8bx5k1823vrq | review | in_review | 2:Reviewer | 0 | NOT_COMPLETE
+jx73935evbhabhz08kgdyfjdr58226rk | review | in_review | 1:Reviewer | 0 | NOT_COMPLETE
+
+Interpretation:
+- PASS means review-approved + artifacts physically present.
+- NOT_COMPLETE means missing artifacts and/or task reopened/in review/waiting.

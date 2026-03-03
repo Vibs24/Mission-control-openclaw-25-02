@@ -12,6 +12,12 @@ DATABASE = os.path.join(BASE_DIR, "reliability.db")
 
 app = Flask(__name__)
 app.config.update(SECRET_KEY="dev-secret-change-me", DATABASE=DATABASE)
+PASSWORD_HASH_METHOD = "pbkdf2:sha256"
+DEFAULT_USERS = [
+    ("admin", "admin123", "admin"),
+    ("reviewer", "review123", "reviewer"),
+    ("viewer", "viewer123", "viewer"),
+]
 
 
 def get_db():
@@ -52,6 +58,25 @@ def init_db():
         );
         """
     )
+    for username, password, role in DEFAULT_USERS:
+        row = db.execute(
+            "SELECT id, password_hash, role FROM users WHERE username=?",
+            (username,),
+        ).fetchone()
+        new_hash = generate_password_hash(password, method=PASSWORD_HASH_METHOD)
+        if row is None:
+            db.execute(
+                "INSERT INTO users (username, password_hash, role) VALUES (?, ?, ?)",
+                (username, new_hash, role),
+            )
+            continue
+        needs_hash_migration = (row["password_hash"] or "").startswith("scrypt:")
+        role_changed = row["role"] != role
+        if needs_hash_migration or role_changed:
+            db.execute(
+                "UPDATE users SET password_hash=?, role=? WHERE id=?",
+                (new_hash, role, row["id"]),
+            )
     db.commit()
 
 
@@ -156,7 +181,14 @@ def login():
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
         user = get_db().execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
-        if user and check_password_hash(user["password_hash"], password):
+        is_valid = False
+        if user:
+            try:
+                is_valid = check_password_hash(user["password_hash"], password)
+            except AttributeError:
+                # Handles legacy scrypt hashes on Python builds without hashlib.scrypt.
+                is_valid = False
+        if is_valid:
             session["user_id"] = user["id"]
             session["username"] = user["username"]
             session["role"] = user["role"]

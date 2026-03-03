@@ -1,9 +1,0 @@
-criterion,status,notes
-"4 parallel workflows (/task,/debug,/review,/incident)",PASS,Created CERT task set across workflows
-one-active-task-per-agent enforcement,PASS,Unique agent assignment verified
-strict proof gate + reviewer approval,PASS,All tasks show reviewer_gate_passed
-controlled failure + autonomous recovery,PASS,missing_evidence + transient_agent_busy resolved
-Telegram 15-minute digest blocked/stuck reasons,PASS,Digest file includes exact reasons
-task timeline + per-agent logs,PASS,CSV + per-agent logs generated
-auto-managed artifact folder + artifact validation,PASS,All outputs in canonical artifact folder
-orchestrator restart + durable recovery,PASS,Before/after state files confirm continuity

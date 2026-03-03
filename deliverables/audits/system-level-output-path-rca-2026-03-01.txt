@@ -1,0 +1,27 @@
+Mission Control RCA - Output Path/Proof Gate Recurrence
+Date: 2026-03-01
+
+Observed symptom:
+- Tasks repeatedly showed "Missing fields: Output Path or Stored Location" and/or moved to blocked state after specialist updates.
+
+Verified root cause:
+1) Assignee worklogs often contained path strings, but referenced files were missing or directories were empty at validation time.
+2) Recovery branch could classify failures as generic no_verifiable_file_evidence before prioritizing labeled output-path validation, causing noisy/less-actionable blocks.
+3) Evidence parser accepted broad slash tokens from free text in some cases, creating noisy path diagnostics.
+
+Permanent fixes implemented in orchestrator runtime:
+- Added explicit output-path failure type output_path_empty (path exists but no verifiable files).
+- Added unified invalid path classifier for output_path_not_found + output_path_empty.
+- Reordered/guarded recovery checks so labeled output-path evidence is handled before generic file-evidence failure when relevant.
+- Fixed repeated invalid-path fingerprinting to use reportedOutputPaths (not verified outputPaths), enabling consistent repeated-path suppression/escalation.
+- Tightened structured evidence path extraction to labeled path lines only (Output Path / Stored Location / Path / File / Artifact), reducing noisy tokens.
+- Included project-local evidence mirroring in recovery verification before declaring no verifiable file evidence.
+
+Operator impact:
+- UI and comments now surface precise reason codes: missing path, path not found, or path exists but empty.
+- Fewer false/ambiguous block reasons.
+- Better auto-recovery decisions and less loop churn on malformed evidence.
+
+Residual requirement for assignees:
+- Final proof is accepted only when real files exist at the claimed Output Path/Stored Location.
+- Placeholder or empty directories do not pass.

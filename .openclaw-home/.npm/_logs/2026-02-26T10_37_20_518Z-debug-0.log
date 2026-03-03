@@ -1,0 +1,18 @@
+0 verbose cli /opt/homebrew/Cellar/node/25.5.0/bin/node /opt/homebrew/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.8.0
+2 info using node@v25.5.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/.npmrc
+5 silly config load:file:/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm exec convex run tasks:list {}
+8 verbose argv "exec" "--" "convex" "run" "tasks:list" "{}"
+9 verbose logfile logs-max:10 dir:/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.npm/_logs/2026-02-26T10_37_20_518Z-
+10 verbose logfile /Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.npm/_logs/2026-02-26T10_37_20_518Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose cwd /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control
+13 verbose os Darwin 24.6.0
+14 verbose node v25.5.0
+15 verbose npm  v11.8.0
+16 verbose exit 127
+17 verbose code 127

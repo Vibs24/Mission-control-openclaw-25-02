@@ -5,13 +5,14 @@ import os
 import sqlite3
 from functools import wraps
 from flask import Flask, Response, flash, g, redirect, render_template, request, session, url_for
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DB_PATH = os.path.join(BASE_DIR, "assets.db")
 
 app = Flask(__name__)
 app.config.update(SECRET_KEY="asset-register-secret", DATABASE=DB_PATH, PER_PAGE=10)
+PASSWORD_HASH_METHOD = "pbkdf2:sha256"
 
 
 def get_db():
@@ -50,6 +51,19 @@ def init_db():
         );
         """
     )
+    # Ensure seeded admin user exists with a hash method compatible with Python 3.9.
+    admin = db.execute("SELECT id, password_hash FROM users WHERE username=?", ("admin",)).fetchone()
+    admin_hash = generate_password_hash("admin123", method=PASSWORD_HASH_METHOD)
+    if admin is None:
+        db.execute(
+            "INSERT INTO users (username, password_hash) VALUES (?, ?)",
+            ("admin", admin_hash),
+        )
+    elif (admin["password_hash"] or "").startswith("scrypt:"):
+        db.execute(
+            "UPDATE users SET password_hash=? WHERE id=?",
+            (admin_hash, admin["id"]),
+        )
     db.commit()
 
 
@@ -73,7 +87,13 @@ def login():
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
         user = get_db().execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
-        if user and check_password_hash(user["password_hash"], password):
+        is_valid = False
+        if user:
+            try:
+                is_valid = check_password_hash(user["password_hash"], password)
+            except AttributeError:
+                is_valid = False
+        if is_valid:
             session.clear()
             session["user_id"] = user["id"]
             session["username"] = user["username"]

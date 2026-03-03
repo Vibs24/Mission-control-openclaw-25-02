@@ -1,0 +1,32 @@
+Blocked Tasks Snapshot
+Generated At: 2026-03-01T13:46:14.378Z
+
+Task: jx7e962r379eypv58t47n1ys0981wtyg
+Title: build fully functional admin dashboard using python
+Assignee: Natasha
+Reason: no_verifiable_file_evidence: reported files not found on disk (/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e962r379eypv58t47n1ys0981wtyg-python-admin-dashboard)
+
+Task: jx75k3fhcax5c3d16x2kfpyqt58230rr
+Title: Build a fully functional Customer Support Ticket Dashboard using Flask, SQLite, 
+Assignee: Dev
+Reason: no_verifiable_file_evidence: reported files not found on disk (/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/ticket-dashboard/app.py, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/ticket-dashboard/requirements.txt, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/ticket-dashboard/README.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/ticket-dashboard/seed.py)
+
+Task: jx7e3m7npspft33t6xaeqbg01s823msr
+Title: Review Mission Control task orchestration quality in /Users/syphaoffice1/Mission
+Assignee: Bruce
+Reason: no_verifiable_file_evidence: reported files not found on disk (/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/orchestrator-review-pack/review-findings.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/orchestrator-review-pack/severity-matrix.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/orchestrator-review-pack/fixes-list.md)
+
+Task: jx795e3t9x2bg515zv0t5ga64d822act
+Title: Analyze Mission Control last-24h operations: throughput, median cycle time, bloc
+Assignee: Peter
+Reason: agent_unavailable: target specialist is busy on another running task
+
+Task: jx7feejzkdyndwcqv1xn8bx5k1823vrq
+Title: Create release readiness pack for Mission Control + bot + OpenClaw profile sync:
+Assignee: Dev
+Reason: no_verifiable_file_evidence: reported files not found on disk (/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/release-readiness-pack-v2/prechecks.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/release-readiness-pack-v2/rollout-steps.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/release-readiness-pack-v2/health-checks.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/release-readiness-pack-v2/rollback-plan.md)
+
+Task: jx73935evbhabhz08kgdyfjdr58226rk
+Title: Execute full QA regression on Mission Control workflows: intake, assignment, in_
+Assignee: Dev
+Reason: no_verifiable_file_evidence: reported files not found on disk (/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-full-regression-v2/pass-fail-matrix.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-full-regression-v2/defects-log.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-full-regression-v2/retest-results.md, /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-full-regression-v2/final-signoff.md)
