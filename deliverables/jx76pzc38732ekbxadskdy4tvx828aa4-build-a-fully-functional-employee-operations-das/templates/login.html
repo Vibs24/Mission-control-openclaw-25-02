@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% block content %}
+<div class="card" style="max-width:420px;margin:8vh auto">
+<h2>Secure Login</h2>
+<form method="post">
+  <input name="username" placeholder="Username" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+</form>
+<p class="muted">Default after seeding: admin / admin123</p>
+</div>
+{% endblock %}

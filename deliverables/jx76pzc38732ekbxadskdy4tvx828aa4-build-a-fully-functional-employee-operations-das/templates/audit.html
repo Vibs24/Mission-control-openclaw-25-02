@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block content %}
+<h2>Audit Log Timeline</h2>
+<div class="card"><ul class="timeline">{% for r in rows %}<li><strong>{{r.actor}}</strong> — {{r.action}} <span class="muted">{{r.created_at}}</span></li>{% endfor %}</ul></div>
+{% endblock %}

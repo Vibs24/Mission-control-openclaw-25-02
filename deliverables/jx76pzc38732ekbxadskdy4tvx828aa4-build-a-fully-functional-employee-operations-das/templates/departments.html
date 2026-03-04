@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block content %}
+<h2>Departments</h2>
+<div class="card"><form class="inline" method="post"><input name="name" placeholder="Department name" required><input name="description" placeholder="Description"><button>Create</button></form></div>
+<div class="card"><table><tr><th>Name</th><th>Description</th><th>Employees</th><th></th></tr>{% for d in departments %}<tr><td>{{ d.name }}</td><td>{{ d.description }}</td><td>{{ d.employees|length }}</td><td><form method="post" action="{{ url_for('delete_department', dep_id=d.id) }}"><button class="danger">Delete</button></form></td></tr>{% endfor %}</table></div>
+{% endblock %}

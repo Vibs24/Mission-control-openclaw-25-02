@@ -1,0 +1,26 @@
+{% extends 'base.html' %}{% block content %}
+<h2>Employees</h2>
+<div class="card">
+<form class="inline" method="get">
+  <input name="search" value="{{ search }}" placeholder="Search name/email">
+  <select name="status"><option value="">All status</option><option {% if status=='active' %}selected{% endif %}>active</option><option {% if status=='inactive' %}selected{% endif %}>inactive</option></select>
+  <button>Filter</button><a href="{{ url_for('export_csv', entity='employees') }}">Export CSV</a>
+</form>
+</div>
+<div class="card">
+<h3>Add Employee</h3>
+<form class="inline" method="post">
+  <input name="name" placeholder="Name" required>
+  <input name="email" placeholder="Email" required>
+  <input name="role" placeholder="Role" required>
+  <select name="status"><option>active</option><option>inactive</option></select>
+  <select name="department_id"><option value="">No dept</option>{% for d in departments %}<option value="{{ d.id }}">{{ d.name }}</option>{% endfor %}</select>
+  <button type="submit">Create</button>
+</form>
+</div>
+<div class="card"><table><tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Department</th><th>Action</th></tr>
+{% for e in data.items %}
+<tr><td>{{ e.name }}</td><td>{{ e.email }}</td><td>{{ e.role }}</td><td><span class="badge {{ e.status }}">{{ e.status }}</span></td><td>{{ e.department.name if e.department else '-' }}</td><td><form method="post" action="{{ url_for('delete_employee', emp_id=e.id) }}"><button class="danger">Delete</button></form></td></tr>
+{% endfor %}</table>
+<div class="pagination">{% if data.has_prev %}<a href="?page={{ data.prev_num }}&search={{search}}&status={{status}}">Prev</a>{% endif %}{% if data.has_next %}<a href="?page={{ data.next_num }}&search={{search}}&status={{status}}">Next</a>{% endif %}</div></div>
+{% endblock %}
