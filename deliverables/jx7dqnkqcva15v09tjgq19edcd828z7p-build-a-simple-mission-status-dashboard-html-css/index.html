@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Status Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mission Status Dashboard</h1>
+      <p>Live overview of key mission metrics and task health.</p>
+    </header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="table-card">
+      <h2>Mission Status Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Owner</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Progress</th>
+            <th>ETA</th>
+          </tr>
+        </thead>
+        <tbody id="status-body"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="sample-data.js"></script>
+  <script>
+    const kpiContainer = document.getElementById('kpis');
+    missionData.kpis.forEach(k => {
+      const card = document.createElement('div');
+      card.className = 'kpi-card';
+      card.innerHTML = `<h3>${k.label}</h3><p>${k.value}</p>`;
+      kpiContainer.appendChild(card);
+    });
+
+    const tbody = document.getElementById('status-body');
+    missionData.rows.forEach(r => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${r.mission}</td>
+        <td>${r.owner}</td>
+        <td>${r.priority}</td>
+        <td><span class="badge ${r.statusClass}">${r.status}</span></td>
+        <td>${r.progress}%</td>
+        <td>${r.eta}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  </script>
+</body>
+</html>
