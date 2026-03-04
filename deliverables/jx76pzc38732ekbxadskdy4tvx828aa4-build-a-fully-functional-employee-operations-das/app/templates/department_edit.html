@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card narrow">
+  <h3>Edit Department</h3>
+  <form method="post">
+    <input name="name" value="{{department.name}}" required>
+    <input name="description" value="{{department.description}}" placeholder="Description">
+    <div class="inline">
+      <button>Save Changes</button>
+      <a class="btn" href="{{url_for('main.departments')}}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

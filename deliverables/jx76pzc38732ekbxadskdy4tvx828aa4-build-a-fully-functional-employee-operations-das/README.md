@@ -6,10 +6,10 @@ Production-style Employee Operations dashboard with secure login/logout, CRUD mo
 
 - Authentication: login/logout with password hashing (`Flask-Login`, `Werkzeug`)
 - Dashboard KPIs: Employees, Departments, Open Tasks, Pending Leaves
-- CRUD-style operations:
-  - Departments: create/list/delete (with non-empty guard)
-  - Employees: create/list/delete + search/filter + pagination
-  - Tasks: create/list/delete + search/filter + pagination
+- CRUD operations:
+  - Departments: create/read/update/delete (with non-empty guard)
+  - Employees: create/read/update/delete + search/filter + pagination
+  - Tasks: create/read/update/delete + search/filter + pagination
   - Attendance: add/list + date filter + pagination
   - Leave tracking: add/list + status filter + pagination
 - Status badges and responsive design
@@ -26,7 +26,7 @@ Production-style Employee Operations dashboard with secure login/logout, CRUD mo
 - SQLite
 - Flask-SQLAlchemy
 - Flask-Login
-- Vanilla HTML/CSS
+- Vanilla HTML/CSS/JS
 
 ## Project Structure
 
@@ -48,9 +48,10 @@ Production-style Employee Operations dashboard with secure login/logout, CRUD mo
 ## Setup
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv /tmp/empdash-venv
+source /tmp/empdash-venv/bin/activate
 pip install -r requirements.txt
+export SECRET_KEY='replace-with-strong-secret'
 python seed_data.py
 python run.py
 ```
@@ -64,7 +65,7 @@ Default credentials (seeded):
 ## Testing
 
 ```bash
-source .venv/bin/activate
+source /tmp/empdash-venv/bin/activate
 pytest -q
 ```
 

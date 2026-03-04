@@ -13,6 +13,10 @@ form{display:grid;gap:8px}
 input,select,button,.btn{padding:8px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:14px}
 button,.btn{background:#2563eb;color:#fff;border:none;cursor:pointer;text-decoration:none}
 button.danger{background:#dc2626}
+.actions-cell{display:flex;gap:8px;align-items:center}
+.inline-block{display:inline}
+.actions-row{display:flex;gap:8px;align-items:center}
+.form-card{max-width:560px}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th,td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:left}
 .badge{padding:3px 8px;border-radius:999px;font-size:12px;color:#fff}

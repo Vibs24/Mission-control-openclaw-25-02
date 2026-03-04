@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -11,8 +12,8 @@ login_manager.login_view = "main.login"
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        SECRET_KEY="change-me-in-production",
-        SQLALCHEMY_DATABASE_URI="sqlite:///employee_ops.db",
+        SECRET_KEY=os.getenv("SECRET_KEY", "change-me-in-production"),
+        SQLALCHEMY_DATABASE_URI=os.getenv("DATABASE_URL", "sqlite:///employee_ops.db"),
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
     )
 

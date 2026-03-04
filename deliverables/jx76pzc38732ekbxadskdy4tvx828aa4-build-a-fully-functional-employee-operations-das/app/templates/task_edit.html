@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card narrow">
+  <h3>Edit Task</h3>
+  <form method="post">
+    <input name="title" value="{{task.title}}" required>
+    <input name="description" value="{{task.description or ''}}" placeholder="Description">
+    <select name="priority">
+      {% for p in ['Low','Medium','High'] %}
+      <option value="{{p}}" {% if task.priority==p %}selected{% endif %}>{{p}}</option>
+      {% endfor %}
+    </select>
+    <select name="status">
+      {% for s in ['Open','In Progress','Done'] %}
+      <option value="{{s}}" {% if task.status==s %}selected{% endif %}>{{s}}</option>
+      {% endfor %}
+    </select>
+    <input name="due_date" type="date" value="{{task.due_date or ''}}">
+    <select name="employee_id" required>
+      {% for e in employees %}
+      <option value="{{e.id}}" {% if task.employee_id==e.id %}selected{% endif %}>{{e.full_name}}</option>
+      {% endfor %}
+    </select>
+    <div class="inline">
+      <button>Save Changes</button>
+      <a class="btn" href="{{url_for('main.tasks')}}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

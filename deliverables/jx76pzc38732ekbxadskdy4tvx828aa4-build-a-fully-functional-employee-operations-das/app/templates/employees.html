@@ -33,10 +33,22 @@
 </div>
 <div class="card">
   <table>
-    <thead><tr><th>Code</th><th>Name</th><th>Department</th><th>Role</th><th>Status</th><th></th></tr></thead>
+    <thead><tr><th>Code</th><th>Name</th><th>Department</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead>
     <tbody>
       {% for e in pagination.items %}
-      <tr><td>{{e.employee_code}}</td><td>{{e.full_name}}</td><td>{{e.department.name}}</td><td>{{e.role}}</td><td><span class="badge {{e.status|lower|replace(' ','-')}}">{{e.status}}</span></td><td><form method="post" action="{{url_for('main.delete_employee', eid=e.id)}}"><button class="danger">Delete</button></form></td></tr>
+      <tr>
+        <td>{{e.employee_code}}</td>
+        <td>{{e.full_name}}</td>
+        <td>{{e.department.name}}</td>
+        <td>{{e.role}}</td>
+        <td><span class="badge {{e.status|lower|replace(' ','-')}}">{{e.status}}</span></td>
+        <td class="actions-cell">
+          <a class="btn" href="{{url_for('main.edit_employee', eid=e.id)}}">Edit</a>
+          <form method="post" action="{{url_for('main.delete_employee', eid=e.id)}}" class="inline-block">
+            <button class="danger js-confirm-delete">Delete</button>
+          </form>
+        </td>
+      </tr>
       {% endfor %}
     </tbody>
   </table>

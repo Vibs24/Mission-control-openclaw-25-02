@@ -1,8 +1,10 @@
 import csv
 from datetime import datetime
 from io import StringIO
-from flask import Blueprint, flash, redirect, render_template, request, url_for, Response
+
+from flask import Blueprint, Response, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
+
 from . import db
 from .models import AuditLog, Attendance, Department, Employee, Leave, Task, User
 
@@ -111,6 +113,26 @@ def employees():
     )
 
 
+@bp.route("/employees/<int:eid>/edit", methods=["GET", "POST"])
+@login_required
+def edit_employee(eid):
+    e = Employee.query.get_or_404(eid)
+    if request.method == "POST":
+        e.employee_code = request.form["employee_code"]
+        e.full_name = request.form["full_name"]
+        e.email = request.form["email"]
+        e.role = request.form["role"]
+        e.status = request.form["status"]
+        e.joining_date = datetime.strptime(request.form["joining_date"], "%Y-%m-%d").date()
+        e.department_id = int(request.form["department_id"])
+        log_event("employee", e.id, "update", f"Employee updated: {e.full_name}")
+        db.session.commit()
+        flash("Employee updated", "success")
+        return redirect(url_for("main.employees"))
+
+    return render_template("employee_edit.html", employee=e, departments=Department.query.order_by(Department.name).all())
+
+
 @bp.route("/employees/<int:eid>/delete", methods=["POST"])
 @login_required
 def delete_employee(eid):
@@ -141,6 +163,20 @@ def departments():
         query = query.filter(Department.name.contains(q))
     pagination = paginate(query.order_by(Department.name.asc()))
     return render_template("departments.html", pagination=pagination, q=q)
+
+
+@bp.route("/departments/<int:did>/edit", methods=["GET", "POST"])
+@login_required
+def edit_department(did):
+    d = Department.query.get_or_404(did)
+    if request.method == "POST":
+        d.name = request.form["name"]
+        d.description = request.form.get("description")
+        log_event("department", d.id, "update", f"Department updated: {d.name}")
+        db.session.commit()
+        flash("Department updated", "success")
+        return redirect(url_for("main.departments"))
+    return render_template("department_edit.html", department=d)
 
 
 @bp.route("/departments/<int:did>/delete", methods=["POST"])
@@ -189,6 +225,25 @@ def tasks():
     return render_template("tasks.html", pagination=pagination, q=q, selected_status=status, employees=Employee.query.all())
 
 
+@bp.route("/tasks/<int:tid>/edit", methods=["GET", "POST"])
+@login_required
+def edit_task(tid):
+    t = Task.query.get_or_404(tid)
+    if request.method == "POST":
+        due_date = request.form.get("due_date")
+        t.title = request.form["title"]
+        t.description = request.form.get("description")
+        t.priority = request.form["priority"]
+        t.status = request.form["status"]
+        t.employee_id = int(request.form["employee_id"])
+        t.due_date = datetime.strptime(due_date, "%Y-%m-%d").date() if due_date else None
+        log_event("task", t.id, "update", f"Task updated: {t.title}")
+        db.session.commit()
+        flash("Task updated", "success")
+        return redirect(url_for("main.tasks"))
+    return render_template("task_edit.html", task=t, employees=Employee.query.order_by(Employee.full_name).all())
+
+
 @bp.route("/tasks/<int:tid>/delete", methods=["POST"])
 @login_required
 def delete_task(tid):
@@ -197,6 +252,7 @@ def delete_task(tid):
     db.session.delete(t)
     log_event("task", tid, "delete", f"Task deleted: {title}")
     db.session.commit()
+    flash("Task deleted", "warning")
     return redirect(url_for("main.tasks"))
 
 
@@ -215,6 +271,7 @@ def attendance():
         db.session.flush()
         log_event("attendance", rec.id, "create", f"Attendance marked for {rec.employee.full_name}")
         db.session.commit()
+        flash("Attendance added", "success")
         return redirect(url_for("main.attendance"))
 
     day_filter = request.args.get("day")
@@ -241,6 +298,7 @@ def leaves():
         db.session.flush()
         log_event("leave", l.id, "create", f"Leave request for {l.employee.full_name}")
         db.session.commit()
+        flash("Leave request added", "success")
         return redirect(url_for("main.leaves"))
 
     status = request.args.get("status", "")

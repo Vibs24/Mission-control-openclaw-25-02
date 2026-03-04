@@ -1,0 +1,17 @@
+/
+/attendance
+/dashboard
+/departments
+/departments/<int:did>/delete
+/departments/<int:did>/edit
+/employees
+/employees/<int:eid>/delete
+/employees/<int:eid>/edit
+/export/<string:entity>.csv
+/leaves
+/login
+/logout
+/static/<path:filename>
+/tasks
+/tasks/<int:tid>/delete
+/tasks/<int:tid>/edit

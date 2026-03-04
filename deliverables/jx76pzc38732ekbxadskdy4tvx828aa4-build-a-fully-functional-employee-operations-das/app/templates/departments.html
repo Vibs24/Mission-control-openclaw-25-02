@@ -3,9 +3,37 @@
 <div class="grid2">
   <div class="card">
     <h3>Add Department</h3>
-    <form method="post"><input name="name" placeholder="Department name" required><input name="description" placeholder="Description"><button>Add</button></form>
+    <form method="post">
+      <input name="name" placeholder="Department name" required>
+      <input name="description" placeholder="Description">
+      <button>Add</button>
+    </form>
   </div>
-  <div class="card"><form method="get" class="inline"><input name="q" value="{{q}}" placeholder="Search department"><button>Search</button></form></div>
+  <div class="card">
+    <form method="get" class="inline">
+      <input name="q" value="{{q}}" placeholder="Search department">
+      <button>Search</button>
+    </form>
+  </div>
 </div>
-<div class="card"><table><thead><tr><th>Name</th><th>Description</th><th></th></tr></thead><tbody>{% for d in pagination.items %}<tr><td>{{d.name}}</td><td>{{d.description}}</td><td><form method="post" action="{{url_for('main.delete_department', did=d.id)}}"><button class="danger">Delete</button></form></td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
+<div class="card">
+  <table>
+    <thead><tr><th>Name</th><th>Description</th><th>Actions</th></tr></thead>
+    <tbody>
+      {% for d in pagination.items %}
+      <tr>
+        <td>{{d.name}}</td>
+        <td>{{d.description}}</td>
+        <td class="actions-cell">
+          <a class="btn" href="{{url_for('main.edit_department', did=d.id)}}">Edit</a>
+          <form method="post" action="{{url_for('main.delete_department', did=d.id)}}" class="inline-block">
+            <button class="danger js-confirm-delete">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% include '_pagination.html' %}
+</div>
 {% endblock %}
