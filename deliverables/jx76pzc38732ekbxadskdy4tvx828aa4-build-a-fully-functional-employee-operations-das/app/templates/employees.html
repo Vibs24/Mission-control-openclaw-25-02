@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grid2">
+  <div class="card">
+    <h3>Add Employee</h3>
+    <form method="post">
+      <input name="employee_code" placeholder="EMP001" required>
+      <input name="full_name" placeholder="Full name" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="role" placeholder="Role" required>
+      <input name="joining_date" type="date" required>
+      <select name="status"><option>Active</option><option>On Leave</option><option>Inactive</option></select>
+      <select name="department_id" required>{% for d in departments %}<option value="{{d.id}}">{{d.name}}</option>{% endfor %}</select>
+      <button>Add</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Search & Filter</h3>
+    <form method="get" class="inline">
+      <input name="q" value="{{q}}" placeholder="Name/email/code">
+      <select name="status">
+        <option value="">All Status</option>
+        {% for s in ['Active','On Leave','Inactive'] %}<option value="{{s}}" {% if selected_status==s %}selected{% endif %}>{{s}}</option>{% endfor %}
+      </select>
+      <select name="department_id">
+        <option value="">All Depts</option>
+        {% for d in departments %}<option value="{{d.id}}" {% if selected_dept==d.id %}selected{% endif %}>{{d.name}}</option>{% endfor %}
+      </select>
+      <button>Apply</button>
+      <a class="btn" href="{{url_for('main.export_csv', entity='employees')}}">Export CSV</a>
+    </form>
+  </div>
+</div>
+<div class="card">
+  <table>
+    <thead><tr><th>Code</th><th>Name</th><th>Department</th><th>Role</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+      {% for e in pagination.items %}
+      <tr><td>{{e.employee_code}}</td><td>{{e.full_name}}</td><td>{{e.department.name}}</td><td>{{e.role}}</td><td><span class="badge {{e.status|lower|replace(' ','-')}}">{{e.status}}</span></td><td><form method="post" action="{{url_for('main.delete_employee', eid=e.id)}}"><button class="danger">Delete</button></form></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% include '_pagination.html' %}
+</div>
+{% endblock %}

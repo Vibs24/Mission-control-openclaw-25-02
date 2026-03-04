@@ -1,5 +1,0 @@
-{% extends 'base.html' %}{% block content %}
-<h2>Leave Tracking</h2>
-<div class="card"><form class="inline" method="post"><select name="employee_id">{% for e in employees %}<option value="{{e.id}}">{{e.name}}</option>{% endfor %}</select><input type="date" name="start_date" required><input type="date" name="end_date" required><select name="status"><option>pending</option><option>approved</option><option>rejected</option></select><input name="reason" placeholder="Reason"><button>Create</button></form></div>
-<div class="card"><table><tr><th>Employee</th><th>From</th><th>To</th><th>Status</th><th>Reason</th></tr>{% for r in rows %}<tr><td>{{r.employee.name}}</td><td>{{r.start_date}}</td><td>{{r.end_date}}</td><td><span class="badge {{r.status}}">{{r.status}}</span></td><td>{{r.reason}}</td></tr>{% endfor %}</table></div>
-{% endblock %}

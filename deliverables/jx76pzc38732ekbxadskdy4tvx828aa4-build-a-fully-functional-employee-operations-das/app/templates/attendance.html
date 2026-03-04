@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grid2">
+<div class="card"><h3>Mark Attendance</h3><form method="post"><select name="employee_id" required>{% for e in employees %}<option value="{{e.id}}">{{e.full_name}}</option>{% endfor %}</select><input name="day" type="date" required><select name="status"><option>Present</option><option>Absent</option><option>WFH</option></select><input name="check_in" placeholder="09:00"><input name="check_out" placeholder="18:00"><button>Save</button></form></div>
+<div class="card"><form method="get" class="inline"><input type="date" name="day" value="{{day_filter or ''}}"><button>Filter</button></form></div>
+</div>
+<div class="card"><table><thead><tr><th>Employee</th><th>Day</th><th>Status</th><th>Check-in</th><th>Check-out</th></tr></thead><tbody>{% for a in pagination.items %}<tr><td>{{a.employee.full_name}}</td><td>{{a.day}}</td><td><span class="badge {{a.status|lower}}">{{a.status}}</span></td><td>{{a.check_in or '-'}}</td><td>{{a.check_out or '-'}}</td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
+{% endblock %}

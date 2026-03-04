@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grid2">
+<div class="card"><h3>Add Task</h3><form method="post"><input name="title" placeholder="Title" required><input name="description" placeholder="Description"><select name="priority"><option>Low</option><option selected>Medium</option><option>High</option></select><select name="status"><option>Open</option><option>In Progress</option><option>Done</option></select><input name="due_date" type="date"><select name="employee_id" required>{% for e in employees %}<option value="{{e.id}}">{{e.full_name}}</option>{% endfor %}</select><button>Add</button></form></div>
+<div class="card"><form method="get" class="inline"><input name="q" value="{{q}}" placeholder="Search task"><select name="status"><option value="">All</option>{% for s in ['Open','In Progress','Done'] %}<option value="{{s}}" {% if selected_status==s %}selected{% endif %}>{{s}}</option>{% endfor %}</select><button>Apply</button><a class="btn" href="{{url_for('main.export_csv', entity='tasks')}}">Export CSV</a></form></div>
+</div>
+<div class="card"><table><thead><tr><th>Title</th><th>Employee</th><th>Priority</th><th>Status</th><th>Due</th><th></th></tr></thead><tbody>{% for t in pagination.items %}<tr><td>{{t.title}}</td><td>{{t.employee.full_name}}</td><td>{{t.priority}}</td><td><span class="badge {{t.status|lower|replace(' ','-')}}">{{t.status}}</span></td><td>{{t.due_date or '-'}}</td><td><form method="post" action="{{url_for('main.delete_task', tid=t.id)}}"><button class="danger">Delete</button></form></td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
+{% endblock %}

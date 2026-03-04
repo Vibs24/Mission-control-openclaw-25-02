@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="grid2">
+<div class="card"><h3>Apply/Record Leave</h3><form method="post"><select name="employee_id" required>{% for e in employees %}<option value="{{e.id}}">{{e.full_name}}</option>{% endfor %}</select><input name="leave_type" placeholder="Sick/Casual" required><input type="date" name="start_date" required><input type="date" name="end_date" required><select name="status"><option>Pending</option><option>Approved</option><option>Rejected</option></select><input name="reason" placeholder="Reason"><button>Save</button></form></div>
+<div class="card"><form method="get" class="inline"><select name="status"><option value="">All Status</option>{% for s in ['Pending','Approved','Rejected'] %}<option value="{{s}}" {% if selected_status==s %}selected{% endif %}>{{s}}</option>{% endfor %}</select><button>Filter</button></form></div>
+</div>
+<div class="card"><table><thead><tr><th>Employee</th><th>Type</th><th>Start</th><th>End</th><th>Status</th><th>Reason</th></tr></thead><tbody>{% for l in pagination.items %}<tr><td>{{l.employee.full_name}}</td><td>{{l.leave_type}}</td><td>{{l.start_date}}</td><td>{{l.end_date}}</td><td><span class="badge {{l.status|lower}}">{{l.status}}</span></td><td>{{l.reason}}</td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
+{% endblock %}

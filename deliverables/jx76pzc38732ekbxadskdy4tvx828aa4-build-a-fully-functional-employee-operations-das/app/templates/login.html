@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card narrow">
+  <h3>Login</h3>
+  <form method="post">
+    <label>Username <input name="username" required></label>
+    <label>Password <input name="password" type="password" required></label>
+    <button type="submit">Sign In</button>
+  </form>
+  <p class="hint">Default seeded login: admin / admin123</p>
+</div>
+{% endblock %}

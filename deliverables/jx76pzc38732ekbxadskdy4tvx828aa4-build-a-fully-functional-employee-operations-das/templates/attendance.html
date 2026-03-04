@@ -1,5 +1,0 @@
-{% extends 'base.html' %}{% block content %}
-<h2>Attendance</h2>
-<div class="card"><form class="inline" method="post"><input type="date" name="day" required><select name="employee_id">{% for e in employees %}<option value="{{e.id}}">{{e.name}}</option>{% endfor %}</select><select name="status"><option>present</option><option>absent</option></select><button>Add</button><a href="{{ url_for('export_csv', entity='attendance') }}">Export CSV</a></form></div>
-<div class="card"><table><tr><th>Date</th><th>Employee</th><th>Status</th></tr>{% for r in rows %}<tr><td>{{r.day}}</td><td>{{r.employee.name}}</td><td><span class="badge {{r.status}}">{{r.status}}</span></td></tr>{% endfor %}</table></div>
-{% endblock %}

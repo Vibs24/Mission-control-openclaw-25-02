@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="kpis">
+  <div class="kpi"><h4>Employees</h4><p>{{kpis.employees}}</p></div>
+  <div class="kpi"><h4>Departments</h4><p>{{kpis.departments}}</p></div>
+  <div class="kpi"><h4>Open Tasks</h4><p>{{kpis.open_tasks}}</p></div>
+  <div class="kpi"><h4>Pending Leaves</h4><p>{{kpis.pending_leaves}}</p></div>
+</div>
+
+<div class="card">
+  <h3>Audit Timeline</h3>
+  <ul class="timeline">
+    {% for log in recent_logs %}
+      <li><span>{{log.created_at.strftime('%Y-%m-%d %H:%M')}}</span> <b>[{{log.action}}]</b> {{log.message}} — {{log.actor}}</li>
+    {% else %}
+      <li>No logs yet.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+body{font-family:Inter,Arial,sans-serif;margin:0;background:#f4f6fb;color:#1b1f2a}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#0f172a;color:#fff;position:sticky;top:0}
+nav a{color:#dbeafe;text-decoration:none;margin-left:12px}
+main{padding:16px;max-width:1200px;margin:auto}
+.card{background:#fff;padding:14px;border-radius:12px;box-shadow:0 3px 10px #0001;margin-bottom:14px}
+.narrow{max-width:380px;margin:40px auto}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;padding:14px;border-radius:12px}
+.kpi p{font-size:1.8rem;font-weight:700;margin:.2rem 0}
+form{display:grid;gap:8px}
+.inline{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+input,select,button,.btn{padding:8px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:14px}
+button,.btn{background:#2563eb;color:#fff;border:none;cursor:pointer;text-decoration:none}
+button.danger{background:#dc2626}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:left}
+.badge{padding:3px 8px;border-radius:999px;font-size:12px;color:#fff}
+.badge.active,.badge.present,.badge.approved,.badge.done{background:#16a34a}
+.badge.on-leave,.badge.pending,.badge.in-progress{background:#d97706}
+.badge.inactive,.badge.absent,.badge.rejected{background:#dc2626}
+.badge.wfh,.badge.open{background:#2563eb}
+.alert{padding:10px;border-radius:8px;margin-bottom:12px}
+.alert.success{background:#dcfce7}.alert.danger{background:#fee2e2}.alert.warning{background:#fef3c7}
+.timeline{padding-left:18px}.timeline li{margin:6px 0}
+.pager{display:flex;justify-content:center;gap:12px;padding-top:10px}
+.hint{color:#6b7280;font-size:12px}
+@media (max-width:650px){nav{flex-direction:column;align-items:flex-start}.links{display:flex;flex-wrap:wrap}}

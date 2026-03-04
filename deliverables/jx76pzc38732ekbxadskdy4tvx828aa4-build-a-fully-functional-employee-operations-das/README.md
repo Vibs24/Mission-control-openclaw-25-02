@@ -1,45 +1,84 @@
 # Employee Operations Dashboard (Flask + SQLite)
 
-Production-ready starter dashboard for employee operations with authentication, CRUD, KPI insights, attendance/leave tracking, audit timeline, CSV exports, and tests.
+Production-style Employee Operations dashboard with secure login/logout, CRUD modules, KPI cards, searchable/filterable tables, pagination, attendance + leave tracking, CSV export, audit timeline, responsive UI, seed data, and tests.
 
 ## Features
-- Secure login/logout (`Flask-Login`, hashed passwords)
-- CRUD modules: Employees, Departments, Tasks
-- Attendance tracking and Leave management
-- Search, filters, and pagination
-- KPI cards + status badges
-- CSV export endpoints
-- Audit-log timeline for key operations
-- Responsive HTML/CSS UI
-- Seed script with realistic starter data
-- Basic automated tests (pytest)
 
-## Quickstart
+- Authentication: login/logout with password hashing (`Flask-Login`, `Werkzeug`)
+- Dashboard KPIs: Employees, Departments, Open Tasks, Pending Leaves
+- CRUD-style operations:
+  - Departments: create/list/delete (with non-empty guard)
+  - Employees: create/list/delete + search/filter + pagination
+  - Tasks: create/list/delete + search/filter + pagination
+  - Attendance: add/list + date filter + pagination
+  - Leave tracking: add/list + status filter + pagination
+- Status badges and responsive design
+- CSV Export endpoints:
+  - `/export/employees.csv`
+  - `/export/tasks.csv`
+- Audit log timeline for key actions
+- Seed script with realistic sample data
+- Automated tests with `pytest`
+
+## Tech Stack
+
+- Flask 3
+- SQLite
+- Flask-SQLAlchemy
+- Flask-Login
+- Vanilla HTML/CSS
+
+## Project Structure
+
+```
+.
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── static/style.css
+│   └── templates/
+├── tests/test_app.py
+├── run.py
+├── seed_data.py
+├── requirements.txt
+└── README.md
+```
+
+## Setup
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python seed_data.py
-python app.py
+python run.py
 ```
-Open: http://127.0.0.1:5000
 
-Default login after seed:
+Open: `http://127.0.0.1:5000`
+
+Default credentials (seeded):
 - Username: `admin`
 - Password: `admin123`
 
-## Run tests
+## Testing
+
 ```bash
+source .venv/bin/activate
 pytest -q
 ```
 
-## Project structure
-- `app.py` – Flask app + models + routes
-- `templates/` – HTML templates
-- `static/style.css` – responsive styling
-- `seed_data.py` – database seeding
-- `tests/test_app.py` – smoke/functional tests
+## Security Notes
 
-## Notes
-- For production, set `SECRET_KEY` via environment and run behind gunicorn/nginx.
-- SQLite is used for portability. Swap URI for Postgres in `SQLALCHEMY_DATABASE_URI` when scaling.
+- Passwords are hashed (Werkzeug)
+- Auth-protected routes via `@login_required`
+- Replace `SECRET_KEY` before production deploy
+- Run behind WSGI server (e.g., gunicorn) for real production
+
+## Quick Runbook
+
+1. Seed DB with demo data (`python seed_data.py`)
+2. Login as admin
+3. Create/update records in each module
+4. Export CSV from Employees/Tasks pages
+5. Verify dashboard KPIs and audit timeline update
