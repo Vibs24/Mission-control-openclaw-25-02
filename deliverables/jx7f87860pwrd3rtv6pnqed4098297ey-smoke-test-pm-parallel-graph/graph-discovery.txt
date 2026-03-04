@@ -1,0 +1,122 @@
+[1] Locate orchestration graph artifacts
+Wed Mar  4 07:13:36 UTC 2026
+Mission-control/orchestrator/agent-sync.mjs:18:    role: "Lead Agent / IT Chief of Staff",
+Mission-control/orchestrator/agent-sync.mjs:20:    keywords: ["chief", "triage", "assign", "delegate", "priority", "escalat", "orchestr"],
+Mission-control/orchestrator/agent-sync.mjs:358:  if (h === "### chief directives") return "chiefDirectives";
+Mission-control/orchestrator/agent-sync.mjs:368:    chiefDirectives: [],
+Mission-control/orchestrator/agent-sync.mjs:414:    "chiefDirectives",
+Mission-control/orchestrator/agent-sync.mjs:518:        Number(task.lastChiefCheckAt || 0),
+Mission-control/orchestrator/agent-sync.mjs:550:    chiefDirectives: [],
+Mission-control/orchestrator/agent-sync.mjs:599:      if (fromName.includes("jarvis") || content.toLowerCase().includes("chief ")) {
+Mission-control/orchestrator/agent-sync.mjs:601:          state[slug].chiefDirectives.push(content);
+Mission-control/orchestrator/agent-sync.mjs:676:    s.chiefDirectives = uniqueLines(s.chiefDirectives, 20);
+Mission-control/orchestrator/agent-sync.mjs:832:    "### Chief Directives",
+Mission-control/orchestrator/agent-sync.mjs:833:    bulletBlock(agentState.chiefDirectives, "No new chief directives."),
+Mission-control/orchestrator/agent-sync.mjs:910:      [...agentState.chiefDirectives, ...agentState.userInstructions],
+Mission-control/orchestrator/agent-sync.mjs:978:    "- Chief (Jarvis) orchestrates only; specialist proof must come from specialist agents.",
+Mission-control/orchestrator/agent-sync.mjs:1407:            chiefDirectives: agentState[agent.slug].chiefDirectives,
+Mission-control/orchestrator/workflows/role-mapping.mjs:11:export const LEGACY_TO_PARALLEL_AGENT_ALIAS = {
+Mission-control/orchestrator/workflows/role-mapping.mjs:18:  Jarvis: "Chief",
+Mission-control/orchestrator/workflows/role-mapping.mjs:21:export const PARALLEL_TO_LEGACY_AGENT_ALIAS = {
+Mission-control/orchestrator/workflows/role-mapping.mjs:29:  "Project Manager": "Jarvis",
+Mission-control/orchestrator/workflows/role-mapping.mjs:30:  Chief: "Jarvis",
+Mission-control/orchestrator/workflows/role-mapping.mjs:35:    summary: "Chief orchestrator. Triage, assign, monitor, enforce proof gates, and escalate.",
+Mission-control/orchestrator/workflows/role-mapping.mjs:39:      "Never count chief comments as specialist proof.",
+Mission-control/orchestrator/workflows/parallel-planner.mjs:3:export const PARALLEL_SPECIALISTS = [
+Mission-control/orchestrator/workflows/parallel-planner.mjs:55:  for (const candidate of [...PARALLEL_SPECIALISTS, "Reviewer"]) {
+Mission-control/orchestrator/workflows/parallel-planner.mjs:137:  for (const role of PARALLEL_SPECIALISTS) {
+Mission-control/orchestrator/workflows/parallel-planner.mjs:162:export function buildParallelExecutionPlan({
+Mission-control/orchestrator/workflows/parallel-planner.mjs:177:  const selectedRoles = [...new Set(inferredRoles)].filter((role) => PARALLEL_SPECIALISTS.includes(role));
+Mission-control/orchestrator/README.md:6:- Chief Agent triage (Jarvis)
+Mission-control/orchestrator/README.md:8:- Chief watchdog / stale-task follow-up
+Mission-control/orchestrator/logs/bot.launchd.err.log:14:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:58:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:93:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:114:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:140:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:176:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:197:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:223:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:259:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:280:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:307:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:325:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:363:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:390:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:408:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:446:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:489:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:508:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:535:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:566:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:604:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:646:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:664:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:702:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:760:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:779:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:800:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:858:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:877:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:898:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:940:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:958:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:996:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1037:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1073:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1164:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5089:24)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1200:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1241:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1277:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1319:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1337:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1375:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1417:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1435:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1473:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1514:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1550:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1571:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1613:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1631:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1669:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1727:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1746:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1788:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1806:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1844:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1886:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1904:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1942:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:1984:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2002:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2040:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2081:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2117:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2159:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2177:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2215:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2257:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2275:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2313:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2355:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2373:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2411:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2452:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2488:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2530:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2548:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2586:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2628:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2646:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2684:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2726:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2744:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2782:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2823:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2859:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2901:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2919:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2957:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:2999:    at async chiefTriageLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:3537:22)
+Mission-control/orchestrator/logs/bot.launchd.err.log:3017:    at async chiefWatchdogLoop (file:///Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/index.mjs:5049:22)
