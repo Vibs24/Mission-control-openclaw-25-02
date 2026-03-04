@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Employee Notes Dashboard</h2>
+
+<div class="card">
+  <h3>Create Employee</h3>
+  <form method="post" action="{{ url_for('create_employee') }}">
+    <label for="new-name">Name</label>
+    <input id="new-name" name="name" required />
+
+    <label for="new-email">Email</label>
+    <input id="new-email" name="email" type="email" required />
+
+    <button type="submit">Create Employee</button>
+  </form>
+</div>
+
+{% for employee in employees %}
+  <div class="card">
+    <h3>Employee #{{ employee.id }}</h3>
+
+    <form method="post" action="{{ url_for('update_employee', employee_id=employee.id) }}">
+      <label for="name-{{ employee.id }}">Name</label>
+      <input id="name-{{ employee.id }}" name="name" value="{{ employee.name }}" required />
+
+      <label for="email-{{ employee.id }}">Email</label>
+      <input id="email-{{ employee.id }}" name="email" type="email" value="{{ employee.email }}" required />
+
+      <button type="submit">Update Employee</button>
+    </form>
+
+    <form class="inline" method="post" action="{{ url_for('delete_employee', employee_id=employee.id) }}">
+      <button type="submit">Delete Employee</button>
+    </form>
+
+    <h4>Add Note</h4>
+    <form method="post" action="{{ url_for('create_note', employee_id=employee.id) }}">
+      <textarea name="content" required></textarea>
+      <button type="submit">Create Note</button>
+    </form>
+
+    <div class="notes">
+      <h4>Notes</h4>
+      {% for note in notes_by_employee.get(employee.id, []) %}
+        <div class="card">
+          <small>Note #{{ note.id }} at {{ note.created_at }}</small>
+          <form method="post" action="{{ url_for('update_note', note_id=note.id) }}">
+            <textarea name="content" required>{{ note.content }}</textarea>
+            <button type="submit">Update Note</button>
+          </form>
+          <form class="inline" method="post" action="{{ url_for('delete_note', note_id=note.id) }}">
+            <button type="submit">Delete Note</button>
+          </form>
+        </div>
+      {% else %}
+        <p>No notes yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+{% else %}
+  <p>No employees yet.</p>
+{% endfor %}
+{% endblock %}

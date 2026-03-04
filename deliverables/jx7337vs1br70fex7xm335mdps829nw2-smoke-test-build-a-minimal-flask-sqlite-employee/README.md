@@ -1,50 +1,56 @@
-# Minimal Flask + SQLite Employee Notes App
+# Flask + SQLite Employee Notes App
 
-A smoke-test-ready Flask application with:
-- Login / logout
-- Employee note CRUD
-- SQLite schema + seed script
-- Basic tests with pytest
+Minimal, fully runnable app with:
+- Secure login/logout (hashed password via Werkzeug)
+- Employee CRUD
+- Note CRUD (notes belong to employees)
+- SQLite schema
+- Seed script (`admin` + sample employee + sample notes)
+- Basic pytest coverage (auth + CRUD flow)
 
-## Project Structure
+## Structure
 
 ```
 app/
-  main.py
+  __init__.py
   db.py
+  main.py
   templates/
+    base.html
+    dashboard.html
+    login.html
+app.py
 schema.sql
 seed.py
-tests/
+tests/test_app.py
 requirements.txt
 ```
 
 ## Setup
 
 ```bash
-python3 -m venv /tmp/employee-notes-venv
-source /tmp/employee-notes-venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Initialize DB + Seed Data
+## Initialize and seed database
 
 ```bash
 python seed.py
 ```
 
-Default login:
+Default seeded credentials:
 - username: `admin`
 - password: `admin123`
 
 ## Run
 
 ```bash
-export FLASK_APP=app.main:create_app
-flask run --debug
+flask --app app run --debug
 ```
 
-Open `http://127.0.0.1:5000`.
+Then open: `http://127.0.0.1:5000`
 
 ## Test
 

@@ -1,33 +1,37 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Employee Notes</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; max-width: 900px; }
-    nav { display:flex; gap:1rem; margin-bottom:1rem; }
-    table { width:100%; border-collapse: collapse; }
-    th, td { border:1px solid #ddd; padding:.5rem; }
-    .error { color: #b00020; }
-    input, textarea { width:100%; padding:.5rem; margin:.25rem 0 .75rem; }
-    .btn { padding:.4rem .8rem; border:1px solid #444; background:#f6f6f6; cursor:pointer; text-decoration:none; color:black; }
-    form.inline { display:inline; }
+    body { font-family: Arial, sans-serif; max-width: 980px; margin: 1.5rem auto; padding: 0 1rem; }
+    nav { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .flash { padding: 0.5rem; border: 1px solid #ccc; margin: 0.4rem 0; }
+    .flash.error { border-color: #b00020; color: #b00020; }
+    .flash.success { border-color: #2e7d32; color: #2e7d32; }
+    input, textarea { width: 100%; box-sizing: border-box; margin: 0.3rem 0; padding: 0.4rem; }
+    button { padding: 0.4rem 0.7rem; cursor: pointer; }
+    .card { border: 1px solid #ddd; padding: 0.8rem; margin-bottom: 1rem; }
+    .notes { margin-top: 0.6rem; padding-left: 1rem; }
+    form.inline { display: inline; }
   </style>
 </head>
 <body>
   <nav>
-    <a href="{{ url_for('index') }}">Home</a>
-    {% if session.get('user') %}
-      <span>Logged in as {{ session['user'] }}</span>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    {% if session.get('username') %}
+      <span>Signed in as {{ session['username'] }}</span>
       <a href="{{ url_for('logout') }}">Logout</a>
     {% endif %}
   </nav>
-  {% with messages = get_flashed_messages(with_categories=true) %}
+
+  {% with messages = get_flashed_messages(with_categories=True) %}
     {% for category, message in messages %}
-      <p class="{{ category }}">{{ message }}</p>
+      <div class="flash {{ category }}">{{ message }}</div>
     {% endfor %}
   {% endwith %}
+
   {% block content %}{% endblock %}
 </body>
 </html>

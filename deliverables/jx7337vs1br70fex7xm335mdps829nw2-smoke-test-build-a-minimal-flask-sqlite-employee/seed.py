@@ -1,4 +1,4 @@
-from app.main import create_app
+from app import create_app
 from app.db import init_db, seed_db
 
 app = create_app()
