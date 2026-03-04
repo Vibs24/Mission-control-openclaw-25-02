@@ -1,28 +1,58 @@
-import pytest
-from werkzeug.security import generate_password_hash
-from app import app, db, User, Employee
+from app.main import create_app
+from app.db import init_db, seed_db
 
-@pytest.fixture()
-def client():
-    app.config.update(TESTING=True, SQLALCHEMY_DATABASE_URI='sqlite:///:memory:')
+
+def make_client(tmp_path):
+    db_path = tmp_path / "test.sqlite"
+    app = create_app({"TESTING": True, "SECRET_KEY": "test", "DATABASE": str(db_path)})
     with app.app_context():
-        db.drop_all()
-        db.create_all()
-        db.session.add(User(username='admin', password_hash=generate_password_hash('admin123')))
-        db.session.add(Employee(name='Test', email='test@example.com'))
-        db.session.commit()
-    with app.test_client() as c:
-        yield c
+        init_db()
+        seed_db()
+    return app.test_client()
 
-def login(c):
-    return c.post('/login', data={'username':'admin','password':'admin123'}, follow_redirects=True)
 
-def test_login_and_dashboard(client):
-    r = login(client)
-    assert b'Employee Notes' in r.data
+def login(client):
+    return client.post("/login", data={"username": "admin", "password": "admin123"}, follow_redirects=True)
 
-def test_create_employee(client):
+
+def test_login_and_list_notes(tmp_path):
+    client = make_client(tmp_path)
+    res = login(client)
+    assert res.status_code == 200
+    assert b"Employee Notes" in res.data
+    assert b"Alice" in res.data
+
+
+def test_create_update_delete_note(tmp_path):
+    client = make_client(tmp_path)
     login(client)
-    r = client.post('/employees', data={'name':'New','email':'new@example.com'}, follow_redirects=True)
-    assert b'new@example.com' in r.data
 
+    create_res = client.post(
+        "/notes/create",
+        data={"employee_name": "Carol", "title": "1:1", "content": "Weekly sync"},
+        follow_redirects=True,
+    )
+    assert b"Carol" in create_res.data
+
+    list_res = client.get("/")
+    assert b"1:1" in list_res.data
+
+    # Find note id by looking for edit URL from content page
+    assert b"/notes/" in list_res.data
+
+    # Update and delete known seeded ID pattern by creating deterministic single app run:
+    edit_res = client.post(
+        "/notes/3/edit",
+        data={"employee_name": "Carol", "title": "Updated", "content": "Done"},
+        follow_redirects=True,
+    )
+    assert b"Updated" in edit_res.data
+
+    delete_res = client.post("/notes/3/delete", follow_redirects=True)
+    assert b"Updated" not in delete_res.data
+
+
+def test_requires_auth(tmp_path):
+    client = make_client(tmp_path)
+    res = client.get("/", follow_redirects=True)
+    assert b"Login" in res.data

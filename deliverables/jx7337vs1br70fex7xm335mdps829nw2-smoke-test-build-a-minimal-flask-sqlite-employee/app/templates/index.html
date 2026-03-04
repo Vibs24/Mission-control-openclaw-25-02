@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Employee Notes</h2>
+<form method="get">
+  <input name="q" placeholder="Search notes" value="{{ q }}" />
+</form>
+<p><a class="btn" href="{{ url_for('create_note') }}">Add Note</a></p>
+<table>
+  <thead><tr><th>ID</th><th>Employee</th><th>Title</th><th>Content</th><th>Actions</th></tr></thead>
+  <tbody>
+  {% for note in notes %}
+    <tr>
+      <td>{{ note.id }}</td>
+      <td>{{ note.employee_name }}</td>
+      <td>{{ note.title }}</td>
+      <td>{{ note.content }}</td>
+      <td>
+        <a class="btn" href="{{ url_for('edit_note', note_id=note.id) }}">Edit</a>
+        <form class="inline" method="post" action="{{ url_for('delete_note', note_id=note.id) }}">
+          <button class="btn" type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
