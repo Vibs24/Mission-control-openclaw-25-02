@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+  <div class="card">
+    <h3>Add Employee</h3>
+    <form method="post">
+      <input name="name" placeholder="Full name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button>Create</button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Employee List</h3>
+    <table>
+      <thead><tr><th>Name</th><th>Email</th><th></th></tr></thead>
+      <tbody>
+        {% for e in employees %}
+        <tr>
+          <td>{{ e.name }}</td>
+          <td>{{ e.email }}</td>
+          <td>
+            <form method="post" action="{{ url_for('main.delete_employee', eid=e.id) }}">
+              <button class="danger">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,37 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Employee Notes</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 980px; margin: 1.5rem auto; padding: 0 1rem; }
-    nav { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
-    .flash { padding: 0.5rem; border: 1px solid #ccc; margin: 0.4rem 0; }
-    .flash.error { border-color: #b00020; color: #b00020; }
-    .flash.success { border-color: #2e7d32; color: #2e7d32; }
-    input, textarea { width: 100%; box-sizing: border-box; margin: 0.3rem 0; padding: 0.4rem; }
-    button { padding: 0.4rem 0.7rem; cursor: pointer; }
-    .card { border: 1px solid #ddd; padding: 0.8rem; margin-bottom: 1rem; }
-    .notes { margin-top: 0.6rem; padding-left: 1rem; }
-    form.inline { display: inline; }
+    body { font-family: Arial, sans-serif; background:#f4f4f6; margin:0; }
+    nav { background:#111827; color:#fff; padding:12px 16px; display:flex; justify-content:space-between; }
+    nav a { color:#c7d2fe; margin-left:12px; text-decoration:none; }
+    main { max-width:900px; margin:16px auto; padding:0 12px; }
+    .card { background:#fff; border-radius:10px; padding:14px; margin-bottom:12px; }
+    form { display:grid; gap:8px; }
+    input, select, textarea, button, .btn { padding:8px; border-radius:8px; border:1px solid #d1d5db; }
+    button, .btn { border:none; background:#2563eb; color:#fff; text-decoration:none; cursor:pointer; }
+    .danger { background:#dc2626; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { border-bottom:1px solid #e5e7eb; padding:8px; text-align:left; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .flash { padding:8px; border-radius:8px; margin-bottom:8px; background:#e0f2fe; }
+    @media (max-width:700px){ .row{ grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
   <nav>
-    <a href="{{ url_for('dashboard') }}">Dashboard</a>
-    {% if session.get('username') %}
-      <span>Signed in as {{ session['username'] }}</span>
-      <a href="{{ url_for('logout') }}">Logout</a>
+    <strong>Employee Notes</strong>
+    {% if current_user.is_authenticated %}
+    <div>
+      <a href="{{ url_for('main.employees') }}">Employees</a>
+      <a href="{{ url_for('main.notes') }}">Notes</a>
+      <a href="{{ url_for('main.logout') }}">Logout</a>
+    </div>
     {% endif %}
   </nav>
-
-  {% with messages = get_flashed_messages(with_categories=True) %}
-    {% for category, message in messages %}
-      <div class="flash {{ category }}">{{ message }}</div>
-    {% endfor %}
-  {% endwith %}
-
-  {% block content %}{% endblock %}
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for _, msg in messages %}
+      <div class="flash">{{ msg }}</div>
+      {% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
 </body>
 </html>

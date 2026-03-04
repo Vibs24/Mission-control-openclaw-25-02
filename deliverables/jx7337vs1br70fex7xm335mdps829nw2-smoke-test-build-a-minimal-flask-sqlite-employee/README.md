@@ -1,59 +1,50 @@
-# Flask + SQLite Employee Notes App
+# Minimal Flask + SQLite Employee Notes App
 
-Minimal, fully runnable app with:
-- Secure login/logout (hashed password via Werkzeug)
-- Employee CRUD
-- Note CRUD (notes belong to employees)
-- SQLite schema
-- Seed script (`admin` + sample employee + sample notes)
-- Basic pytest coverage (auth + CRUD flow)
+Smoke-test implementation of a runnable Flask app with login, employee CRUD, note CRUD, SQLite schema, seed data, and basic tests.
 
-## Structure
+## Features
 
-```
-app/
-  __init__.py
-  db.py
-  main.py
-  templates/
-    base.html
-    dashboard.html
-    login.html
-app.py
-schema.sql
-seed.py
-tests/test_app.py
-requirements.txt
-```
+- Login/logout (`Flask-Login`)
+- Employee CRUD (create/list/delete)
+- Employee Notes CRUD (create/list/edit/delete)
+- SQLite persistence via SQLAlchemy models (`User`, `Employee`, `Note`)
+- Seed script for demo data
+- Basic pytest suite
 
 ## Setup
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv /tmp/employee-notes-venv
+source /tmp/employee-notes-venv/bin/activate
 pip install -r requirements.txt
+python seed_data.py
+python run.py
 ```
 
-## Initialize and seed database
-
-```bash
-python seed.py
-```
+App URL: `http://127.0.0.1:5000`
 
 Default seeded credentials:
 - username: `admin`
 - password: `admin123`
 
-## Run
+## Run Tests
 
 ```bash
-flask --app app run --debug
+source /tmp/employee-notes-venv/bin/activate
+pytest -q
 ```
 
-Then open: `http://127.0.0.1:5000`
+## Project Layout
 
-## Test
-
-```bash
-pytest -q
+```
+.
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   └── templates/
+├── tests/test_app.py
+├── seed_data.py
+├── run.py
+└── requirements.txt
 ```
