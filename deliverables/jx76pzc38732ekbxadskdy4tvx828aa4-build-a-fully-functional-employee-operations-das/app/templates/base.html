@@ -30,14 +30,6 @@
   {% endwith %}
   {% block content %}{% endblock %}
 </main>
-<script>
-  document.querySelectorAll('.js-confirm-delete').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      if (!confirm('Are you sure you want to delete this record?')) {
-        e.preventDefault();
-      }
-    });
-  });
-</script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

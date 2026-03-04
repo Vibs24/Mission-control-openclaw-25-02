@@ -1,17 +1,16 @@
-/
-/attendance
-/dashboard
-/departments
-/departments/<int:did>/delete
-/departments/<int:did>/edit
-/employees
-/employees/<int:eid>/delete
-/employees/<int:eid>/edit
-/export/<string:entity>.csv
-/leaves
-/login
-/logout
-/static/<path:filename>
-/tasks
-/tasks/<int:tid>/delete
-/tasks/<int:tid>/edit
+GET          / -> main.root
+GET,POST     /attendance -> main.attendance
+GET          /dashboard -> main.dashboard
+GET,POST     /departments -> main.departments
+POST         /departments/<int:did>/delete -> main.delete_department
+GET,POST     /departments/<int:did>/edit -> main.edit_department
+GET,POST     /employees -> main.employees
+POST         /employees/<int:eid>/delete -> main.delete_employee
+GET,POST     /employees/<int:eid>/edit -> main.edit_employee
+GET          /export/<string:entity>.csv -> main.export_csv
+GET,POST     /leaves -> main.leaves
+GET,POST     /login -> main.login
+GET          /logout -> main.logout
+GET,POST     /tasks -> main.tasks
+POST         /tasks/<int:tid>/delete -> main.delete_task
+GET,POST     /tasks/<int:tid>/edit -> main.edit_task
