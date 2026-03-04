@@ -1,0 +1,103 @@
+[2] Heartbeat + PM graph source markers
+Wed Mar  4 08:30:16 UTC 2026
+Mission-control/orchestrator/index.mjs:24:import { buildParallelExecutionPlan } from "./workflows/parallel-planner.mjs";
+Mission-control/orchestrator/index.mjs:26:  LEGACY_TO_PARALLEL_AGENT_ALIAS,
+Mission-control/orchestrator/index.mjs:27:  PARALLEL_TO_LEGACY_AGENT_ALIAS,
+Mission-control/orchestrator/index.mjs:134:  executionHeartbeatEnabled: env.EXECUTION_HEARTBEAT_ENABLED !== "false",
+Mission-control/orchestrator/index.mjs:135:  executionHeartbeatMinutes: Math.max(1, Number(env.EXECUTION_HEARTBEAT_MINUTES || 2)),
+Mission-control/orchestrator/index.mjs:141:  chiefPmParallelDefault: env.CHIEF_PM_PARALLEL_DEFAULT !== "false",
+Mission-control/orchestrator/index.mjs:145:  nodeHeartbeatEnabled: env.NODE_HEARTBEAT_ENABLED !== "false",
+Mission-control/orchestrator/index.mjs:146:  nodeHeartbeatMinutes: Math.max(1, Number(env.NODE_HEARTBEAT_MINUTES || 2)),
+Mission-control/orchestrator/index.mjs:220:const lastExecutionHeartbeatByStep = new Map();
+Mission-control/orchestrator/index.mjs:288:function markLoopHeartbeat(loopName, extra = {}) {
+Mission-control/orchestrator/index.mjs:815:function heartbeatKey(taskId, step) {
+Mission-control/orchestrator/index.mjs:819:async function maybeEmitRunningStepHeartbeat(task, step, assignee) {
+Mission-control/orchestrator/index.mjs:820:  if (!config.executionEventsV2Enabled || !config.executionHeartbeatEnabled || !step) return;
+Mission-control/orchestrator/index.mjs:821:  const key = heartbeatKey(task?._id, step);
+Mission-control/orchestrator/index.mjs:823:  const last = Number(lastExecutionHeartbeatByStep.get(key) || 0);
+Mission-control/orchestrator/index.mjs:824:  const intervalMs = Math.max(30 * 1000, config.executionHeartbeatMinutes * 60 * 1000);
+Mission-control/orchestrator/index.mjs:838:    kind: "heartbeat",
+Mission-control/orchestrator/index.mjs:840:    title: `${assignee?.name || step?.agentName || "Assignee"} heartbeat`,
+Mission-control/orchestrator/index.mjs:854:  lastExecutionHeartbeatByStep.set(key, now);
+Mission-control/orchestrator/index.mjs:1519:  if (model === "chief_pm_parallel") return "chief_pm_parallel";
+Mission-control/orchestrator/index.mjs:1521:  return config.chiefPmParallelDefault ? "chief_pm_parallel" : "legacy_sequential";
+Mission-control/orchestrator/index.mjs:1524:function isChiefPmParallelTask(task) {
+Mission-control/orchestrator/index.mjs:1526:  return normalizeOrchestrationModel(task) === "chief_pm_parallel";
+Mission-control/orchestrator/index.mjs:1539:  const alias = { ...PARALLEL_TO_LEGACY_AGENT_ALIAS };
+Mission-control/orchestrator/index.mjs:1599:  const projectManager = findAgentByNames(agentsMap, ["Project Manager", "Peter", "Jarvis", config.chiefAgentName]);
+Mission-control/orchestrator/index.mjs:1601:    throw new Error("pm_agent_missing: unable to resolve Project Manager agent");
+Mission-control/orchestrator/index.mjs:1603:  const planned = buildParallelExecutionPlan({
+Mission-control/orchestrator/index.mjs:1635:    "Project Manager is coordinating dependency graph and parallel specialist execution.";
+Mission-control/orchestrator/index.mjs:1642:    orchestrationModel: "chief_pm_parallel",
+Mission-control/orchestrator/index.mjs:1673:    title: "Chief assigned task to Project Manager",
+Mission-control/orchestrator/index.mjs:1677:    nextSteps: "PM scheduler dispatches all runnable specialist nodes in parallel.",
+Mission-control/orchestrator/index.mjs:1686:      orchestrationModel: "chief_pm_parallel",
+Mission-control/orchestrator/index.mjs:1719:  const aliasName = PARALLEL_TO_LEGACY_AGENT_ALIAS[String(node?.agentName || "")];
+Mission-control/orchestrator/index.mjs:1727:  const legacyAlias = PARALLEL_TO_LEGACY_AGENT_ALIAS[roleName];
+Mission-control/orchestrator/index.mjs:1729:  const parallelAlias = LEGACY_TO_PARALLEL_AGENT_ALIAS[roleName];
+Mission-control/orchestrator/index.mjs:1730:  if (parallelAlias) names.push(parallelAlias);
+Mission-control/orchestrator/index.mjs:1814:async function dispatchParallelNode({ task, node, agentsMap, chief }) {
+Mission-control/orchestrator/index.mjs:1995:        nextHandoff: "Project Manager",
+Mission-control/orchestrator/index.mjs:2046:        nextSteps: nodeWorklog.sections.nextHandoff || "Project Manager will schedule dependent nodes.",
+Mission-control/orchestrator/index.mjs:2153:      nextAction: "Completed via PM parallel workflow",
+Mission-control/orchestrator/index.mjs:2993:  if (isChiefPmParallelTask(task)) return;
+Mission-control/orchestrator/index.mjs:3268:  if (isChiefPmParallelTask(task)) return false;
+Mission-control/orchestrator/index.mjs:3724:  if (/\/\.openclaw\/workspace\/(agents|soul|tools|identity|heartbeat)\.md$/.test(lower)) return true;
+Mission-control/orchestrator/index.mjs:4012:    /^\[heartbeat\]/i,
+Mission-control/orchestrator/index.mjs:4321:  if (isChiefPmParallelTask(task)) return;
+Mission-control/orchestrator/index.mjs:4543:  markLoopHeartbeat("poller", { status: "started", offset });
+Mission-control/orchestrator/index.mjs:4546:      markLoopHeartbeat("poller", { status: "polling", offset });
+Mission-control/orchestrator/index.mjs:4557:      markLoopHeartbeat("poller", { status: "idle", offset, batchCount: updates.length });
+Mission-control/orchestrator/index.mjs:4567:        markLoopHeartbeat("poller", { status: "conflict", offset });
+Mission-control/orchestrator/index.mjs:4573:      markLoopHeartbeat("poller", { status: "error", offset });
+Mission-control/orchestrator/index.mjs:4577:  markLoopHeartbeat("poller", { status: "stopped", offset });
+Mission-control/orchestrator/index.mjs:4713:  markLoopHeartbeat("outboxReplay", { status: "started" });
+Mission-control/orchestrator/index.mjs:4716:      markLoopHeartbeat("outboxReplay", { status: "loop" });
+Mission-control/orchestrator/index.mjs:4721:      markLoopHeartbeat("outboxReplay", { status: "error" });
+Mission-control/orchestrator/index.mjs:4725:  markLoopHeartbeat("outboxReplay", { status: "stopped" });
+Mission-control/orchestrator/index.mjs:4729:  markLoopHeartbeat("chiefTriage", { status: "started" });
+Mission-control/orchestrator/index.mjs:4732:      markLoopHeartbeat("chiefTriage", { status: "loop" });
+Mission-control/orchestrator/index.mjs:4755:      const pmMode = isChiefPmParallelTask(claimed);
+Mission-control/orchestrator/index.mjs:4759:        ? findAgentByNames(agents, ["Project Manager", "Peter", "Jarvis", config.chiefAgentName])
+Mission-control/orchestrator/index.mjs:4763:        ? `Assigned to ${candidateProjectManager?.name || "Project Manager"} for dependency-graph orchestration`
+Mission-control/orchestrator/index.mjs:4851:              "Project Manager is orchestrating runnable dependency nodes; chief monitoring active.",
+Mission-control/orchestrator/index.mjs:5069:          await m((api).automation.recordAssigneeHeartbeat, {
+Mission-control/orchestrator/index.mjs:5392:      markLoopHeartbeat("chiefTriage", { status: "error" });
+Mission-control/orchestrator/index.mjs:5396:  markLoopHeartbeat("chiefTriage", { status: "stopped" });
+Mission-control/orchestrator/index.mjs:5898:  await m((api).automation.recordAssigneeHeartbeat, {
+Mission-control/orchestrator/index.mjs:6341:  markLoopHeartbeat("pmScheduler", { status: "started" });
+Mission-control/orchestrator/index.mjs:6344:      markLoopHeartbeat("pmScheduler", { status: "loop" });
+Mission-control/orchestrator/index.mjs:6354:        if (model !== "chief_pm_parallel") return false;
+Mission-control/orchestrator/index.mjs:6487:            await dispatchParallelNode({
+Mission-control/orchestrator/index.mjs:6498:        if (config.nodeHeartbeatEnabled && chief && runningNodes.length > 0) {
+Mission-control/orchestrator/index.mjs:6500:            const heartbeatKey = executionNodeInFlightKey(currentTask._id, node.nodeKey);
+Mission-control/orchestrator/index.mjs:6502:            const lastBeat = Number(lastExecutionHeartbeatByStep.get(heartbeatKey) ?? 0);
+Mission-control/orchestrator/index.mjs:6503:            const minIntervalMs = config.nodeHeartbeatMinutes * 60 * 1000;
+Mission-control/orchestrator/index.mjs:6506:            await m((api).executionGraph.heartbeatNode, {
+Mission-control/orchestrator/index.mjs:6516:              kind: "heartbeat",
+Mission-control/orchestrator/index.mjs:6518:              title: `${node.agentName} heartbeat`,
+Mission-control/orchestrator/index.mjs:6526:            lastExecutionHeartbeatByStep.set(heartbeatKey, now);
+Mission-control/orchestrator/index.mjs:6535:      markLoopHeartbeat("pmScheduler", { status: "error" });
+Mission-control/orchestrator/index.mjs:6539:  markLoopHeartbeat("pmScheduler", { status: "stopped" });
+Mission-control/orchestrator/index.mjs:6543:  markLoopHeartbeat("chiefWatchdog", { status: "started" });
+Mission-control/orchestrator/index.mjs:6546:      markLoopHeartbeat("chiefWatchdog", { status: "loop" });
+Mission-control/orchestrator/index.mjs:6584:        if (isChiefPmParallelTask(task)) {
+Mission-control/orchestrator/index.mjs:6723:            await maybeEmitRunningStepHeartbeat(currentTask, runningStep, runningStepAssignee);
+Mission-control/orchestrator/index.mjs:6888:              await m((api).automation.recordAssigneeHeartbeat, {
+Mission-control/orchestrator/index.mjs:7158:          kind: "heartbeat",
+Mission-control/orchestrator/index.mjs:7182:      markLoopHeartbeat("chiefWatchdog", { status: "error" });
+Mission-control/orchestrator/index.mjs:7186:  markLoopHeartbeat("chiefWatchdog", { status: "stopped" });
+Mission-control/orchestrator/index.mjs:7431:  markLoopHeartbeat("telegramDigest", { status: "started" });
+Mission-control/orchestrator/index.mjs:7434:      markLoopHeartbeat("telegramDigest", { status: "loop" });
+Mission-control/orchestrator/index.mjs:7511:      markLoopHeartbeat("telegramDigest", { status: "error" });
+Mission-control/orchestrator/index.mjs:7516:  markLoopHeartbeat("telegramDigest", { status: "stopped" });
+Mission-control/orchestrator/index.mjs:7642:    "[orchestrator] chief->pm parallel workflow:",
+Mission-control/orchestrator/index.mjs:7644:      ? `enabled (default=${config.chiefPmParallelDefault ? "chief_pm_parallel" : "legacy_sequential"}, heartbeat=${config.nodeHeartbeatMinutes}m, retry_budget=${config.chiefNodeRetryBudget})`
+Mission-control/orchestrator/workflows/parallel-planner.mjs:3:export const PARALLEL_SPECIALISTS = [
+Mission-control/orchestrator/workflows/parallel-planner.mjs:55:  for (const candidate of [...PARALLEL_SPECIALISTS, "Reviewer"]) {
+Mission-control/orchestrator/workflows/parallel-planner.mjs:137:  for (const role of PARALLEL_SPECIALISTS) {
+Mission-control/orchestrator/workflows/parallel-planner.mjs:162:export function buildParallelExecutionPlan({
+Mission-control/orchestrator/workflows/parallel-planner.mjs:177:  const selectedRoles = [...new Set(inferredRoles)].filter((role) => PARALLEL_SPECIALISTS.includes(role));
+Mission-control/orchestrator/workflows/role-mapping.mjs:11:export const LEGACY_TO_PARALLEL_AGENT_ALIAS = {
+Mission-control/orchestrator/workflows/role-mapping.mjs:21:export const PARALLEL_TO_LEGACY_AGENT_ALIAS = {
+Mission-control/orchestrator/workflows/role-mapping.mjs:29:  "Project Manager": "Jarvis",
