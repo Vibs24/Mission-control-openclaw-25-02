@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h4>Audit Log Timeline</h4>
+<div class="timeline">
+{% for a in rows.items %}
+  <div class="event"><strong>{{a.action}}</strong> — {{a.detail}} <small class="text-muted">{{a.timestamp}}</small></div>
+{% endfor %}
+</div>
+{% include '_pagination.html' %}
+{% endblock %}

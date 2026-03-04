@@ -1,7 +1,9 @@
-{% if pagination.pages > 1 %}
-<div class="pager">
-  {% if pagination.has_prev %}<a href="?page={{pagination.prev_num}}">Prev</a>{% endif %}
-  <span>Page {{pagination.page}} / {{pagination.pages}}</span>
-  {% if pagination.has_next %}<a href="?page={{pagination.next_num}}">Next</a>{% endif %}
-</div>
+{% if rows.pages > 1 %}
+<nav><ul class="pagination pagination-sm">
+  {% for p in rows.iter_pages() %}
+    {% if p %}
+    <li class="page-item {% if p==rows.page %}active{% endif %}"><a class="page-link" href="{{ request.path }}?{{ request.query_string.decode('utf-8')|replace('page=' ~ rows.page|string, '') }}&page={{p}}">{{p}}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul></nav>
 {% endif %}

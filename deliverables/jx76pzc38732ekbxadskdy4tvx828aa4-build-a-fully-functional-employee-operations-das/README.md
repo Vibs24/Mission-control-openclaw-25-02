@@ -1,85 +1,59 @@
 # Employee Operations Dashboard (Flask + SQLite)
 
-Production-style Employee Operations dashboard with secure login/logout, CRUD modules, KPI cards, searchable/filterable tables, pagination, attendance + leave tracking, CSV export, audit timeline, responsive UI, seed data, and tests.
+Production-oriented internal dashboard for employee operations with:
 
-## Features
+- Secure login/logout (Flask-Login + password hashing)
+- CRUD: Departments, Employees, Tasks
+- Attendance and Leave tracking
+- Search/filter + pagination on core list views
+- KPI cards + status badges
+- Audit-log timeline
+- CSV export endpoints
+- Responsive UI (Bootstrap)
+- Seed data script
+- Basic automated tests (pytest)
 
-- Authentication: login/logout with password hashing (`Flask-Login`, `Werkzeug`)
-- Dashboard KPIs: Employees, Departments, Open Tasks, Pending Leaves
-- CRUD operations:
-  - Departments: create/read/update/delete (with non-empty guard)
-  - Employees: create/read/update/delete + search/filter + pagination
-  - Tasks: create/read/update/delete + search/filter + pagination
-  - Attendance: add/list + date filter + pagination
-  - Leave tracking: add/list + status filter + pagination
-- Status badges and responsive design
-- CSV Export endpoints:
-  - `/export/employees.csv`
-  - `/export/tasks.csv`
-- Audit log timeline for key actions
-- Seed script with realistic sample data
-- Automated tests with `pytest`
-
-## Tech Stack
-
-- Flask 3
-- SQLite
-- Flask-SQLAlchemy
-- Flask-Login
-- Vanilla HTML/CSS/JS
-
-## Project Structure
-
-```
-.
-├── app/
-│   ├── __init__.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── static/style.css
-│   └── templates/
-├── tests/test_app.py
-├── run.py
-├── seed_data.py
-├── requirements.txt
-└── README.md
-```
-
-## Setup
+## 1) Setup
 
 ```bash
-python3 -m venv /tmp/empdash-venv
-source /tmp/empdash-venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-export SECRET_KEY='replace-with-strong-secret'
+```
+
+## 2) Initialize sample data
+
+```bash
 python seed_data.py
+```
+
+Default credentials:
+- `admin` / `admin123`
+
+## 3) Run app
+
+```bash
 python run.py
 ```
 
-Open: `http://127.0.0.1:5000`
+Open: http://127.0.0.1:5000
 
-Default credentials (seeded):
-- Username: `admin`
-- Password: `admin123`
-
-## Testing
+## 4) Run tests
 
 ```bash
-source /tmp/empdash-venv/bin/activate
 pytest -q
 ```
 
-## Security Notes
+## 5) CSV exports
 
-- Passwords are hashed (Werkzeug)
-- Auth-protected routes via `@login_required`
-- Replace `SECRET_KEY` before production deploy
-- Run behind WSGI server (e.g., gunicorn) for real production
+- `/export/employees`
+- `/export/tasks`
+- `/export/attendance`
+- `/export/leaves`
 
-## Quick Runbook
+## Structure
 
-1. Seed DB with demo data (`python seed_data.py`)
-2. Login as admin
-3. Create/update records in each module
-4. Export CSV from Employees/Tasks pages
-5. Verify dashboard KPIs and audit timeline update
+- `app/` Flask package (models/routes/templates/static)
+- `run.py` app entrypoint
+- `seed_data.py` database seed
+- `tests/` test suite

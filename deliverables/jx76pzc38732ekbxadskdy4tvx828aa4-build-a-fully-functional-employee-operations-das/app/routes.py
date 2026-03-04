@@ -1,333 +1,259 @@
 import csv
-from datetime import datetime
 from io import StringIO
-
-from flask import Blueprint, Response, flash, redirect, render_template, request, url_for
-from flask_login import current_user, login_required, login_user, logout_user
-
-from . import db
-from .models import AuditLog, Attendance, Department, Employee, Leave, Task, User
-
-bp = Blueprint("main", __name__)
+from datetime import datetime
+from flask import render_template, request, redirect, url_for, flash, Response
+from flask_login import login_user, logout_user, login_required, current_user
+from .models import db, User, Department, Employee, Task, Attendance, LeaveRequest, AuditLog
 
 
-def log_event(entity_type, entity_id, action, message):
-    db.session.add(
-        AuditLog(
-            entity_type=entity_type,
-            entity_id=entity_id,
-            action=action,
-            message=message,
-            actor=current_user.username if current_user.is_authenticated else "system",
-        )
-    )
+def _audit(action, detail):
+    db.session.add(AuditLog(action=action, detail=detail))
 
 
-def paginate(query, default=10):
+def _paginate(query, default=10):
     page = request.args.get("page", 1, type=int)
     per_page = request.args.get("per_page", default, type=int)
     return query.paginate(page=page, per_page=per_page, error_out=False)
 
 
-@bp.route("/")
-def root():
-    return redirect(url_for("main.dashboard") if current_user.is_authenticated else url_for("main.login"))
+def register_routes(app):
+    @app.route("/")
+    def home():
+        if current_user.is_authenticated:
+            return redirect(url_for("dashboard"))
+        return redirect(url_for("login"))
 
+    @app.route("/login", methods=["GET", "POST"])
+    def login():
+        if request.method == "POST":
+            username = request.form["username"].strip()
+            password = request.form["password"]
+            user = User.query.filter_by(username=username).first()
+            if user and user.check_password(password):
+                login_user(user)
+                _audit("auth", f"{username} logged in")
+                db.session.commit()
+                return redirect(url_for("dashboard"))
+            flash("Invalid credentials", "danger")
+        return render_template("login.html")
 
-@bp.route("/login", methods=["GET", "POST"])
-def login():
-    if current_user.is_authenticated:
-        return redirect(url_for("main.dashboard"))
-    if request.method == "POST":
-        user = User.query.filter_by(username=request.form["username"].strip()).first()
-        if user and user.check_password(request.form["password"]):
-            login_user(user)
-            log_event("auth", user.id, "login", f"User {user.username} logged in")
+    @app.route("/logout")
+    @login_required
+    def logout():
+        _audit("auth", f"{current_user.username} logged out")
+        db.session.commit()
+        logout_user()
+        return redirect(url_for("login"))
+
+    @app.route("/dashboard")
+    @login_required
+    def dashboard():
+        kpis = {
+            "employees": Employee.query.count(),
+            "departments": Department.query.count(),
+            "open_tasks": Task.query.filter(Task.status != "done").count(),
+            "pending_leaves": LeaveRequest.query.filter_by(status="pending").count(),
+        }
+        recent_audit = AuditLog.query.order_by(AuditLog.timestamp.desc()).limit(10).all()
+        return render_template("dashboard.html", kpis=kpis, recent_audit=recent_audit)
+
+    @app.route("/departments", methods=["GET", "POST"])
+    @login_required
+    def departments():
+        if request.method == "POST":
+            dep = Department(name=request.form["name"].strip(), location=request.form.get("location", "").strip())
+            db.session.add(dep)
+            _audit("department.create", dep.name)
             db.session.commit()
-            return redirect(url_for("main.dashboard"))
-        flash("Invalid username or password", "danger")
-    return render_template("login.html")
+            return redirect(url_for("departments"))
 
+        q = request.args.get("q", "").strip()
+        query = Department.query
+        if q:
+            query = query.filter(Department.name.ilike(f"%{q}%"))
+        rows = _paginate(query.order_by(Department.created_at.desc()))
+        return render_template("departments.html", rows=rows, q=q)
 
-@bp.route("/logout")
-@login_required
-def logout():
-    log_event("auth", current_user.id, "logout", f"User {current_user.username} logged out")
-    db.session.commit()
-    logout_user()
-    return redirect(url_for("main.login"))
+    @app.route("/departments/<int:dep_id>/delete", methods=["POST"])
+    @login_required
+    def delete_department(dep_id):
+        dep = Department.query.get_or_404(dep_id)
+        _audit("department.delete", dep.name)
+        db.session.delete(dep)
+        db.session.commit()
+        return redirect(url_for("departments"))
 
+    @app.route("/employees", methods=["GET", "POST"])
+    @login_required
+    def employees():
+        if request.method == "POST":
+            emp = Employee(
+                full_name=request.form["full_name"].strip(),
+                email=request.form["email"].strip(),
+                role=request.form["role"].strip(),
+                status=request.form.get("status", "active"),
+                department_id=int(request.form["department_id"]),
+            )
+            db.session.add(emp)
+            _audit("employee.create", emp.full_name)
+            db.session.commit()
+            return redirect(url_for("employees"))
 
-@bp.route("/dashboard")
-@login_required
-def dashboard():
-    kpis = {
-        "employees": Employee.query.count(),
-        "departments": Department.query.count(),
-        "open_tasks": Task.query.filter(Task.status != "Done").count(),
-        "pending_leaves": Leave.query.filter_by(status="Pending").count(),
-    }
-    recent_logs = AuditLog.query.order_by(AuditLog.created_at.desc()).limit(8).all()
-    return render_template("dashboard.html", kpis=kpis, recent_logs=recent_logs)
+        q = request.args.get("q", "").strip()
+        status = request.args.get("status", "")
+        query = Employee.query
+        if q:
+            query = query.filter((Employee.full_name.ilike(f"%{q}%")) | (Employee.email.ilike(f"%{q}%")))
+        if status:
+            query = query.filter(Employee.status == status)
+        rows = _paginate(query.order_by(Employee.created_at.desc()))
+        return render_template("employees.html", rows=rows, q=q, status=status, departments=Department.query.all())
 
+    @app.route("/employees/<int:emp_id>/update", methods=["POST"])
+    @login_required
+    def update_employee(emp_id):
+        emp = Employee.query.get_or_404(emp_id)
+        emp.role = request.form.get("role", emp.role)
+        emp.status = request.form.get("status", emp.status)
+        _audit("employee.update", emp.full_name)
+        db.session.commit()
+        return redirect(url_for("employees"))
 
-@bp.route("/employees", methods=["GET", "POST"])
-@login_required
-def employees():
-    if request.method == "POST":
-        e = Employee(
-            employee_code=request.form["employee_code"],
-            full_name=request.form["full_name"],
-            email=request.form["email"],
-            role=request.form["role"],
-            status=request.form["status"],
-            joining_date=datetime.strptime(request.form["joining_date"], "%Y-%m-%d").date(),
-            department_id=int(request.form["department_id"]),
+    @app.route("/employees/<int:emp_id>/delete", methods=["POST"])
+    @login_required
+    def delete_employee(emp_id):
+        emp = Employee.query.get_or_404(emp_id)
+        _audit("employee.delete", emp.full_name)
+        db.session.delete(emp)
+        db.session.commit()
+        return redirect(url_for("employees"))
+
+    @app.route("/tasks", methods=["GET", "POST"])
+    @login_required
+    def tasks():
+        if request.method == "POST":
+            due = request.form.get("due_date")
+            task = Task(
+                title=request.form["title"].strip(),
+                priority=request.form.get("priority", "medium"),
+                status=request.form.get("status", "todo"),
+                employee_id=int(request.form["employee_id"]),
+                due_date=datetime.strptime(due, "%Y-%m-%d").date() if due else None,
+            )
+            db.session.add(task)
+            _audit("task.create", task.title)
+            db.session.commit()
+            return redirect(url_for("tasks"))
+
+        status = request.args.get("status", "")
+        query = Task.query
+        if status:
+            query = query.filter(Task.status == status)
+        rows = _paginate(query.order_by(Task.created_at.desc()))
+        return render_template("tasks.html", rows=rows, status=status, employees=Employee.query.all())
+
+    @app.route("/tasks/<int:task_id>/update", methods=["POST"])
+    @login_required
+    def update_task(task_id):
+        task = Task.query.get_or_404(task_id)
+        task.status = request.form.get("status", task.status)
+        task.priority = request.form.get("priority", task.priority)
+        _audit("task.update", task.title)
+        db.session.commit()
+        return redirect(url_for("tasks"))
+
+    @app.route("/tasks/<int:task_id>/delete", methods=["POST"])
+    @login_required
+    def delete_task(task_id):
+        task = Task.query.get_or_404(task_id)
+        _audit("task.delete", task.title)
+        db.session.delete(task)
+        db.session.commit()
+        return redirect(url_for("tasks"))
+
+    @app.route("/attendance", methods=["GET", "POST"])
+    @login_required
+    def attendance():
+        if request.method == "POST":
+            row = Attendance(
+                employee_id=int(request.form["employee_id"]),
+                day=datetime.strptime(request.form["day"], "%Y-%m-%d").date(),
+                check_in=request.form.get("check_in", ""),
+                check_out=request.form.get("check_out", ""),
+                status=request.form.get("status", "present"),
+            )
+            db.session.add(row)
+            _audit("attendance.create", f"employee_id={row.employee_id}")
+            db.session.commit()
+            return redirect(url_for("attendance"))
+        rows = _paginate(Attendance.query.order_by(Attendance.day.desc()))
+        return render_template("attendance.html", rows=rows, employees=Employee.query.all())
+
+    @app.route("/leaves", methods=["GET", "POST"])
+    @login_required
+    def leaves():
+        if request.method == "POST":
+            row = LeaveRequest(
+                employee_id=int(request.form["employee_id"]),
+                start_date=datetime.strptime(request.form["start_date"], "%Y-%m-%d").date(),
+                end_date=datetime.strptime(request.form["end_date"], "%Y-%m-%d").date(),
+                reason=request.form.get("reason", ""),
+                status=request.form.get("status", "pending"),
+            )
+            db.session.add(row)
+            _audit("leave.create", f"employee_id={row.employee_id}")
+            db.session.commit()
+            return redirect(url_for("leaves"))
+
+        status = request.args.get("status", "")
+        query = LeaveRequest.query
+        if status:
+            query = query.filter(LeaveRequest.status == status)
+        rows = _paginate(query.order_by(LeaveRequest.created_at.desc()))
+        return render_template("leaves.html", rows=rows, status=status, employees=Employee.query.all())
+
+    @app.route("/leaves/<int:leave_id>/update", methods=["POST"])
+    @login_required
+    def update_leave(leave_id):
+        row = LeaveRequest.query.get_or_404(leave_id)
+        row.status = request.form.get("status", row.status)
+        _audit("leave.update", f"leave_id={leave_id}")
+        db.session.commit()
+        return redirect(url_for("leaves"))
+
+    @app.route("/audit")
+    @login_required
+    def audit():
+        rows = _paginate(AuditLog.query.order_by(AuditLog.timestamp.desc()))
+        return render_template("audit.html", rows=rows)
+
+    @app.route("/export/<string:table>")
+    @login_required
+    def export_csv(table):
+        output = StringIO()
+        writer = csv.writer(output)
+
+        if table == "employees":
+            writer.writerow(["id", "full_name", "email", "role", "status", "department"])
+            for r in Employee.query.all():
+                writer.writerow([r.id, r.full_name, r.email, r.role, r.status, r.department.name])
+        elif table == "tasks":
+            writer.writerow(["id", "title", "priority", "status", "employee", "due_date"])
+            for r in Task.query.all():
+                writer.writerow([r.id, r.title, r.priority, r.status, r.employee.full_name, r.due_date])
+        elif table == "attendance":
+            writer.writerow(["id", "employee", "day", "status", "check_in", "check_out"])
+            for r in Attendance.query.all():
+                writer.writerow([r.id, r.employee.full_name, r.day, r.status, r.check_in, r.check_out])
+        elif table == "leaves":
+            writer.writerow(["id", "employee", "start_date", "end_date", "status", "reason"])
+            for r in LeaveRequest.query.all():
+                writer.writerow([r.id, r.employee.full_name, r.start_date, r.end_date, r.status, r.reason])
+        else:
+            return "unknown table", 404
+
+        return Response(
+            output.getvalue(),
+            mimetype="text/csv",
+            headers={"Content-Disposition": f"attachment; filename={table}.csv"},
         )
-        db.session.add(e)
-        db.session.flush()
-        log_event("employee", e.id, "create", f"Employee created: {e.full_name}")
-        db.session.commit()
-        flash("Employee created", "success")
-        return redirect(url_for("main.employees"))
-
-    q = request.args.get("q", "").strip()
-    status = request.args.get("status", "")
-    dept_id = request.args.get("department_id", type=int)
-    query = Employee.query
-    if q:
-        query = query.filter(Employee.full_name.contains(q) | Employee.email.contains(q) | Employee.employee_code.contains(q))
-    if status:
-        query = query.filter_by(status=status)
-    if dept_id:
-        query = query.filter_by(department_id=dept_id)
-
-    pagination = paginate(query.order_by(Employee.full_name.asc()))
-    return render_template(
-        "employees.html",
-        pagination=pagination,
-        departments=Department.query.order_by(Department.name).all(),
-        q=q,
-        selected_status=status,
-        selected_dept=dept_id,
-    )
-
-
-@bp.route("/employees/<int:eid>/edit", methods=["GET", "POST"])
-@login_required
-def edit_employee(eid):
-    e = Employee.query.get_or_404(eid)
-    if request.method == "POST":
-        e.employee_code = request.form["employee_code"]
-        e.full_name = request.form["full_name"]
-        e.email = request.form["email"]
-        e.role = request.form["role"]
-        e.status = request.form["status"]
-        e.joining_date = datetime.strptime(request.form["joining_date"], "%Y-%m-%d").date()
-        e.department_id = int(request.form["department_id"])
-        log_event("employee", e.id, "update", f"Employee updated: {e.full_name}")
-        db.session.commit()
-        flash("Employee updated", "success")
-        return redirect(url_for("main.employees"))
-
-    return render_template("employee_edit.html", employee=e, departments=Department.query.order_by(Department.name).all())
-
-
-@bp.route("/employees/<int:eid>/delete", methods=["POST"])
-@login_required
-def delete_employee(eid):
-    e = Employee.query.get_or_404(eid)
-    name = e.full_name
-    db.session.delete(e)
-    log_event("employee", eid, "delete", f"Employee deleted: {name}")
-    db.session.commit()
-    flash("Employee deleted", "warning")
-    return redirect(url_for("main.employees"))
-
-
-@bp.route("/departments", methods=["GET", "POST"])
-@login_required
-def departments():
-    if request.method == "POST":
-        d = Department(name=request.form["name"], description=request.form.get("description"))
-        db.session.add(d)
-        db.session.flush()
-        log_event("department", d.id, "create", f"Department created: {d.name}")
-        db.session.commit()
-        flash("Department added", "success")
-        return redirect(url_for("main.departments"))
-
-    query = Department.query
-    q = request.args.get("q", "").strip()
-    if q:
-        query = query.filter(Department.name.contains(q))
-    pagination = paginate(query.order_by(Department.name.asc()))
-    return render_template("departments.html", pagination=pagination, q=q)
-
-
-@bp.route("/departments/<int:did>/edit", methods=["GET", "POST"])
-@login_required
-def edit_department(did):
-    d = Department.query.get_or_404(did)
-    if request.method == "POST":
-        d.name = request.form["name"]
-        d.description = request.form.get("description")
-        log_event("department", d.id, "update", f"Department updated: {d.name}")
-        db.session.commit()
-        flash("Department updated", "success")
-        return redirect(url_for("main.departments"))
-    return render_template("department_edit.html", department=d)
-
-
-@bp.route("/departments/<int:did>/delete", methods=["POST"])
-@login_required
-def delete_department(did):
-    d = Department.query.get_or_404(did)
-    if d.employees:
-        flash("Cannot delete non-empty department", "danger")
-        return redirect(url_for("main.departments"))
-    name = d.name
-    db.session.delete(d)
-    log_event("department", did, "delete", f"Department deleted: {name}")
-    db.session.commit()
-    flash("Department deleted", "warning")
-    return redirect(url_for("main.departments"))
-
-
-@bp.route("/tasks", methods=["GET", "POST"])
-@login_required
-def tasks():
-    if request.method == "POST":
-        due_date = request.form.get("due_date")
-        t = Task(
-            title=request.form["title"],
-            description=request.form.get("description"),
-            priority=request.form["priority"],
-            status=request.form["status"],
-            due_date=datetime.strptime(due_date, "%Y-%m-%d").date() if due_date else None,
-            employee_id=int(request.form["employee_id"]),
-        )
-        db.session.add(t)
-        db.session.flush()
-        log_event("task", t.id, "create", f"Task created: {t.title}")
-        db.session.commit()
-        flash("Task created", "success")
-        return redirect(url_for("main.tasks"))
-
-    q = request.args.get("q", "").strip()
-    status = request.args.get("status", "")
-    query = Task.query
-    if q:
-        query = query.filter(Task.title.contains(q))
-    if status:
-        query = query.filter_by(status=status)
-    pagination = paginate(query.order_by(Task.id.desc()))
-    return render_template("tasks.html", pagination=pagination, q=q, selected_status=status, employees=Employee.query.all())
-
-
-@bp.route("/tasks/<int:tid>/edit", methods=["GET", "POST"])
-@login_required
-def edit_task(tid):
-    t = Task.query.get_or_404(tid)
-    if request.method == "POST":
-        due_date = request.form.get("due_date")
-        t.title = request.form["title"]
-        t.description = request.form.get("description")
-        t.priority = request.form["priority"]
-        t.status = request.form["status"]
-        t.employee_id = int(request.form["employee_id"])
-        t.due_date = datetime.strptime(due_date, "%Y-%m-%d").date() if due_date else None
-        log_event("task", t.id, "update", f"Task updated: {t.title}")
-        db.session.commit()
-        flash("Task updated", "success")
-        return redirect(url_for("main.tasks"))
-    return render_template("task_edit.html", task=t, employees=Employee.query.order_by(Employee.full_name).all())
-
-
-@bp.route("/tasks/<int:tid>/delete", methods=["POST"])
-@login_required
-def delete_task(tid):
-    t = Task.query.get_or_404(tid)
-    title = t.title
-    db.session.delete(t)
-    log_event("task", tid, "delete", f"Task deleted: {title}")
-    db.session.commit()
-    flash("Task deleted", "warning")
-    return redirect(url_for("main.tasks"))
-
-
-@bp.route("/attendance", methods=["GET", "POST"])
-@login_required
-def attendance():
-    if request.method == "POST":
-        rec = Attendance(
-            employee_id=int(request.form["employee_id"]),
-            day=datetime.strptime(request.form["day"], "%Y-%m-%d").date(),
-            status=request.form["status"],
-            check_in=request.form.get("check_in"),
-            check_out=request.form.get("check_out"),
-        )
-        db.session.add(rec)
-        db.session.flush()
-        log_event("attendance", rec.id, "create", f"Attendance marked for {rec.employee.full_name}")
-        db.session.commit()
-        flash("Attendance added", "success")
-        return redirect(url_for("main.attendance"))
-
-    day_filter = request.args.get("day")
-    query = Attendance.query
-    if day_filter:
-        query = query.filter_by(day=datetime.strptime(day_filter, "%Y-%m-%d").date())
-    pagination = paginate(query.order_by(Attendance.day.desc()))
-    return render_template("attendance.html", pagination=pagination, employees=Employee.query.all(), day_filter=day_filter)
-
-
-@bp.route("/leaves", methods=["GET", "POST"])
-@login_required
-def leaves():
-    if request.method == "POST":
-        l = Leave(
-            employee_id=int(request.form["employee_id"]),
-            leave_type=request.form["leave_type"],
-            start_date=datetime.strptime(request.form["start_date"], "%Y-%m-%d").date(),
-            end_date=datetime.strptime(request.form["end_date"], "%Y-%m-%d").date(),
-            status=request.form["status"],
-            reason=request.form.get("reason"),
-        )
-        db.session.add(l)
-        db.session.flush()
-        log_event("leave", l.id, "create", f"Leave request for {l.employee.full_name}")
-        db.session.commit()
-        flash("Leave request added", "success")
-        return redirect(url_for("main.leaves"))
-
-    status = request.args.get("status", "")
-    query = Leave.query
-    if status:
-        query = query.filter_by(status=status)
-    pagination = paginate(query.order_by(Leave.start_date.desc()))
-    return render_template("leaves.html", pagination=pagination, employees=Employee.query.all(), selected_status=status)
-
-
-@bp.route("/export/<string:entity>.csv")
-@login_required
-def export_csv(entity):
-    output = StringIO()
-    writer = csv.writer(output)
-
-    if entity == "employees":
-        writer.writerow(["Code", "Name", "Email", "Role", "Status", "Department"])
-        for e in Employee.query.order_by(Employee.full_name).all():
-            writer.writerow([e.employee_code, e.full_name, e.email, e.role, e.status, e.department.name])
-    elif entity == "tasks":
-        writer.writerow(["Title", "Employee", "Priority", "Status", "Due Date"])
-        for t in Task.query.order_by(Task.id.desc()).all():
-            writer.writerow([t.title, t.employee.full_name, t.priority, t.status, t.due_date])
-    else:
-        return "Unsupported export", 400
-
-    return Response(
-        output.getvalue(),
-        mimetype="text/csv",
-        headers={"Content-Disposition": f"attachment; filename={entity}.csv"},
-    )

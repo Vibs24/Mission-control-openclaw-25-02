@@ -1,8 +1,17 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-<div class="grid2">
-<div class="card"><h3>Apply/Record Leave</h3><form method="post"><select name="employee_id" required>{% for e in employees %}<option value="{{e.id}}">{{e.full_name}}</option>{% endfor %}</select><input name="leave_type" placeholder="Sick/Casual" required><input type="date" name="start_date" required><input type="date" name="end_date" required><select name="status"><option>Pending</option><option>Approved</option><option>Rejected</option></select><input name="reason" placeholder="Reason"><button>Save</button></form></div>
-<div class="card"><form method="get" class="inline"><select name="status"><option value="">All Status</option>{% for s in ['Pending','Approved','Rejected'] %}<option value="{{s}}" {% if selected_status==s %}selected{% endif %}>{{s}}</option>{% endfor %}</select><button>Filter</button></form></div>
-</div>
-<div class="card"><table><thead><tr><th>Employee</th><th>Type</th><th>Start</th><th>End</th><th>Status</th><th>Reason</th></tr></thead><tbody>{% for l in pagination.items %}<tr><td>{{l.employee.full_name}}</td><td>{{l.leave_type}}</td><td>{{l.start_date}}</td><td>{{l.end_date}}</td><td><span class="badge {{l.status|lower}}">{{l.status}}</span></td><td>{{l.reason}}</td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
+<div class="d-flex justify-content-between mb-2"><h4>Leave Requests</h4><a class="btn btn-outline-secondary" href="{{ url_for('export_csv', table='leaves') }}">Export CSV</a></div>
+<form class="row g-2 mb-2"><div class="col"><select name="status" class="form-select"><option value="">All</option><option>pending</option><option>approved</option><option>rejected</option></select></div><div class="col-auto"><button class="btn btn-primary">Filter</button></div></form>
+<form method="post" class="row g-2 mb-3">
+  <div class="col"><select class="form-select" name="employee_id">{% for e in employees %}<option value="{{e.id}}">{{e.full_name}}</option>{% endfor %}</select></div>
+  <div class="col"><input type="date" class="form-control" name="start_date" required></div>
+  <div class="col"><input type="date" class="form-control" name="end_date" required></div>
+  <div class="col"><input class="form-control" name="reason" placeholder="Reason"></div>
+  <div class="col-auto"><button class="btn btn-success">Submit</button></div>
+</form>
+<table class="table table-striped table-sm"><tr><th>Employee</th><th>From</th><th>To</th><th>Status</th><th>Actions</th></tr>
+{% for l in rows.items %}<tr><td>{{l.employee.full_name}}</td><td>{{l.start_date}}</td><td>{{l.end_date}}</td><td><span class="badge {{l.status}}">{{l.status}}</span></td><td>
+<form method="post" action="{{ url_for('update_leave', leave_id=l.id) }}" class="d-inline"><select name="status" class="form-select form-select-sm d-inline w-auto"><option>pending</option><option>approved</option><option>rejected</option></select><button class="btn btn-sm btn-warning">Update</button></form></td></tr>{% endfor %}
+</table>
+{% include '_pagination.html' %}
 {% endblock %}
