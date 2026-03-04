@@ -1,50 +1,41 @@
-# Minimal Flask + SQLite Employee Notes App
+# Smoke Test: Minimal Flask + SQLite Employee Notes App
 
-Smoke-test implementation of a runnable Flask app with login, employee CRUD, note CRUD, SQLite schema, seed data, and basic tests.
+Minimal, runnable employee-notes app for smoke validation.
 
 ## Features
-
-- Login/logout (`Flask-Login`)
+- Secure login/logout (Flask-Login + password hashing)
 - Employee CRUD (create/list/delete)
-- Employee Notes CRUD (create/list/edit/delete)
-- SQLite persistence via SQLAlchemy models (`User`, `Employee`, `Note`)
-- Seed script for demo data
-- Basic pytest suite
+- Employee note CRUD (create/edit/delete)
+- SQLite backing store
+- Seed script with default admin and sample records
+- Basic pytest smoke tests
 
 ## Setup
-
 ```bash
-python3 -m venv /tmp/employee-notes-venv
-source /tmp/employee-notes-venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-python seed_data.py
-python run.py
 ```
 
-App URL: `http://127.0.0.1:5000`
-
-Default seeded credentials:
-- username: `admin`
-- password: `admin123`
-
-## Run Tests
-
+## Seed database
 ```bash
-source /tmp/employee-notes-venv/bin/activate
+python seed_data.py
+```
+Default login: `admin / admin123`
+
+## Run
+```bash
+python run.py
+```
+Open: http://127.0.0.1:5000
+
+## Test
+```bash
 pytest -q
 ```
 
-## Project Layout
-
-```
-.
-├── app/
-│   ├── __init__.py
-│   ├── models.py
-│   ├── routes.py
-│   └── templates/
-├── tests/test_app.py
-├── seed_data.py
-├── run.py
-└── requirements.txt
-```
+## Project files
+- `app/` Flask package (models/routes/templates)
+- `run.py` app entrypoint
+- `seed_data.py` seed loader
+- `tests/test_app.py` smoke tests
