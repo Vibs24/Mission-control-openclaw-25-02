@@ -1,1 +1,7 @@
-{% extends 'base.html' %}{% block body %}<h2>Board</h2><h3>Navigation</h3><a href='{{url_for("main.members")}}'>Members</a><button>Create Task</button>{% for st in statuses %}<section><h4>{{st}}</h4><span>{{columns[st]|length}}</span>{% for t in columns[st] %}<div>{{t.title}}</div>{% endfor %}</section>{% endfor %}{% endblock %}
+{% extends 'layout.html' %}{% block content %}
+<div class='topbar'><input id='search' placeholder='Live search...'><button id='notifBtn'>🔔</button><div id='notifPanel' class='panel hidden'></div><span class='avatar'>{{current_user.avatar}}</span></div>
+<div class='toolbar'><button id='newTaskBtn'>+ New Task</button></div>
+<div id='board' class='board'></div>
+<div id='drawer' class='drawer hidden'></div>
+<div id='taskModal' class='modal hidden'></div>
+{% endblock %}

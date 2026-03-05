@@ -1,0 +1,5 @@
+<!doctype html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='stylesheet' href='{{url_for("static",filename="style.css")}}'></head>
+<body class='dark'><div class='app'>
+<aside class='sidebar'><h3>TeamBoard</h3><a href='/board'>Board</a><a href='/members'>Members</a><a href='/activity'>Activity</a><a href='/workspaces'>Workspaces</a><a href='/logout'>Logout</a>
+<div id='presence'></div></aside>
+<main>{% block content %}{% endblock %}</main></div><script src='{{url_for("static",filename="app.js")}}'></script></body></html>

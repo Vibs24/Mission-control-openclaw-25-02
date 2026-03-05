@@ -1,18 +1,2 @@
-{% extends 'base.html' %}
-{% block body %}
-<header class='top'><h2>Workspaces</h2><a href='{{url_for("main.logout")}}'>Logout</a></header>
-<main class='container'>
-  <section class='card'>
-    <h3>Create Workspace</h3>
-    <form method='post'><input name='name' required placeholder='Workspace Name'><button>Create</button></form>
-  </section>
-  <section class='card'>
-    <h3>Your Workspaces</h3>
-    <ul>{% for w in workspaces %}<li><a href='{{url_for("main.board", workspace_id=w.id)}}'>{{w.name}}</a></li>{% else %}<li>None yet</li>{% endfor %}</ul>
-  </section>
-  <section class='card'>
-    <h3>Pending Invites</h3>
-    <ul>{% for i in invites %}<li>{{i.email}} <form method='post' action='{{url_for("main.accept_invite", token=i.token)}}' style='display:inline'><button>Accept</button></form></li>{% else %}<li>No invites</li>{% endfor %}</ul>
-  </section>
-</main>
-{% endblock %}
+{% extends 'layout.html' %}{% block content %}<h2>Workspaces</h2><form method='post' class='inline'><input name='name' placeholder='Workspace name' required><button>Create</button></form>
+<ul>{% for w in items %}<li>{{w.name}} <a href='/join/{{w.invite_code}}'>Open</a></li>{% endfor %}</ul>{% endblock %}

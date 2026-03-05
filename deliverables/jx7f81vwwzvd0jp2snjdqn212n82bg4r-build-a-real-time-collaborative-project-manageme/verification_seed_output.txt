@@ -1,1 +1,1 @@
-Seeded admin/member + workspace + task
+Seeded users: admin@team.local/admin123 member@team.local/member123

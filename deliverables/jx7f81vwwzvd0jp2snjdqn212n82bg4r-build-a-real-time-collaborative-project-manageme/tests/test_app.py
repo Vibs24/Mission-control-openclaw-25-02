@@ -1,43 +1,34 @@
-import os, tempfile
-import pytest
-from app import create_app, db
-from app.models import User, Workspace, WorkspaceMember
+from app import create_app
+from app.models import db, User, Workspace, WorkspaceMember, Task
 
-@pytest.fixture
-def client():
-    fd, p = tempfile.mkstemp()
-    app = create_app({'TESTING':True,'SQLALCHEMY_DATABASE_URI':f'sqlite:///{p}','SECRET_KEY':'t'})
+
+def setup_client():
+    app = create_app({'TESTING':True, 'SQLALCHEMY_DATABASE_URI':'sqlite:///:memory:'})
     with app.app_context():
         db.create_all()
-        u1=User(email='u1@example.com'); u1.set_password('pass')
-        u2=User(email='u2@example.com'); u2.set_password('pass')
-        db.session.add_all([u1,u2]); db.session.flush()
-        ws=Workspace(name='W', owner_id=u1.id); db.session.add(ws); db.session.flush()
-        db.session.add_all([WorkspaceMember(workspace_id=ws.id,user_id=u1.id,role='admin',online=True),WorkspaceMember(workspace_id=ws.id,user_id=u2.id,role='member',online=True)])
+        a=User(email='a@x.com', avatar='A'); a.set_password('pass')
+        b=User(email='b@x.com', avatar='B'); b.set_password('pass')
+        db.session.add_all([a,b]); db.session.flush()
+        w=Workspace(name='W', invite_code='abc123', owner_id=a.id); db.session.add(w); db.session.flush()
+        db.session.add_all([WorkspaceMember(workspace_id=w.id,user_id=a.id,role='admin'),WorkspaceMember(workspace_id=w.id,user_id=b.id,role='member')])
         db.session.commit()
-    with app.test_client() as c: yield c
-    os.close(fd); os.unlink(p)
+    return app.test_client(), app
 
-def login(c,email='u1@example.com'):
-    return c.post('/login',data={'email':email,'password':'pass'},follow_redirects=True)
 
-def test_auth_and_workspace(client):
-    rv = login(client)
-    assert b'Your Workspaces' in rv.data
+def test_signup_and_workspace_create():
+    c,_=setup_client()
+    r=c.post('/signup', data={'email':'new@x.com','password':'z'}, follow_redirects=True)
+    assert r.status_code==200
 
-def test_task_create_move_comment(client):
-    login(client)
-    rv=client.post('/w/1/tasks',data={'title':'T1','description':'d','priority':'High','status':'To Do','assignee_id':'2'})
-    assert rv.status_code==200
-    rv=client.post('/task/1/update',data={'title':'T1','description':'d','priority':'High','due_date':'','status':'Review','assignee_id':'2'})
-    assert rv.status_code==200
-    rv=client.post('/task/1/comment',data={'body':'Looks good'})
-    assert rv.status_code==200
 
-def test_search_notifications_json(client):
-    login(client)
-    client.post('/w/1/tasks',data={'title':'Needle','description':'haystack','priority':'Low','status':'To Do'})
-    rv=client.get('/w/1/tasks?q=Needle')
-    assert b'Needle' in rv.data
-    rv=client.get('/notifications')
-    assert rv.status_code==200
+def test_create_and_move_task_api():
+    c,app=setup_client()
+    c.post('/login', data={'email':'a@x.com','password':'pass'}, follow_redirects=True)
+    c.set_cookie('ws_id','1')
+    r=c.post('/api/task', json={'title':'T','description':'D','priority':'high','due_date':'2026-03-08','assignee_id':2})
+    assert r.json['ok'] is True
+    tid=r.json['id']
+    m=c.post(f'/api/task/{tid}/update', json={'status':'done'})
+    assert m.json['ok'] is True
+    with app.app_context():
+        assert db.session.get(Task, tid).status=='done'

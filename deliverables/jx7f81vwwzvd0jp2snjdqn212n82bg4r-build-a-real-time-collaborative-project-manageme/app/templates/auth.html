@@ -1,0 +1,4 @@
+<!doctype html><html><head><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='stylesheet' href='{{url_for("static",filename="style.css")}}'></head>
+<body class='dark'><div class='auth-card'><h2>{{'Sign up' if mode=='signup' else 'Login'}}</h2>{% if error %}<p class='err'>{{error}}</p>{% endif %}
+<form method='post'><input name='email' placeholder='Email' required><input type='password' name='password' placeholder='Password' required><button>{{'Create account' if mode=='signup' else 'Login'}}</button></form>
+<a href='{{url_for("login") if mode=="signup" else url_for("signup")}}'>{{'Have account? Login' if mode=='signup' else 'No account? Sign up'}}</a></div></body></html>

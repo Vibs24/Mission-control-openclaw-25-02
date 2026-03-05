@@ -1,32 +1,35 @@
-# Real-Time Collaborative Project Management Platform
+# Real-time Collaborative Project Management Platform
 
-Flask + SQLite collaboration app with workspaces, Kanban board, drag/drop status updates without page reload, task modal editing, threaded comments, activity timeline, notifications, member admin controls, and responsive dark UI.
+Flask + SQLite dark-theme collaboration platform with Kanban board, task modal editing, comments, activity timeline, notifications, workspace management, invite link flow, member admin controls, and persistent sessions.
 
-## Setup
+## Key features
+- Email/password registration and login with persistent remember sessions
+- Workspace creation + invite link join (`/join/<code>`) + direct email invite via members page
+- Kanban board with 4 lanes: To Do, In Progress, Review, Done
+- Lane task count badges + accent colors
+- Cards show title, priority dot, due date (overdue red), assignee avatar, comment count
+- Drag/drop card status updates instantly (AJAX)
+- Full-screen modal: task edit form (left) + threaded comments and timeline (right)
+- Slide-in drawer for new task creation
+- Live search across title+description
+- Notification bell panel for assignment/comment events
+- Sidebar with board/members/activity/workspaces + online presence strip placeholder
+- Members page admin controls: change role, remove, workload summary by status
+- Relational schema with indexed status/assignee/workspace/notification recipient fields
+- Cascading foreign keys enabled via SQLite pragma
+- SessionToken table with expiry timestamps
+- Responsive mobile layout (columns collapse to vertical stack)
+
+## Run
 ```bash
-python3 -m venv /tmp/collabpm-venv
-source /tmp/collabpm-venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 python seed_data.py
 python run.py
 ```
 
-## Features delivered
-- Email/password registration + persistent remember sessions.
-- Workspace creation, invite token flow, direct email invite records.
-- 4-lane Kanban: To Do, In Progress, Review, Done.
-- Count badges, priority dots, overdue red highlights, assignee avatars, comment counts.
-- Drag/drop cards with instant fetch update (no reload required for state sync).
-- Full-screen split task modal: metadata editor + comments + timeline.
-- Slide-in drawer for new task creation.
-- Live search across task title+description.
-- Notification panel and profile area in top nav.
-- Sidebar: workspace switcher, nav links, online presence strip.
-- Admin member controls: role change/remove + workload summary per status.
-- Relational DB tables + indexes + FK cascades for cleanup.
-
 ## Test
 ```bash
-source /tmp/collabpm-venv/bin/activate
-pytest -q
+python3 -m pytest -q
 ```

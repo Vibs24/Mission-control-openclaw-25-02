@@ -1,249 +1,222 @@
 import secrets
-from datetime import datetime
+from datetime import datetime, timedelta, date
+from flask import render_template, request, redirect, url_for, jsonify, abort, make_response
+from flask_login import login_user, logout_user, login_required, current_user
+from .models import db, User, Workspace, WorkspaceMember, Task, Comment, Activity, Notification, SessionToken
 
-from flask import Blueprint, flash, jsonify, redirect, render_template, request, session, url_for
-from flask_login import current_user, login_required, login_user, logout_user
-
-from . import db
-from .models import Activity, Comment, Notification, SessionToken, Task, User, Workspace, WorkspaceMember
-
-bp = Blueprint('main', __name__)
-
-
-def _issue_token(user_id):
-    token = secrets.token_hex(32)
-    db.session.add(SessionToken(user_id=user_id, token=token))
-    db.session.commit()
-    return token
-
-
-def _set_workspace(ws_id):
-    session['workspace_id'] = ws_id
-
-
-def _current_ws():
-    return session.get('workspace_id')
-
-
-def _require_member(ws_id):
-    return WorkspaceMember.query.filter_by(workspace_id=ws_id, user_id=current_user.id).first()
-
-
-@bp.before_app_request
-def restore_from_cookie():
-    if current_user.is_authenticated:
-        return
-    token = request.cookies.get('session_token')
-    if not token:
-        return
-    st = SessionToken.query.filter_by(token=token).first()
-    if st:
-        user = db.session.get(User, st.user_id)
-        if user:
-            login_user(user, remember=True)
-
-
-@bp.route('/')
-def root():
-    return redirect(url_for('main.workspaces') if current_user.is_authenticated else url_for('main.login'))
-
-
-@bp.route('/signup', methods=['GET', 'POST'])
-def signup():
-    if request.method == 'POST':
-        email = request.form['email'].strip().lower()
-        if User.query.filter_by(email=email).first():
-            flash('Email already in use', 'danger')
-            return redirect(url_for('main.signup'))
-        u = User(email=email)
-        u.set_password(request.form['password'])
-        db.session.add(u)
-        db.session.commit()
-        login_user(u, remember=True)
-        token = _issue_token(u.id)
-        resp = redirect(url_for('main.workspaces'))
-        resp.set_cookie('session_token', token, max_age=60 * 60 * 24 * 30, httponly=True, samesite='Lax')
-        return resp
-    return render_template('signup.html')
-
-
-@bp.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        u = User.query.filter_by(email=request.form['email'].strip().lower()).first()
-        if u and u.check_password(request.form['password']):
-            login_user(u, remember=True)
-            token = _issue_token(u.id)
-            memberships = WorkspaceMember.query.filter_by(user_id=u.id).all()
-            for m in memberships:
-                m.online = True
-            db.session.commit()
-            resp = redirect(url_for('main.workspaces'))
-            resp.set_cookie('session_token', token, max_age=60 * 60 * 24 * 30, httponly=True, samesite='Lax')
-            return resp
-        flash('Invalid credentials', 'danger')
-    return render_template('login.html')
-
-
-@bp.route('/logout')
-@login_required
-def logout():
-    for m in WorkspaceMember.query.filter_by(user_id=current_user.id).all():
-        m.online = False
-    db.session.commit()
-    logout_user()
-    resp = redirect(url_for('main.login'))
-    resp.delete_cookie('session_token')
-    return resp
-
-
-@bp.route('/workspaces', methods=['GET', 'POST'])
-@login_required
-def workspaces():
-    if request.method == 'POST':
-        ws = Workspace(name=request.form['name'], owner_id=current_user.id)
-        db.session.add(ws)
-        db.session.flush()
-        db.session.add(WorkspaceMember(workspace_id=ws.id, user_id=current_user.id, role='admin', online=True))
-        db.session.commit()
-        _set_workspace(ws.id)
-        return redirect(url_for('main.board', workspace_id=ws.id))
-    memberships = WorkspaceMember.query.filter_by(user_id=current_user.id).all()
-    all_ws = [db.session.get(Workspace, m.workspace_id) for m in memberships]
-    return render_template('workspaces.html', workspaces=all_ws, invites=[])
-
-
-@bp.route('/workspace/<int:workspace_id>/select')
-@login_required
-def select_workspace(workspace_id):
-    if not _require_member(workspace_id):
-        return 'Forbidden', 403
-    _set_workspace(workspace_id)
-    return redirect(url_for('main.board', workspace_id=workspace_id))
-
-
-@bp.route('/members', methods=['GET', 'POST'])
-@login_required
-def members():
-    ws_id = _current_ws()
-    if not ws_id:
-        return redirect(url_for('main.workspaces'))
-    me = _require_member(ws_id)
-    if not me:
-        return 'Forbidden', 403
-    if request.method == 'POST' and me.role == 'admin':
-        target = int(request.form['target_user_id'])
-        role = request.form.get('role', 'member')
-        m = WorkspaceMember.query.filter_by(workspace_id=ws_id, user_id=target).first()
-        if m:
-            m.role = role
-            db.session.commit()
-    rows = []
-    for m in WorkspaceMember.query.filter_by(workspace_id=ws_id).all():
-        u = db.session.get(User, m.user_id)
-        rows.append((m, u))
-    return render_template('members.html', rows=rows, workspace_id=ws_id)
-
-
-@bp.route('/members/remove/<int:user_id>', methods=['POST'])
-@login_required
-def remove_member(user_id):
-    ws_id = _current_ws()
-    me = _require_member(ws_id)
-    if not me or me.role != 'admin':
-        return 'Forbidden', 403
-    WorkspaceMember.query.filter_by(workspace_id=ws_id, user_id=user_id).delete()
-    db.session.commit()
-    return redirect(url_for('main.members'))
-
-
-@bp.route('/board')
-@bp.route('/w/<int:workspace_id>/tasks', methods=['GET', 'POST'])
-@bp.route('/board/<int:workspace_id>', methods=['GET'])
-@login_required
-def board(workspace_id=None):
-    ws_id = workspace_id or _current_ws()
-    if not ws_id:
-        return redirect(url_for('main.workspaces'))
-    if not _require_member(ws_id):
-        return 'Forbidden', 403
-    _set_workspace(ws_id)
-
-    if request.method == 'POST':
-        t = Task(
-            workspace_id=ws_id,
-            title=request.form['title'],
-            description=request.form.get('description', ''),
-            priority=request.form.get('priority', 'Medium'),
-            status=request.form.get('status', 'To Do'),
-            assignee_id=int(request.form['assignee_id']) if request.form.get('assignee_id') else None,
-            created_by=current_user.id,
-        )
-        db.session.add(t)
-        db.session.flush()
-        db.session.add(Activity(task_id=t.id, actor_id=current_user.id, field_name='create', detail='Task created'))
-        if t.assignee_id and t.assignee_id != current_user.id:
-            db.session.add(Notification(recipient_id=t.assignee_id, title='Task assignment', body=f'Assigned: {t.title}'))
-        db.session.commit()
-        return 'OK', 200
-
-    q = request.args.get('q', '').strip().lower()
-    tasks = Task.query.filter_by(workspace_id=ws_id).order_by(Task.id.desc()).all()
-    if q:
-        tasks = [t for t in tasks if q in (t.title or '').lower() or q in (t.description or '').lower()]
-    statuses = ['To Do', 'In Progress', 'Review', 'Done']
-    columns = {s: [] for s in statuses}
-    for t in tasks:
-        columns[t.status].append(t)
-    users = [db.session.get(User, m.user_id) for m in WorkspaceMember.query.filter_by(workspace_id=ws_id).all()]
-    presence = [u for u in users if WorkspaceMember.query.filter_by(workspace_id=ws_id, user_id=u.id, online=True).first()]
-    return render_template('board.html', workspace_id=ws_id, statuses=statuses, columns=columns, users=users, presence=presence)
-
-
-@bp.route('/task/<int:task_id>/update', methods=['POST'])
-@login_required
-def update_task(task_id):
-    t = db.session.get(Task, task_id)
-    if not t or not _require_member(t.workspace_id):
-        return 'Forbidden', 403
-    old_status = t.status
-    t.title = request.form.get('title', t.title)
-    t.description = request.form.get('description', t.description)
-    t.priority = request.form.get('priority', t.priority)
-    t.status = request.form.get('status', t.status)
-    due = request.form.get('due_date', '').strip()
-    t.due_date = datetime.strptime(due, '%Y-%m-%d').date() if due else None
-    t.assignee_id = int(request.form['assignee_id']) if request.form.get('assignee_id') else None
-    db.session.add(Activity(task_id=t.id, actor_id=current_user.id, field_name='status', old_value=old_status, new_value=t.status, detail='Task updated'))
-    db.session.commit()
-    return 'OK', 200
-
-
-@bp.route('/task/<int:task_id>/comment', methods=['POST'])
-@login_required
-def comment_task(task_id):
-    t = db.session.get(Task, task_id)
-    if not t or not _require_member(t.workspace_id):
-        return 'Forbidden', 403
-    body = request.form.get('body', '').strip()
-    if not body:
-        return 'Missing comment', 400
-    db.session.add(Comment(task_id=t.id, author_id=current_user.id, body=body))
-    db.session.add(Activity(task_id=t.id, actor_id=current_user.id, field_name='comment', new_value=body, detail='Comment added'))
-    if t.assignee_id and t.assignee_id != current_user.id:
-        db.session.add(Notification(recipient_id=t.assignee_id, title='New comment', body=f'Comment on {t.title}'))
-    db.session.commit()
-    return 'OK', 200
-
-
-@bp.route('/notifications')
-@login_required
-def notifications():
-    items = Notification.query.filter_by(recipient_id=current_user.id).order_by(Notification.id.desc()).all()
-    if request.accept_mimetypes.best == 'application/json' or request.args.get('format') == 'json':
-        return jsonify([{'id': n.id, 'title': n.title, 'body': n.body, 'read': n.read} for n in items])
-    return render_template('notifications.html', items=items)
+STATUSES = ['todo', 'in_progress', 'review', 'done']
 
 
 def register_routes(app):
-    app.register_blueprint(bp)
+    def ws_id(): return int(request.cookies.get('ws_id', '0'))
+
+    def require_member(workspace_id):
+        m = WorkspaceMember.query.filter_by(workspace_id=workspace_id, user_id=current_user.id).first()
+        if not m: abort(403)
+        return m
+
+    def member_users(workspace_id):
+        mids = [m.user_id for m in WorkspaceMember.query.filter_by(workspace_id=workspace_id).all()]
+        return User.query.filter(User.id.in_(mids)).all() if mids else []
+
+    def add_activity(task_id, field, old_v, new_v):
+        db.session.add(Activity(task_id=task_id, user_id=current_user.id, field=field, old_value=str(old_v or ''), new_value=str(new_v or '')))
+
+    def notify(uid, workspace_id, msg):
+        if uid and uid != current_user.id:
+            db.session.add(Notification(recipient_id=uid, workspace_id=workspace_id, message=msg))
+
+    @app.route('/')
+    def home():
+        return redirect(url_for('board')) if current_user.is_authenticated else redirect(url_for('login'))
+
+    @app.route('/signup', methods=['GET', 'POST'])
+    def signup():
+        if request.method == 'POST':
+            email = request.form['email'].strip().lower()
+            if User.query.filter_by(email=email).first():
+                return render_template('auth.html', mode='signup', error='Email already exists')
+            u = User(email=email, avatar=(email[:1] or 'U').upper())
+            u.set_password(request.form['password'])
+            db.session.add(u); db.session.commit()
+            login_user(u, remember=True)
+            token = secrets.token_hex(16)
+            db.session.add(SessionToken(user_id=u.id, token=token, expires_at=datetime.utcnow()+timedelta(days=30))); db.session.commit()
+            return redirect(url_for('workspaces'))
+        return render_template('auth.html', mode='signup')
+
+    @app.route('/login', methods=['GET', 'POST'])
+    def login():
+        if request.method == 'POST':
+            u = User.query.filter_by(email=request.form['email'].strip().lower()).first()
+            if u and u.check_password(request.form['password']):
+                login_user(u, remember=True)
+                token = secrets.token_hex(16)
+                db.session.add(SessionToken(user_id=u.id, token=token, expires_at=datetime.utcnow()+timedelta(days=30))); db.session.commit()
+                return redirect(url_for('workspaces'))
+            return render_template('auth.html', mode='login', error='Invalid credentials')
+        return render_template('auth.html', mode='login')
+
+    @app.route('/logout')
+    @login_required
+    def logout():
+        logout_user(); return redirect(url_for('login'))
+
+    @app.route('/workspaces', methods=['GET', 'POST'])
+    @login_required
+    def workspaces():
+        if request.method == 'POST':
+            name = request.form['name'].strip()
+            w = Workspace(name=name, invite_code=secrets.token_hex(6), owner_id=current_user.id)
+            db.session.add(w); db.session.flush()
+            db.session.add(WorkspaceMember(workspace_id=w.id, user_id=current_user.id, role='admin'))
+            db.session.commit()
+            r = make_response(redirect(url_for('board'))); r.set_cookie('ws_id', str(w.id)); return r
+        my = Workspace.query.join(WorkspaceMember, Workspace.id==WorkspaceMember.workspace_id).filter(WorkspaceMember.user_id==current_user.id).all()
+        return render_template('workspaces.html', items=my)
+
+    @app.route('/join/<code>')
+    @login_required
+    def join_link(code):
+        w = Workspace.query.filter_by(invite_code=code).first_or_404()
+        if not WorkspaceMember.query.filter_by(workspace_id=w.id, user_id=current_user.id).first():
+            db.session.add(WorkspaceMember(workspace_id=w.id, user_id=current_user.id, role='member')); db.session.commit()
+        r = make_response(redirect(url_for('board'))); r.set_cookie('ws_id', str(w.id)); return r
+
+    @app.route('/members', methods=['GET', 'POST'])
+    @login_required
+    def members():
+        wid = ws_id(); me = require_member(wid)
+        if request.method == 'POST':
+            if me.role != 'admin': abort(403)
+            if request.form['action'] == 'invite_email':
+                email = request.form['email'].strip().lower(); u = User.query.filter_by(email=email).first()
+                if u and not WorkspaceMember.query.filter_by(workspace_id=wid, user_id=u.id).first():
+                    db.session.add(WorkspaceMember(workspace_id=wid, user_id=u.id, role='member'))
+            elif request.form['action'] == 'set_role':
+                m = db.session.get(WorkspaceMember, int(request.form['member_id']));
+                if m and m.workspace_id == wid: m.role = request.form['role']
+            elif request.form['action'] == 'remove':
+                m = db.session.get(WorkspaceMember, int(request.form['member_id']))
+                if m and m.workspace_id == wid and m.user_id != current_user.id: db.session.delete(m)
+            db.session.commit(); return redirect(url_for('members'))
+        rows = WorkspaceMember.query.filter_by(workspace_id=wid).all(); users = {u.id:u for u in User.query.all()}
+        workload = {}
+        for m in rows:
+            workload[m.user_id] = {s: Task.query.filter_by(workspace_id=wid, assignee_id=m.user_id, status=s).count() for s in STATUSES}
+        invite = Workspace.query.get(wid).invite_code
+        return render_template('members.html', rows=rows, users=users, me=me, workload=workload, invite=invite)
+
+    @app.route('/activity')
+    @login_required
+    def activity_feed():
+        wid = ws_id(); require_member(wid)
+        task_ids = [t.id for t in Task.query.filter_by(workspace_id=wid).all()]
+        rows = Activity.query.filter(Activity.task_id.in_(task_ids)).order_by(Activity.id.desc()).limit(200).all() if task_ids else []
+        users = {u.id:u for u in User.query.all()}
+        return render_template('activity.html', rows=rows, users=users)
+
+    @app.route('/board')
+    @login_required
+    def board():
+        wid = ws_id()
+        if wid == 0: return redirect(url_for('workspaces'))
+        require_member(wid)
+        users = member_users(wid)
+        return render_template('board.html', users=users)
+
+    @app.route('/api/board')
+    @login_required
+    def api_board():
+        wid = ws_id(); require_member(wid)
+        q = request.args.get('q','').strip().lower()
+        tasks = Task.query.filter_by(workspace_id=wid).all()
+        comments_count = {t.id: Comment.query.filter_by(task_id=t.id).count() for t in tasks}
+        users = {u.id:u for u in User.query.all()}
+        payload = {s: [] for s in STATUSES}
+        for t in tasks:
+            if q and q not in (t.title + ' ' + (t.description or '')).lower():
+                continue
+            payload[t.status].append({
+                'id': t.id,'title': t.title,'priority': t.priority,'due_date': str(t.due_date) if t.due_date else '',
+                'overdue': bool(t.due_date and t.due_date < date.today() and t.status != 'done'),
+                'assignee': users[t.assignee_id].email if t.assignee_id in users else 'Unassigned',
+                'avatar': users[t.assignee_id].avatar if t.assignee_id in users else '👤',
+                'comments': comments_count[t.id]
+            })
+        return jsonify(payload)
+
+    @app.route('/api/task', methods=['POST'])
+    @login_required
+    def api_task_create():
+        wid = ws_id(); require_member(wid)
+        d = request.get_json(force=True)
+        due = datetime.strptime(d['due_date'], '%Y-%m-%d').date() if d.get('due_date') else None
+        t = Task(workspace_id=wid, title=d['title'], description=d.get('description',''), priority=d.get('priority','medium'), due_date=due, assignee_id=d.get('assignee_id'), created_by=current_user.id)
+        db.session.add(t); db.session.flush(); add_activity(t.id, 'create', '', t.title); notify(t.assignee_id, wid, f'Assigned: {t.title}'); db.session.commit()
+        return jsonify({'ok': True, 'id': t.id})
+
+    @app.route('/api/task/<int:tid>')
+    @login_required
+    def api_task_get(tid):
+        t = db.session.get(Task, tid)
+        if not t: abort(404)
+        require_member(t.workspace_id)
+        comments = Comment.query.filter_by(task_id=t.id).order_by(Comment.id.desc()).all()
+        users = {u.id:u for u in User.query.all()}
+        activity = Activity.query.filter_by(task_id=t.id).order_by(Activity.id.desc()).all()
+        return jsonify({
+            'task': {'id':t.id,'title':t.title,'description':t.description,'priority':t.priority,'status':t.status,'due_date':str(t.due_date) if t.due_date else '','assignee_id':t.assignee_id},
+            'comments': [{'user':users[c.user_id].email,'avatar':users[c.user_id].avatar,'body':c.body,'at':str(c.created_at)} for c in comments],
+            'activity': [{'field':a.field,'old':a.old_value,'new':a.new_value,'at':str(a.created_at)} for a in activity]
+        })
+
+    @app.route('/api/task/<int:tid>/update', methods=['POST'])
+    @login_required
+    def api_task_update(tid):
+        t = db.session.get(Task, tid)
+        if not t: abort(404)
+        require_member(t.workspace_id)
+        d = request.get_json(force=True)
+        for f in ['title','description','priority','status','assignee_id','due_date']:
+            if f in d:
+                old = getattr(t, f)
+                new = d[f]
+                if f == 'due_date' and new: new = datetime.strptime(new, '%Y-%m-%d').date()
+                setattr(t, f, new)
+                if str(old) != str(new): add_activity(t.id, f, old, new)
+        t.updated_at = datetime.utcnow();
+        if 'assignee_id' in d: notify(t.assignee_id, t.workspace_id, f'Assigned: {t.title}')
+        db.session.commit(); return jsonify({'ok': True})
+
+    @app.route('/api/task/<int:tid>/comment', methods=['POST'])
+    @login_required
+    def api_task_comment(tid):
+        t = db.session.get(Task, tid)
+        if not t: abort(404)
+        require_member(t.workspace_id)
+        body = request.get_json(force=True).get('body','').strip()
+        if body:
+            db.session.add(Comment(task_id=t.id, user_id=current_user.id, body=body))
+            add_activity(t.id, 'comment', '', body[:60]); notify(t.assignee_id, t.workspace_id, f'Comment on: {t.title}')
+            db.session.commit()
+        return jsonify({'ok': True})
+
+    @app.route('/api/members')
+    @login_required
+    def api_members():
+        wid = ws_id(); require_member(wid)
+        users = member_users(wid)
+        return jsonify([{'id':u.id,'email':u.email,'avatar':u.avatar} for u in users])
+
+    @app.route('/api/notifications')
+    @login_required
+    def api_notifications():
+        rows = Notification.query.filter_by(recipient_id=current_user.id).order_by(Notification.id.desc()).limit(50).all()
+        return jsonify([{'id':n.id,'message':n.message,'read':n.is_read,'at':str(n.created_at)} for n in rows])
+
+    @app.route('/api/notifications/read', methods=['POST'])
+    @login_required
+    def api_notifications_read():
+        Notification.query.filter_by(recipient_id=current_user.id, is_read=False).update({'is_read': True})
+        db.session.commit(); return jsonify({'ok': True})
