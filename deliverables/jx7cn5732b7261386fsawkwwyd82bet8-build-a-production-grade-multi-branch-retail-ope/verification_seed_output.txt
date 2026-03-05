@@ -1,1 +1,1 @@
-Seed complete: admin/manager/staff users + branches + inventory + transactions
+Seed complete: admin/admin123, manager/manager123, staff/staff123

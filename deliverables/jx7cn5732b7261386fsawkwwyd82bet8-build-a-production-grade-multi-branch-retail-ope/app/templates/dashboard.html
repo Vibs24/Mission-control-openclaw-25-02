@@ -1,12 +1,4 @@
 {% extends 'base.html' %}{% block content %}
-<div class='kpis'>
-<div class='kpi'><h4>Daily Sales</h4><p>{{'%.2f'|format(daily_sales)}}</p></div>
-<div class='kpi'><h4>Daily Margin</h4><p>{{'%.2f'|format(margin)}}</p></div>
-<div class='kpi'><h4>Stock Turnover</h4><p>{{turnover}}</p></div>
-<div class='kpi warn'><h4>Low Stock Alerts</h4><p>{{low_stock_count}}</p></div>
-</div>
-<div class='grid2'>
-<div class='card'><h3>Notification Center</h3><ul>{% for n in notifications %}<li><b>{{n.level}}</b> {{n.title}} — {{n.message}}</li>{% endfor %}</ul></div>
-<div class='card'><h3>Audit Timeline</h3><ul class='timeline'>{% for l in logs %}<li>{{l.created_at}} · {{l.actor}} · {{l.action}} · {{l.detail}}</li>{% endfor %}</ul></div>
-</div>
+<div class='row g-2'>{% for k,v in kpi.items() %}<div class='col-md-3'><div class='card'><div class='card-body'><small>{{k}}</small><h4>{{v}}</h4></div></div></div>{% endfor %}</div>
+<h5 class='mt-3'>Low Stock Alerts</h5><ul>{% for i in low %}<li>{{i.branch.name}} - {{i.product.name}} ({{i.qty}})</li>{% else %}<li>No low stock</li>{% endfor %}</ul>
 {% endblock %}
