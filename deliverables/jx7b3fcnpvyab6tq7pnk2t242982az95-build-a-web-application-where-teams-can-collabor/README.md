@@ -1,24 +1,31 @@
-# Team Collaboration Web App (Flask + SQLite)
+# TeamFlow Collaboration App
 
-Features delivered:
-- Email/password signup + login with persistent sessions
-- Create workspace and invite teammates
-- Task creation with title/description/due-date/priority/assignee
-- Kanban board with drag/drop status movement
-- Task detail page with comments/notes + full history timeline
-- Notifications on assignment and new comments
-- Admin member management (remove members) + workload overview
-- SQLite persistence, responsive UI for phone/desktop
-- Automated tests + setup/run scripts
+Flask + SQLite team collaboration app with signup/login, workspaces, invites, task board with drag-and-drop status columns, task detail (comments/notes/history), notifications, admin member management, and workload overview.
 
-## Setup & Run
+## Features
+- Email/password signup + persistent sessions
+- Create workspace + invite teammates
+- Tasks: title/description/due date/priority/assignee
+- Kanban board: todo/doing/done (drag-and-drop)
+- Task detail: comments, notes, change history timeline
+- Notifications on assignment/comment
+- Admin controls: view/remove members, workload overview
+- CSV/PDF export endpoints
+- Mobile + desktop responsive layout
+
+## Setup
 ```bash
-./scripts/setup.sh
-./scripts/run.sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/seed.py
+python app.py
 ```
-App: http://127.0.0.1:5070
+Open http://127.0.0.1:5000
 
-## Test
+Seed user: `admin@team.com / admin123`
+
+## Tests
 ```bash
-./scripts/test.sh
+pytest -q
 ```

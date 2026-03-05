@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -e
 cd "$(dirname "$0")/.."
-source .venv/bin/activate
-export PYTHONPATH=.
+source .venv/bin/activate 2>/dev/null || true
 pytest -q

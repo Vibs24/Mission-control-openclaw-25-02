@@ -1,9 +1,0 @@
-Verification executed:
-- PYTHONPATH=.pydeps:. python3 -m pytest -q tests/test_app.py
-Result: 2 passed
-
-Manual checks covered by test suite:
-- signup/login/session flow
-- workspace + invite + assignment notifications
-- task detail/comments/history
-- drag/drop status move API
