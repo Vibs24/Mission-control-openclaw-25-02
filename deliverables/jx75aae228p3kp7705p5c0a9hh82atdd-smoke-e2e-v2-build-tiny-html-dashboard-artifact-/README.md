@@ -1,17 +1,14 @@
-# Smoke E2E v2 — Tiny HTML Dashboard Artifact
+# Smoke E2E v2 Artifact Bundle
 
-## Implementation
-- Created `index.html` (minimal dashboard page with simple KPI cards and status section).
-- Created `README.md` (this file) documenting scope and verification notes.
+## Deliverables
+- `index.html` — Tiny dashboard status page
+- `README.md` — Concise implementation and verification notes
 
-## Current Status
-- **Completed** for smoke scope.
+## Implementation Notes
+- Built minimal static HTML dashboard with smoke status and compact KPI cards.
+- Kept content concise and workflow-focused for quick reviewer validation.
 
-## Verification
-- Confirmed both files exist in the canonical artifact folder.
-- Deliverable is self-contained and can be opened directly in a browser.
-
-## Next Checks
-1. Reviewer opens `index.html` to verify render.
-2. Reviewer confirms file presence and content correctness.
-3. Workflow proceeds to review gate.
+## Verification Notes
+- Artifact folder validated on disk.
+- Required files confirmed present in canonical path.
+- Bundle is ready for Reviewer handoff.

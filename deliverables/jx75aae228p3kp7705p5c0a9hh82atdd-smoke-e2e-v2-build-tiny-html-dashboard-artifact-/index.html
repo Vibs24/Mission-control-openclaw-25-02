@@ -3,37 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Smoke E2E v2 - Tiny Dashboard</title>
+  <title>Smoke E2E v2 Dashboard</title>
   <style>
-    body { font-family: system-ui, Arial, sans-serif; margin: 24px; background:#f8fafc; color:#0f172a; }
-    .wrap { max-width: 760px; margin: 0 auto; }
-    .card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin-bottom:12px; }
-    .kpis { display:grid; grid-template-columns:repeat(3,minmax(120px,1fr)); gap:10px; }
-    .kpi { background:#eef2ff; border-radius:10px; padding:10px; text-align:center; }
+    body { font-family: Inter, Arial, sans-serif; background:#f3f4f6; margin:0; padding:24px; color:#111827; }
+    .panel { max-width:760px; margin:0 auto; background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:20px; }
+    .grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; margin:12px 0 16px; }
+    .kpi { border:1px solid #e5e7eb; border-radius:10px; padding:10px; background:#fafafa; }
     .ok { color:#166534; font-weight:700; }
-    small { color:#475569; }
+    ul { margin-top:6px; }
+    @media (max-width:700px){ .grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Tiny Smoke Dashboard</h1>
-      <p>Status: <span class="ok">Ready</span></p>
-      <small>Artifact smoke bundle for workflow E2E validation.</small>
+  <section class="panel">
+    <h1>Smoke E2E v2 — Tiny Dashboard</h1>
+    <p><strong>Status:</strong> <span class="ok">PASS</span></p>
+    <div class="grid">
+      <div class="kpi"><strong>Bundle</strong><br/>index.html + README.md</div>
+      <div class="kpi"><strong>Folder</strong><br/>Canonical artifact path</div>
+      <div class="kpi"><strong>Verification</strong><br/>Filesystem check complete</div>
     </div>
-    <div class="card kpis">
-      <div class="kpi"><strong>2</strong><br/>Files</div>
-      <div class="kpi"><strong>1</strong><br/>Bundle</div>
-      <div class="kpi"><strong>PASS</strong><br/>Smoke</div>
-    </div>
-    <div class="card">
-      <h3>Verification Notes</h3>
-      <ul>
-        <li>index.html created and renderable.</li>
-        <li>README.md created with concise implementation notes.</li>
-        <li>Files placed in canonical auto-managed artifact folder.</li>
-      </ul>
-    </div>
-  </div>
+
+    <h2>Implementation Notes</h2>
+    <ul>
+      <li>Created minimal static dashboard HTML with concise status/KPI section.</li>
+      <li>Added README with scope, steps, and validation notes.</li>
+    </ul>
+
+    <h2>Verification Notes</h2>
+    <ul>
+      <li>Confirmed artifact folder exists.</li>
+      <li>Confirmed required files are present on disk.</li>
+      <li>Ready for reviewer handoff.</li>
+    </ul>
+  </section>
 </body>
 </html>
