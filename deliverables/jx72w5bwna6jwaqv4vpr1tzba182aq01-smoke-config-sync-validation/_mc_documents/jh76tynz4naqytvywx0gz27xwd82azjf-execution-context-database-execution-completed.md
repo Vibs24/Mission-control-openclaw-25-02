@@ -1,14 +1,14 @@
-# Execution Context — Designer execution completed
+# Execution Context — Database execution completed
 
-- Document ID: jh7fe97yjf04zzm1cbmj37s87982bznt
+- Document ID: jh76tynz4naqytvywx0gz27xwd82azjf
 - Type: research
-- Created By: Designer
-- Created At: 2026-03-05T11:19:21.446Z
-- Mirrored At: 2026-03-05T11:20:11.464Z
+- Created By: Database
+- Created At: 2026-03-05T11:20:08.887Z
+- Mirrored At: 2026-03-05T11:20:11.466Z
 
 ---
 
-### Designer execution completed
+### Database execution completed
 
 PM node dispatch invoked
 
@@ -23,43 +23,43 @@ Proceed with evidence validation and handoff.
 
 #### Full Context
 {
-  "runId": "49dcdab8-1a1e-4b8c-9794-ccf238e18fba",
+  "runId": "022cfbf0-deeb-429d-8dfb-09daa34f1f30",
   "status": "ok",
   "summary": "completed",
   "result": {
     "payloads": [
       {
-        "text": "### Worklog — Designer — Step 1/1\nObjective:\nValidate OpenClaw profile sync and strict startup routing behavior, and produce filesystem-only, reproducible evidence.\n\nActions Taken:\n- Created artifact folder and captured raw command outputs:\n  - `openclaw status`\n  - `openclaw gateway status`\n  - `openclaw gateway --help`\n- Performed self-review by re-checking output consistency and writing a concise validation summary with pass/warn outcomes.\n- Recorded findings and reproducibility notes in a dedicated report.\n- Committed evidence artifacts to workspace (`a1b5773`).\n\nFindings:\n- **Profile sync validation: PASS**\n  - Gateway service uses `OPENCLAW_PROFILE=mc2`.\n  - CLI/service config paths align to `~/.openclaw-mc2/openclaw.json`.\n- **Strict startup routing validation: PASS**\n  - Gateway bind is loopback (`127.0.0.1`).\n  - Probe target is local-only (`ws://127.0.0.1:19889`).\n- **Operational warning observed (non-blocking for this smoke scope):**\n  - LaunchAgent loaded but runtime reported stopped/spawn scheduled.\n  - Service PATH flagged as out-of-date/non-standard.\n\nEvidence:\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/VALIDATION_REPORT.md\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/status.txt\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/gateway_status.txt\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/runtime_status.txt\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/artifact_listing.txt\n\nEvidence: include verifiable details and references\n- `gateway_status.txt` contains:\n  - `OPENCLAW_PROFILE=mc2`\n  - `Config (cli): ~/.openclaw-mc2/openclaw.json`\n  - `Config (service): ~/.openclaw-mc2/openclaw.json`\n  - `Gateway: bind=loopback (127.0.0.1)`\n  - `Probe target: ws://127.0.0.1:19889`\n- `status.txt` confirms gateway reachable on local loopback and service state context.\n- `VALIDATION_REPORT.md` documents test procedure, pass criteria, and warnings.\n\nStored Location: /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation\nBlockers:\nNone (warnings captured in findings; validation scope completed).\n\nNext Handoff: Reviewer",
+        "text": "### Worklog — Database — Step 1/1\nObjective:\nValidate OpenClaw profile sync and strict startup routing, with filesystem-only reproducible evidence.\n\nActions Taken:\n- Created artifact evidence bundle at:\n- `/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation`\n- Ran runtime checks and captured output:\n- `openclaw status`\n- `openclaw gateway status`\n- `openclaw --profile mc2 doctor`\n- Performed strict-routing code-path verification:\n- startup bootstrap script\n- orchestrator strict-routing guards\n- role-routing migration script references\n- Extracted profile config snapshot from `~/.openclaw-mc2/openclaw.json` for reproducible review.\n- Performed self-review by rerunning checks and confirming consistent outputs.\n\nFindings:\n- Profile sync validation: **PASS (config wiring present and consistent)**.\n- Strict startup routing validation: **PASS (startup + strict guards + migration references present)**.\n- Operational hygiene: **WARN** (gateway service state/PATH drift and state-dir hygiene issues reported by doctor), reproducibly captured.\n\nEvidence:\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/VALIDATION_SUMMARY.md\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/runtime_status.txt\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/routing_validation.txt\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/profile_config_extract.json\n- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation/doctor_report.txt\n- Verifiable references inside `routing_validation.txt`:\n- `ops/bin/start-missioncontrol-bot.sh` lines 38–45\n- `Mission-control/orchestrator/index.mjs` lines 1825, 6100, 7739, 7741\n- `Mission-control/orchestrator/scripts/migrate-role-routing.mjs` lines 258, 297\n\nStored Location: /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx72w5bwna6jwaqv4vpr1tzba182aq01-smoke-config-sync-validation\nBlockers:\n- None (warnings captured as findings; no blocking failure for this validation scope).\n\nNext Handoff: Reviewer",
         "mediaUrl": null
       }
     ],
     "meta": {
-      "durationMs": 66967,
+      "durationMs": 114511,
       "agentMeta": {
-        "sessionId": "d14f88ee-5d35-4f3c-8688-35558fb2da41",
+        "sessionId": "86382357-4479-4b08-bc72-1887dfb2e5c0",
         "provider": "openai-codex",
         "model": "gpt-5.3-codex",
         "usage": {
-          "input": 25969,
-          "output": 2402,
-          "cacheRead": 893440,
-          "total": 97949
+          "input": 408326,
+          "output": 3169,
+          "cacheRead": 1323776,
+          "total": 127270
         },
         "lastCallUsage": {
-          "input": 413,
-          "output": 768,
-          "cacheRead": 96768,
+          "input": 506,
+          "output": 812,
+          "cacheRead": 125952,
           "cacheWrite": 0,
-          "total": 97949
+          "total": 127270
         },
-        "promptTokens": 97181
+        "promptTokens": 126458
       },
       "aborted": false,
       "systemPromptReport": {
         "source": "run",
-        "generatedAt": 1772709493998,
-        "sessionId": "d14f88ee-5d35-4f3c-8688-35558fb2da41",
-        "sessionKey": "agent:designer:main",
+        "generatedAt": 1772709493963,
+        "sessionId": "86382357-4479-4b08-bc72-1887dfb2e5c0",
+        "sessionKey": "agent:database:main",
         "provider": "openai-codex",
         "model": "gpt-5.3-codex",
         "workspaceDir": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
@@ -374,4 +374,7 @@ Proceed with evidence validation and handoff.
               "propertiesCount": 4
             },
             {
-              "n
+              "name": "sessions_history",
+              "summaryChars": 36,
+              "schemaChars": 161,
+              "propertiesCount

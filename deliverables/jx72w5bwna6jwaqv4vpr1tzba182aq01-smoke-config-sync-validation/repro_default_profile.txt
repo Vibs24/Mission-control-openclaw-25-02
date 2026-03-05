@@ -1,0 +1,22 @@
+Service: LaunchAgent (loaded)
+File logs: /tmp/openclaw/openclaw-2026-03-05.log
+Command: /opt/homebrew/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 19889
+Service file: ~/Library/LaunchAgents/ai.openclaw.mc2.plist
+Service env: OPENCLAW_PROFILE=mc2 OPENCLAW_STATE_DIR=/Users/syphaoffice1/.openclaw-mc2 OPENCLAW_CONFIG_PATH=/Users/syphaoffice1/.openclaw-mc2/openclaw.json OPENCLAW_GATEWAY_PORT=19889
+
+Config (cli): ~/.openclaw-mc2/openclaw.json
+Config (service): ~/.openclaw-mc2/openclaw.json
+
+Gateway: bind=loopback (127.0.0.1), port=19889 (service args)
+Probe target: ws://127.0.0.1:19889
+Dashboard: http://127.0.0.1:19889/
+Probe note: Loopback-only gateway; only local clients can connect.
+
+Runtime: running (pid 40188)
+RPC probe: ok
+
+Listening: 127.0.0.1:19889
+
+
+Troubles: run openclaw --profile mc2 status
+Troubleshooting: https://docs.openclaw.ai/troubleshooting

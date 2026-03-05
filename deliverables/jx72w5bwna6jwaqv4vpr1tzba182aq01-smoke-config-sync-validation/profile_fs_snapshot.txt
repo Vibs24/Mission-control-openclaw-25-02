@@ -1,0 +1,30 @@
+## Profile dirs
+drwxr-xr-x@ 30 syphaoffice1  staff  960 Mar  5 16:38 /Users/syphaoffice1/.openclaw
+drwx------@ 30 syphaoffice1  staff  960 Feb 27 03:35 /Users/syphaoffice1/.openclaw-clawd2
+drwxr-xr-x@ 26 syphaoffice1  staff  832 Mar  5 16:49 /Users/syphaoffice1/.openclaw-mc2
+
+## Main profile config
+
+## Workspace .openclaw-home summary
+total 72
+drwx------@ 21 syphaoffice1  staff   672 Feb 27 17:08 .
+drwx------@  6 syphaoffice1  staff   192 Feb 26 17:00 ..
+-rw-r--r--@  1 syphaoffice1  staff  8196 Mar  3 10:48 .DS_Store
+drwx------@  9 syphaoffice1  staff   288 Feb 26 15:50 agents
+drwxr-xr-x@  3 syphaoffice1  staff    96 Feb 26 15:40 browser
+drwxr-xr-x@  3 syphaoffice1  staff    96 Feb 26 10:21 canvas
+drwxr-xr-x   6 syphaoffice1  staff   192 Feb 26 10:22 completions
+drwx------   4 syphaoffice1  staff   128 Feb 26 10:41 credentials
+drwxr-xr-x@  6 syphaoffice1  staff   192 Feb 26 22:10 cron
+drwx------@  3 syphaoffice1  staff    96 Feb 26 22:09 delivery-queue
+drwxr-xr-x   4 syphaoffice1  staff   128 Feb 26 22:09 devices
+drwxr-xr-x   4 syphaoffice1  staff   128 Feb 26 10:22 identity
+drwxr--r--   5 syphaoffice1  staff   160 Feb 26 10:21 logs
+drwxr-xr-x@  3 syphaoffice1  staff    96 Feb 26 14:15 memory
+-rw-------@  1 syphaoffice1  staff  6097 Feb 27 17:08 openclaw.json
+-rw-------   1 syphaoffice1  staff  1939 Feb 26 10:25 openclaw.json.bak
+-rw-------   1 syphaoffice1  staff  1631 Feb 26 10:21 openclaw.json.bak.1
+-rw-------@  1 syphaoffice1  staff  1939 Feb 26 14:10 openclaw.json.pre-cli-compat.bak
+drwx------   3 syphaoffice1  staff    96 Feb 26 15:20 telegram
+-rw-r--r--@  1 syphaoffice1  staff    49 Feb 26 10:21 update-check.json
+drwxr-xr-x  17 syphaoffice1  staff   544 Feb 26 14:06 workspace
