@@ -13,4 +13,4 @@ tests/test_app.py::test_search_notifications_json
     expires = datetime.utcnow() + duration
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-3 passed, 6 warnings in 0.76s
+3 passed, 6 warnings in 0.85s
