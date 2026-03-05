@@ -2,41 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Smoke E2E v2 — Tiny Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smoke E2E v2 Dashboard</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f3f6fb;margin:24px;color:#1f2937}
-    .wrap{max-width:780px;margin:auto}
-    .card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    body{font-family:Arial,sans-serif;background:#f8fafc;margin:24px;color:#0f172a}
+    .wrap{max-width:760px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
     .ok{color:#166534;font-weight:700}
-    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-    .kpi{background:#eef4ff;border-radius:10px;padding:10px}
-    .muted{color:#6b7280;font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:10px}
+    .card{background:#f1f5f9;border-radius:8px;padding:10px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Tiny Smoke Dashboard</h1>
-    <div class="card kpis">
-      <div class="kpi"><div class="muted">Artifact</div><div>Smoke E2E v2</div></div>
-      <div class="kpi"><div class="muted">Status</div><div class="ok">Complete</div></div>
-      <div class="kpi"><div class="muted">Bundle</div><div>index.html + README.md</div></div>
-    </div>
-    <div class="card">
-      <h3>Implementation Notes</h3>
-      <ul>
-        <li>Created a valid standalone HTML dashboard page.</li>
-        <li>Included quick KPI-style status blocks and summary text.</li>
-        <li>Kept scope minimal per smoke test requirements.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Verification Notes</h3>
-      <ul>
-        <li>Confirmed artifact folder exists.</li>
-        <li>Confirmed required files are written to canonical path.</li>
-        <li>Ready for reviewer path/content validation.</li>
-      </ul>
+    <p>Status: <span class="ok">Ready for Review</span></p>
+    <div class="grid">
+      <div class="card"><strong>Bundle</strong><br/>HTML + README</div>
+      <div class="card"><strong>Validation</strong><br/>Files verified</div>
+      <div class="card"><strong>Scope</strong><br/>Smoke E2E v2</div>
     </div>
   </div>
 </body>

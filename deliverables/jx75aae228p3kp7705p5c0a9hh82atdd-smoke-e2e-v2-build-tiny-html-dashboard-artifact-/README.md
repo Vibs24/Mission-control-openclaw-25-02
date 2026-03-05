@@ -1,13 +1,13 @@
-# Smoke E2E v2 Tiny HTML Dashboard Artifact
+# Smoke E2E v2 Artifact Bundle
 
 ## Implementation
-- Created `index.html` (tiny dashboard-style status page).
-- Created `README.md` with concise implementation + verification notes.
-- Kept output intentionally minimal for smoke validation.
+- Added `index.html` tiny dashboard page.
+- Added this `README.md` with concise notes.
 
 ## Verification
-- Artifact folder exists at the required canonical path.
-- Required files present:
-  - `index.html`
-  - `README.md`
-- Files are ready for reviewer evidence checks.
+- Confirmed canonical artifact folder exists.
+- Confirmed required files are present and readable.
+
+## Files
+- `index.html`
+- `README.md`
