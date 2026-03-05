@@ -1,19 +1,19 @@
-# Smoke E2E Artifact
+# Smoke E2E Deliverable
 
-## What was done
+## Summary
+This smoke task created a minimal end-to-end artifact package in the assigned folder.
 
-- Created the auto-managed artifact folder for task `jx74bbk3y7yy887c2zg550d9qx82bg0r`.
-- Added `index.html` containing a minimal status page for end-to-end workflow smoke validation.
-- Added this `README.md` to summarize execution and expected validation checks.
+## Deliverables
+- `index.html` — Minimal status page containing:
+  - What was done
+  - Current status
+  - Next checks
+- `README.md` — This documentation file
 
-## Current status
+## Current Status
+PASSING (artifacts created and verified on disk)
 
-- Artifact generation: **Done**
-- Required files present: **Yes** (`index.html`, `README.md`)
-- Ready for reviewer handoff: **Yes**
-
-## Next checks
-
-1. Verify artifact folder path and file presence.
-2. Open `index.html` in a browser and confirm readable status summary.
-3. Confirm README includes what was done, current status, and next checks.
+## Next Checks
+1. Open `index.html` locally and verify display.
+2. Ensure file paths are captured in evidence.
+3. Hand off to Reviewer.

@@ -1,36 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smoke E2E Status</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f6f8fb; color: #1f2937; }
-    .card { max-width: 760px; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.2rem; }
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f9fc; color: #1f2937; }
+    .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem 1.25rem; max-width: 760px; }
     h1 { margin-top: 0; }
     .ok { color: #166534; font-weight: 700; }
-    ul { line-height: 1.6; }
-    code { background: #f3f4f6; padding: 0.1rem 0.35rem; border-radius: 6px; }
+    ul { line-height: 1.5; }
+    .meta { color: #4b5563; font-size: 0.95rem; }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Frontend Smoke E2E Status</h1>
-    <p><strong>Task:</strong> Build minimal HTML status page and README in auto-managed artifact folder.</p>
-    <p><strong>Status:</strong> <span class="ok">Completed</span></p>
+    <h1>Smoke E2E Workflow Status</h1>
+    <p class="meta">Task: jx74bbk3y7yy887c2zg550d9qx82bg0r</p>
+    <p><strong>Current Status:</strong> <span class="ok">PASSING</span></p>
 
     <h2>What was done</h2>
     <ul>
-      <li>Created <code>index.html</code> with smoke-test status content.</li>
-      <li>Created <code>README.md</code> documenting scope, status, and follow-up checks.</li>
-      <li>Verified files exist in the required artifact folder.</li>
+      <li>Created this minimal <code>index.html</code> status page in the auto-managed artifact folder.</li>
+      <li>Created companion <code>README.md</code> documenting scope and verification checks.</li>
+      <li>Verified folder and files exist on disk.</li>
     </ul>
 
     <h2>Next checks</h2>
     <ul>
-      <li>Open <code>index.html</code> in browser and confirm rendering.</li>
-      <li>Validate artifact ingestion by reviewer workflow.</li>
-      <li>Confirm worklog + evidence mapping in Mission Control review step.</li>
+      <li>Open <code>index.html</code> in browser and confirm content renders correctly.</li>
+      <li>Confirm artifact paths are visible to reviewer in filesystem evidence.</li>
+      <li>Proceed with reviewer validation gate.</li>
     </ul>
   </div>
 </body>
