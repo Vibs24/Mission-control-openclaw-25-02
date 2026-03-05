@@ -1,0 +1,9 @@
+PRAGMA foreign_keys = ON;
+DROP TABLE IF EXISTS audit_logs; DROP TABLE IF EXISTS leaves; DROP TABLE IF EXISTS attendance; DROP TABLE IF EXISTS shifts; DROP TABLE IF EXISTS employees; DROP TABLE IF EXISTS departments; DROP TABLE IF EXISTS users;
+CREATE TABLE departments(id INTEGER PRIMARY KEY, name TEXT UNIQUE NOT NULL);
+CREATE TABLE users(id INTEGER PRIMARY KEY, username TEXT UNIQUE NOT NULL, password TEXT NOT NULL, role TEXT NOT NULL CHECK(role IN('admin','manager','reviewer')), department_id INTEGER, FOREIGN KEY(department_id) REFERENCES departments(id));
+CREATE TABLE employees(id INTEGER PRIMARY KEY, emp_code TEXT UNIQUE NOT NULL, name TEXT NOT NULL, email TEXT, phone TEXT, department_id INTEGER NOT NULL, title TEXT, salary REAL NOT NULL DEFAULT 0, status TEXT NOT NULL DEFAULT 'active', created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY(department_id) REFERENCES departments(id));
+CREATE TABLE shifts(id INTEGER PRIMARY KEY, employee_id INTEGER NOT NULL, shift_date TEXT NOT NULL, start_time TEXT NOT NULL, end_time TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'planned', FOREIGN KEY(employee_id) REFERENCES employees(id));
+CREATE TABLE attendance(id INTEGER PRIMARY KEY, employee_id INTEGER NOT NULL, day TEXT NOT NULL, check_in TEXT, check_out TEXT, hours REAL DEFAULT 0, status TEXT NOT NULL DEFAULT 'present', FOREIGN KEY(employee_id) REFERENCES employees(id));
+CREATE TABLE leaves(id INTEGER PRIMARY KEY, employee_id INTEGER NOT NULL, leave_type TEXT NOT NULL, start_date TEXT NOT NULL, end_date TEXT NOT NULL, reason TEXT, status TEXT NOT NULL DEFAULT 'pending', reviewed_by INTEGER, FOREIGN KEY(employee_id) REFERENCES employees(id), FOREIGN KEY(reviewed_by) REFERENCES users(id));
+CREATE TABLE audit_logs(id INTEGER PRIMARY KEY, user_id INTEGER, action TEXT NOT NULL, entity TEXT NOT NULL, entity_id INTEGER, details TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY(user_id) REFERENCES users(id));
