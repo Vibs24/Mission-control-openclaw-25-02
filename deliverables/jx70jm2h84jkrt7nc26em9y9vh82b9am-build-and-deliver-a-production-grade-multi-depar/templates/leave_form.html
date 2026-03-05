@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Submit Leave Request{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1>Submit Leave Request</h1>
+  <div class="actions"><a class="btn-outline" href="{{ url_for('leave_list') }}">Back</a></div>
+</section>
+
+<form method="post" class="card form-grid two">
+  <label>Employee
+    <select name="employee_id" required>
+      <option value="">Select employee</option>
+      {% for e in employees %}
+      <option value="{{ e.id }}" {% if (leave.employee_id|string) == (e.id|string) %}selected{% endif %}>{{ e.full_name }} ({{ e.employee_code }})</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Leave Type
+    <select name="leave_type">
+      {% for lt in ['Annual', 'Sick', 'Unpaid', 'Emergency'] %}
+      <option value="{{ lt }}" {% if (leave.leave_type or 'Annual') == lt %}selected{% endif %}>{{ lt }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Start Date
+    <input type="date" name="start_date" required value="{{ leave.start_date or today }}" />
+  </label>
+  <label>End Date
+    <input type="date" name="end_date" required value="{{ leave.end_date or today }}" />
+  </label>
+  <label class="full">Reason
+    <textarea name="reason" rows="4">{{ leave.reason or '' }}</textarea>
+  </label>
+  <button type="submit">Submit Request</button>
+</form>
+{% endblock %}

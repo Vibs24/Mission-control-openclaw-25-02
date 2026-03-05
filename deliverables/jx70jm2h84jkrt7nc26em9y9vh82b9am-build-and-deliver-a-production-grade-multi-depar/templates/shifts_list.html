@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block title %}Shift Planning | Workforce Command Center{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1>Shift Planning</h1>
+  <div class="actions">
+    <a class="btn-outline" href="{{ url_for('export_data', entity='shifts', file_format='csv') }}">Export CSV</a>
+    <a class="btn-outline" href="{{ url_for('export_data', entity='shifts', file_format='pdf') }}">Export PDF</a>
+    {% if current_user.role in ['Admin', 'Manager'] %}
+      <a href="{{ url_for('shift_new') }}">Plan Shift</a>
+    {% endif %}
+  </div>
+</section>
+
+<form method="get" class="filter-grid card">
+  <label>Search
+    <input type="text" name="q" value="{{ filters.q }}" placeholder="Name, code, location" />
+  </label>
+  <label>Department
+    <select name="department">
+      <option value="">All</option>
+      {% for d in departments %}
+      <option value="{{ d.department }}" {% if filters.department == d.department %}selected{% endif %}>{{ d.department }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Status
+    <select name="status">
+      <option value="">All</option>
+      {% for st in ['Planned', 'Completed', 'Cancelled'] %}
+      <option value="{{ st }}" {% if filters.status == st %}selected{% endif %}>{{ st }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Date From
+    <input type="date" name="date_from" value="{{ filters.date_from }}" />
+  </label>
+  <label>Date To
+    <input type="date" name="date_to" value="{{ filters.date_to }}" />
+  </label>
+  <label>Per Page
+    <select name="per_page">
+      {% for n in [10, 20, 50, 100] %}
+      <option value="{{ n }}" {% if per_page == n %}selected{% endif %}>{{ n }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <button type="submit">Apply Filters</button>
+</form>
+
+<div class="table-wrap card">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Employee</th>
+        <th>Department</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in shifts %}
+      <tr>
+        <td>{{ row.shift_date }}</td>
+        <td>{{ row.employee_name }} ({{ row.employee_code }})</td>
+        <td>{{ row.department }}</td>
+        <td>{{ row.start_time }}</td>
+        <td>{{ row.end_time }}</td>
+        <td>{{ row.location }}</td>
+        <td>{{ row.status }}</td>
+        <td>
+          {% if current_user.role in ['Admin', 'Manager'] %}
+          <form method="post" action="{{ url_for('shift_delete', shift_id=row.id) }}" class="inline-form" data-confirm="Delete this shift?">
+            <button type="submit" class="link-btn danger">Delete</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8" class="muted">No shifts found.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="pagination">
+  <span>Showing {{ total }} records</span>
+  <div class="actions">
+    {% if page > 1 %}
+      <a href="{{ url_for('shifts_list', q=filters.q, department=filters.department, status=filters.status, date_from=filters.date_from, date_to=filters.date_to, per_page=per_page, page=page-1) }}">Prev</a>
+    {% endif %}
+    <span>Page {{ page }} / {{ pages }}</span>
+    {% if page < pages %}
+      <a href="{{ url_for('shifts_list', q=filters.q, department=filters.department, status=filters.status, date_from=filters.date_from, date_to=filters.date_to, per_page=per_page, page=page+1) }}">Next</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

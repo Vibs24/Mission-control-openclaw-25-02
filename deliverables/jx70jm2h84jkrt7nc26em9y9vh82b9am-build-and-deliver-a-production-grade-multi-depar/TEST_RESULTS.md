@@ -1,27 +1,128 @@
-# Test Results
+# TEST_RESULTS
 
-## setup.sh output
+Execution date: 2026-03-05
+Environment: offline (pip index unreachable), Python from system + `.venv` shell, `PYTHONPATH=.pydeps` fallback enabled.
+
+## 1) Setup
+
+Command:
+
+```bash
+./scripts/setup.sh
 ```
 
-[notice] A new release of pip is available: 25.3 -> 26.0.1
-[notice] To update, run: python3.14 -m pip install --upgrade pip
-Seeded users: admin/admin123 manager/manager123 reviewer/review123
-Setup complete
+Result: PASS (setup completed; dependency install fell back due offline environment)
+
+Key output:
+
+```text
+[setup] WARNING: dependency install failed. Continuing with system Python packages and PYTHONPATH=.pydeps
+[setup] initializing and seeding database
+Seed complete.
+[setup] complete
 ```
 
-## test.sh output
-```
-..........                                                               [100%]
-=============================== warnings summary ===============================
-tests/test_integration.py::test_create_employee_flow
-tests/test_integration.py::test_create_employee_flow
-tests/test_integration.py::test_payroll_export
-tests/test_smoke.py::test_login_dashboard
-tests/test_smoke_endpoints.py::test_exports
-tests/test_unit_auth.py::test_login_success
-  /private/tmp/workforce-jx70-venv/lib/python3.14/site-packages/sqlalchemy/sql/schema.py:3624: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-    return util.wrap_callable(lambda ctx: fn(), fn)  # type: ignore
+## 2) Seed Reset
 
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-10 passed, 6 warnings in 1.91s
+Command:
+
+```bash
+PYTHONPATH="$(pwd)/.pydeps:${PYTHONPATH:-}" python3 scripts/seed.py --reset
 ```
+
+Result: PASS
+
+Key output:
+
+```text
+Seed complete.
+```
+
+## 3) Automated Test Suite (Unit + Integration + Smoke)
+
+Command:
+
+```bash
+./scripts/test.sh
+```
+
+Result: PASS
+
+Key output:
+
+```text
+[test] pytest not available, using unittest discovery fallback
+Ran 13 tests in 17.920s
+OK
+```
+
+Detailed executed tests:
+
+```text
+test_admin_can_create_employee ... ok
+test_login_logout_flow ... ok
+test_manager_creates_leave_reviewer_approves ... ok
+test_reviewer_cannot_open_employee_create ... ok
+test_dashboard_after_login ... ok
+test_dashboard_requires_auth ... ok
+test_health_endpoint ... ok
+test_payroll_exports ... ok
+test_build_basic_pdf_generates_pdf_binary ... ok
+test_calculate_work_hours_invalid_values ... ok
+test_calculate_work_hours_valid_range ... ok
+test_paginate_clamps_requested_page ... ok
+test_validate_employee_payload_requires_fields ... ok
+```
+
+## 4) Health Check
+
+Command:
+
+```bash
+./scripts/healthcheck.sh --internal
+```
+
+Result: PASS
+
+Key output:
+
+```text
+HEALTHCHECK_PASS internal status=ok database=ok timestamp=2026-03-05T07:06:20.730442Z
+```
+
+## 5) Deploy + Rollback Smoke
+
+Commands:
+
+```bash
+./scripts/deploy.sh /tmp/workforce_deploy_smoke
+sleep 1
+./scripts/deploy.sh /tmp/workforce_deploy_smoke
+./scripts/rollback.sh /tmp/workforce_deploy_smoke
+```
+
+Result: PASS
+
+Key output:
+
+```text
+Deployed release: /tmp/workforce_deploy_smoke/releases/20260305_124008
+Deployed release: /tmp/workforce_deploy_smoke/releases/20260305_124013
+Rollback complete. Current now points to: /tmp/workforce_deploy_smoke/releases/20260305_124008
+```
+
+## 6) Known Execution Constraint
+
+Command attempted:
+
+```bash
+./scripts/run.sh
+```
+
+Observed sandbox limitation:
+
+```text
+Operation not permitted
+```
+
+Notes: runtime app start is blocked by sandbox port-binding restrictions in this environment. Functional runtime validation was completed using Flask test client and internal health checks.

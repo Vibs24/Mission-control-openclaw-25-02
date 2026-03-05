@@ -1,3 +1,57 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Workforce Center</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head><body>
-{% if current_user.is_authenticated %}<nav><a href="{{url_for('dashboard')}}">Dashboard</a> <a href="{{url_for('employees')}}">Employees</a> <a href="{{url_for('shifts')}}">Shifts</a> <a href="{{url_for('attendance')}}">Attendance</a> <a href="{{url_for('leaves')}}">Leaves</a> <a href="{{url_for('payroll_csv')}}">Payroll CSV</a> <a href="{{url_for('export_audit_pdf')}}">Audit PDF</a> <a href="{{url_for('logout')}}">Logout</a></nav>{% endif %}
-<div class="wrap">{% with m=get_flashed_messages() %}{% for x in m %}<p>{{x}}</p>{% endfor %}{% endwith %}{% block content %}{% endblock %}</div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Workforce Command Center{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ url_for('dashboard') if current_user else url_for('login') }}">Workforce Command Center</a>
+      {% if current_user %}
+      <button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>Menu</button>
+      <nav class="nav" data-nav>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('employees_list') }}">Employees</a>
+        <a href="{{ url_for('shifts_list') }}">Shifts</a>
+        <a href="{{ url_for('attendance_list') }}">Attendance</a>
+        <a href="{{ url_for('leave_list') }}">Leave</a>
+        <a href="{{ url_for('audit_timeline') }}">Audit</a>
+        <a href="{{ url_for('notifications') }}">Notifications{% if unread_notifications %} ({{ unread_notifications }}){% endif %}</a>
+        <a href="{{ url_for('export_data', entity='payroll', file_format='csv') }}">Payroll CSV</a>
+        <a href="{{ url_for('export_data', entity='payroll', file_format='pdf') }}">Payroll PDF</a>
+        <form method="post" action="{{ url_for('logout') }}" class="inline-form">
+          <button type="submit" class="link-btn">Logout</button>
+        </form>
+      </nav>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="wrap main-content">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-stack">
+          {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% if current_user %}
+      <div class="meta-bar">
+        <span>User: <strong>{{ current_user.full_name }}</strong></span>
+        <span>Role: <strong>{{ current_user.role }}</strong></span>
+        <span>Date: <strong>{{ today }}</strong></span>
+      </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

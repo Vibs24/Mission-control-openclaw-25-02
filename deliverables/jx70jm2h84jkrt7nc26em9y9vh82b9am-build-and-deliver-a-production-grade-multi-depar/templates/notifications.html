@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Notifications | Workforce Command Center{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1>Notification Center</h1>
+  <div class="actions">
+    <a class="btn-outline" href="{{ url_for('notifications', scope='all') }}">All</a>
+    <a class="btn-outline" href="{{ url_for('notifications', scope='unread') }}">Unread</a>
+    <form method="post" action="{{ url_for('notification_mark_all_read') }}" class="inline-form">
+      <button type="submit">Mark All Read</button>
+    </form>
+  </div>
+</section>
+
+<div class="table-wrap card">
+  <table>
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>Message</th>
+        <th>Created</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in notifications %}
+      <tr>
+        <td><span class="badge {{ row.level }}">{{ row.level }}</span></td>
+        <td>{{ row.message }}</td>
+        <td>{{ row.created_at }}</td>
+        <td>{{ 'Read' if row.is_read else 'Unread' }}</td>
+        <td>
+          {% if not row.is_read %}
+          <form method="post" action="{{ url_for('notification_mark_read', notification_id=row.id) }}" class="inline-form">
+            <button type="submit" class="link-btn">Mark Read</button>
+          </form>
+          {% else %}
+          -
+          {% endif %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="5" class="muted">No notifications found.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="pagination">
+  <span>Showing {{ total }} records</span>
+  <div class="actions">
+    {% if page > 1 %}
+      <a href="{{ url_for('notifications', scope=scope, per_page=per_page, page=page-1) }}">Prev</a>
+    {% endif %}
+    <span>Page {{ page }} / {{ pages }}</span>
+    {% if page < pages %}
+      <a href="{{ url_for('notifications', scope=scope, per_page=per_page, page=page+1) }}">Next</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

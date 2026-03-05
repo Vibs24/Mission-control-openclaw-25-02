@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block title %}Attendance | Workforce Command Center{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1>Attendance Workflow</h1>
+  <div class="actions">
+    <a class="btn-outline" href="{{ url_for('export_data', entity='attendance', file_format='csv') }}">Export CSV</a>
+    <a class="btn-outline" href="{{ url_for('export_data', entity='attendance', file_format='pdf') }}">Export PDF</a>
+    {% if current_user.role in ['Admin', 'Manager'] %}
+      <a href="{{ url_for('attendance_new') }}">Record Attendance</a>
+    {% endif %}
+  </div>
+</section>
+
+<form method="get" class="filter-grid card">
+  <label>Search
+    <input type="text" name="q" value="{{ filters.q }}" placeholder="Name or code" />
+  </label>
+  <label>Department
+    <select name="department">
+      <option value="">All</option>
+      {% for d in departments %}
+      <option value="{{ d.department }}" {% if filters.department == d.department %}selected{% endif %}>{{ d.department }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Status
+    <select name="status">
+      <option value="">All</option>
+      {% for st in ['Present', 'Absent', 'Late', 'Leave'] %}
+      <option value="{{ st }}" {% if filters.status == st %}selected{% endif %}>{{ st }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Date From
+    <input type="date" name="date_from" value="{{ filters.date_from }}" />
+  </label>
+  <label>Date To
+    <input type="date" name="date_to" value="{{ filters.date_to }}" />
+  </label>
+  <label>Per Page
+    <select name="per_page">
+      {% for n in [10, 20, 50, 100] %}
+      <option value="{{ n }}" {% if per_page == n %}selected{% endif %}>{{ n }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <button type="submit">Apply Filters</button>
+</form>
+
+<div class="table-wrap card">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Employee</th>
+        <th>Department</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+        <th>Status</th>
+        <th>Approved By</th>
+        <th>Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in attendance %}
+      <tr>
+        <td>{{ row.attendance_date }}</td>
+        <td>{{ row.employee_name }} ({{ row.employee_code }})</td>
+        <td>{{ row.department }}</td>
+        <td>{{ row.check_in or '-' }}</td>
+        <td>{{ row.check_out or '-' }}</td>
+        <td>{{ row.status }}</td>
+        <td>{{ row.approved_by_username or '-' }}</td>
+        <td>
+          {% if current_user.role in ['Admin', 'Manager', 'Reviewer'] %}
+          <form method="post" action="{{ url_for('attendance_approve', attendance_id=row.id) }}" class="inline-form">
+            <select name="status">
+              {% for st in ['Present', 'Absent', 'Late', 'Leave'] %}
+                <option value="{{ st }}" {% if row.status == st %}selected{% endif %}>{{ st }}</option>
+              {% endfor %}
+            </select>
+            <button type="submit" class="link-btn">Approve</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8" class="muted">No attendance records found.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="pagination">
+  <span>Showing {{ total }} records</span>
+  <div class="actions">
+    {% if page > 1 %}
+      <a href="{{ url_for('attendance_list', q=filters.q, department=filters.department, status=filters.status, date_from=filters.date_from, date_to=filters.date_to, per_page=per_page, page=page-1) }}">Prev</a>
+    {% endif %}
+    <span>Page {{ page }} / {{ pages }}</span>
+    {% if page < pages %}
+      <a href="{{ url_for('attendance_list', q=filters.q, department=filters.department, status=filters.status, date_from=filters.date_from, date_to=filters.date_to, per_page=per_page, page=page+1) }}">Next</a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

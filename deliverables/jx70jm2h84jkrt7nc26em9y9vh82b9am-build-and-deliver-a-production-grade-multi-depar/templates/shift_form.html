@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Plan Shift{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1>Plan Shift</h1>
+  <div class="actions"><a class="btn-outline" href="{{ url_for('shifts_list') }}">Back</a></div>
+</section>
+
+<form method="post" class="card form-grid two">
+  <label>Employee
+    <select name="employee_id" required>
+      <option value="">Select employee</option>
+      {% for e in employees %}
+        <option value="{{ e.id }}" {% if (shift.employee_id|string) == (e.id|string) %}selected{% endif %}>{{ e.full_name }} ({{ e.employee_code }})</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Shift Date
+    <input type="date" name="shift_date" required value="{{ shift.shift_date or '' }}" />
+  </label>
+  <label>Start Time
+    <input type="time" name="start_time" required value="{{ shift.start_time or '' }}" />
+  </label>
+  <label>End Time
+    <input type="time" name="end_time" required value="{{ shift.end_time or '' }}" />
+  </label>
+  <label>Location
+    <input type="text" name="location" value="{{ shift.location or '' }}" />
+  </label>
+  <label>Status
+    <select name="status">
+      {% for st in ['Planned', 'Completed', 'Cancelled'] %}
+      <option value="{{ st }}" {% if (shift.status or 'Planned') == st %}selected{% endif %}>{{ st }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label class="full">Notes
+    <textarea name="notes" rows="4">{{ shift.notes or '' }}</textarea>
+  </label>
+  <button type="submit">Save Shift</button>
+</form>
+{% endblock %}
