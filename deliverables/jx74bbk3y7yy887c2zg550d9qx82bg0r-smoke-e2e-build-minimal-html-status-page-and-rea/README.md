@@ -1,15 +1,19 @@
 # Smoke E2E Artifact
 
+## Objective
+Create a minimal end-to-end smoke artifact with:
+- `index.html`
+- `README.md`
+
 ## What was done
-- Built a minimal HTML status page: `index.html`.
-- Added this README with concise smoke-test context.
-- Confirmed both files were written in the required artifact directory.
+1. Created `index.html` as a minimal status page.
+2. Added current status and next checks.
+3. Verified artifact folder and files exist on disk.
 
 ## Current status
-- Smoke E2E deliverable is complete.
-- Artifact files are present and ready for reviewer validation.
+**Done (Backend implementation complete; ready for reviewer check).**
 
 ## Next checks
-1. Open `index.html` and verify visible status sections.
-2. Confirm this README includes what was done, current status, and next checks.
-3. Approve/reject based on workflow smoke criteria.
+- Open `index.html` and verify visual layout.
+- Validate file presence and content consistency.
+- Reviewer confirms acceptance criteria coverage.

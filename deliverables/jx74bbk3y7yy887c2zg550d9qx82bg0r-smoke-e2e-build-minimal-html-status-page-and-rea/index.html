@@ -1,38 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smoke E2E Status</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f9fc; color: #1b1f24; }
-    .card { max-width: 760px; background: #fff; border: 1px solid #d8dee4; border-radius: 10px; padding: 1.25rem 1.5rem; }
-    .badge { display:inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; background: #dafbe1; color: #116329; font-weight: 600; }
-    ul { line-height: 1.6; }
-    code { background: #f0f3f6; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f9fc; color: #111827; }
+    .card { max-width: 780px; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1rem 1.2rem; }
+    .ok { color: #166534; font-weight: 700; }
+    ul { line-height: 1.5; }
+    code { background: #f3f4f6; padding: 0.1rem 0.3rem; border-radius: 6px; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Smoke E2E Workflow Status</h1>
-    <p><span class="badge">Completed</span></p>
-    <p>This page is a minimal end-to-end artifact for Mission Control smoke validation.</p>
+    <p><strong>Task:</strong> Minimal HTML status page + README in artifact folder</p>
+    <p><strong>Current Status:</strong> <span class="ok">Completed</span></p>
 
-    <h2>What was done</h2>
+    <h2>What Was Done</h2>
     <ul>
-      <li>Created this <code>index.html</code> status page.</li>
-      <li>Created a companion <code>README.md</code> with status and next checks.</li>
-      <li>Verified both files exist in the auto-managed artifact folder.</li>
+      <li>Created this <code>index.html</code> smoke status page.</li>
+      <li>Created <code>README.md</code> documenting scope, outputs, and follow-up checks.</li>
+      <li>Verified files are present in the auto-managed artifact folder.</li>
     </ul>
 
-    <h2>Current status</h2>
-    <p>Artifacts are present and ready for reviewer verification.</p>
-
-    <h2>Next checks</h2>
+    <h2>Next Checks</h2>
     <ul>
-      <li>Open <code>index.html</code> in a browser to validate rendering.</li>
-      <li>Confirm README coverage aligns with task acceptance criteria.</li>
-      <li>Proceed to review gate handoff.</li>
+      <li>Open <code>index.html</code> in browser and validate rendering.</li>
+      <li>Confirm README steps are readable and complete.</li>
+      <li>Proceed to reviewer validation for workflow closure.</li>
     </ul>
   </div>
 </body>
