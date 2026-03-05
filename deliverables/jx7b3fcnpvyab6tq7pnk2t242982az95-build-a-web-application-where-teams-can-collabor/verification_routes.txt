@@ -1,0 +1,13 @@
+/
+/admin/overview
+/board
+/login
+/logout
+/notifications
+/signup
+/static/<path:filename>
+/task/<int:tid>
+/workspace/<int:ws_id>/set
+/workspace/member/<int:mid>/remove
+/workspace/members
+/workspaces

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h4>Admin Workload Overview</h4><table class='table table-sm'><tr><th>Member</th><th>In Progress Tasks</th></tr>{% for r in data %}<tr><td>{{r[0]}}</td><td>{{r[1]}}</td></tr>{% endfor %}</table>{% endblock %}

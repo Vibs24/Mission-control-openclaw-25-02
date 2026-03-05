@@ -1,1 +1,1 @@
-Seed complete: owner/member users + workspace + task
+Seeded. Login: admin@team.local/admin123

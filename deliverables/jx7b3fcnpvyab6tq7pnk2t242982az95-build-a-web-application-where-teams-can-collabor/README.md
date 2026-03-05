@@ -1,33 +1,26 @@
-# TeamFlow Collaboration App (Flask + SQLite)
+# Team Collaboration Web App (Flask + SQLite)
 
-A team collaboration platform with workspace-based task boards, assignment notifications, task detail discussions, history tracking, and admin member controls.
+## Features delivered
+- Email/password signup & login with persistent sessions (`remember=True`)
+- Workspace creation and member invite flow
+- RBAC-ish workspace admin controls (remove members, workload overview)
+- Task CRUD-on-board creation with title/description/due date/priority/assignee
+- Kanban board columns (`todo`, `in_progress`, `done`) with drag-enabled UI
+- Task detail page with comments/notes and full history timeline
+- Notifications for assignment and comments on assigned tasks
+- Mobile-friendly responsive Bootstrap UI
+- SQLite persistence
 
-## Features
-- Email/password signup + login with persistent remembered sessions
-- Workspace creation and teammate invites (token-based acceptance)
-- RBAC inside workspace (Admin / Member)
-- Task board with drag-and-drop status updates (Todo / In Progress / Done)
-- Task details: comments, notes, assignment controls, full change history
-- Notification center (task assigned, comment on assigned task)
-- Admin member management (invite/remove + in-progress overview)
-- SQLite persistence (all data survives refresh)
-- Responsive UI (desktop + mobile)
-
-## Setup
+## Run
 ```bash
-python3 -m venv /tmp/teamflow-venv
-source /tmp/teamflow-venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 python seed_data.py
 python run.py
 ```
 
-## Tests
+## Test
 ```bash
-source /tmp/teamflow-venv/bin/activate
 pytest -q
 ```
-
-## Seed Accounts
-- owner@example.com / owner123
-- member@example.com / member123
