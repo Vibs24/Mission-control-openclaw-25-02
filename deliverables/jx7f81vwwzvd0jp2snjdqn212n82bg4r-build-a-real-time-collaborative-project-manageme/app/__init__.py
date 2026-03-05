@@ -1,43 +1,33 @@
-from datetime import timedelta
-
+import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from sqlalchemy import event
-from .models import db, User
 
 
-def create_app(config=None):
-    app = Flask(__name__)
-    app.config.update(
-        SECRET_KEY='change-me-in-production',
-        SQLALCHEMY_DATABASE_URI='sqlite:///collabflow.db',
+db = SQLAlchemy()
+login_manager = LoginManager()
+login_manager.login_view = 'main.login'
+
+
+def create_app(test_config=None):
+    app = Flask(__name__, instance_relative_config=True)
+    app.config.from_mapping(
+        SECRET_KEY=os.getenv('SECRET_KEY', 'replace-me'),
+        SQLALCHEMY_DATABASE_URI=os.getenv('DATABASE_URL', 'sqlite:///collab_pm.db'),
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
-        REMEMBER_COOKIE_DURATION=timedelta(days=30),
-        REMEMBER_COOKIE_SECURE=False,
-        REMEMBER_COOKIE_HTTPONLY=True,
-        REMEMBER_COOKIE_SAMESITE="Lax",
+        REMEMBER_COOKIE_DURATION=60 * 60 * 24 * 30,
     )
-    if config:
-        app.config.update(config)
+    if test_config:
+        app.config.update(test_config)
 
     db.init_app(app)
-    login_manager = LoginManager()
-    login_manager.login_view = 'login'
     login_manager.init_app(app)
 
-    @login_manager.user_loader
-    def load_user(uid):
-        return db.session.get(User, int(uid))
-
-    from .routes import register_routes
-    register_routes(app)
+    from . import models
+    from .routes import bp
+    app.register_blueprint(bp)
 
     with app.app_context():
-        @event.listens_for(db.engine, "connect")
-        def _sqlite_pragma(dbapi_connection, _connection_record):
-            cursor = dbapi_connection.cursor()
-            cursor.execute("PRAGMA foreign_keys=ON")
-            cursor.close()
         db.create_all()
 
     return app

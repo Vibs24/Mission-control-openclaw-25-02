@@ -1,15 +1,1 @@
-{% extends 'base.html' %}
-{% block content %}
-<section class="auth-card">
-  <h2>Log In</h2>
-  <p class="muted">Continue to your workspaces and boards.</p>
-  <form method="post">
-    <label>Email</label>
-    <input type="email" name="email" required>
-    <label>Password</label>
-    <input type="password" name="password" required>
-    <button type="submit">Log In</button>
-  </form>
-  <p class="muted">No account yet? <a href="{{ url_for('signup') }}">Create one</a></p>
-</section>
-{% endblock %}
+{% extends 'base.html' %}{% block body %}<h2>Login</h2><form method='post'><input name='email' type='email' required><input name='password' type='password' required><button>Sign In</button></form><a href='{{url_for("main.signup")}}'>Sign up</a>{% endblock %}

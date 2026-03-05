@@ -1,16 +1,1 @@
-{% extends 'base.html' %}
-{% block content %}
-<section class="auth-card">
-  <h2>Accept Invite</h2>
-  <p class="muted">Join workspace <strong>#{{ invite.workspace_id }}</strong> using your email.</p>
-  <form method="post">
-    <label>Display Name</label>
-    <input name="display_name" required>
-    <label>Email</label>
-    <input type="email" name="email" value="{{ invite.email }}" required>
-    <label>Password (required for new accounts)</label>
-    <input type="password" name="password" minlength="8">
-    <button type="submit">Join Workspace</button>
-  </form>
-</section>
-{% endblock %}
+{% extends 'base.html' %}{% block body %}<h2>Accept Invite</h2><form method='post'><input name='display_name' required><input name='email' value='{{invite.email}}' required><input name='password' type='password' required><button>Join</button></form>{% endblock %}

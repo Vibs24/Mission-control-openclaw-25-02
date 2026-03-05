@@ -1,61 +1,32 @@
-# CollabFlow: Real-Time Collaborative Project Management
+# Real-Time Collaborative Project Management Platform
 
-Production-ready Flask + SQLite collaborative project management platform with workspace scoping, role-based membership, kanban tasking, threaded comments, activity history diffs, notifications, and data exports.
+Flask + SQLite collaboration app with workspaces, Kanban board, drag/drop status updates without page reload, task modal editing, threaded comments, activity timeline, notifications, member admin controls, and responsive dark UI.
 
-## Features
-- Email/password auth (`werkzeug` password hash) with persistent browser sessions via `session_tokens`
-- Workspaces with switcher, email invite creation, and invite-token acceptance flow
-- Member management (`admin` / `member`) with admin role change and removal controls
-- Workload summary by status on the members page
-- Kanban board with 4 status columns (`todo`, `in_progress`, `review`, `done`), badge counts, and unique accent colors
-- Task cards with priority color dot, due date (overdue red), assignee avatar initials, comment count
-- Drag-and-drop status update through fetch API without page reload
-- Full-screen task detail modal with editable fields
-- Threaded comments with timestamps and avatar initials
-- Activity timeline with old/new value diff logging for edits, status, assignment, comments
-- Slide-in drawer for task creation
-- Top nav with live search, notification bell with unread/read controls, avatar dropdown menu
-- Left sidebar with workspace switcher, board/members/activity links, simulated online presence
-- CSV exports (`tasks`, `workload`) and PDF summary export
-- Responsive dark charcoal UI with transitions/animations and mobile vertical column stacking
-
-## Tech
-- Python 3.11+
-- Flask 3 + Flask-Login + Flask-SQLAlchemy
-- SQLite
-- Vanilla JS + CSS
-- Pytest
-
-## Quick Start
+## Setup
 ```bash
-./scripts/setup.sh
-./scripts/run.sh
-```
-Open `http://127.0.0.1:5000`.
-
-## Seed Data
-```bash
-VENV=$(cat .venv_path)
-SAFE=/tmp/collabflow_src_$(echo -n "$PWD" | shasum | awk '{print $1}')
-ln -sfn "$PWD" "$SAFE"
-PYTHONPATH="$SAFE" "$VENV/bin/python" "$SAFE/scripts/seed.py"
-```
-Seed login:
-- `admin@example.com`
-- `password123`
-
-## Tests
-```bash
-./scripts/test.sh
+python3 -m venv /tmp/collabpm-venv
+source /tmp/collabpm-venv/bin/activate
+pip install -r requirements.txt
+python seed_data.py
+python run.py
 ```
 
-## Docs
-- `ARCHITECTURE.md`
-- `API.md`
-- `DB_SCHEMA.md`
+## Features delivered
+- Email/password registration + persistent remember sessions.
+- Workspace creation, invite token flow, direct email invite records.
+- 4-lane Kanban: To Do, In Progress, Review, Done.
+- Count badges, priority dots, overdue red highlights, assignee avatars, comment counts.
+- Drag/drop cards with instant fetch update (no reload required for state sync).
+- Full-screen split task modal: metadata editor + comments + timeline.
+- Slide-in drawer for new task creation.
+- Live search across task title+description.
+- Notification panel and profile area in top nav.
+- Sidebar: workspace switcher, nav links, online presence strip.
+- Admin member controls: role change/remove + workload summary per status.
+- Relational DB tables + indexes + FK cascades for cleanup.
 
-## Scripts
-- `scripts/setup.sh` create venv and install dependencies
-- `scripts/run.sh` run the app in a path-safe execution context
-- `scripts/test.sh` run pytest in a path-safe execution context
-- `scripts/seed.py` populate sample data
+## Test
+```bash
+source /tmp/collabpm-venv/bin/activate
+pytest -q
+```

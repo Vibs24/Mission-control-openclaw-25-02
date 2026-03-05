@@ -9,8 +9,8 @@ tests/test_app.py::test_search_notifications_json
 tests/test_app.py::test_auth_and_workspace
 tests/test_app.py::test_task_create_move_comment
 tests/test_app.py::test_search_notifications_json
-  /private/tmp/realtime-venv/lib/python3.14/site-packages/flask_login/login_manager.py:488: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  /private/tmp/collabpm-venv/lib/python3.14/site-packages/flask_login/login_manager.py:488: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
     expires = datetime.utcnow() + duration
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-3 passed, 6 warnings in 0.76s
+3 passed, 6 warnings in 0.69s
