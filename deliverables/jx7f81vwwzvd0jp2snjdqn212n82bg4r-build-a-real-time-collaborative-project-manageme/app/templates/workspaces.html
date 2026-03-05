@@ -1,1 +1,20 @@
-{% extends 'base.html' %}{% block content %}<section class='panel'><h2>Workspaces</h2><form method='post'><input name='name' placeholder='workspace name'><button>Create</button></form><ul>{% for w in rows %}<li><a href='{{ url_for("set_workspace", ws_id=w.id) }}'>{{w.name}}</a> <small>/invite/{{w.invite_slug}}</small></li>{% endfor %}</ul></section>{% endblock %}
+{% extends 'base.html' %}
+{% block content %}
+<section class="panel">
+  <h2>Your Workspaces</h2>
+  <form method="post" class="row">
+    <input name="name" placeholder="New workspace name" required>
+    <button type="submit">Create Workspace</button>
+  </form>
+  <div class="workspace-grid">
+    {% for ws in rows %}
+    <a class="workspace-card" href="{{ url_for('set_workspace', ws_id=ws.id) }}">
+      <strong>{{ ws.name }}</strong>
+      <small>Open board</small>
+    </a>
+    {% else %}
+    <p class="muted">No workspace yet. Create your first one.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

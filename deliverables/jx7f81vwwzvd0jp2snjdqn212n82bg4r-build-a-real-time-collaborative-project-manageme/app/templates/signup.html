@@ -1,1 +1,17 @@
-<form method='post' class='auth'><h2>Sign up</h2><input name='name' placeholder='name' required><input name='email' placeholder='email' required><input type='password' name='password' required><button>Create account</button><a href='/login'>login</a></form>
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-card">
+  <h2>Create Account</h2>
+  <p class="muted">Email and password login with persistent sessions.</p>
+  <form method="post">
+    <label>Display Name</label>
+    <input name="display_name" required>
+    <label>Email</label>
+    <input type="email" name="email" required>
+    <label>Password</label>
+    <input type="password" name="password" minlength="8" required>
+    <button type="submit">Sign Up</button>
+  </form>
+  <p class="muted">Already registered? <a href="{{ url_for('login') }}">Log in</a></p>
+</section>
+{% endblock %}

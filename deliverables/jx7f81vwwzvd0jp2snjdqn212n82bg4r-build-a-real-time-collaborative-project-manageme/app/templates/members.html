@@ -1,1 +1,89 @@
-{% extends 'base.html' %}{% block content %}<section class='panel'><h2>Members</h2>{% if admin %}<form method='post'><input name='email' placeholder='Invite by email'><button>Invite</button></form>{% endif %}<table><tr><th>User</th><th>Role</th><th>Workload</th><th>Actions</th></tr>{% for m in rows %}<tr><td>{{users[m.user_id].display_name}} ({{users[m.user_id].email}})</td><td>{{m.role}}</td><td>{% for s,c in workload[loop.index0][1].items() %}{{s}}:{{c}} {% endfor %}</td><td>{% if admin %}<form method='post' action='{{ url_for("set_role", mid=m.id) }}'><select name='role'><option>member</option><option {% if m.role=='admin' %}selected{% endif %}>admin</option></select><button>Set</button></form><form method='post' action='{{ url_for("remove_member", mid=m.id) }}'><button>Remove</button></form>{% endif %}</td></tr>{% endfor %}</table></section>{% endblock %}
+{% extends 'base.html' %}
+{% block content %}
+<div class="layout">
+  <aside class="sidebar">
+    <h3>Workspace</h3>
+    {% for ws in workspace_list %}
+    <a class="nav-link {% if workspace and ws.id == workspace.id %}active{% endif %}" href="{{ url_for('set_workspace', ws_id=ws.id) }}">{{ ws.name }}</a>
+    {% endfor %}
+    <h3>Navigation</h3>
+    <a class="nav-link {% if active_nav == 'board' %}active{% endif %}" href="{{ url_for('board') }}">Board</a>
+    <a class="nav-link {% if active_nav == 'members' %}active{% endif %}" href="{{ url_for('members') }}">Members</a>
+    <a class="nav-link {% if active_nav == 'activity' %}active{% endif %}" href="{{ url_for('activity') }}">Activity</a>
+    <h3>Online</h3>
+    <div class="online-strip">
+      {% for user in online_users %}
+      <span class="avatar" style="background:{{ user.avatar_color }}">{{ user.initials }}</span>
+      {% else %}
+      <span class="muted">No active users</span>
+      {% endfor %}
+    </div>
+  </aside>
+  <section class="mainboard">
+    <h2>Members</h2>
+    {% if editable %}
+    <form action="{{ url_for('create_invite', ws_id=workspace.id) }}" method="post" class="row">
+      <input name="email" type="email" placeholder="Invite by email" required>
+      <button type="submit">Generate Invite Link</button>
+    </form>
+    {% endif %}
+    {% if pending_invites %}
+    <div class="pending-list">
+      <h4>Pending Invites</h4>
+      {% for invite in pending_invites %}
+      <div class="pending-item">
+        <span>{{ invite.email }}</span>
+        <small>{{ invite.expires_at.strftime('%Y-%m-%d') }}</small>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Member</th>
+          <th>Role</th>
+          <th>Workload</th>
+          {% if editable %}<th>Actions</th>{% endif %}
+        </tr>
+        {% for row in rows %}
+        {% set user = users[row.user_id] %}
+        <tr>
+          <td>
+            <span class="avatar" style="background:{{ user.avatar_color }}">{{ user.initials }}</span>
+            {{ user.display_name }}
+            <small>{{ user.email }}</small>
+          </td>
+          <td>
+            {% if editable %}
+            <form method="post" class="row slim-row">
+              <input type="hidden" name="target_user_id" value="{{ user.id }}">
+              <select name="role" onchange="this.form.submit()">
+                <option value="member" {% if row.role == 'member' %}selected{% endif %}>Member</option>
+                <option value="admin" {% if row.role == 'admin' %}selected{% endif %}>Admin</option>
+              </select>
+            </form>
+            {% else %}
+            {{ row.role }}
+            {% endif %}
+          </td>
+          <td>
+            <span class="pill">To Do {{ workload[row.user_id]['todo'] }}</span>
+            <span class="pill">In Progress {{ workload[row.user_id]['in_progress'] }}</span>
+            <span class="pill">Review {{ workload[row.user_id]['review'] }}</span>
+            <span class="pill">Done {{ workload[row.user_id]['done'] }}</span>
+          </td>
+          {% if editable %}
+          <td>
+            <form method="post" action="{{ url_for('members_remove', user_id=user.id) }}">
+              <button type="submit" {% if user.id == current_user.id %}disabled{% endif %}>Remove</button>
+            </form>
+          </td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </section>
+</div>
+{% endblock %}
