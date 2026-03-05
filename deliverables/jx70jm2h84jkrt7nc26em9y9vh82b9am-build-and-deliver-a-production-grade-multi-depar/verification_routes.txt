@@ -1,0 +1,15 @@
+/
+/attendance
+/audit
+/dashboard
+/employees
+/employees/<int:eid>/delete
+/export/attendance.csv
+/export/leave/<int:leave_id>.pdf
+/export/payroll.csv
+/health
+/leaves
+/login
+/logout
+/shifts
+/static/<path:filename>

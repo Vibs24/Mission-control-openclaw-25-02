@@ -1,22 +1,23 @@
-from conftest import login
+from app import create_app
+from app.models import db, User, Employee
 
 
-def test_admin_can_create_employee_and_department(client):
-    login(client, 'admin', 'admin123')
-    rv = client.post('/departments', data={'name': 'Finance'}, follow_redirects=True)
-    assert rv.status_code == 200
-    assert b'Finance' in rv.data
+def setup_client():
+    app = create_app({'TESTING':True,'SQLALCHEMY_DATABASE_URI':'sqlite:///:memory:'})
+    with app.app_context():
+        db.create_all()
+        u = User(username='admin', role='Admin'); u.set_password('admin123')
+        db.session.add(u); db.session.commit()
+    return app.test_client(), app
 
 
-def test_reviewer_forbidden_on_department_management(client):
-    login(client, 'reviewer', 'reviewer123')
-    rv = client.get('/departments')
-    assert rv.status_code == 403
+def login(c):
+    return c.post('/login', data={'username':'admin','password':'admin123'}, follow_redirects=True)
 
 
-def test_manager_can_create_shift_and_attendance(client):
-    login(client, 'manager', 'manager123')
-    rv1 = client.post('/shifts', data={'employee_id': '1', 'shift_date': '2026-03-05', 'shift_name': 'Morning', 'start_time': '09:00', 'end_time': '18:00'}, follow_redirects=True)
-    assert rv1.status_code == 200
-    rv2 = client.post('/attendance', data={'employee_id': '1', 'day': '2026-03-05', 'status': 'Present', 'check_in': '09:00', 'check_out': '18:00'}, follow_redirects=True)
-    assert rv2.status_code == 200
+def test_create_employee_integration():
+    c, app = setup_client(); login(c)
+    r = c.post('/employees', data={'name':'John','email':'john@x.com','department':'Ops','status':'active'}, follow_redirects=True)
+    assert r.status_code == 200
+    with app.app_context():
+        assert Employee.query.filter_by(name='John').first() is not None

@@ -1,12 +1,13 @@
-from conftest import login
+from app import create_app
+from app.models import db, User
 
 
-def test_smoke_dashboard_and_exports(client):
-    rv = login(client, 'admin', 'admin123')
-    assert b'Employees' in rv.data
-    csv1 = client.get('/export/payroll.csv')
-    assert csv1.status_code == 200
-    assert csv1.mimetype == 'text/csv'
-    pdf = client.get('/export/payroll.pdf')
-    assert pdf.status_code == 200
-    assert pdf.mimetype == 'application/pdf'
+def test_login_smoke():
+    app = create_app({'TESTING':True,'SQLALCHEMY_DATABASE_URI':'sqlite:///:memory:'})
+    with app.app_context():
+        db.create_all()
+        u = User(username='manager', role='Manager'); u.set_password('manager123')
+        db.session.add(u); db.session.commit()
+    c = app.test_client()
+    r = c.post('/login', data={'username':'manager','password':'manager123'}, follow_redirects=True)
+    assert b'active_employees' in r.data

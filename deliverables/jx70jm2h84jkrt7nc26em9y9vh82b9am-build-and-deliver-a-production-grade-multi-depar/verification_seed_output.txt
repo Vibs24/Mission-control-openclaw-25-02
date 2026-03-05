@@ -1,1 +1,1 @@
-Seed complete: users + departments + employees + shifts + attendance + leaves
+Seeded users: admin/admin123 manager/manager123 reviewer/reviewer123

@@ -1,31 +1,42 @@
 # Multi-Department Workforce Command Center
 
-Flask + SQLite production-grade workforce operations app.
+Production-grade workforce platform built using Flask + SQLite + HTML/CSS/JS.
 
-## Included Scope
-- Secure RBAC login: Admin / Manager / Reviewer
+## Scope Delivered
+- Secure RBAC login (`Admin`, `Manager`, `Reviewer`)
 - Employee CRUD
 - Shift planning
-- Attendance and leave workflows
-- Payroll-ready exports (CSV + PDF)
+- Attendance + leave workflows
+- Payroll-ready CSV export
 - KPI dashboard
 - Audit timeline
-- Advanced filters/search/pagination
-- Responsive UI
-- Seed data + reproducible scripts
+- Advanced filter/search/pagination on major modules
+- CSV + PDF exports
+- Responsive UI (Bootstrap)
+- Seed data
 - Automated tests (unit + integration + smoke)
+- Architecture notes + deployment script + health checks + rollback guide + QA report
 
-## Setup / Run / Test
+## Setup / Run
 ```bash
-./scripts/deploy.sh
-./scripts/run.sh
-./scripts/test.sh
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python seed_data.py
+python run.py
 ```
 
-Seeded users:
-- admin/admin123
-- manager/manager123
-- reviewer/reviewer123
+## Alternate Deploy Shortcut
+```bash
+./deploy.sh
+```
 
-## Documentation
-See `docs/` for architecture notes, deployment readiness, and QA artifacts.
+## Health Check
+```bash
+./healthcheck.sh
+```
+
+## Test
+```bash
+pytest -q
+```

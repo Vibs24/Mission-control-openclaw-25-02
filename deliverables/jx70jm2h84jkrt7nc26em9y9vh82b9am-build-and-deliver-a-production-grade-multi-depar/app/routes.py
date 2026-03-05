@@ -1,243 +1,159 @@
 import csv
-from io import StringIO
-from datetime import date, datetime
+from io import StringIO, BytesIO
 from functools import wraps
-from flask import Blueprint, render_template, request, redirect, url_for, flash, Response, abort
+from datetime import date, datetime
+from flask import render_template, request, redirect, url_for, flash, abort, Response, send_file
 from flask_login import login_user, logout_user, login_required, current_user
-from fpdf import FPDF
-from . import db
-from .models import User, Department, Employee, Shift, Attendance, LeaveRequest, AuditLog
-
-bp = Blueprint('main', __name__)
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from .models import db, User, Employee, Shift, Attendance, LeaveRequest, AuditLog
 
 
-def log(action, entity, detail):
-    db.session.add(AuditLog(actor=current_user.username if current_user.is_authenticated else 'system', action=action, entity=entity, detail=detail))
+def register_routes(app):
+    def log(action, detail):
+        db.session.add(AuditLog(action=action, detail=detail))
 
+    def require_roles(*roles):
+        def deco(fn):
+            @wraps(fn)
+            def wrap(*a, **k):
+                if current_user.role not in roles:
+                    abort(403)
+                return fn(*a, **k)
+            return wrap
+        return deco
 
-def role_required(*roles):
-    def decorator(fn):
-        @wraps(fn)
-        def wrapper(*args, **kwargs):
-            if current_user.role not in roles:
-                abort(403)
-            return fn(*args, **kwargs)
-        return wrapper
-    return decorator
+    def paginate(query):
+        page = request.args.get('page', 1, type=int)
+        per_page = request.args.get('per_page', 10, type=int)
+        return query.paginate(page=page, per_page=per_page, error_out=False)
 
+    @app.route('/')
+    def home():
+        return redirect(url_for('dashboard') if current_user.is_authenticated else url_for('login'))
 
-def paginate(query, default=10):
-    page = request.args.get('page', 1, type=int)
-    per_page = request.args.get('per_page', default, type=int)
-    return query.paginate(page=page, per_page=per_page, error_out=False)
+    @app.route('/login', methods=['GET','POST'])
+    def login():
+        if request.method == 'POST':
+            u = User.query.filter_by(username=request.form['username'].strip()).first()
+            if u and u.check_password(request.form['password']):
+                login_user(u); log('auth.login', u.username); db.session.commit(); return redirect(url_for('dashboard'))
+            flash('Invalid credentials', 'danger')
+        return render_template('login.html')
 
+    @app.route('/logout')
+    @login_required
+    def logout():
+        log('auth.logout', current_user.username); db.session.commit(); logout_user(); return redirect(url_for('login'))
 
-@bp.route('/')
-def root():
-    return redirect(url_for('main.dashboard') if current_user.is_authenticated else url_for('main.login'))
+    @app.route('/dashboard')
+    @login_required
+    def dashboard():
+        today = date.today()
+        present = Attendance.query.filter_by(day=today, status='present').count()
+        pending_leave = LeaveRequest.query.filter_by(status='pending').count()
+        active_emp = Employee.query.filter_by(status='active').count()
+        shifts_today = Shift.query.filter_by(shift_date=today).count()
+        return render_template('dashboard.html', kpi={
+            'active_employees': active_emp,
+            'today_shifts': shifts_today,
+            'present_today': present,
+            'pending_leaves': pending_leave,
+        })
 
+    @app.route('/employees', methods=['GET','POST'])
+    @login_required
+    @require_roles('Admin','Manager')
+    def employees():
+        if request.method == 'POST':
+            e = Employee(name=request.form['name'], email=request.form['email'], department=request.form['department'], status=request.form.get('status','active'))
+            db.session.add(e); log('employee.create', e.name); db.session.commit(); return redirect(url_for('employees'))
+        q = request.args.get('q','').strip()
+        query = Employee.query
+        if q:
+            query = query.filter((Employee.name.ilike(f'%{q}%')) | (Employee.department.ilike(f'%{q}%')))
+        return render_template('employees.html', rows=paginate(query.order_by(Employee.id.desc())), q=q)
 
-@bp.route('/login', methods=['GET', 'POST'])
-def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('main.dashboard'))
-    if request.method == 'POST':
-        user = User.query.filter_by(username=request.form['username'].strip()).first()
-        if user and user.check_password(request.form['password']):
-            login_user(user)
-            log('login', 'auth', f'{user.username} logged in')
-            db.session.commit()
-            return redirect(url_for('main.dashboard'))
-        flash('Invalid credentials', 'danger')
-    return render_template('login.html')
+    @app.route('/employees/<int:eid>/delete', methods=['POST'])
+    @login_required
+    @require_roles('Admin')
+    def delete_employee(eid):
+        e = db.session.get(Employee, eid)
+        if not e: abort(404)
+        log('employee.delete', e.name); db.session.delete(e); db.session.commit(); return redirect(url_for('employees'))
 
+    @app.route('/shifts', methods=['GET','POST'])
+    @login_required
+    @require_roles('Admin','Manager')
+    def shifts():
+        if request.method == 'POST':
+            s = Shift(employee_id=int(request.form['employee_id']), shift_date=datetime.strptime(request.form['shift_date'], '%Y-%m-%d').date(), start_time=request.form['start_time'], end_time=request.form['end_time'])
+            db.session.add(s); log('shift.create', f'emp={s.employee_id}'); db.session.commit(); return redirect(url_for('shifts'))
+        return render_template('shifts.html', rows=paginate(Shift.query.order_by(Shift.shift_date.desc())), employees=Employee.query.all())
 
-@bp.route('/logout')
-@login_required
-def logout():
-    log('logout', 'auth', f'{current_user.username} logged out')
-    db.session.commit()
-    logout_user()
-    return redirect(url_for('main.login'))
+    @app.route('/attendance', methods=['GET','POST'])
+    @login_required
+    @require_roles('Admin','Manager','Reviewer')
+    def attendance():
+        if request.method == 'POST':
+            a = Attendance(employee_id=int(request.form['employee_id']), day=datetime.strptime(request.form['day'],'%Y-%m-%d').date(), status=request.form['status'])
+            db.session.add(a); log('attendance.mark', f'emp={a.employee_id}:{a.status}'); db.session.commit(); return redirect(url_for('attendance'))
+        return render_template('attendance.html', rows=paginate(Attendance.query.order_by(Attendance.day.desc())), employees=Employee.query.all())
 
+    @app.route('/leaves', methods=['GET','POST'])
+    @login_required
+    @require_roles('Admin','Manager','Reviewer')
+    def leaves():
+        if request.method == 'POST':
+            l = LeaveRequest(employee_id=int(request.form['employee_id']), start_date=datetime.strptime(request.form['start_date'],'%Y-%m-%d').date(), end_date=datetime.strptime(request.form['end_date'],'%Y-%m-%d').date(), reason=request.form.get('reason',''), status=request.form.get('status','pending'))
+            db.session.add(l); log('leave.create', f'emp={l.employee_id}'); db.session.commit(); return redirect(url_for('leaves'))
+        status = request.args.get('status','')
+        query = LeaveRequest.query
+        if status:
+            query = query.filter_by(status=status)
+        return render_template('leaves.html', rows=paginate(query.order_by(LeaveRequest.id.desc())), employees=Employee.query.all(), status=status)
 
-@bp.route('/dashboard')
-@login_required
-def dashboard():
-    employees = Employee.query.count()
-    present_today = Attendance.query.filter_by(day=date.today(), status='Present').count()
-    pending_leaves = LeaveRequest.query.filter_by(status='Pending').count()
-    payroll_total = db.session.query(db.func.coalesce(db.func.sum(Employee.salary_monthly), 0)).scalar() or 0
-    logs = AuditLog.query.order_by(AuditLog.created_at.desc()).limit(12).all()
-    return render_template('dashboard.html', employees=employees, present_today=present_today, pending_leaves=pending_leaves, payroll_total=payroll_total, logs=logs)
+    @app.route('/export/payroll.csv')
+    @login_required
+    @require_roles('Admin','Manager')
+    def payroll_export():
+        out = StringIO(); w = csv.writer(out)
+        w.writerow(['employee_id','name','department','present_days'])
+        for e in Employee.query.all():
+            present_days = Attendance.query.filter_by(employee_id=e.id, status='present').count()
+            w.writerow([e.id, e.name, e.department, present_days])
+        return Response(out.getvalue(), mimetype='text/csv', headers={'Content-Disposition':'attachment; filename=payroll_ready.csv'})
 
+    @app.route('/export/attendance.csv')
+    @login_required
+    def attendance_csv():
+        out = StringIO(); w = csv.writer(out)
+        w.writerow(['id','employee','day','status'])
+        for r in Attendance.query.all():
+            w.writerow([r.id, r.employee.name, r.day, r.status])
+        return Response(out.getvalue(), mimetype='text/csv', headers={'Content-Disposition':'attachment; filename=attendance.csv'})
 
-@bp.route('/departments', methods=['GET', 'POST'])
-@login_required
-@role_required('Admin', 'Manager')
-def departments():
-    if request.method == 'POST':
-        d = Department(name=request.form['name'])
-        db.session.add(d)
-        db.session.flush()
-        log('create', 'department', d.name)
-        db.session.commit()
-        return redirect(url_for('main.departments'))
-    pagination = paginate(Department.query.order_by(Department.name.asc()))
-    return render_template('departments.html', pagination=pagination)
+    @app.route('/export/leave/<int:leave_id>.pdf')
+    @login_required
+    def leave_pdf(leave_id):
+        l = db.session.get(LeaveRequest, leave_id)
+        if not l: abort(404)
+        b = BytesIO(); c = canvas.Canvas(b, pagesize=A4)
+        c.drawString(50, 800, f'Leave Request #{l.id}')
+        c.drawString(50, 780, f'Employee: {l.employee.name}')
+        c.drawString(50, 760, f'From: {l.start_date} To: {l.end_date}')
+        c.drawString(50, 740, f'Status: {l.status}')
+        c.drawString(50, 720, f'Reason: {l.reason}')
+        c.save(); b.seek(0)
+        return send_file(b, mimetype='application/pdf', as_attachment=True, download_name=f'leave_{l.id}.pdf')
 
+    @app.route('/audit')
+    @login_required
+    @require_roles('Admin','Manager')
+    def audit():
+        return render_template('audit.html', rows=paginate(AuditLog.query.order_by(AuditLog.id.desc())))
 
-@bp.route('/employees', methods=['GET', 'POST'])
-@login_required
-def employees():
-    if request.method == 'POST':
-        if current_user.role not in ['Admin', 'Manager']:
-            abort(403)
-        e = Employee(
-            code=request.form['code'], full_name=request.form['full_name'], email=request.form['email'],
-            role_title=request.form['role_title'], salary_monthly=float(request.form['salary_monthly']),
-            status=request.form['status'], department_id=int(request.form['department_id'])
-        )
-        db.session.add(e)
-        db.session.flush()
-        log('create', 'employee', e.full_name)
-        db.session.commit()
-        return redirect(url_for('main.employees'))
-
-    q = request.args.get('q', '').strip()
-    dep = request.args.get('department_id', type=int)
-    query = Employee.query
-    if q:
-        query = query.filter(Employee.full_name.contains(q) | Employee.code.contains(q) | Employee.email.contains(q))
-    if dep:
-        query = query.filter_by(department_id=dep)
-    pagination = paginate(query.order_by(Employee.full_name.asc()))
-    return render_template('employees.html', pagination=pagination, departments=Department.query.order_by(Department.name).all(), q=q, selected_dept=dep)
-
-
-@bp.route('/employees/<int:eid>/delete', methods=['POST'])
-@login_required
-@role_required('Admin')
-def delete_employee(eid):
-    e = Employee.query.get_or_404(eid)
-    name = e.full_name
-    db.session.delete(e)
-    log('delete', 'employee', name)
-    db.session.commit()
-    return redirect(url_for('main.employees'))
-
-
-@bp.route('/shifts', methods=['GET', 'POST'])
-@login_required
-@role_required('Admin', 'Manager')
-def shifts():
-    if request.method == 'POST':
-        s = Shift(
-            employee_id=int(request.form['employee_id']),
-            shift_date=datetime.strptime(request.form['shift_date'], '%Y-%m-%d').date(),
-            shift_name=request.form['shift_name'],
-            start_time=request.form['start_time'],
-            end_time=request.form['end_time'],
-        )
-        db.session.add(s)
-        db.session.flush()
-        log('create', 'shift', f'{s.employee.full_name} {s.shift_date}')
-        db.session.commit()
-        return redirect(url_for('main.shifts'))
-    pagination = paginate(Shift.query.order_by(Shift.shift_date.desc()))
-    return render_template('shifts.html', pagination=pagination, employees=Employee.query.order_by(Employee.full_name).all())
-
-
-@bp.route('/attendance', methods=['GET', 'POST'])
-@login_required
-def attendance():
-    if request.method == 'POST':
-        a = Attendance(
-            employee_id=int(request.form['employee_id']),
-            day=datetime.strptime(request.form['day'], '%Y-%m-%d').date(),
-            status=request.form['status'],
-            check_in=request.form.get('check_in'),
-            check_out=request.form.get('check_out'),
-        )
-        db.session.add(a)
-        db.session.flush()
-        log('create', 'attendance', f'{a.employee.full_name} {a.day}')
-        db.session.commit()
-        return redirect(url_for('main.attendance'))
-
-    day = request.args.get('day')
-    query = Attendance.query
-    if day:
-        query = query.filter_by(day=datetime.strptime(day, '%Y-%m-%d').date())
-    pagination = paginate(query.order_by(Attendance.day.desc()))
-    return render_template('attendance.html', pagination=pagination, employees=Employee.query.order_by(Employee.full_name).all(), day_filter=day)
-
-
-@bp.route('/leaves', methods=['GET', 'POST'])
-@login_required
-def leaves():
-    if request.method == 'POST':
-        l = LeaveRequest(
-            employee_id=int(request.form['employee_id']),
-            leave_type=request.form['leave_type'],
-            start_date=datetime.strptime(request.form['start_date'], '%Y-%m-%d').date(),
-            end_date=datetime.strptime(request.form['end_date'], '%Y-%m-%d').date(),
-            status=request.form['status'],
-            reason=request.form.get('reason'),
-        )
-        db.session.add(l)
-        db.session.flush()
-        log('create', 'leave', f'{l.employee.full_name} {l.status}')
-        db.session.commit()
-        return redirect(url_for('main.leaves'))
-
-    status = request.args.get('status', '')
-    query = LeaveRequest.query
-    if status:
-        query = query.filter_by(status=status)
-    pagination = paginate(query.order_by(LeaveRequest.start_date.desc()))
-    return render_template('leaves.html', pagination=pagination, employees=Employee.query.order_by(Employee.full_name).all(), selected_status=status)
-
-
-@bp.route('/export/payroll.csv')
-@login_required
-def export_payroll_csv():
-    out = StringIO()
-    w = csv.writer(out)
-    w.writerow(['Code', 'Name', 'Department', 'Role', 'Monthly Salary'])
-    for e in Employee.query.order_by(Employee.full_name).all():
-        w.writerow([e.code, e.full_name, e.department.name, e.role_title, e.salary_monthly])
-    return Response(out.getvalue(), mimetype='text/csv', headers={'Content-Disposition': 'attachment; filename=payroll.csv'})
-
-
-@bp.route('/export/attendance.csv')
-@login_required
-def export_attendance_csv():
-    out = StringIO()
-    w = csv.writer(out)
-    w.writerow(['Date', 'Employee', 'Status', 'Check In', 'Check Out'])
-    for a in Attendance.query.order_by(Attendance.day.desc()).all():
-        w.writerow([a.day, a.employee.full_name, a.status, a.check_in, a.check_out])
-    return Response(out.getvalue(), mimetype='text/csv', headers={'Content-Disposition': 'attachment; filename=attendance.csv'})
-
-
-@bp.route('/export/payroll.pdf')
-@login_required
-def export_payroll_pdf():
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font('Helvetica', 'B', 14)
-    pdf.cell(0, 10, 'Payroll Ready Report', new_x='LMARGIN', new_y='NEXT')
-    pdf.set_font('Helvetica', size=10)
-    for e in Employee.query.order_by(Employee.full_name).all():
-        pdf.cell(0, 8, f'{e.code} | {e.full_name} | {e.department.name} | {e.salary_monthly}', new_x='LMARGIN', new_y='NEXT')
-    raw = bytes(pdf.output())
-    return Response(raw, mimetype='application/pdf', headers={'Content-Disposition': 'attachment; filename=payroll.pdf'})
-
-
-@bp.route('/audit')
-@login_required
-@role_required('Admin', 'Reviewer')
-def audit():
-    pagination = paginate(AuditLog.query.order_by(AuditLog.created_at.desc()))
-    return render_template('audit.html', pagination=pagination)
+    @app.route('/health')
+    def health():
+        db.session.execute(db.text('SELECT 1'))
+        return {'status':'ok'}
