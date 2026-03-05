@@ -5,30 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smoke E2E Status</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f9fc; color: #1f2937; }
-    .card { background: white; border-radius: 10px; padding: 1.2rem 1.4rem; box-shadow: 0 2px 10px rgba(0,0,0,.08); max-width: 760px; }
-    .ok { color: #166534; font-weight: 700; }
-    ul { margin-top: .4rem; }
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f9fc; color: #1b1f24; }
+    .card { max-width: 760px; background: #fff; border: 1px solid #d8dee4; border-radius: 10px; padding: 1.25rem 1.5rem; }
+    .badge { display:inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; background: #dafbe1; color: #116329; font-weight: 600; }
+    ul { line-height: 1.6; }
+    code { background: #f0f3f6; padding: 0.1rem 0.3rem; border-radius: 4px; }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Mission Control Smoke E2E Status</h1>
-    <p><strong>Task:</strong> Minimal HTML status page + README delivery</p>
-    <p><strong>Current Status:</strong> <span class="ok">Completed</span></p>
+    <h1>Smoke E2E Workflow Status</h1>
+    <p><span class="badge">Completed</span></p>
+    <p>This page is a minimal end-to-end artifact for Mission Control smoke validation.</p>
 
     <h2>What was done</h2>
     <ul>
-      <li>Created this <code>index.html</code> status page in the assigned artifact folder.</li>
-      <li>Created <code>README.md</code> documenting actions, status, and next checks.</li>
-      <li>Verified files exist on disk for workflow evidence.</li>
+      <li>Created this <code>index.html</code> status page.</li>
+      <li>Created a companion <code>README.md</code> with status and next checks.</li>
+      <li>Verified both files exist in the auto-managed artifact folder.</li>
     </ul>
+
+    <h2>Current status</h2>
+    <p>Artifacts are present and ready for reviewer verification.</p>
 
     <h2>Next checks</h2>
     <ul>
-      <li>Reviewer confirms artifact paths and file readability.</li>
-      <li>Reviewer validates acceptance criteria coverage for smoke E2E.</li>
-      <li>If needed, extend smoke artifact with timestamped validation logs.</li>
+      <li>Open <code>index.html</code> in a browser to validate rendering.</li>
+      <li>Confirm README coverage aligns with task acceptance criteria.</li>
+      <li>Proceed to review gate handoff.</li>
     </ul>
   </div>
 </body>
