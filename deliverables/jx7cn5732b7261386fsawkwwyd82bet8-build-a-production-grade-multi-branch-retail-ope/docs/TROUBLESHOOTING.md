@@ -1,13 +1,16 @@
 # Troubleshooting
 
-## Invalid credentials for seeded user
-- Ensure DB initialized and seeded (`setup.sh` or init-db + seed.py).
+## Login fails
+- Re-run `python seed_data.py` and use seeded credentials.
+
+## No stock available for sale
+- Record purchase first or increase inventory entry.
+
+## 403 on branch/purchase pages
+- Expected for Staff role. Use Admin/Manager.
 
 ## PDF export fails
-- Verify `reportlab` installed in active environment.
+- Ensure `fpdf2` is installed from `requirements.txt`.
 
-## Empty inventory list
-- Confirm products seeded and user role/branch scope permits view.
-
-## Tests failing on sqlite
-- Run from project root and ensure `schema.sql` path unchanged.
+## Tests fail due to environment
+- Activate venv: `source /tmp/retailops-venv/bin/activate`.

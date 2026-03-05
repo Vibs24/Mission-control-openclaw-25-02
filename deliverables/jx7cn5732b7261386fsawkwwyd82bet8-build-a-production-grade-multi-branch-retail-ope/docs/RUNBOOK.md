@@ -1,22 +1,19 @@
 # Runbook
 
-## Start
+## Setup
 1. `./scripts/setup.sh`
-2. `./scripts/run.sh`
-3. Validate login and dashboard load.
+2. Confirm `Seed complete` output.
 
-## Daily Ops Checks
-- Dashboard KPI render
-- Low-stock alerts present when thresholds crossed
-- Exports downloadable
-- Audit timeline receives new entries after transactions
+## Start Service
+- `./scripts/run.sh`
 
-## Recovery
-- Backup `retail.db`
-- Recreate schema: `python3 - <<'PY'
-from app import create_app
-app = create_app()
-with app.app_context():
-    app.init_db()
-PY`
-- Re-seed: `python3 scripts/seed.py --reset`
+## Validation
+1. Login as admin.
+2. Verify dashboard KPIs and notification panel.
+3. Add purchase and confirm inventory rises.
+4. Add sale and confirm inventory drops.
+5. Export CSV and open invoice PDF.
+6. Open audit timeline.
+
+## Tests
+- `./scripts/test.sh`

@@ -1,0 +1,3 @@
+{% extends 'base.html' %}{% block content %}
+<div class='card'><h3>Audit Timeline</h3><ul class='timeline'>{% for a in pagination.items %}<li>{{a.created_at}} · <b>{{a.actor}}</b> · {{a.action}} · {{a.entity}} · {{a.detail}}</li>{% endfor %}</ul>{% include '_pagination.html' %}</div>
+{% endblock %}

@@ -1,17 +1,23 @@
 # Architecture
 
 ## Stack
-- Flask web layer (server-rendered Jinja templates)
-- SQLite transactional store
-- ReportLab for PDF invoice export
+- Flask MVC app
+- SQLite via Flask-SQLAlchemy
+- Flask-Login for session auth
+- Jinja templates + responsive CSS
 
 ## Layers
-1. **Presentation**: templates + CSS responsive UI
-2. **Application**: Flask routes enforcing RBAC and business rules
-3. **Data**: SQLite with normalized tables for branches/users/products/inventory/transactions/audit
+1. **Presentation**: HTML templates for dashboard and workflows.
+2. **Application**: route handlers enforce RBAC and process workflows.
+3. **Data**: SQLAlchemy models for users, branches, inventory, transactions, audit, notifications.
 
-## Key Design Notes
-- Session-based authentication for simplicity and clear integration testing.
-- Role checks via decorator for consistent RBAC enforcement.
-- Audit logging on auth and transactional operations.
-- Notification records for low-stock and operational events.
+## Security
+- Passwords hashed with Werkzeug.
+- Role checks via decorator (`role_required`).
+- Protected routes with `@login_required`.
+
+## Operational Data Flow
+- Purchase increases inventory.
+- Sale decreases inventory and records margin components.
+- Low stock triggers notification.
+- All key actions append audit events.
