@@ -1,0 +1,40 @@
+Service: LaunchAgent (loaded)
+File logs: /tmp/openclaw/openclaw-2026-03-05.log
+Command: /opt/homebrew/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 19889
+Service file: ~/Library/LaunchAgents/ai.openclaw.mc2.plist
+Service env: OPENCLAW_PROFILE=mc2 OPENCLAW_STATE_DIR=/Users/syphaoffice1/.openclaw-mc2 OPENCLAW_CONFIG_PATH=/Users/syphaoffice1/.openclaw-mc2/openclaw.json OPENCLAW_GATEWAY_PORT=19889
+
+Service config looks out of date or non-standard.
+Service config issue: Gateway service PATH missing required dirs: /Users/syphaoffice1/.local/bin, /Users/syphaoffice1/.npm-global/bin, /Users/syphaoffice1/bin, /Users/syphaoffice1/.volta/bin, /Users/syphaoffice1/.asdf/shims, /Users/syphaoffice1/.bun/bin, /Users/syphaoffice1/Library/Application Support/fnm/aliases/default/bin, /Users/syphaoffice1/.fnm/aliases/default/bin, /Users/syphaoffice1/Library/pnpm, /Users/syphaoffice1/.local/share/pnpm
+Recommendation: run "openclaw --profile mc2 doctor" (or "openclaw --profile mc2 doctor --repair").
+Config (cli): ~/.openclaw-mc2/openclaw.json
+Config (service): ~/.openclaw-mc2/openclaw.json
+
+Gateway: bind=loopback (127.0.0.1), port=19889 (service args)
+Probe target: ws://127.0.0.1:19889
+Dashboard: http://127.0.0.1:19889/
+Probe note: Loopback-only gateway; only local clients can connect.
+
+Runtime: stopped (state spawn scheduled)
+RPC probe: ok
+
+Service is loaded but not running (likely exited immediately).
+File logs: /tmp/openclaw/openclaw-2026-03-05.log
+Launchd stdout (if installed): /Users/syphaoffice1/.openclaw-mc2/logs/gateway.log
+Launchd stderr (if installed): /Users/syphaoffice1/.openclaw-mc2/logs/gateway.err.log
+
+Listening: 127.0.0.1:19889
+Other gateway-like services detected (best effort):
+- ai.clawe.squadhub (user, plist: /Users/syphaoffice1/Library/LaunchAgents/ai.clawe.squadhub.plist)
+- ai.missioncontrol.agent-sync (user, plist: /Users/syphaoffice1/Library/LaunchAgents/ai.missioncontrol.agent-sync.plist)
+- ai.missioncontrol.bot (user, plist: /Users/syphaoffice1/Library/LaunchAgents/ai.missioncontrol.bot.plist)
+- ai.missioncontrol.dashboard (user, plist: /Users/syphaoffice1/Library/LaunchAgents/ai.missioncontrol.dashboard.plist)
+- com.sypha.clawe.sysops.worker (user, plist: /Users/syphaoffice1/Library/LaunchAgents/com.sypha.clawe.sysops.worker.plist)
+Cleanup hint: launchctl bootout gui/$UID/ai.openclaw.mc2
+Cleanup hint: rm ~/Library/LaunchAgents/ai.openclaw.mc2.plist
+
+Recommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).
+If you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).
+
+Troubles: run openclaw --profile mc2 status
+Troubleshooting: https://docs.openclaw.ai/troubleshooting

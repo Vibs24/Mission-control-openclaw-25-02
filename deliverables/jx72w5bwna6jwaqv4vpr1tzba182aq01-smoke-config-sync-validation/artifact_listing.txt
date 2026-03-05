@@ -1,0 +1,10 @@
+total 72
+drwxr-xr-x@  9 syphaoffice1  staff    288 Mar  5 16:48 .
+drwxr-xr-x@ 14 syphaoffice1  staff    448 Mar  5 16:47 ..
+-rw-r--r--@  1 syphaoffice1  staff      0 Mar  5 16:49 artifact_listing.txt
+-rw-r--r--@  1 syphaoffice1  staff   3611 Mar  5 16:48 gateway_help.txt
+-rw-r--r--@  1 syphaoffice1  staff   2832 Mar  5 16:48 gateway_status.txt
+-rw-r--r--@  1 syphaoffice1  staff     29 Mar  5 16:48 key_fields_count.txt
+-rw-r--r--@  1 syphaoffice1  staff      0 Mar  5 16:48 key_fields_grep.txt
+-rw-r--r--@  1 syphaoffice1  staff  11306 Mar  5 16:48 runtime_status.txt
+-rw-r--r--@  1 syphaoffice1  staff   8427 Mar  5 16:48 status.txt
