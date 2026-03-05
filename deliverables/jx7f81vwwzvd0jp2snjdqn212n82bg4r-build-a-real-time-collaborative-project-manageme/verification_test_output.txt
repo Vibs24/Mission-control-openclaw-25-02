@@ -18,8 +18,8 @@ tests/test_app.py::test_create_and_move_task_api
     db.session.add(SessionToken(user_id=u.id, token=token, expires_at=datetime.utcnow()+timedelta(days=30))); db.session.commit()
 
 tests/test_app.py::test_create_and_move_task_api
-  /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/app/routes.py:188: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/app/routes.py:196: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
     t.updated_at = datetime.utcnow();
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-2 passed, 17 warnings in 0.92s
+2 passed, 17 warnings in 0.47s

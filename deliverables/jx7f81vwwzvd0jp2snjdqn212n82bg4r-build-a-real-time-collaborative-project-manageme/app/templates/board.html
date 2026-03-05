@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}{% block content %}
-<div class='topbar'><input id='search' placeholder='Live search...'><button id='notifBtn'>🔔</button><div id='notifPanel' class='panel hidden'></div><span class='avatar'>{{current_user.avatar}}</span></div>
+<div class='topbar'><input id='search' placeholder='Live search...'><button id='notifBtn'>🔔</button><div id='notifPanel' class='panel hidden'></div><button id='profileBtn' class='avatar'>{{current_user.avatar}}</button><div id='profileMenu' class='panel hidden'></div></div>
 <div class='toolbar'><button id='newTaskBtn'>+ New Task</button></div>
 <div id='board' class='board'></div>
 <div id='drawer' class='drawer hidden'></div>

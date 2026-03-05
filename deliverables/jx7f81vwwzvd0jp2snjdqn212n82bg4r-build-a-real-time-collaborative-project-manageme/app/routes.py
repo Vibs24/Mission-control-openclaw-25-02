@@ -83,6 +83,14 @@ def register_routes(app):
             db.session.add(WorkspaceMember(workspace_id=w.id, user_id=current_user.id, role='member')); db.session.commit()
         r = make_response(redirect(url_for('board'))); r.set_cookie('ws_id', str(w.id)); return r
 
+    @app.route('/workspace/<int:wid>/set')
+    @login_required
+    def set_workspace(wid):
+        require_member(wid)
+        r = make_response(redirect(url_for('board')))
+        r.set_cookie('ws_id', str(wid))
+        return r
+
     @app.route('/members', methods=['GET', 'POST'])
     @login_required
     def members():
@@ -208,6 +216,25 @@ def register_routes(app):
         wid = ws_id(); require_member(wid)
         users = member_users(wid)
         return jsonify([{'id':u.id,'email':u.email,'avatar':u.avatar} for u in users])
+
+    @app.route('/api/workspaces')
+    @login_required
+    def api_workspaces():
+        my = Workspace.query.join(WorkspaceMember, Workspace.id==WorkspaceMember.workspace_id).filter(WorkspaceMember.user_id==current_user.id).all()
+        active = ws_id()
+        return jsonify([{'id':w.id,'name':w.name,'active':w.id==active} for w in my])
+
+    @app.route('/api/presence')
+    @login_required
+    def api_presence():
+        wid = ws_id(); require_member(wid)
+        users = member_users(wid)
+        return jsonify([{'email':u.email,'avatar':u.avatar,'online':True} for u in users])
+
+    @app.route('/api/profile')
+    @login_required
+    def api_profile():
+        return jsonify({'email': current_user.email, 'avatar': current_user.avatar})
 
     @app.route('/api/notifications')
     @login_required

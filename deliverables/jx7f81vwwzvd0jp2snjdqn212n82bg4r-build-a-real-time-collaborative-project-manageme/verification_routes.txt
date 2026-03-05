@@ -4,10 +4,13 @@
 /api/members
 /api/notifications
 /api/notifications/read
+/api/presence
+/api/profile
 /api/task
 /api/task/<int:tid>
 /api/task/<int:tid>/comment
 /api/task/<int:tid>/update
+/api/workspaces
 /board
 /join/<code>
 /login
@@ -15,4 +18,5 @@
 /members
 /signup
 /static/<path:filename>
+/workspace/<int:wid>/set
 /workspaces
