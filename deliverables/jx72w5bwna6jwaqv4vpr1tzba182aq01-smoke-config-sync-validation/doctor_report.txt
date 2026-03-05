@@ -1,0 +1,175 @@
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░▄▄▄░██░▄▄░██░▄▄▄██░▀██░██░▄▄▀██░████░▄▄▀██░███░██
+██░███░██░▀▀░██░▄▄▄██░█░█░██░█████░████░▀▀░██░█░█░██
+██░▀▀▀░██░█████░▀▀▀██░██▄░██░▀▀▄██░▀▀░█░██░██▄▀▄▀▄██
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+                  🦞 OPENCLAW 🦞                    
+ 
+┌  OpenClaw doctor
+│
+◇  State integrity ────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  - State directory permissions are too open (~/.openclaw-mc2).               │
+│    Recommend chmod 700.                                                      │
+│  - CRITICAL: OAuth dir missing (~/.openclaw-mc2/credentials).                │
+│  - Multiple state directories detected. This can split session history.      │
+│    - ~/.openclaw                                                             │
+│    Active state dir: ~/.openclaw-mc2                                         │
+│  - 1/1 recent sessions are missing transcripts.                              │
+│    Verify sessions in store: openclaw --profile mc2 sessions --store         │
+│    "/Users/syphaoffice1/.openclaw-mc2/agents/main/sessions/sessions.json"    │
+│    Preview cleanup impact: openclaw --profile mc2 sessions cleanup           │
+│    --store                                                                   │
+│    "/Users/syphaoffice1/.openclaw-mc2/agents/main/sessions/sessions.json"    │
+│    --dry-run                                                                 │
+│  - Main session transcript missing                                           │
+│    (~/.openclaw-mc2/agents/main/sessions/374ac80d-7f54-4e94-909d-b876fb40c4  │
+│  76.jsonl).                                                                  │
+│    History will appear to reset.                                             │
+│                                                                              │
+├──────────────────────────────────────────────────────────────────────────────╯
+│
+◇  Session locks ──────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  - Found 1 session lock file.                                                │
+│  - ~/.openclaw-mc2/agents/database/sessions/86382357-4479-4b08-bc72-1887dfb  │
+│  2e5c0.jsonl.lock                                                            │
+│    pid=23883 (alive) age=1m20s stale=no                                      │
+│                                                                              │
+├──────────────────────────────────────────────────────────────────────────────╯
+│
+◇  Other gateway-like services detected ───────────────────────────────────────╮
+│                                                                              │
+│  - ai.clawe.squadhub (user, plist:                                           │
+│    /Users/syphaoffice1/Library/LaunchAgents/ai.clawe.squadhub.plist)         │
+│  - ai.missioncontrol.agent-sync (user, plist:                                │
+│    /Users/syphaoffice1/Library/LaunchAgents/ai.missioncontrol.agent-sync.pl  │
+│  ist)                                                                        │
+│  - ai.missioncontrol.bot (user, plist:                                       │
+│    /Users/syphaoffice1/Library/LaunchAgents/ai.missioncontrol.bot.plist)     │
+│  - ai.missioncontrol.dashboard (user, plist:                                 │
+│    /Users/syphaoffice1/Library/LaunchAgents/ai.missioncontrol.dashboard.pli  │
+│  st)                                                                         │
+│  - com.sypha.clawe.sysops.worker (user, plist:                               │
+│    /Users/syphaoffice1/Library/LaunchAgents/com.sypha.clawe.sysops.worker.p  │
+│  list)                                                                       │
+│                                                                              │
+├──────────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cleanup hints ─────────────────────────────────────╮
+│                                                     │
+│  - launchctl bootout gui/$UID/ai.openclaw.mc2       │
+│  - rm ~/Library/LaunchAgents/ai.openclaw.mc2.plist  │
+│                                                     │
+├─────────────────────────────────────────────────────╯
+│
+◇  Gateway recommendation ───────────────────────────────────────────────╮
+│                                                                        │
+│  Recommendation: run a single gateway per machine for most setups.     │
+│  One gateway supports multiple agents.                                 │
+│  If you need multiple gateways (e.g., a rescue bot on the same host),  │
+│  isolate ports + config/state (see docs:                               │
+│  /gateway#multiple-gateways-same-host).                                │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  Gateway service config ─────────────────────────────────────────────────╮
+│                                                                          │
+│  - Gateway service PATH missing required dirs:                           │
+│    /Users/syphaoffice1/.local/bin, /Users/syphaoffice1/.npm-global/bin,  │
+│    /Users/syphaoffice1/bin, /Users/syphaoffice1/.volta/bin,              │
+│    /Users/syphaoffice1/.asdf/shims, /Users/syphaoffice1/.bun/bin,        │
+│    /Users/syphaoffice1/Library/Application                               │
+│    Support/fnm/aliases/default/bin,                                      │
+│    /Users/syphaoffice1/.fnm/aliases/default/bin,                         │
+│    /Users/syphaoffice1/Library/pnpm,                                     │
+│    /Users/syphaoffice1/.local/share/pnpm                                 │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Security ────────────────────────────────────────────╮
+│                                                       │
+│  - No channel security warnings detected.             │
+│  - Run: openclaw --profile mc2 security audit --deep  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Skills status ────────────╮
+│                            │
+│  Eligible: 37              │
+│  Missing requirements: 15  │
+│  Blocked by allowlist: 0   │
+│                            │
+├────────────────────────────╯
+│
+◇  Plugins ──────╮
+│                │
+│  Loaded: 4     │
+│  Disabled: 32  │
+│  Errors: 0     │
+│                │
+├────────────────╯
+│
+◇  Shell completion ────────────────────────────────────────────────────╮
+│                                                                       │
+│  Shell completion is configured in your zsh profile but the cache is  │
+│  missing.                                                             │
+│  Regenerating cache...                                                │
+│                                                                       │
+├───────────────────────────────────────────────────────────────────────╯
+│
+◇  Shell completion ───────────────────────────────────────────╮
+│                                                              │
+│  Completion cache regenerated at                             │
+│  /Users/syphaoffice1/.openclaw-mc2/completions/openclaw.zsh  │
+│                                                              │
+├──────────────────────────────────────────────────────────────╯
+Agents: main (default), it-dev, it-support, it-analytics, it-docs, it-ops, reviewer, chief, project-manager, frontend, designer, database, backend, documentation, operations
+Heartbeat interval: 30m (main)
+Session store (main): /Users/syphaoffice1/.openclaw-mc2/agents/main/sessions/sessions.json (1 entries)
+- agent:main:main (8632m ago)
+│
+◇  Memory search ──────────────────────────────────────────────────────────╮
+│                                                                          │
+│  Memory search is enabled but no embedding provider is configured.       │
+│  Semantic recall will not work without an embedding provider.            │
+│  Gateway memory probe for default agent is not ready: No API key found   │
+│  for provider "openai". You are authenticated with OpenAI Codex OAuth.   │
+│  Use openai-codex/gpt-5.3-codex (OAuth) or set OPENAI_API_KEY to use     │
+│  openai/gpt-5.1-codex.                                                   │
+│                                                                          │
+│  No API key found for provider "google". Auth store:                     │
+│  /Users/syphaoffice1/.openclaw-mc2/agents/main/agent/auth-profiles.json  │
+│  (agentDir: /Users/syphaoffice1/.openclaw-mc2/agents/main/agent).        │
+│  Configure auth for this agent (openclaw --profile mc2 agents add <id>)  │
+│  or copy auth-profiles.json from the main agentDir.                      │
+│                                                                          │
+│  No API key found for provider "voyage". Auth store:                     │
+│  /Users/syphaoffice1/.openclaw-mc2/agents/main/agent/auth-profiles.json  │
+│  (agentDir: /Users/syphaoffice1/.openclaw-mc2/agents/main/agent).        │
+│  Configure auth for this agent (openclaw --profile mc2 agents add <id>)  │
+│  or copy auth-profiles.json from the main agentDir.                      │
+│                                                                          │
+│  No API key found for provider "mistral". Auth store:                    │
+│  /Users/syphaoffice1/.openclaw-mc2/agents/main/agent/auth-profiles.json  │
+│  (agentDir: /Users/syphaoffice1/.openclaw-mc2/agents/main/agent).        │
+│  Configure auth for this agent (openclaw --profile mc2 agents add <id>)  │
+│  or copy auth-profiles.json from the main agentDir.                      │
+│                                                                          │
+│  Fix (pick one):                                                         │
+│  - Set OPENAI_API_KEY, GEMINI_API_KEY, VOYAGE_API_KEY, or                │
+│    MISTRAL_API_KEY in your environment                                   │
+│  - Configure credentials: openclaw --profile mc2 configure --section     │
+│    model                                                                 │
+│  - For local embeddings: configure                                       │
+│    agents.defaults.memorySearch.provider and local model path            │
+│  - To disable: openclaw --profile mc2 config set                         │
+│    agents.defaults.memorySearch.enabled false                            │
+│                                                                          │
+│  Verify: openclaw --profile mc2 memory status --deep                     │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Run "openclaw --profile mc2 doctor --fix" to apply changes.
+│
+└  Doctor complete.
+

@@ -1,0 +1,22 @@
+## startup script references
+    35	fi
+    36	if ! /opt/homebrew/bin/node "${DRIFT_ARGS[@]}"; then
+    37	  echo "[start-missioncontrol-bot] ERROR: openclaw config drift check failed" >&2
+    38	  if [[ "$OPENCLAW_CONFIG_STRICT_STARTUP" == "true" ]]; then
+    39	    exit 1
+    40	  fi
+    41	fi
+    42	
+    43	/opt/homebrew/bin/node orchestrator/scripts/provision-role-agents.mjs
+    44	/opt/homebrew/bin/node orchestrator/scripts/migrate-role-routing.mjs
+    45	exec /opt/homebrew/bin/node orchestrator/index.mjs
+
+## strict routing guards
+1825:          `[strict-routing] Unknown agent '${requestedAgentId}'. Fallback to main is disabled. ` +
+6100:                title: "PM workflow blocked (strict routing)",
+7739:                  title: "PM workflow blocked (strict routing)",
+7741:                  workDone: "Chief blocked PM task because strict routing disallows downgrade.",
+
+## role routing migration references
+258:        reason: "role_routing_migration: canonical role enforcement",
+297:  const reportPath = path.join(logsDir, "role-routing-migration.json");
