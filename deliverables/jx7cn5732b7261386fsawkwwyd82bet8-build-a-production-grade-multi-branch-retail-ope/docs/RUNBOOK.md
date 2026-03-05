@@ -12,6 +12,11 @@
 - Audit timeline receives new entries after transactions
 
 ## Recovery
-- Backup `retail_ops.db`
-- Recreate schema: `flask --app app:create_app init-db`
-- Re-seed: `python3 seed.py`
+- Backup `retail.db`
+- Recreate schema: `python3 - <<'PY'
+from app import create_app
+app = create_app()
+with app.app_context():
+    app.init_db()
+PY`
+- Re-seed: `python3 scripts/seed.py --reset`

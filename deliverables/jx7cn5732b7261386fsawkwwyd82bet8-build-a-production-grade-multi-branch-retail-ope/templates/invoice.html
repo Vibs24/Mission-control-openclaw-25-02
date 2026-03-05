@@ -1,10 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="card">
-<h2>Invoice #{{ sale['id'] }}</h2>
-<p>Branch: {{ sale['branch'] }} | Customer: {{ sale['customer'] or 'Walk-in' }} | Date: {{ sale['created_at'] }}</p>
-<table><tr><th>Product</th><th>Qty</th><th>Rate</th></tr>{% for i in items %}<tr><td>{{ i['product'] }}</td><td>{{ i['qty'] }}</td><td>{{ i['unit_price'] }}</td></tr>{% endfor %}</table>
-<p><strong>Total:</strong> ₹{{ sale['total'] }} | <strong>Margin:</strong> ₹{{ sale['margin'] }}</p>
-<p><a href="{{ url_for('invoice_pdf', sale_id=sale['id']) }}">Download PDF</a></p>
+<section class="page-shell">
+  <article class="panel printable">
+    <div class="panel-head no-print">
+      <h1>Invoice #{{ sale['id'] }}</h1>
+      <div class="actions-inline">
+        <button class="btn ghost" onclick="window.print()" type="button">Print</button>
+        <a class="btn" href="{{ url_for('invoice_pdf', sale_id=sale['id']) }}">Download PDF</a>
+        <a class="btn ghost" href="{{ url_for('sales') }}">Back to Sales</a>
+      </div>
+    </div>
+
+    <div class="invoice-meta">
+      <p><strong>Invoice ID:</strong> {{ sale['id'] }}</p>
+      <p><strong>Date:</strong> {{ sale['created_at'] }}</p>
+      <p><strong>Branch:</strong> {{ sale['branch_name'] }}</p>
+      <p><strong>Customer:</strong> {{ sale['customer_name'] or 'Walk-in' }}</p>
+      <p><strong>Seller:</strong> {{ sale['created_by_name'] }}</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Product</th><th>Qty</th><th>Unit Price</th><th>Line Total</th></tr></thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td>{{ item['product_name'] }}</td>
+          <td>{{ item['qty'] }}</td>
+          <td>${{ '%.2f'|format(item['unit_price']) }}</td>
+          <td>${{ '%.2f'|format(item['qty'] * item['unit_price']) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="invoice-totals">
+      <p><strong>Total:</strong> ${{ '%.2f'|format(sale['total']) }}</p>
+      <p><strong>Margin:</strong> ${{ '%.2f'|format(sale['margin']) }}</p>
+    </div>
+  </article>
 </section>
 {% endblock %}

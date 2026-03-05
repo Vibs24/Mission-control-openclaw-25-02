@@ -1,7 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="card"><h2>Audit Log Timeline</h2>
-<p><a href="{{ url_for('export_csv', entity='audit') }}">Export CSV</a></p>
-<ul class="timeline">{% for l in logs %}<li><strong>{{ l['created_at'] }}</strong> - {{ l['username'] or 'system' }} - {{ l['action'] }} {{ l['entity'] }} ({{ l['details'] }})</li>{% endfor %}</ul>
+<section class="page-shell">
+  <article class="panel">
+    <div class="panel-head">
+      <h1>Audit Timeline</h1>
+      <div class="actions-inline">
+        <a class="btn ghost" href="{{ url_for('export_csv', entity='audit') }}">CSV Export</a>
+        <a class="btn ghost" href="{{ url_for('export_pdf', entity='audit') }}">PDF Export</a>
+      </div>
+    </div>
+
+    <form method="get" class="toolbar">
+      <input name="q" value="{{ q }}" placeholder="Search user/action/entity/details">
+      <button class="btn" type="submit">Search</button>
+      <a class="btn ghost" href="{{ url_for('audit') }}">Clear</a>
+    </form>
+
+    <table>
+      <thead><tr><th>Time</th><th>User</th><th>Action</th><th>Entity</th><th>Entity ID</th><th>Details</th></tr></thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row['created_at'] }}</td>
+          <td>{{ row['username'] }}</td>
+          <td>{{ row['action'] }}</td>
+          <td>{{ row['entity'] }}</td>
+          <td>{{ row['entity_id'] or '-' }}</td>
+          <td>{{ row['details'] or '-' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="pager">
+      <span>Page {{ page }} / {{ pages }} · {{ total }} records</span>
+      <div>
+        {% if page > 1 %}<a class="btn ghost" href="{{ url_for('audit', page=page-1, q=q) }}">Prev</a>{% endif %}
+        {% if page < pages %}<a class="btn ghost" href="{{ url_for('audit', page=page+1, q=q) }}">Next</a>{% endif %}
+      </div>
+    </div>
+  </article>
 </section>
 {% endblock %}

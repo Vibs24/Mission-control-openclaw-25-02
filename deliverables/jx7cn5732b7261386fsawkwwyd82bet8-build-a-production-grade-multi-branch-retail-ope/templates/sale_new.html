@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-shell">
+  <article class="panel">
+    <div class="panel-head">
+      <h1>Create Sale</h1>
+      <a class="btn ghost" href="{{ url_for('sales') }}">Back to Sales</a>
+    </div>
+
+    <form method="post" id="saleForm" class="form-grid sale-form">
+      <label>Branch
+        <select name="branch_id" id="branchSelect" {% if session.get('role') != 'admin' %}disabled{% endif %}>
+          {% for b in branches %}
+          <option value="{{ b['id'] }}" {% if selected_branch == b['id'] %}selected{% endif %}>{{ b['name'] }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      {% if session.get('role') != 'admin' %}
+      <input type="hidden" name="branch_id" value="{{ selected_branch }}">
+      {% endif %}
+
+      <label>Customer (optional)
+        <select name="customer_id">
+          <option value="">Walk-in Customer</option>
+          {% for c in customers %}
+          <option value="{{ c['id'] }}" data-branch="{{ c['branch_id'] }}">{{ c['name'] }} ({{ c['branch_name'] }})</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <div class="items-wrap">
+        <h3>Items</h3>
+        <table id="saleItemsTable">
+          <thead><tr><th>Product</th><th>Qty</th><th></th></tr></thead>
+          <tbody>
+            <tr class="sale-item-row">
+              <td>
+                <select name="product_id" required>
+                  <option value="">Select product</option>
+                  {% for p in products %}
+                  <option value="{{ p['id'] }}" data-branch="{{ p['branch_id'] }}">{{ p['name'] }} · {{ p['branch_name'] }} · Stock {{ p['qty'] }} · ${{ '%.2f'|format(p['sell_price']) }}</option>
+                  {% endfor %}
+                </select>
+              </td>
+              <td><input type="number" name="qty" min="1" required></td>
+              <td><button type="button" class="btn ghost remove-row">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="actions-inline">
+        <button class="btn ghost" type="button" id="addItemLine">Add Item</button>
+        <button class="btn primary" type="submit">Create Sale</button>
+      </div>
+    </form>
+  </article>
+</section>
+{% endblock %}

@@ -19,7 +19,7 @@ cd deliverables/jx7cn5732b7261386fsawkwwyd82bet8-build-a-production-grade-multi-
 ./scripts/setup.sh
 ./scripts/run.sh
 ```
-Open: http://127.0.0.1:5050
+Open: http://127.0.0.1:5000
 
 ## Test
 ```bash
@@ -28,8 +28,19 @@ Open: http://127.0.0.1:5050
 
 ## Seeded Users
 - admin / admin123
-- manager1 / manager123
-- staff1 / staff123
+- manager_central / manager123
+- staff_central / staff123
+- manager_north / manager123
+- staff_north / staff123
+- manager_south / manager123
+- staff_south / staff123
+
+## Offline/Restricted Environments
+If pip cannot reach the internet, run tests or seed with:
+```bash
+PYTHONPATH=.pydeps:. python3 scripts/seed.py --reset
+PYTHONPATH=.pydeps:. python3 -m pytest -q
+```
 
 ## Documentation
 - Architecture: `docs/ARCHITECTURE.md`

@@ -1,8 +1,65 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="card"><h2>Vendors</h2>
-<form method="post" class="grid-2"><input name="name" placeholder="Name" required><input name="contact" placeholder="Contact"><select name="branch_id">{% for b in branches %}<option value="{{ b['id'] }}">{{ b['name'] }}</option>{% endfor %}</select><button>Add Vendor</button></form>
-<p><a href="{{ url_for('export_csv', entity='vendors') }}">Export CSV</a></p>
-<table><tr><th>Name</th><th>Contact</th><th>Branch</th></tr>{% for r in rows %}<tr><td>{{ r['name'] }}</td><td>{{ r['contact'] }}</td><td>{{ r['branch_name'] }}</td></tr>{% endfor %}</table>
+<section class="page-shell">
+  <article class="panel">
+    <div class="panel-head">
+      <h1>Vendors</h1>
+      <div class="actions-inline">
+        <a class="btn ghost" href="{{ url_for('export_csv', entity='vendors') }}">CSV Export</a>
+        <a class="btn ghost" href="{{ url_for('export_pdf', entity='vendors') }}">PDF Export</a>
+      </div>
+    </div>
+
+    <form method="get" class="toolbar">
+      <input name="q" value="{{ q }}" placeholder="Search vendor, contact, branch">
+      {% if session.get('role') == 'admin' %}
+      <select name="branch_id">
+        <option value="">All branches</option>
+        {% for b in branches %}
+        <option value="{{ b['id'] }}" {% if branch_filter|int == b['id'] %}selected{% endif %}>{{ b['name'] }}</option>
+        {% endfor %}
+      </select>
+      {% endif %}
+      <button class="btn" type="submit">Apply</button>
+      <a class="btn ghost" href="{{ url_for('vendors') }}">Clear</a>
+    </form>
+
+    <form method="post" class="form-grid compact">
+      <label>Vendor Name<input name="name" required></label>
+      <label>Contact<input name="contact"></label>
+      {% if session.get('role') == 'admin' %}
+      <label>Branch
+        <select name="branch_id" required>
+          {% for b in branches %}<option value="{{ b['id'] }}">{{ b['name'] }}</option>{% endfor %}
+        </select>
+      </label>
+      {% else %}
+      <input type="hidden" name="branch_id" value="{{ session.get('branch_id') }}">
+      {% endif %}
+      <button class="btn primary" type="submit">Add Vendor</button>
+    </form>
+
+    <table>
+      <thead><tr><th>ID</th><th>Name</th><th>Contact</th><th>Branch</th></tr></thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td>{{ row['id'] }}</td>
+          <td>{{ row['name'] }}</td>
+          <td>{{ row['contact'] or '-' }}</td>
+          <td>{{ row['branch_name'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="pager">
+      <span>Page {{ page }} / {{ pages }} · {{ total }} records</span>
+      <div>
+        {% if page > 1 %}<a class="btn ghost" href="{{ url_for('vendors', page=page-1, q=q, branch_id=branch_filter) }}">Prev</a>{% endif %}
+        {% if page < pages %}<a class="btn ghost" href="{{ url_for('vendors', page=page+1, q=q, branch_id=branch_filter) }}">Next</a>{% endif %}
+      </div>
+    </div>
+  </article>
 </section>
 {% endblock %}

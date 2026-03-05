@@ -1,7 +1,7 @@
 # Deployment Readiness Checklist
 
 - [ ] Replace default Flask `SECRET_KEY`.
-- [ ] Move from plain-text passwords to hashed passwords (Werkzeug hashing).
+- [ ] Validate password hashing and RBAC role assignment.
 - [ ] Configure reverse proxy (Nginx/Caddy) + HTTPS.
 - [ ] Backup/restore policy for SQLite or migrate to managed DB.
 - [ ] Enable process supervision (systemd/supervisor).
