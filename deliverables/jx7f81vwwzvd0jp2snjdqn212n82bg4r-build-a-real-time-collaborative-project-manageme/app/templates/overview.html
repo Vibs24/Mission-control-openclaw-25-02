@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class='panel'><h2>Activity Feed</h2><ul>{% for r in data %}<li>{{r.created_at}} · {{users.get(r.actor_id).display_name if users and users.get(r.actor_id) else 'user'}} · {{r.event_type}} · {{r.detail}}</li>{% endfor %}</ul></section>{% endblock %}

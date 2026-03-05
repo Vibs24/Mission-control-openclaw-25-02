@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% block content %}
+<button id='openDrawer'>+ New Task</button>
+<div id='taskDrawer' class='drawer'><form method='post'><input name='title' placeholder='Title' required><textarea name='description' placeholder='Description'></textarea><input type='date' name='due_date'><select name='priority'><option>low</option><option selected>medium</option><option>high</option></select><select name='assignee_id'><option value=''>unassigned</option>{% for u in users %}<option value='{{u.id}}'>{{u.display_name}}</option>{% endfor %}</select><button>Create</button></form></div>
+<div class='kanban'>
+{% for s,label,color in [('todo','To Do','#2563eb'),('in_progress','In Progress','#f59e0b'),('review','Review','#a855f7'),('done','Done','#10b981')] %}
+<section class='lane' data-status='{{s}}' style='--accent:{{color}}'><h3>{{label}} <span class='badge'>{{counts[s]}}</span></h3>
+{% for t in cols[s] %}
+<article class='card task' draggable='true' data-task='{{t.id}}'><a href='{{ url_for("task_detail", tid=t.id) }}'>{{t.title}}</a><div class='meta'><span class='dot {{t.priority}}'></span>{{t.priority}} · {% if t.due_date and t.due_date < now %}<span class='overdue'>{{t.due_date}}</span>{% else %}{{t.due_date or '-'}}{% endif %}</div><div class='meta'>👤 {{t.assignee.display_name if t.assignee else 'unassigned'}} · 💬 {{t.comments.count()}}</div></article>
+{% endfor %}
+</section>
+{% endfor %}
+</div>
+{% endblock %}

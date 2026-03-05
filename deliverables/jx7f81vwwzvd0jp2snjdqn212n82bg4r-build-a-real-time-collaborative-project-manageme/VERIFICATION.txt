@@ -1,0 +1,10 @@
+Validation executed:
+1) python3 -m pip install --break-system-packages -r requirements.txt --target .pydeps
+2) PYTHONPATH=.pydeps:. python3 -m pytest -q
+Result: 4 passed
+
+Self-review checks fixed before finalizing:
+- Added compatibility endpoints expected by tests (/api/task, /api/board, /members, /workspace/<id>/select)
+- Added session token creation on signup/login
+- Added invite accept flow via token POST + join via workspace slug
+- Added drag-drop instant status API update without full reload
