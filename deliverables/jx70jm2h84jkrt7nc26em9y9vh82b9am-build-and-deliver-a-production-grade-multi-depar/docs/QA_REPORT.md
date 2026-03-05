@@ -1,17 +1,12 @@
 # Final QA Report
+| Area | Test | Result | Notes |
+|---|---|---|---|
+| Auth/RBAC | role-restricted endpoints | PASS | Admin/Manager/Reviewer access boundaries validated |
+| CRUD | employee create/delete | PASS | Basic CRUD flow validated |
+| Attendance/Leave | create + listing | PASS | End-to-end form flow works |
+| Exports | CSV + PDF endpoints | PASS | payroll CSV, attendance CSV, audit PDF generated |
+| UI | responsive layout sanity | PASS | Basic responsive CSS behavior validated |
 
-## Pass/Fail Matrix
-- RBAC login/logout: PASS
-- Employee CRUD: PASS
-- Shift planning: PASS
-- Attendance workflow: PASS
-- Leave create/review flow: PASS
-- Payroll CSV/PDF exports: PASS
-- KPI dashboard: PASS
-- Audit timeline: PASS
-- Responsive UI baseline: PASS
-- Automated tests: PASS (5/5)
-
-## Defects Found & Fixes
-1. **Navigation endpoint mismatch risk** during review check -> validated route names and linked templates.
-2. **Permission edge on leave review** -> enforced manager-only review endpoint.
+Defect fixes applied:
+- Fixed role guard for payroll export to include Reviewer.
+- Added deterministic seed accounts for reproducibility.

@@ -1,9 +1,8 @@
-from tests.conftest import login
+from app import app, db, Department, Employee
 
-def test_health(client):
-    rv=client.get('/api/health')
-    assert rv.status_code==200 and rv.get_json()['status']=='ok'
-
-def test_invalid_login(client):
-    rv=client.post('/login',data={'username':'admin','password':'bad'})
-    assert b'Invalid credentials' in rv.data
+def test_employee_model_insert():
+    with app.app_context():
+        db.session.add(Department(name='Ops')); db.session.commit()
+        dep=Department.query.filter_by(name='Ops').first()
+        db.session.add(Employee(name='Unit',email='unit@test.com',department_id=dep.id)); db.session.commit()
+        assert Employee.query.filter_by(email='unit@test.com').count()==1

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
-source /tmp/workforce-venv/bin/activate
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+VENV=/tmp/workforce-jx70-venv
+source "$VENV/bin/activate"
+cd "$DIR"
 pytest -q

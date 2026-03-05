@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
-python3 -m venv /tmp/workforce-venv
-source /tmp/workforce-venv/bin/activate
-pip install -r requirements.txt
-flask --app app:create_app init-db
-python3 scripts/seed.py
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+VENV=/tmp/workforce-jx70-venv
+python3 -m venv "$VENV"
+source "$VENV/bin/activate"
+pip install -q -r "$DIR/requirements.txt"
+python "$DIR/scripts/seed.py"
+echo "Setup complete"
