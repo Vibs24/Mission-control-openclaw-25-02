@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block content %}
+<div class='card'><h3>Add Branch (Admin)</h3><form method='post' class='inline'><input name='name' placeholder='Branch name' required><input name='city' placeholder='City' required><button>Add</button></form></div>
+<div class='card'><table><thead><tr><th>Name</th><th>City</th></tr></thead><tbody>{% for b in pagination.items %}<tr><td>{{b.name}}</td><td>{{b.city}}</td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
+{% endblock %}
