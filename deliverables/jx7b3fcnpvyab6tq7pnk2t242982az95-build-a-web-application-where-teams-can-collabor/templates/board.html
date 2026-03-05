@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block content %}
+<div class='grid'>
+<section class='card'><h3>New Task</h3><form method='post' action='{{ url_for("task_new") }}'><input name='title' placeholder='title' required><textarea name='description' placeholder='description'></textarea><input name='due_date' type='date'><select name='priority'><option>low</option><option selected>medium</option><option>high</option></select><select name='assignee_id'><option value=''>unassigned</option>{% for m in members %}<option value='{{m["id"]}}'>{{m['name']}}</option>{% endfor %}</select><button>Create</button></form></section>
+<section class='card'><h3>Invite teammate</h3><form method='post' action='{{ url_for("invite") }}'><input name='email' placeholder='teammate email'><button>Invite</button></form><h4>Members</h4><ul>{% for m in members %}<li>{{m['name']}} ({{m['role']}}) <form style='display:inline' method='post' action='{{ url_for("remove_member", user_id=m["id"]) }}'><button style='width:auto'>Remove</button></form></li>{% endfor %}</ul><h4>Notifications</h4><ul>{% for n in notifs %}<li>{{n['message']}}</li>{% endfor %}</ul></section>
+</div>
+<div class='board'>
+{% for col,label in [('todo','To Do'),('in_progress','In Progress'),('done','Done')] %}
+<div class='col' data-status='{{col}}'><h3>{{label}}</h3>{% for t in tasks if t['status']==col %}<div class='task' draggable='true' data-id='{{t["id"]}}'><a href='{{ url_for("task_detail", task_id=t["id"]) }}'><b>{{t['title']}}</b></a><p>{{t['priority']}} | due {{t['due_date'] or '-'}} </p><small>assignee: {{t['assignee_name'] or 'none'}}</small></div>{% endfor %}</div>
+{% endfor %}
+</div>
+<script src='{{ url_for("static", filename="board.js") }}'></script>
+{% endblock %}
