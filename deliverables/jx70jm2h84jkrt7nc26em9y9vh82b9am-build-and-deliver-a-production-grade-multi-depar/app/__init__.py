@@ -1,15 +1,32 @@
-from importlib.util import module_from_spec, spec_from_file_location
-from pathlib import Path
+import os
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
-_core_path = Path(__file__).resolve().parents[1] / "app.py"
-_spec = spec_from_file_location("workforce_core_app", _core_path)
-_module = module_from_spec(_spec)
-assert _spec and _spec.loader
-_spec.loader.exec_module(_module)
 
-create_app = _module.create_app
-get_db = _module.get_db
-paginate = _module.paginate
-calculate_work_hours = _module.calculate_work_hours
-validate_employee_payload = _module.validate_employee_payload
-build_basic_pdf = _module.build_basic_pdf
+db = SQLAlchemy()
+login_manager = LoginManager()
+login_manager.login_view = 'main.login'
+
+
+def create_app(test_config=None):
+    app = Flask(__name__, instance_relative_config=True)
+    app.config.from_mapping(
+        SECRET_KEY=os.getenv('SECRET_KEY', 'replace-in-production'),
+        SQLALCHEMY_DATABASE_URI=os.getenv('DATABASE_URL', 'sqlite:///workforce.db'),
+        SQLALCHEMY_TRACK_MODIFICATIONS=False,
+    )
+    if test_config:
+        app.config.update(test_config)
+
+    db.init_app(app)
+    login_manager.init_app(app)
+
+    from . import models
+    from .routes import bp
+    app.register_blueprint(bp)
+
+    with app.app_context():
+        db.create_all()
+
+    return app
