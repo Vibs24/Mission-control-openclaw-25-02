@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card">
+<h2>Invoice #{{ sale['id'] }}</h2>
+<p>Branch: {{ sale['branch'] }} | Customer: {{ sale['customer'] or 'Walk-in' }} | Date: {{ sale['created_at'] }}</p>
+<table><tr><th>Product</th><th>Qty</th><th>Rate</th></tr>{% for i in items %}<tr><td>{{ i['product'] }}</td><td>{{ i['qty'] }}</td><td>{{ i['unit_price'] }}</td></tr>{% endfor %}</table>
+<p><strong>Total:</strong> ₹{{ sale['total'] }} | <strong>Margin:</strong> ₹{{ sale['margin'] }}</p>
+<p><a href="{{ url_for('invoice_pdf', sale_id=sale['id']) }}">Download PDF</a></p>
+</section>
+{% endblock %}

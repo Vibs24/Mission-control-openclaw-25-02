@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card">
+  <h2>Inventory</h2>
+  <form method="get"><input name="q" value="{{ q }}" placeholder="Search sku/name/category"><button>Search</button></form>
+  <form method="post" class="grid-2">
+    <input name="sku" placeholder="SKU" required><input name="name" placeholder="Name" required>
+    <input name="category" placeholder="Category"><input name="cost_price" type="number" step="0.01" placeholder="Cost" required>
+    <input name="sell_price" type="number" step="0.01" placeholder="Sell" required><input name="qty" type="number" placeholder="Qty" required>
+    <input name="reorder_level" type="number" placeholder="Reorder Level" required>
+    <select name="branch_id" required>{% for b in branches %}<option value="{{ b['id'] }}">{{ b['name'] }}</option>{% endfor %}</select>
+    <button type="submit">Add Product</button>
+  </form>
+  <p><a href="{{ url_for('export_csv', entity='inventory') }}">Export CSV</a></p>
+  <table><tr><th>SKU</th><th>Name</th><th>Branch</th><th>Qty</th><th>Status</th></tr>
+    {% for r in rows %}<tr><td>{{ r['sku'] }}</td><td>{{ r['name'] }}</td><td>{{ r['branch_name'] }}</td><td>{{ r['qty'] }}</td><td><span class="badge {{ 'danger' if r['qty'] <= r['reorder_level'] else 'ok' }}">{{ 'LOW' if r['qty'] <= r['reorder_level'] else 'OK' }}</span></td></tr>{% endfor %}
+  </table>
+  <p>Page {{ page }} / {{ total_pages }}</p>
+</section>
+{% endblock %}

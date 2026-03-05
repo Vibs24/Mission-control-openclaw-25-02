@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card">
+  <h2>Secure Login</h2>
+  <form method="post" class="grid">
+    <label>Username <input name="username" required></label>
+    <label>Password <input name="password" type="password" required></label>
+    <button type="submit">Login</button>
+  </form>
+  <p>Seeded users: admin/admin123, manager1/manager123, staff1/staff123</p>
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="kpis">
+  <div class="card"><h3>Daily Sales</h3><p>₹{{ '%.2f'|format(sales_today) }}</p></div>
+  <div class="card"><h3>Margins</h3><p>₹{{ '%.2f'|format(margin) }}</p></div>
+  <div class="card"><h3>Stock Turnover</h3><p>{{ turnover }}</p></div>
+  <div class="card"><h3>Low Stock Items</h3><p>{{ low }}</p></div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card">
+<h2>Sales Workflow</h2>
+<form method="post" class="grid-2">
+  <select name="branch_id" required>{% for b in branches %}<option value="{{ b['id'] }}">{{ b['name'] }}</option>{% endfor %}</select>
+  <select name="customer_id" required>{% for c in customers %}<option value="{{ c['id'] }}">{{ c['name'] }}</option>{% endfor %}</select>
+  <select name="product_id" required>{% for p in products %}<option value="{{ p['id'] }}">{{ p['name'] }}</option>{% endfor %}</select>
+  <input name="qty" type="number" required placeholder="Qty">
+  <button type="submit">Create Sale + Invoice</button>
+</form>
+<p><a href="{{ url_for('export_csv', entity='sales') }}">Export Sales CSV</a></p>
+<table><tr><th>ID</th><th>Branch</th><th>Customer</th><th>Total</th><th>Margin</th></tr>{% for r in sales_rows %}<tr><td><a href="{{ url_for('invoice', sale_id=r['id']) }}">{{ r['id'] }}</a></td><td>{{ r['branch'] }}</td><td>{{ r['customer'] }}</td><td>{{ r['total'] }}</td><td>{{ r['margin'] }}</td></tr>{% endfor %}</table>
+</section>
+{% endblock %}

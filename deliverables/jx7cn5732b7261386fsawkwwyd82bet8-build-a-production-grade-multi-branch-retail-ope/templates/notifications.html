@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card"><h2>Notification Center</h2>
+<ul>{% for n in rows %}<li><span class="badge">{{ n['level'] }}</span> {{ n['message'] }} <small>{{ n['created_at'] }}</small></li>{% endfor %}</ul>
+</section>
+{% endblock %}

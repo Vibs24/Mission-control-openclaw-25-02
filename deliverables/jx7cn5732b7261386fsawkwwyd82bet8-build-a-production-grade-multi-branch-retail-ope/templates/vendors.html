@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card"><h2>Vendors</h2>
+<form method="post" class="grid-2"><input name="name" placeholder="Name" required><input name="contact" placeholder="Contact"><select name="branch_id">{% for b in branches %}<option value="{{ b['id'] }}">{{ b['name'] }}</option>{% endfor %}</select><button>Add Vendor</button></form>
+<p><a href="{{ url_for('export_csv', entity='vendors') }}">Export CSV</a></p>
+<table><tr><th>Name</th><th>Contact</th><th>Branch</th></tr>{% for r in rows %}<tr><td>{{ r['name'] }}</td><td>{{ r['contact'] }}</td><td>{{ r['branch_name'] }}</td></tr>{% endfor %}</table>
+</section>
+{% endblock %}

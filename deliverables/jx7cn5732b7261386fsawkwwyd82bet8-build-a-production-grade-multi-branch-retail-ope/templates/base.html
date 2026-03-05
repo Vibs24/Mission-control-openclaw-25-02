@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Retail Ops Platform</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Retail Ops Platform</h1>
+    {% if session.get('user_id') %}
+    <nav>
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('inventory') }}">Inventory</a>
+      <a href="{{ url_for('purchases') }}">Purchase</a>
+      <a href="{{ url_for('sales') }}">Sales</a>
+      <a href="{{ url_for('customers') }}">Customers</a>
+      <a href="{{ url_for('vendors') }}">Vendors</a>
+      <a href="{{ url_for('audit') }}">Audit</a>
+      <a href="{{ url_for('notifications') }}">Notifications</a>
+      <a href="{{ url_for('logout') }}">Logout ({{ session['username'] }})</a>
+    </nav>
+    {% endif %}
+  </header>
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}<p class="msg {{ category }}">{{ message }}</p>{% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
