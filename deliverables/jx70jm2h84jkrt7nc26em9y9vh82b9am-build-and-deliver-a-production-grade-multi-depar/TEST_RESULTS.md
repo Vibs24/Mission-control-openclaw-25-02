@@ -52,7 +52,7 @@ Key output:
 
 ```text
 [test] pytest not available, using unittest discovery fallback
-Ran 13 tests in 17.920s
+Ran 13 tests in 11.843s
 OK
 ```
 
@@ -87,7 +87,7 @@ Result: PASS
 Key output:
 
 ```text
-HEALTHCHECK_PASS internal status=ok database=ok timestamp=2026-03-05T07:06:20.730442Z
+HEALTHCHECK_PASS internal status=ok database=ok timestamp=2026-03-05T07:10:50.170064Z
 ```
 
 ## 5) Deploy + Rollback Smoke
