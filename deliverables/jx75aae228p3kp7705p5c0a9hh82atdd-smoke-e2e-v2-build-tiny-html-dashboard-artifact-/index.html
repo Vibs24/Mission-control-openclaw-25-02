@@ -3,23 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Smoke E2E v2 Dashboard</title>
+  <title>Smoke E2E v2 - Tiny Dashboard</title>
   <style>
-    body{font-family:Arial,sans-serif;background:#f8fafc;margin:24px;color:#0f172a}
-    .wrap{max-width:760px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
-    .ok{color:#166534;font-weight:700}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:10px}
-    .card{background:#f1f5f9;border-radius:8px;padding:10px}
+    body { font-family: system-ui, Arial, sans-serif; margin: 24px; background:#f8fafc; color:#0f172a; }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    .card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin-bottom:12px; }
+    .kpis { display:grid; grid-template-columns:repeat(3,minmax(120px,1fr)); gap:10px; }
+    .kpi { background:#eef2ff; border-radius:10px; padding:10px; text-align:center; }
+    .ok { color:#166534; font-weight:700; }
+    small { color:#475569; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Tiny Smoke Dashboard</h1>
-    <p>Status: <span class="ok">Ready for Review</span></p>
-    <div class="grid">
-      <div class="card"><strong>Bundle</strong><br/>HTML + README</div>
-      <div class="card"><strong>Validation</strong><br/>Files verified</div>
-      <div class="card"><strong>Scope</strong><br/>Smoke E2E v2</div>
+    <div class="card">
+      <h1>Tiny Smoke Dashboard</h1>
+      <p>Status: <span class="ok">Ready</span></p>
+      <small>Artifact smoke bundle for workflow E2E validation.</small>
+    </div>
+    <div class="card kpis">
+      <div class="kpi"><strong>2</strong><br/>Files</div>
+      <div class="kpi"><strong>1</strong><br/>Bundle</div>
+      <div class="kpi"><strong>PASS</strong><br/>Smoke</div>
+    </div>
+    <div class="card">
+      <h3>Verification Notes</h3>
+      <ul>
+        <li>index.html created and renderable.</li>
+        <li>README.md created with concise implementation notes.</li>
+        <li>Files placed in canonical auto-managed artifact folder.</li>
+      </ul>
     </div>
   </div>
 </body>
