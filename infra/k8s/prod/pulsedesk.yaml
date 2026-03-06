@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: pulsedesk-api, namespace: prod }
+spec:
+  replicas: 4
+  selector: { matchLabels: { app: pulsedesk-api } }
+  template:
+    metadata: { labels: { app: pulsedesk-api } }
+    spec:
+      containers:
+        - name: api
+          image: pulsedesk/api:prod
+          ports: [{ containerPort: 4000 }]
+          resources:
+            requests: { cpu: "250m", memory: "256Mi" }
+            limits: { cpu: "1000m", memory: "1Gi" }
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: { name: pulsedesk-api-hpa, namespace: prod }
+spec:
+  minReplicas: 4
+  maxReplicas: 12
+  scaleTargetRef: { apiVersion: apps/v1, kind: Deployment, name: pulsedesk-api }
+  metrics:
+    - type: Resource
+      resource: { name: cpu, target: { type: Utilization, averageUtilization: 65 } }

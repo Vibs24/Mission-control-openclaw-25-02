@@ -1,19 +1,19 @@
 {
   "version": 1,
   "process": {
-    "pid": 58060,
+    "pid": 73346,
     "cwd": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control",
-    "lastStartedAt": 1772730017425,
+    "lastStartedAt": 1772785485315,
     "running": true,
     "node": "v25.5.0",
-    "lastStopSignalAt": 1772729996242
+    "lastStopSignalAt": 1772785457501
   },
   "telegram": {
-    "lastInboundUpdateId": 334572450,
-    "lastInboundAt": 1772705463501,
+    "lastInboundUpdateId": 334572452,
+    "lastInboundAt": 1772776741785,
     "lastInboundVia": "poller",
-    "lastUpdateId": 334572450,
-    "offsetSavedAt": 1772705464694,
+    "lastUpdateId": 334572452,
+    "offsetSavedAt": 1772776742639,
     "digestEnabled": true,
     "digestIntervalMs": 900000,
     "digestLoopIntervalMs": 60000,
@@ -31,20 +31,20 @@
         "lastSummary": "digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:1 alerts:0"
       },
       "1045407142": {
-        "lastSentAt": 1772771769237,
-        "lastFingerprint": "c40b6aa35d77",
-        "lastSummary": "digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:3 alerts:0"
+        "lastSentAt": 1772789118899,
+        "lastFingerprint": "f116eab928cd",
+        "lastSummary": "digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0"
       }
     },
-    "lastDigestAt": 1772771773109
+    "lastDigestAt": 1772789123016
   },
   "loops": {
     "chiefTriage": {
-      "at": 1772772157137,
+      "at": 1772789522505,
       "status": "loop"
     },
     "chiefWatchdog": {
-      "at": 1772772132434,
+      "at": 1772789499152,
       "status": "loop"
     },
     "statusNotifier": {
@@ -52,20 +52,20 @@
       "status": "stopped"
     },
     "poller": {
-      "at": 1772772140780,
+      "at": 1772789515803,
       "status": "polling",
-      "offset": 334572450
+      "offset": 334572452
     },
     "outboxReplay": {
-      "at": 1772772149420,
+      "at": 1772789523004,
       "status": "loop"
     },
     "telegramDigest": {
-      "at": 1772772135094,
+      "at": 1772789485037,
       "status": "loop"
     },
     "pmScheduler": {
-      "at": 1772772155360,
+      "at": 1772789515433,
       "status": "loop"
     }
   },
@@ -253,7 +253,7 @@
   },
   "startupPreflight": {
     "ok": true,
-    "checkedAt": 1772730017424,
+    "checkedAt": 1772785485315,
     "profile": "mc2",
     "home": "/Users/syphaoffice1/.openclaw-mc2",
     "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
@@ -265,7 +265,7 @@
   },
   "degraded": false,
   "degradedSince": null,
-  "lastReplayAt": 1772772149421,
+  "lastReplayAt": 1772789523005,
   "outboxSize": 0,
   "lastError": {
     "scope": "degraded",

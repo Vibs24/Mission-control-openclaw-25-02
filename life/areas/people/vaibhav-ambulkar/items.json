@@ -1,0 +1,72 @@
+[
+  {
+    "id": "7049cb62452118f9",
+    "fact": "Requester linked to task jx70jm2h84jkrt7nc26em9y9vh82b9am: Build and deliver a production-grade Multi-Department Workforce Command Center u.",
+    "category": "relationship",
+    "timestamp": "2026-03-05",
+    "source": "task:jx70jm2h84jkrt7nc26em9y9vh82b9am:requester",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-"
+    ],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 26
+  },
+  {
+    "id": "1fec4bc8094cd963",
+    "fact": "Requester linked to task jx7b3fcnpvyab6tq7pnk2t242982az95: Build a web application where teams can collaborate on daily work. Anyone can si.",
+    "category": "relationship",
+    "timestamp": "2026-03-05",
+    "source": "task:jx7b3fcnpvyab6tq7pnk2t242982az95:requester",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone"
+    ],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 26
+  },
+  {
+    "id": "d94ce8bb1ea5559e",
+    "fact": "Requester linked to task jx7f81vwwzvd0jp2snjdqn212n82bg4r: Build a real-time collaborative project management platform where anyone can reg.",
+    "category": "relationship",
+    "timestamp": "2026-03-05",
+    "source": "task:jx7f81vwwzvd0jp2snjdqn212n82bg4r:requester",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-a-real-time-collaborative-project-management-platform-where-anyone"
+    ],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 26
+  },
+  {
+    "id": "420f8df4aa0dc165",
+    "fact": "Requester linked to task jx7e7qpbzydjh4eta4r0dy30v182djzx: Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m.",
+    "category": "relationship",
+    "timestamp": "2026-03-06",
+    "source": "task:jx7e7qpbzydjh4eta4r0dy30v182djzx:requester",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar"
+    ],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 26
+  },
+  {
+    "id": "1f48edf959647689",
+    "fact": "Requester linked to task jx7d5smsz957w0qccrqd9f9mr182cxd9: create text file with \"Hello world\" text on desktop.",
+    "category": "relationship",
+    "timestamp": "2026-03-06",
+    "source": "task:jx7d5smsz957w0qccrqd9f9mr182cxd9:requester",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/create-text-file-with-hello-world-text-on-desktop"
+    ],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 26
+  }
+]

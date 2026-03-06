@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updatedAt": 1772788694676,
+  "runs": 26,
+  "entities": 10,
+  "facts": 2477,
+  "lastRun": {
+    "at": 1772788694676,
+    "mode": "daily",
+    "shadowMode": true,
+    "extractedEntities": 8,
+    "extractedFacts": 1187,
+    "createdFacts": 111,
+    "updatedFacts": 1076,
+    "supersededFacts": 0,
+    "skippedFacts": 0
+  },
+  "duplicateFactsSkipped": 0,
+  "bootstrapAt": 1772785466876,
+  "lastSynthesis": {
+    "at": 1772786105529,
+    "mode": "manual",
+    "changedEntities": 5,
+    "totalEntities": 10
+  },
+  "createdAt": 1772779033181
+}

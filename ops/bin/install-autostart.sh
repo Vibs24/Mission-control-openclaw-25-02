@@ -20,8 +20,10 @@ bootstrap_or_verify() {
 install -m 0644 "$ROOT/ops/launchd/ai.missioncontrol.bot.plist" "$LAUNCH_DIR/ai.missioncontrol.bot.plist"
 install -m 0644 "$ROOT/ops/launchd/ai.missioncontrol.dashboard.plist" "$LAUNCH_DIR/ai.missioncontrol.dashboard.plist"
 install -m 0644 "$ROOT/ops/launchd/ai.missioncontrol.agent-sync.plist" "$LAUNCH_DIR/ai.missioncontrol.agent-sync.plist"
+install -m 0644 "$ROOT/ops/launchd/ai.missioncontrol.pkm-extract.plist" "$LAUNCH_DIR/ai.missioncontrol.pkm-extract.plist"
+install -m 0644 "$ROOT/ops/launchd/ai.missioncontrol.pkm-synthesis.plist" "$LAUNCH_DIR/ai.missioncontrol.pkm-synthesis.plist"
 
-for label in ai.missioncontrol.bot ai.missioncontrol.dashboard ai.missioncontrol.agent-sync; do
+for label in ai.missioncontrol.bot ai.missioncontrol.dashboard ai.missioncontrol.agent-sync ai.missioncontrol.pkm-extract ai.missioncontrol.pkm-synthesis; do
   /bin/launchctl bootout "gui/$UID_NUM/$label" >/dev/null 2>&1 || true
 done
 sleep 1
@@ -29,11 +31,17 @@ sleep 1
 bootstrap_or_verify ai.missioncontrol.bot "$LAUNCH_DIR/ai.missioncontrol.bot.plist"
 bootstrap_or_verify ai.missioncontrol.dashboard "$LAUNCH_DIR/ai.missioncontrol.dashboard.plist"
 bootstrap_or_verify ai.missioncontrol.agent-sync "$LAUNCH_DIR/ai.missioncontrol.agent-sync.plist"
+bootstrap_or_verify ai.missioncontrol.pkm-extract "$LAUNCH_DIR/ai.missioncontrol.pkm-extract.plist"
+bootstrap_or_verify ai.missioncontrol.pkm-synthesis "$LAUNCH_DIR/ai.missioncontrol.pkm-synthesis.plist"
 /bin/launchctl enable "gui/$UID_NUM/ai.missioncontrol.bot"
 /bin/launchctl enable "gui/$UID_NUM/ai.missioncontrol.dashboard"
 /bin/launchctl enable "gui/$UID_NUM/ai.missioncontrol.agent-sync"
+/bin/launchctl enable "gui/$UID_NUM/ai.missioncontrol.pkm-extract"
+/bin/launchctl enable "gui/$UID_NUM/ai.missioncontrol.pkm-synthesis"
 /bin/launchctl kickstart -k "gui/$UID_NUM/ai.missioncontrol.bot"
 /bin/launchctl kickstart -k "gui/$UID_NUM/ai.missioncontrol.dashboard"
 /bin/launchctl kickstart -k "gui/$UID_NUM/ai.missioncontrol.agent-sync"
+/bin/launchctl kickstart -k "gui/$UID_NUM/ai.missioncontrol.pkm-extract"
+/bin/launchctl kickstart -k "gui/$UID_NUM/ai.missioncontrol.pkm-synthesis"
 
-echo "Installed and started: ai.missioncontrol.bot, ai.missioncontrol.dashboard, ai.missioncontrol.agent-sync"
+echo "Installed and started: ai.missioncontrol.bot, ai.missioncontrol.dashboard, ai.missioncontrol.agent-sync, ai.missioncontrol.pkm-extract, ai.missioncontrol.pkm-synthesis"

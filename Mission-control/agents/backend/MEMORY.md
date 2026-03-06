@@ -33,9 +33,10 @@ Curated stable knowledge for the IT Mission Control squad.
 ### Durable Instructions
 - Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow
 - Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow
+- Task context: [done/approved] Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow
 
 ### Notes
-- Using existing WORKING.md state due no new higher-priority deltas.
+- No additional notes.
 <!-- END MC_SYNC:durable_memory -->
 
 <!-- BEGIN MC_SYNC:runtime_config -->

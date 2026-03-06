@@ -1,0 +1,50 @@
+[
+  {
+    "id": "847d243709051da3",
+    "fact": "Telegram intake: create text file with \"Hello world\" text on desktop",
+    "category": "context",
+    "timestamp": "2026-03-06",
+    "source": "telegram:k975xsst2ja8d6q5we5st96nn582cdxt",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 14
+  },
+  {
+    "id": "aea8034523f7ebba",
+    "fact": "Telegram intake: Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-mode-first, geometric enterprise UI with a slate + electric blue palette, delivering wireframes through a full compone...",
+    "category": "context",
+    "timestamp": "2026-03-06",
+    "source": "telegram:k979mmzzjcws5zww9ghqfkdz2s82djvg",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 14
+  },
+  {
+    "id": "a9e1b6524e7861f1",
+    "fact": "Telegram intake: Build a real-time collaborative project management platform where anyone can register with their email and password, set up a named workspace, and bring their entire team in through an invite link ...",
+    "category": "context",
+    "timestamp": "2026-03-05",
+    "source": "telegram:k971ds792y4j3tcgerdt94vthh82aj0x",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 14
+  },
+  {
+    "id": "66bfe325a1a1a02d",
+    "fact": "Telegram intake: Build a web application where teams can collaborate on daily work. Anyone can sign up with their email and password, create a workspace, and invite their teammates to join. Once inside, users can c...",
+    "category": "context",
+    "timestamp": "2026-03-05",
+    "source": "telegram:k972bsa8b427sarvnk96hxeh8582aevt",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 14
+  }
+]

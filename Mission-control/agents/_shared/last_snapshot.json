@@ -1,41 +1,28 @@
 {
-  "generatedAt": 1772736007253,
-  "source": "snapshot",
-  "mode": "daily",
+  "generatedAt": 1772785464883,
+  "source": "live",
+  "mode": "startup",
   "perAgent": {
     "chief": {
       "instructions": [
         "Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow",
         "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow",
+        "Activity: Chief moved 'create text file with \"Hello world\" text on desktop' to done",
+        "Activity: Chief moved 'Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done",
         "Activity: Chief moved 'Build a real-time collaborative project management platform where anyone can reg' to done",
         "Activity: Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done",
         "Activity: Chief moved 'Build and deliver a production-grade Multi-Department Workforce Command Center u' to done",
-        "Activity: Reviewer approved review for 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Reviewer commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Document created: Execution Context — Reviewer execution completed",
-        "Activity: Documentation commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Document created: Execution Context — Documentation execution completed",
-        "Activity: Chief commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Chief moved 'Build a real-time collaborative project management platform where anyone can reg' to in_progress",
-        "Activity: Reviewer rejected review for 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Chief moved 'Build a real-time collaborative project management platform where anyone can reg' to blocked",
-        "Activity: Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:1 review:0 waiting:0 blocked:0 done:2 alerts:0",
-        "Activity: Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:1 done:2 alerts:1"
+        "Activity: Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0"
       ],
       "userInstructions": [],
       "chiefDirectives": [
-        "### Chief Triage (Chief)",
-        "Workflow: general",
-        "Priority: low",
-        "Assumptions: Best-effort classification from Telegram intake / task context",
-        "Expected output: Concrete findings + status updates + evidence in comments/docs",
-        "Next action: Assigned to Project Manager for dependency-graph orchestration",
-        "Review gate: Reviewer validates correctness before done",
-        "Priority: normal",
-        "Priority: high",
-        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.",
-        "review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
-        "Explicit reviewer verdict indicates FAIL/changes requested."
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: low\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: normal\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: high\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: watchdog_recovery\nReviewer summary: Reviewer requested changes; routing specialist rework.\nFindings:\n- review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: review_decision\nReviewer summary: Reviewer requested changes (explicit reviewer verdict overrides auto-approval).\nFindings:\n- Explicit reviewer verdict indicates FAIL/changes requested.",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: urgent\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done"
       ],
       "activeTasks": [
         "[in_progress/pending] Build a real-time collaborative project management platform where anyone can reg -> PM graph progress: running=0, runnable=1, waiting=1"
@@ -53,32 +40,34 @@
       "instructions": [
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
         "Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow",
-        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow"
+        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow",
+        "Task context: [done/approved] create text file with \"Hello world\" text on desktop -> Completed via PM parallel workflow"
       ],
       "userInstructions": [],
       "chiefDirectives": [
-        "### Chief Triage (Chief)",
-        "Workflow: general",
-        "Priority: low",
-        "Assumptions: Best-effort classification from Telegram intake / task context",
-        "Expected output: Concrete findings + status updates + evidence in comments/docs",
-        "Next action: Assigned to Project Manager for dependency-graph orchestration",
-        "Review gate: Reviewer validates correctness before done",
-        "Priority: normal",
-        "Priority: high",
-        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.",
-        "review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
-        "Explicit reviewer verdict indicates FAIL/changes requested."
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: low\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: normal\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: high\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: watchdog_recovery\nReviewer summary: Reviewer requested changes; routing specialist rework.\nFindings:\n- review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: review_decision\nReviewer summary: Reviewer requested changes (explicit reviewer verdict overrides auto-approval).\nFindings:\n- Explicit reviewer verdict indicates FAIL/changes requested.",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: urgent\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done"
       ],
       "activeTasks": [
         "[done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
         "[done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow",
-        "[done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow"
+        "[done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "[done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow",
+        "[done/approved] create text file with \"Hello world\" text on desktop -> Completed via PM parallel workflow"
       ],
       "evidencePaths": [
         "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx70jm2h84jkrt7nc26em9y9vh82b9am-build-and-deliver-a-production-grade-multi-depar",
         "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7b3fcnpvyab6tq7pnk2t242982az95-build-a-web-application-where-teams-can-collabor",
-        "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme"
+        "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme",
+        "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde",
+        "/Users/syphaoffice1/Desktop/hello_world.txt",
+        "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-hello-world",
+        "/Users/syphaoffice1/Desktop/hello.txt"
       ]
     },
     "frontend": {
@@ -86,16 +75,11 @@
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
         "Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow",
         "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow",
+        "Activity: Chief moved 'Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done",
         "Activity: Chief moved 'Build a real-time collaborative project management platform where anyone can reg' to done",
         "Activity: Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done",
-        "Activity: Chief moved 'Build and deliver a production-grade Multi-Department Workforce Command Center u' to done",
-        "Activity: Reviewer approved review for 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Reviewer commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Documentation commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Chief commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Chief moved 'Build a real-time collaborative project management platform where anyone can reg' to in_progress",
-        "Activity: Reviewer rejected review for 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Chief moved 'Build a real-time collaborative project management platform where anyone can reg' to blocked"
+        "Activity: Chief moved 'Build and deliver a production-grade Multi-Department Workforce Command Center u' to done"
       ],
       "userInstructions": [],
       "chiefDirectives": [
@@ -106,7 +90,9 @@
     },
     "designer": {
       "instructions": [
-        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow"
+        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow",
+        "Activity: Chief moved 'Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done"
       ],
       "userInstructions": [],
       "chiefDirectives": [],
@@ -117,7 +103,8 @@
       "instructions": [
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
         "Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow",
-        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow"
+        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow"
       ],
       "userInstructions": [],
       "chiefDirectives": [],
@@ -127,7 +114,8 @@
     "backend": {
       "instructions": [
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
-        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow"
+        "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow"
       ],
       "userInstructions": [],
       "chiefDirectives": [],
@@ -137,24 +125,16 @@
     "documentation": {
       "instructions": [
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
-        "Activity: Document created: Execution Context — Reviewer execution completed",
-        "Activity: Documentation commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Document created: Execution Context — Documentation execution completed"
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow"
       ],
       "userInstructions": [],
       "chiefDirectives": [
-        "### Chief Triage (Chief)",
-        "Workflow: general",
-        "Priority: low",
-        "Assumptions: Best-effort classification from Telegram intake / task context",
-        "Expected output: Concrete findings + status updates + evidence in comments/docs",
-        "Next action: Assigned to Project Manager for dependency-graph orchestration",
-        "Review gate: Reviewer validates correctness before done",
-        "Priority: normal",
-        "Priority: high",
-        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.",
-        "review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
-        "Explicit reviewer verdict indicates FAIL/changes requested."
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: low\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: normal\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: high\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: watchdog_recovery\nReviewer summary: Reviewer requested changes; routing specialist rework.\nFindings:\n- review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: review_decision\nReviewer summary: Reviewer requested changes (explicit reviewer verdict overrides auto-approval).\nFindings:\n- Explicit reviewer verdict indicates FAIL/changes requested.",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: urgent\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done"
       ],
       "activeTasks": [],
       "evidencePaths": []
@@ -162,12 +142,12 @@
     "operations": {
       "instructions": [
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
-        "Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow"
+        "Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow",
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow"
       ],
       "userInstructions": [],
       "chiefDirectives": [
-        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.",
-        "review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested."
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: watchdog_recovery\nReviewer summary: Reviewer requested changes; routing specialist rework.\nFindings:\n- review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested."
       ],
       "activeTasks": [],
       "evidencePaths": []
@@ -176,27 +156,17 @@
       "instructions": [
         "Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow",
         "Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow",
-        "Activity: Reviewer approved review for 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Reviewer commented on 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Document created: Execution Context — Reviewer execution completed",
-        "Activity: Reviewer rejected review for 'Build a real-time collaborative project management platform where anyone can reg'",
-        "Activity: Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:1 review:0 waiting:0 blocked:0 done:2 alerts:0",
-        "Activity: Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:1 done:2 alerts:1"
+        "Task context: [done/approved] Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow",
+        "Activity: Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0"
       ],
       "userInstructions": [],
       "chiefDirectives": [
-        "### Chief Triage (Chief)",
-        "Workflow: general",
-        "Priority: low",
-        "Assumptions: Best-effort classification from Telegram intake / task context",
-        "Expected output: Concrete findings + status updates + evidence in comments/docs",
-        "Next action: Assigned to Project Manager for dependency-graph orchestration",
-        "Review gate: Reviewer validates correctness before done",
-        "Priority: normal",
-        "Priority: high",
-        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.",
-        "review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
-        "Explicit reviewer verdict indicates FAIL/changes requested."
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: low\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: normal\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: high\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: watchdog_recovery\nReviewer summary: Reviewer requested changes; routing specialist rework.\nFindings:\n- review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.",
+        "Chief/PM rework routing: Documentation selected for reviewer-requested changes.\nTrigger: review_decision\nReviewer summary: Reviewer requested changes (explicit reviewer verdict overrides auto-approval).\nFindings:\n- Explicit reviewer verdict indicates FAIL/changes requested.",
+        "### Chief Triage (Chief)\n- Workflow: general\n- Priority: urgent\n- Assumptions: Best-effort classification from Telegram intake / task context\n- Expected output: Concrete findings + status updates + evidence in comments/docs\n- Next action: Assigned to Project Manager for dependency-graph orchestration\n- Review gate: Reviewer validates correctness before done"
       ],
       "activeTasks": [],
       "evidencePaths": []

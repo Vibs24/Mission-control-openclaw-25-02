@@ -248,6 +248,16 @@ export const getTaskBySourceRef = query({
   },
 });
 
+export const listRecentIntakeEvents = query({
+  args: {
+    limit: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    const limit = Math.max(1, Math.min(args.limit ?? 200, 1000));
+    return await ctx.db.query("telegramIntakeEvents").order("desc").take(limit);
+  },
+});
+
 export const logTelegramStatusSent = mutation({
   args: {
     taskId: v.id("tasks"),

@@ -9,9 +9,13 @@
 ### Immediate Directives
 - Task context: [done/approved] Build and deliver a production-grade Multi-Department Workforce Command Center u -> Completed via PM parallel workflow
 - Task context: [done/approved] Build a web application where teams can collaborate on daily work. Anyone can si -> Completed via PM parallel workflow
+- Task context: [done/approved] Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow
 
 ### Chief Directives
 - Chief/PM rework routing: Documentation selected for reviewer-requested changes.
+Trigger: watchdog_recovery
+Reviewer summary: Reviewer requested changes; routing specialist rework.
+Findings:
 - review_changes_requested: Explicit reviewer verdict indicates FAIL/changes requested.
 
 ### User Instructions

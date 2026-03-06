@@ -75,6 +75,7 @@ export function buildSpecialistPrompt({
   nextSpecialist,
   deliverablesRoot,
   requiredOutputPath = null,
+  memoryContext = "",
 }) {
   const kind = normalizeWorkflowKind(workflowKind);
   const needsPath = requiresOutputPathEvidence(task, kind);
@@ -137,10 +138,11 @@ export function buildSpecialistPrompt({
     "",
     "Workflow review rubric:",
     `- ${workflow.reviewRubric}`,
+    ...(memoryContext ? [String(memoryContext).trim()] : []),
   ].join("\n");
 }
 
-export function buildReviewerPrompt({ task, workflowKind, acceptanceCriteria }) {
+export function buildReviewerPrompt({ task, workflowKind, acceptanceCriteria, memoryContext = "" }) {
   const kind = normalizeWorkflowKind(workflowKind);
   const criteria = (acceptanceCriteria || []).filter(
     (line) => !/task status reflects actual progress and next action/i.test(String(line || ""))
@@ -158,6 +160,7 @@ export function buildReviewerPrompt({ task, workflowKind, acceptanceCriteria }) 
     "- If all verifiable artifact/proof gates pass, do not FAIL solely because live Mission Control status alignment cannot be independently verified from your runtime context.",
     "- Treat live Mission Control status-alignment checks as orchestration-level (Chief/PM) signals, not reviewer fail criteria.",
     "- Return pass only when all criteria are verifiably satisfied.",
+    ...(memoryContext ? ["", String(memoryContext).trim()] : []),
   ].join("\n");
 }
 

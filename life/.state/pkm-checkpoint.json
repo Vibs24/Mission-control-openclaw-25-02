@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "createdAt": 1772779033180,
+  "lastExtractAt": 1772788694676,
+  "lastSynthesisAt": 1772786105528,
+  "lastQmdUpdateAt": 1772788695937,
+  "mode": "startup",
+  "bootstrapAt": 1772785466875,
+  "qmdAvailable": true,
+  "updatedAt": 1772788695937,
+  "lastSynthesisMode": "manual",
+  "lastSynthesisStats": {
+    "entities": [
+      {
+        "entityKey": "areas/people/1045407142",
+        "changed": false,
+        "hot": 4,
+        "warm": 0,
+        "cold": 0,
+        "facts": 4
+      },
+      {
+        "entityKey": "areas/people/project-manager",
+        "changed": false,
+        "hot": 5,
+        "warm": 0,
+        "cold": 0,
+        "facts": 5
+      },
+      {
+        "entityKey": "areas/people/vaibhav-ambulkar",
+        "changed": false,
+        "hot": 5,
+        "warm": 0,
+        "cold": 0,
+        "facts": 5
+      },
+      {
+        "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+        "changed": true,
+        "hot": 856,
+        "warm": 0,
+        "cold": 0,
+        "facts": 856
+      },
+      {
+        "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+        "changed": true,
+        "hot": 328,
+        "warm": 0,
+        "cold": 0,
+        "facts": 328
+      },
+      {
+        "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+        "changed": true,
+        "hot": 328,
+        "warm": 0,
+        "cold": 0,
+        "facts": 328
+      },
+      {
+        "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+        "changed": true,
+        "hot": 312,
+        "warm": 0,
+        "cold": 0,
+        "facts": 312
+      },
+      {
+        "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+        "changed": true,
+        "hot": 295,
+        "warm": 0,
+        "cold": 0,
+        "facts": 295
+      },
+      {
+        "entityKey": "resources/pkm-smoke-entity",
+        "changed": false,
+        "hot": 1,
+        "warm": 0,
+        "cold": 0,
+        "facts": 2
+      },
+      {
+        "entityKey": "resources/pkm-supersession-test",
+        "changed": false,
+        "hot": 1,
+        "warm": 0,
+        "cold": 0,
+        "facts": 2
+      }
+    ],
+    "totalEntities": 10,
+    "changedEntities": 5,
+    "totalFacts": 2137
+  },
+  "lastExtractMode": "daily",
+  "shadowMode": true,
+  "lastExtractStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 5,
+    "totalSquadMessages": 1,
+    "totalEntities": 8,
+    "totalFacts": 1187,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06",
+    "createdFacts": 111,
+    "updatedFacts": 1076,
+    "supersededFacts": 0,
+    "skippedFacts": 0
+  },
+  "lastQmdEmbedAt": 1772786134766
+}

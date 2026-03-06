@@ -1,0 +1,72 @@
+[
+  {
+    "id": "3ec92d3881824f45",
+    "fact": "Assigned to task jx70jm2h84jkrt7nc26em9y9vh82b9am (done).",
+    "category": "status",
+    "timestamp": "2026-03-05",
+    "source": "task:jx70jm2h84jkrt7nc26em9y9vh82b9am:assignee-j9779zvqqt3f0gpcszmrt74wcx829s1x",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-"
+    ],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 26
+  },
+  {
+    "id": "67f1b3dfe09c4c8c",
+    "fact": "Assigned to task jx7b3fcnpvyab6tq7pnk2t242982az95 (done).",
+    "category": "status",
+    "timestamp": "2026-03-05",
+    "source": "task:jx7b3fcnpvyab6tq7pnk2t242982az95:assignee-j9779zvqqt3f0gpcszmrt74wcx829s1x",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone"
+    ],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 26
+  },
+  {
+    "id": "07112d2d2b2290b8",
+    "fact": "Assigned to task jx7f81vwwzvd0jp2snjdqn212n82bg4r (done).",
+    "category": "status",
+    "timestamp": "2026-03-05",
+    "source": "task:jx7f81vwwzvd0jp2snjdqn212n82bg4r:assignee-j9779zvqqt3f0gpcszmrt74wcx829s1x",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-a-real-time-collaborative-project-management-platform-where-anyone"
+    ],
+    "lastAccessed": "2026-03-05",
+    "accessCount": 26
+  },
+  {
+    "id": "c4ba6a9e7b68494f",
+    "fact": "Assigned to task jx7e7qpbzydjh4eta4r0dy30v182djzx (done).",
+    "category": "status",
+    "timestamp": "2026-03-06",
+    "source": "task:jx7e7qpbzydjh4eta4r0dy30v182djzx:assignee-j9779zvqqt3f0gpcszmrt74wcx829s1x",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar"
+    ],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 26
+  },
+  {
+    "id": "dcf35f71f403155a",
+    "fact": "Assigned to task jx7d5smsz957w0qccrqd9f9mr182cxd9 (done).",
+    "category": "status",
+    "timestamp": "2026-03-06",
+    "source": "task:jx7d5smsz957w0qccrqd9f9mr182cxd9:assignee-j9779zvqqt3f0gpcszmrt74wcx829s1x",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/create-text-file-with-hello-world-text-on-desktop"
+    ],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 26
+  }
+]

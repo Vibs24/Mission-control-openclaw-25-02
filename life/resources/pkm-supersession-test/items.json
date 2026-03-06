@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cd103235805820b0",
+    "fact": "Task delivery status is in_progress",
+    "category": "status",
+    "timestamp": "2026-03-06",
+    "source": "task:jx-test-001",
+    "status": "superseded",
+    "supersededBy": "5485656663481069",
+    "relatedEntities": [
+      "projects/test-pipeline"
+    ],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 1
+  },
+  {
+    "id": "5485656663481069",
+    "fact": "Task delivery status is done",
+    "category": "status",
+    "timestamp": "2026-03-06",
+    "source": "task:jx-test-001",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [
+      "projects/test-pipeline"
+    ],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 1
+  }
+]

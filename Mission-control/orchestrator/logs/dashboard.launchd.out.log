@@ -222,3 +222,19 @@ Re-optimizing dependencies because lockfile has changed
 10:55:28 AM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
 11:12:46 AM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
 1:52:12 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 308 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 177 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 138 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 185 ms
+
+  ➜  Local:   http://127.0.0.1:5174/

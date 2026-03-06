@@ -1,10 +1,10 @@
 # LAST_SYNC.md
 
-- Status: degraded_success
-- Mode: daily
-- Timestamp: 2026-03-05T18:40:07.253Z
-- Degraded: yes
-- Data Source: snapshot/manual
+- Status: success
+- Mode: startup
+- Timestamp: 2026-03-06T08:24:24.885Z
+- Degraded: no
+- Data Source: live/manual
 - Lookback Days: 1
 
 ## Sources Used
@@ -17,20 +17,20 @@
 - Workspace templates: /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/workspace
 - Convex URL: https://secret-fox-493.convex.cloud
 - Convex calls: tasks.list, messages.listByTask, activities.list, agents.list
-- Context counts: tasks=0, activities=0, messages=0
+- Context counts: tasks=5, activities=500, messages=163
 
 ## Agent Update Summary
 
-- Chief (chief): updated sections 3
-- Project Manager (project-manager): updated sections 4
-- Frontend (frontend): updated sections 1
-- Designer (designer): updated sections 2
-- Database (database): updated sections 2
-- Backend (backend): updated sections 2
-- Documentation (documentation): updated sections 4
-- Operations (operations): updated sections 4
-- Reviewer (reviewer): updated sections 4
+- Chief (chief): updated sections 0
+- Project Manager (project-manager): updated sections 0
+- Frontend (frontend): updated sections 0
+- Designer (designer): updated sections 0
+- Database (database): updated sections 0
+- Backend (backend): updated sections 0
+- Documentation (documentation): updated sections 0
+- Operations (operations): updated sections 0
+- Reviewer (reviewer): updated sections 0
 
-## Errors / Warnings
+## Delta Summary
 
-- Live context unavailable: fetch failed
+- No new deltas detected in this sync window.

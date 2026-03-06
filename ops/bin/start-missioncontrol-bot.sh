@@ -9,6 +9,7 @@ mkdir -p "$LOG_DIR"
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
 export OPENCLAW_PROFILE="${OPENCLAW_PROFILE:-mc2}"
 export OPENCLAW_CONFIG_STRICT_STARTUP="${OPENCLAW_CONFIG_STRICT_STARTUP:-true}"
+export PKM_ENABLED="${PKM_ENABLED:-true}"
 
 "$ROOT/ops/bin/wait-for-network.sh" "api.telegram.org" "secret-fox-493.convex.cloud"
 
@@ -19,6 +20,15 @@ if ! AGENT_SYNC_OUTPUT=$(/opt/homebrew/bin/node orchestrator/agent-sync.mjs --mo
   else
     echo "$AGENT_SYNC_OUTPUT" >&2
     echo "[start-missioncontrol-bot] WARN: startup agent sync failed; continuing bot startup" >&2
+  fi
+fi
+
+if [[ "$PKM_ENABLED" == "true" ]]; then
+  if ! /opt/homebrew/bin/node orchestrator/scripts/pkm-bootstrap.mjs --mode startup; then
+    echo "[start-missioncontrol-bot] WARN: PKM bootstrap failed; continuing bot startup" >&2
+  fi
+  if ! /opt/homebrew/bin/node orchestrator/scripts/pkm-extract.mjs --mode startup; then
+    echo "[start-missioncontrol-bot] WARN: PKM extract failed; continuing bot startup" >&2
   fi
 fi
 

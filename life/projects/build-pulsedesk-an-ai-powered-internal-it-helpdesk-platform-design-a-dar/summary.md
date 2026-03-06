@@ -1,0 +1,323 @@
+# Build Pulsedesk An Ai Powered Internal It Helpdesk Platform Design A Dar
+
+Entity Key: `projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar`
+
+## Hot Facts (last 7 days)
+- Task jx7e7qpbzydjh4eta4r0dy30v182djzx is currently done (workflow: general, priority: urgent). _(at 2026-03-06)_
+- Task context: ## Telegram Intake Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-mode-first, geometric enterprise UI with a slate + electric blue palette, delivering wireframes through a full componen... _(at 2026-03-06)_
+- Requester: Vaibhav Ambulkar. _(at 2026-03-06)_
+- Assignee: Project Manager. _(at 2026-03-06)_
+- Reviewer Reviewer completed with proof _(at 2026-03-06)_
+- Reviewer Relevant docs exist and are updated (e.g., `docs/ONBOARDING.md`, `docs/API_SPEC.md`, `docs/USER_MANUAL.md`, `docs/ARCHITECTURE.md`). | - **Root cause or validated workaround recorded** ✅ | Recorded in `SELF_REVIEW.md` and backend worklog:… _(at 2026-03-06)_
+- Reviewer PM node dispatch invoked _(at 2026-03-06)_
+- Reviewer PM dispatch node Reviewer _(at 2026-03-06)_
+- Reviewer PM dispatched node reviewer _(at 2026-03-06)_
+- Project Manager Node reviewer moved to dispatch evaluation _(at 2026-03-06)_
+- Documentation Documentation completed with proof _(at 2026-03-06)_
+- Documentation - Required-manifest file existence verification | - Full file snapshot for artifact integrity | - Artifact folder now contains a comprehensive, reviewer-ready implementation scaffold and operational/documentation package aligned to request… _(at 2026-03-06)_
+- Documentation PM node dispatch invoked _(at 2026-03-06)_
+- Documentation PM dispatch node Documentation _(at 2026-03-06)_
+- Documentation PM dispatched node documentation _(at 2026-03-06)_
+- Project Manager Node documentation moved to dispatch evaluation _(at 2026-03-06)_
+- Operations Operations completed with proof _(at 2026-03-06)_
+- Operations - Automated tests pass. | - Seed script executes and populates expected baseline data. | - Manual implementation checks recorded as PASS for key UX/flow requirements. | - Artifact folder contains runnable backend/frontend assets, persisten… _(at 2026-03-06)_
+- Operations PM node dispatch invoked _(at 2026-03-06)_
+- Frontend Frontend completed with proof _(at 2026-03-06)_
+- Frontend - Message: `chore: refresh validation evidence for realtime collaboration task` (latest verification update in workspace history). | - Artifact folder is present with real deliverables and operational scaffolding expected for review. | - V… _(at 2026-03-06)_
+- Frontend PM node dispatch invoked _(at 2026-03-06)_
+- Operations PM dispatch node Operations _(at 2026-03-06)_
+- Frontend PM dispatch node Frontend _(at 2026-03-06)_
+- Operations PM dispatched node operations _(at 2026-03-06)_
+- Frontend PM dispatched node frontend _(at 2026-03-06)_
+- Project Manager Node operations moved to dispatch evaluation _(at 2026-03-06)_
+- Project Manager Node frontend moved to dispatch evaluation _(at 2026-03-06)_
+- Backend Backend completed with proof _(at 2026-03-06)_
+- Backend - Reproducible validation issue discovered: | - `apps/api` and `apps/web` test commands fail in current runtime with `sh: vitest: command not found`. | - Captured explicitly in test output files and documented in `SELF_REVIEW.md`. | - This… _(at 2026-03-06)_
+- Backend PM node dispatch invoked _(at 2026-03-06)_
+- Backend PM dispatch node Backend _(at 2026-03-06)_
+- Backend PM dispatched node backend _(at 2026-03-06)_
+- Project Manager Node backend moved to dispatch evaluation _(at 2026-03-06)_
+- Designer Designer completed with proof _(at 2026-03-06)_
+- Designer - artifact file index generation | - Artifact contains a coherent full-stack, ops, and documentation baseline aligned to requested architecture and delivery scope. | - Reviewer report identifies one HIGH and multiple MEDIUM/LOW items to cl… _(at 2026-03-06)_
+- Designer PM node dispatch invoked _(at 2026-03-06)_
+- Database Database completed with proof _(at 2026-03-06)_
+- Database Step 1/1 worklog _(at 2026-03-06)_
+- Database PM node dispatch invoked _(at 2026-03-06)_
+- Designer PM dispatch node Designer _(at 2026-03-06)_
+- Database PM dispatch node Database _(at 2026-03-06)_
+- Designer PM dispatched node designer _(at 2026-03-06)_
+- Database PM dispatched node database _(at 2026-03-06)_
+- Chief PM graph ready: Backend, Frontend, Database, Designer, Documentation, Operations _(at 2026-03-06)_
+- Project Manager Node designer moved to dispatch evaluation _(at 2026-03-06)_
+- Project Manager Node database moved to dispatch evaluation _(at 2026-03-06)_
+- Chief Workflow general; Assigned to Project Manager for dependency-graph orchestration _(at 2026-03-06)_
+- Chief: ### Chief Triage (Chief) - Workflow: general - Priority: urgent - Assumptions: Best-effort classification from Telegram intake / task context - Expected output: Concrete finding... _(at 2026-03-06)_
+- Database: ### Worklog — Database — Step 1/1 Objective: Complete assigned workflow turn with verifiable evidence. Actions Taken: - Dispatch run executed and output captured. Findings: - No... _(at 2026-03-06)_
+- Designer: ### Worklog — Designer — Step 1/1 Objective: Design and implement a production-grade PulseDesk scaffold covering dark-mode enterprise UI artifacts, React TypeScript SPA foundati... _(at 2026-03-06)_
+- Backend: ### Worklog — Backend — Step 1/1 Objective: Build and deliver **PulseDesk** as a production-grade internal IT helpdesk platform artifact with dark enterprise UI system, React+TS... _(at 2026-03-06)_
+- Frontend: ### Worklog — Frontend — Step 1/1 Objective: Deliver and validate “PulseDesk” as a production-grade artifact bundle (frontend + backend + data + ops + docs) in the required auto... _(at 2026-03-06)_
+- Operations: ### Worklog — Operations — Step 1/1 Objective: Finalize and validate the production-quality delivery of **PulseDesk-style real-time collaborative project management platform req... _(at 2026-03-06)_
+- Documentation: ### Worklog — Documentation — Step 1/1 Objective: Build and deliver **PulseDesk** as a production-grade full-stack artifact bundle (frontend, backend, data, infra, observability... _(at 2026-03-06)_
+- Reviewer: ### Worklog — Reviewer — Step 1/1 Objective: Complete assigned workflow turn with verifiable evidence. Actions Taken: - Dispatch run executed and output captured. Findings: - Re... _(at 2026-03-06)_
+- Reviewer: Reviewer approved PM graph completion evidence. _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Reviewer approved review for 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Reviewer commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Document created: Execution Context — Reviewer execution completed _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:1 review:0 waiting:0 blocked:0 done:3 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Documentation commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Document created: Execution Context — Documentation execution completed _(at 2026-03-06)_
+- Operations commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Document created: Execution Context — Operations execution completed _(at 2026-03-06)_
+- Frontend commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Document created: Execution Context — Frontend execution completed _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Backend commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Document created: Execution Context — Backend execution completed _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to in_progress _(at 2026-03-06)_
+- Designer commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Document created: Execution Context — Designer execution completed _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:1 review:0 waiting:0 blocked:0 done:3 alerts:0 _(at 2026-03-06)_
+- Database commented on 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to in_progress _(at 2026-03-06)_
+- Task assigned: Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m _(at 2026-03-06)_
+- Chief triaged and assigned 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' _(at 2026-03-06)_
+- Chief claimed inbox task for triage _(at 2026-03-06)_
+- Telegram intake received and task created from Vaibhav Ambulkar (artifact root: /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-i... _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+- Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done _(at 2026-03-06)_
+
+## Warm Facts (8–30 days, +frequency resistance)
+- No warm facts.
+
+## Cold Facts
+- No cold facts.

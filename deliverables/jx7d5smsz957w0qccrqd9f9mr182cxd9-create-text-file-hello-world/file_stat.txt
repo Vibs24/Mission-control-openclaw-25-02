@@ -1,0 +1,1 @@
+-rw-r--r--@ 1 syphaoffice1  staff  12 Mar  6 11:29 /Users/syphaoffice1/Desktop/hello_world.txt

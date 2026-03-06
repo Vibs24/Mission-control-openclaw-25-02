@@ -1,57 +1,25 @@
-# RetailOps Multi-Branch Platform (Flask + SQLite)
+# PulseDesk Monorepo
 
-Production-style retail operations web app for multi-branch stores.
+AI-powered internal IT helpdesk platform (React + TypeScript frontend, Node/Express backend, Postgres/Redis infra) with realtime ticket updates and operations tooling.
 
-## Features
-- Secure authentication with password hashing and RBAC (Admin/Manager/Staff)
-- Branch-wise inventory, purchase, and sales workflows
-- Customer and vendor management
-- Invoice generation (HTML + PDF)
-- Low-stock alerts + notification center
-- KPI dashboard (daily sales, margin, stock turnover)
-- Search/filter/pagination on key lists
-- CSV exports (inventory and sales)
-- Audit-log timeline
-- Responsive HTML/CSS/JS UI
-- Seed-data generator
-- Automated tests (unit, integration, smoke)
+## Local setup (<=5 steps)
+1. `cp .env.example .env`
+2. `npm install --workspaces`
+3. `docker compose up -d postgres redis`
+4. In two terminals: `npm run dev -w @pulsedesk/api` and `npm run dev -w @pulsedesk/web`
+5. Run tests: `node ../../node_modules/vitest/vitest.mjs run` from `apps/api` and `apps/web`
 
-## Tech Stack
-- Flask 3
-- SQLite 3
-- ReportLab for PDF
-- Pytest
+## Monorepo layout
+- `apps/api` - Express modular REST API + WebSocket server + metrics
+- `apps/web` - React SPA (dashboard, agent workspace, admin analytics)
+- `packages/shared` - shared types
+- `infra` - migrations, Docker, k8s, monitoring and telemetry configs
+- `docs` - onboarding, ADRs, manuals, runbooks, performance, OpenAPI
 
-## Project Structure
-- `app.py` main Flask app and business logic
-- `schema.sql` normalized DB schema
-- `templates/` UI pages
-- `static/` CSS and JS
-- `scripts/setup.sh` create env + install + init + seed
-- `scripts/run.sh` run web server
-- `scripts/test.sh` run tests
-- `tests/` test suite
-- `docs/` architecture, API, schema, runbook, troubleshooting, deployment checklist
-
-## Exact Run Commands
-```bash
-cd /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7cn5732b7261386fsawkwwyd82bet8-build-a-production-grade-multi-branch-retail-ope
-bash scripts/setup.sh
-bash scripts/run.sh
-```
-Open: `http://127.0.0.1:5000`
-
-Demo users:
-- admin / admin123
-- manager1 / manager123
-- staff1 / staff123
-
-## Run Tests
-```bash
-cd /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7cn5732b7261386fsawkwwyd82bet8-build-a-production-grade-multi-branch-retail-ope
-bash scripts/test.sh
-```
-
-## Notes
-- SQLite DB file: `retail.db` in project root.
-- Use `/seed` endpoint (or `python scripts/seed.py`) to populate seed data if needed.
+## Key capabilities
+- Auth and JWT sessions (+ Redis cache integration points)
+- Ticket CRUD + triage service (Claude-safe fallback/mock)
+- Notification adapter architecture (mock/slack mode)
+- Full-text-like search path in app + Postgres FTS in SQL schema
+- WebSocket realtime updates for agent UI
+- Prometheus `/metrics`, pino structured logging, OTEL collector config

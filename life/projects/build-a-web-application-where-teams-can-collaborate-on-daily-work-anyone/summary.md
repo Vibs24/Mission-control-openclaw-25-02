@@ -1,0 +1,339 @@
+# Build A Web Application Where Teams Can Collaborate On Daily Work Anyone
+
+Entity Key: `projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone`
+
+## Hot Facts (last 7 days)
+- Task jx7b3fcnpvyab6tq7pnk2t242982az95 is currently done (workflow: general, priority: normal). _(at 2026-03-05)_
+- Task context: ## Telegram Intake Build a web application where teams can collaborate on daily work. Anyone can sign up with their email and password, create a workspace, and invite their teammates to join. Once inside, users can cr... _(at 2026-03-05)_
+- Requester: Vaibhav Ambulkar. _(at 2026-03-05)_
+- Assignee: Project Manager. _(at 2026-03-05)_
+- Chief: ### Chief Triage (Chief) - Workflow: general - Priority: normal - Assumptions: Best-effort classification from Telegram intake / task context - Expected output: Concrete finding... _(at 2026-03-05)_
+- Database: ### Worklog — Database — Step 1/1 Objective: Complete assigned workflow turn with verifiable evidence. Actions Taken: - Dispatch run executed and output captured. Findings: - "p... _(at 2026-03-05)_
+- Designer: ### Worklog — Designer — Step 1/1 Objective: Build and deliver a production-ready team collaboration web app (Flask + SQLite + HTML/CSS/JS) with signup/login, workspace + teamma... _(at 2026-03-05)_
+- Database: ### Worklog — Database — Step 1/1 Objective: Build and validate a database-backed team collaboration web app (Flask + SQLite + HTML/CSS/JS) with auth, workspace/team flows, task... _(at 2026-03-05)_
+- Backend: ### Worklog — Backend — Step 1/1 Objective: Build a production-ready team collaboration web app (Flask + SQLite + HTML/CSS/JS) with signup/login, workspaces, invites, task board... _(at 2026-03-05)_
+- Frontend: ### Worklog — Frontend — Step 1/1 Objective: Build and deliver a runnable team collaboration web app (Flask + SQLite + HTML/CSS/JS) with auth, workspace/member management, task ... _(at 2026-03-05)_
+- Operations: ### Worklog — Operations — Step 1/1 Objective: Build and deliver a fully runnable team collaboration web application (Flask + SQLite + HTML/CSS/JS) with signup/login, workspace ... _(at 2026-03-05)_
+- Documentation: ### Worklog — Documentation — Step 1/1 Objective: Build a complete, runnable team collaboration web application (Flask + SQLite + HTML/CSS/JS) with signup/login, workspace + mem... _(at 2026-03-05)_
+- Reviewer: ### Worklog — Reviewer — Step 1/1 Objective: Complete assigned workflow turn with verifiable evidence. Actions Taken: - Dispatch run executed and output captured. Findings: - - ... _(at 2026-03-05)_
+- Reviewer: Reviewer approved PM graph completion evidence. _(at 2026-03-05)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:1 review:0 waiting:0 blocked:0 done:3 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:1 review:0 waiting:0 blocked:0 done:3 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:5 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:3 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Telegram status sent to 1045407142: digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:3 alerts:0 _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+- Chief moved 'Build a web application where teams can collaborate on daily work. Anyone can si' to done _(at 2026-03-06)_
+
+## Warm Facts (8–30 days, +frequency resistance)
+- No warm facts.
+
+## Cold Facts
+- No cold facts.

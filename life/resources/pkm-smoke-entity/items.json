@@ -1,0 +1,26 @@
+[
+  {
+    "id": "4f249e5b5bd5e7c9",
+    "fact": "System mode is shadow.",
+    "category": "status",
+    "timestamp": "2026-03-06",
+    "source": "smoke:status",
+    "status": "superseded",
+    "supersededBy": "27b74316c3d268ff",
+    "relatedEntities": [],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 1
+  },
+  {
+    "id": "27b74316c3d268ff",
+    "fact": "System mode is strict-shadow.",
+    "category": "status",
+    "timestamp": "2026-03-06",
+    "source": "smoke:status",
+    "status": "active",
+    "supersededBy": null,
+    "relatedEntities": [],
+    "lastAccessed": "2026-03-06",
+    "accessCount": 1
+  }
+]

@@ -17721,3 +17721,4 @@ Validator: v.object({agentId: v.id("agents"), agentName: v.string(), blockers: v
 }
 [retry] convex.query transient failure (attempt 1/4): fetch failed
 [retry] convex.query transient failure (attempt 2/4): fetch failed
+[start-missioncontrol-bot] INFO: startup agent sync skipped (lock held by active sync run)

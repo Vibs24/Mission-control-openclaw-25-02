@@ -154,6 +154,19 @@ const config = {
   structuredWorklogRequired: env.STRUCTURED_WORKLOG_REQUIRED !== "false",
   workflowUiEnhanced: env.WORKFLOW_UI_ENHANCED !== "false",
   internalContextProviderOnly: env.INTERNAL_CONTEXT_PROVIDER_ONLY !== "false",
+  pkmEnabled: env.PKM_ENABLED !== "false",
+  pkmRoot: env.PKM_ROOT || path.join(workspaceRoot, "life"),
+  pkmShadowMode: env.PKM_SHADOW_MODE !== "false",
+  pkmExtractIntervalMinutes: Math.max(1, Number(env.PKM_EXTRACT_INTERVAL_MINUTES || 15)),
+  pkmWeeklySynthesisDay: env.PKM_WEEKLY_SYNTHESIS_DAY || "SUN",
+  pkmWeeklySynthesisHour: Math.max(0, Math.min(23, Number(env.PKM_WEEKLY_SYNTHESIS_HOUR || 0))),
+  pkmWeeklySynthesisMinute: Math.max(0, Math.min(59, Number(env.PKM_WEEKLY_SYNTHESIS_MINUTE || 20))),
+  pkmContextInjectionEnabled: env.PKM_CONTEXT_INJECTION_ENABLED === "true",
+  qmdBin: env.QMD_BIN || "/opt/homebrew/bin/qmd",
+  qmdCollectionLife: env.QMD_COLLECTION_LIFE || "life",
+  qmdCollectionMemory: env.QMD_COLLECTION_MEMORY || "memory",
+  qmdCollectionAgents: env.QMD_COLLECTION_AGENTS || "agents",
+  qmdUpdateAfterExtract: env.QMD_UPDATE_AFTER_EXTRACT !== "false",
   workflowShadowModeEnabled: env.WORKFLOW_SHADOW_MODE_ENABLED === "true",
   workflowShadowModeHours: Math.max(1, Number(env.WORKFLOW_SHADOW_MODE_HOURS || 24)),
   workflowShadowModeStartedAt: env.WORKFLOW_SHADOW_MODE_STARTED_AT || "",
@@ -222,6 +235,10 @@ if (!config.convexUrl) {
 fs.mkdirSync(config.stateDir, { recursive: true });
 fs.mkdirSync(deliverablesRoot, { recursive: true });
 fs.mkdirSync(config.taskArtifactsRoot, { recursive: true });
+if (config.pkmEnabled) {
+  fs.mkdirSync(config.pkmRoot, { recursive: true });
+  fs.mkdirSync(path.join(config.pkmRoot, ".state"), { recursive: true });
+}
 const offsetFile = path.join(config.stateDir, "telegram-offset.json");
 const runtimeStateFile = path.join(config.stateDir, "runtime-state.json");
 const outboxFile = path.join(config.stateDir, "outbox.json");
@@ -1199,7 +1216,41 @@ async function maybeEmitRunningStepHeartbeat(task, step, assignee) {
   lastExecutionHeartbeatByStep.set(key, now);
 }
 
-const internalContextProvider = createInternalContextProvider({ q, api });
+const internalContextProvider = createInternalContextProvider({
+  q,
+  api,
+  pkm: {
+    enabled: config.pkmEnabled,
+    contextInjectionEnabled: config.pkmContextInjectionEnabled,
+    paraRoot: config.pkmRoot,
+    qmdBin: config.qmdBin,
+    qmdCollectionLife: config.qmdCollectionLife,
+    qmdCollectionMemory: config.qmdCollectionMemory,
+    qmdCollectionAgents: config.qmdCollectionAgents,
+  },
+});
+const pkmContextByTask = new Map();
+
+async function getTaskPkmContextBlock(task) {
+  if (!config.pkmEnabled || !config.pkmContextInjectionEnabled || !task?._id) return "";
+  const cacheKey = String(task._id);
+  const cached = pkmContextByTask.get(cacheKey);
+  if (cached && String(cached.taskStatus || "") === String(task?.status || "")) {
+    return String(cached.block || "");
+  }
+  try {
+    const block = await internalContextProvider.getTaskPkmContext(task, { limit: 5 });
+    pkmContextByTask.set(cacheKey, {
+      taskStatus: String(task?.status || ""),
+      block: String(block || ""),
+      at: Date.now(),
+    });
+    return String(block || "");
+  } catch (error) {
+    console.warn(`[pkm] failed to build context block for task ${cacheKey}: ${String(error?.message || error || "")}`);
+    return "";
+  }
+}
 
 async function telegramApi(method, body) {
   if (!config.telegramBotToken) throw new Error("Missing TELEGRAM_BOT_TOKEN");
@@ -2622,12 +2673,14 @@ async function dispatchParallelNode({ task, node, agentsMap, chief }) {
     });
 
     const requiredOutputPath = await ensureAgentWritableOutputPathReady(task);
+    const pkmContextBlock = await getTaskPkmContextBlock(task);
     const prompt =
       node.role === "reviewer"
         ? buildReviewerPrompt({
             task,
             workflowKind: resolveTaskWorkflowKind(task),
             acceptanceCriteria: task.acceptanceCriteria || [],
+            memoryContext: pkmContextBlock,
           })
         : buildSpecialistPrompt({
             task,
@@ -2638,6 +2691,7 @@ async function dispatchParallelNode({ task, node, agentsMap, chief }) {
             nextSpecialist: null,
             deliverablesRoot: config.taskArtifactsRoot,
             requiredOutputPath,
+            memoryContext: pkmContextBlock,
           });
 
     const preMessages = await q(api.messages.listByTask, { taskId: task._id });
@@ -6646,6 +6700,7 @@ async function chiefTriageLoop(signal) {
         const preDispatchMessageCount = Number(preDispatchMessages?.length ?? 0);
 
         const requiredOutputPath = await ensureAgentWritableOutputPathReady(claimed);
+        const pkmContextBlock = await getTaskPkmContextBlock(claimed);
         const prompt = buildSpecialistPrompt({
           task: claimed,
           specialist,
@@ -6655,6 +6710,7 @@ async function chiefTriageLoop(signal) {
           nextSpecialist,
           deliverablesRoot: config.taskArtifactsRoot,
           requiredOutputPath,
+          memoryContext: pkmContextBlock,
         });
         const specialistDispatchStartedAt = Date.now();
         const specialistRunId = await startAutomationRun({
@@ -7542,6 +7598,7 @@ async function attemptBlockedTaskAutoRecovery(task, chief, agents) {
   ]);
   const preDispatchMessageCount = Number(preDispatchMessages?.length ?? 0);
   const preDispatchDocCount = Number(preDispatchDocs?.length ?? 0);
+  const recoveryPkmContextBlock = await getTaskPkmContextBlock(task);
   const recoveryPrompt =
     `${buildSpecialistPrompt({
       task,
@@ -7552,6 +7609,7 @@ async function attemptBlockedTaskAutoRecovery(task, chief, agents) {
       nextSpecialist: nextStep?.role === "specialist" ? nextStepAgent : null,
       deliverablesRoot: config.taskArtifactsRoot,
       requiredOutputPath: await ensureAgentWritableOutputPathReady(task),
+      memoryContext: recoveryPkmContextBlock,
     })}\n\n` +
     `Blocked recovery context:\n` +
     `- Previous block reason: ${blockedReason}\n` +
@@ -9110,10 +9168,12 @@ async function handleReviewTask(task, agents) {
     return true;
   });
 
+  const reviewerPkmContextBlock = await getTaskPkmContextBlock(task);
   const prompt = buildReviewerPrompt({
     task,
     workflowKind,
     acceptanceCriteria: acceptance,
+    memoryContext: reviewerPkmContextBlock,
   });
   const reviewerDispatchStartedAt = Date.now();
   const reviewerRunId = await startAutomationRun({

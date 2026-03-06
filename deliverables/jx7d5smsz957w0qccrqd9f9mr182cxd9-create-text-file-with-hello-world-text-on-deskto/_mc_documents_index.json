@@ -1,0 +1,52 @@
+{
+  "generatedAt": 1772776998247,
+  "generatedAtIso": "2026-03-06T06:03:18.247Z",
+  "taskId": "jx7d5smsz957w0qccrqd9f9mr182cxd9",
+  "taskTitle": "create text file with \"Hello world\" text on desktop",
+  "source": "mission-control-orchestrator",
+  "internalSystemFilesExcludedFromProof": true,
+  "documents": [
+    {
+      "id": "jh77p3rjnwxjfw17ftcfvmx9fs82ca9z",
+      "title": "Execution Context — Database execution completed",
+      "fileName": "jh77p3rjnwxjfw17ftcfvmx9fs82ca9z-execution-context-database-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh77p3rjnwxjfw17ftcfvmx9fs82ca9z-execution-context-database-execution-completed.md"
+    },
+    {
+      "id": "jh72hbsy22819v612w8bap15p982dpdp",
+      "title": "Execution Context — Designer execution completed",
+      "fileName": "jh72hbsy22819v612w8bap15p982dpdp-execution-context-designer-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh72hbsy22819v612w8bap15p982dpdp-execution-context-designer-execution-completed.md"
+    },
+    {
+      "id": "jh72b18r7vn8q42nbdsq6zcq7d82cgn8",
+      "title": "Execution Context — Backend execution completed",
+      "fileName": "jh72b18r7vn8q42nbdsq6zcq7d82cgn8-execution-context-backend-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh72b18r7vn8q42nbdsq6zcq7d82cgn8-execution-context-backend-execution-completed.md"
+    },
+    {
+      "id": "jh7456x48sm0jzvha74hzqq4as82dmfj",
+      "title": "Execution Context — Frontend execution completed",
+      "fileName": "jh7456x48sm0jzvha74hzqq4as82dmfj-execution-context-frontend-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh7456x48sm0jzvha74hzqq4as82dmfj-execution-context-frontend-execution-completed.md"
+    },
+    {
+      "id": "jh796b1aw1d74a5w7kksv4w3c582c203",
+      "title": "Execution Context — Operations execution completed",
+      "fileName": "jh796b1aw1d74a5w7kksv4w3c582c203-execution-context-operations-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh796b1aw1d74a5w7kksv4w3c582c203-execution-context-operations-execution-completed.md"
+    },
+    {
+      "id": "jh79et2qzzny6qbq6fbnp64crd82c6xv",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh79et2qzzny6qbq6fbnp64crd82c6xv-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh79et2qzzny6qbq6fbnp64crd82c6xv-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh79wzavdyzt7nr5s7zpx0jj1n82d4m2",
+      "title": "Execution Context — Reviewer execution completed",
+      "fileName": "jh79wzavdyzt7nr5s7zpx0jj1n82d4m2-execution-context-reviewer-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7d5smsz957w0qccrqd9f9mr182cxd9-create-text-file-with-hello-world-text-on-deskto/_mc_documents/jh79wzavdyzt7nr5s7zpx0jj1n82d4m2-execution-context-reviewer-execution-completed.md"
+    }
+  ]
+}

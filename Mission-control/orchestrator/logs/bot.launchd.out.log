@@ -2271,3 +2271,2618 @@
 [orchestrator] workflow shadow mode: disabled
 [orchestrator] resuming with saved state from 2026-03-05T16:57:40.948Z
 [artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+[pkm-bootstrap] complete {
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+  "qmdAvailable": true,
+  "qmdSetup": {
+    "available": true,
+    "results": [
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'life' already exists.\nUse a different name with --name <name>"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'memory' already exists.\nUse a different name with --name <name>"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'agents' already exists.\nUse a different name with --name <name>"
+      }
+    ]
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772780035769,
+    "lastSynthesisAt": 1772780029509,
+    "lastQmdUpdateAt": null,
+    "mode": "startup",
+    "bootstrapAt": 1772780390105,
+    "qmdAvailable": true,
+    "updatedAt": 1772780390106,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": false,
+          "hot": 690,
+          "warm": 0,
+          "cold": 0,
+          "facts": 690
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": false,
+          "hot": 162,
+          "warm": 0,
+          "cold": 0,
+          "facts": 162
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": false,
+          "hot": 162,
+          "warm": 0,
+          "cold": 0,
+          "facts": 162
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": false,
+          "hot": 146,
+          "warm": 0,
+          "cold": 0,
+          "facts": 146
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": false,
+          "hot": 129,
+          "warm": 0,
+          "cold": 0,
+          "facts": 129
+        }
+      ],
+      "totalEntities": 7,
+      "changedEntities": 0,
+      "totalFacts": 1299
+    },
+    "lastExtractMode": "manual",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 0,
+      "totalSquadMessages": 1,
+      "totalEntities": 7,
+      "totalFacts": 1189,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 120,
+      "updatedFacts": 1069,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    }
+  }
+}
+[pkm-extract] complete {
+  "mode": "startup",
+  "shadowMode": true,
+  "lookbackDays": 1,
+  "entityMentionThreshold": 3,
+  "createdFacts": 30,
+  "updatedFacts": 1159,
+  "supersededFacts": 0,
+  "skippedFacts": 0,
+  "extractedStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 0,
+    "totalSquadMessages": 1,
+    "totalEntities": 7,
+    "totalFacts": 1189,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06"
+  },
+  "paraCounts": {
+    "entities": 7,
+    "facts": 1449
+  },
+  "qmdAvailable": true,
+  "qmdUpdate": {
+    "ok": false,
+    "code": 1,
+    "output": "node:internal/modules/cjs/loader:1961\n  return process.dlopen(module, path.toNamespacedPath(filename));\n                 ^\n\nError: The module '/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/better-sqlite3/build/Release/better_sqlite3.node'\nwas compiled against a different Node.js version using\nNODE_MODULE_VERSION 127. This version of Node.js requires\nNODE_MODULE_VERSION 141. Please try re-compiling or re-installing\nthe module (for instance, using `npm rebuild` or `npm install`).\n    at Module._extensions..node (node:internal/modules/cjs/loader:1961:18)\n    at Module.load (node:internal/modules/cjs/loader:1524:32)\n    at Module._load (node:internal/modules/cjs/loader:1326:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.require (node:internal/modules/cjs/loader:1547:12)\n    at require (node:internal/modules/helpers:152:16)\n    at bindings (/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/bindings/bindings.js:112:48)\n    at new Database (/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/better-sqlite3/lib/database.js:48:64)\n    at openDatabase (file:///Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/dist/db.js:27:12) {\n  code: 'ERR_DLOPEN_FAILED'\n}\n\nNode.js v25.5.0"
+  },
+  "qmdEmbed": {
+    "ok": false,
+    "skipped": true,
+    "reason": "disabled"
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772780394819,
+    "lastSynthesisAt": 1772780029509,
+    "lastQmdUpdateAt": null,
+    "mode": "startup",
+    "bootstrapAt": 1772780390105,
+    "qmdAvailable": true,
+    "updatedAt": 1772780394819,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": false,
+          "hot": 690,
+          "warm": 0,
+          "cold": 0,
+          "facts": 690
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": false,
+          "hot": 162,
+          "warm": 0,
+          "cold": 0,
+          "facts": 162
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": false,
+          "hot": 162,
+          "warm": 0,
+          "cold": 0,
+          "facts": 162
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": false,
+          "hot": 146,
+          "warm": 0,
+          "cold": 0,
+          "facts": 146
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": false,
+          "hot": 129,
+          "warm": 0,
+          "cold": 0,
+          "facts": 129
+        }
+      ],
+      "totalEntities": 7,
+      "changedEntities": 0,
+      "totalFacts": 1299
+    },
+    "lastExtractMode": "startup",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 0,
+      "totalSquadMessages": 1,
+      "totalEntities": 7,
+      "totalFacts": 1189,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 30,
+      "updatedFacts": 1159,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    }
+  },
+  "metrics": {
+    "version": 1,
+    "updatedAt": 1772780394819,
+    "runs": 4,
+    "entities": 7,
+    "facts": 1449,
+    "lastRun": {
+      "at": 1772780394819,
+      "mode": "startup",
+      "shadowMode": true,
+      "extractedEntities": 7,
+      "extractedFacts": 1189,
+      "createdFacts": 30,
+      "updatedFacts": 1159,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "duplicateFactsSkipped": 0,
+    "bootstrapAt": 1772780390106,
+    "lastSynthesis": {
+      "at": 1772780029510,
+      "mode": "manual",
+      "changedEntities": 0,
+      "totalEntities": 7
+    },
+    "createdAt": 1772779033181
+  }
+}
+{
+  "at": "2026-03-06T06:59:55.698Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-06T06:59:55.766Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-06T06:59:55.848Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-06T07:00:02.480Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T17:00:17.425Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=5
+[pkm-bootstrap] complete {
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+  "qmdAvailable": true,
+  "qmdSetup": {
+    "available": true,
+    "results": [
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'life' already exists.\nUse a different name with --name <name>"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'memory' already exists.\nUse a different name with --name <name>"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'agents' already exists.\nUse a different name with --name <name>"
+      }
+    ]
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772780847143,
+    "lastSynthesisAt": 1772780847952,
+    "lastQmdUpdateAt": null,
+    "mode": "startup",
+    "bootstrapAt": 1772781021525,
+    "qmdAvailable": true,
+    "updatedAt": 1772781021526,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 731,
+          "warm": 0,
+          "cold": 0,
+          "facts": 731
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 203,
+          "warm": 0,
+          "cold": 0,
+          "facts": 203
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 203,
+          "warm": 0,
+          "cold": 0,
+          "facts": 203
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 187,
+          "warm": 0,
+          "cold": 0,
+          "facts": 187
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 170,
+          "warm": 0,
+          "cold": 0,
+          "facts": 170
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": true,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 8,
+      "changedEntities": 6,
+      "totalFacts": 1506
+    },
+    "lastExtractMode": "manual",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 0,
+      "totalSquadMessages": 1,
+      "totalEntities": 7,
+      "totalFacts": 1189,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 50,
+      "updatedFacts": 1139,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    }
+  }
+}
+[pkm-extract] complete {
+  "mode": "startup",
+  "shadowMode": true,
+  "lookbackDays": 1,
+  "entityMentionThreshold": 3,
+  "createdFacts": 25,
+  "updatedFacts": 1164,
+  "supersededFacts": 0,
+  "skippedFacts": 0,
+  "extractedStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 0,
+    "totalSquadMessages": 1,
+    "totalEntities": 7,
+    "totalFacts": 1189,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06"
+  },
+  "paraCounts": {
+    "entities": 8,
+    "facts": 1531
+  },
+  "qmdAvailable": true,
+  "qmdUpdate": {
+    "ok": false,
+    "code": 1,
+    "output": "node:internal/modules/cjs/loader:1961\n  return process.dlopen(module, path.toNamespacedPath(filename));\n                 ^\n\nError: The module '/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/better-sqlite3/build/Release/better_sqlite3.node'\nwas compiled against a different Node.js version using\nNODE_MODULE_VERSION 127. This version of Node.js requires\nNODE_MODULE_VERSION 141. Please try re-compiling or re-installing\nthe module (for instance, using `npm rebuild` or `npm install`).\n    at Module._extensions..node (node:internal/modules/cjs/loader:1961:18)\n    at Module.load (node:internal/modules/cjs/loader:1524:32)\n    at Module._load (node:internal/modules/cjs/loader:1326:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.require (node:internal/modules/cjs/loader:1547:12)\n    at require (node:internal/modules/helpers:152:16)\n    at bindings (/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/bindings/bindings.js:112:48)\n    at new Database (/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/better-sqlite3/lib/database.js:48:64)\n    at openDatabase (file:///Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/dist/db.js:27:12) {\n  code: 'ERR_DLOPEN_FAILED'\n}\n\nNode.js v25.5.0"
+  },
+  "qmdEmbed": {
+    "ok": false,
+    "skipped": true,
+    "reason": "disabled"
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772781027638,
+    "lastSynthesisAt": 1772780847952,
+    "lastQmdUpdateAt": null,
+    "mode": "startup",
+    "bootstrapAt": 1772781021525,
+    "qmdAvailable": true,
+    "updatedAt": 1772781027638,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 731,
+          "warm": 0,
+          "cold": 0,
+          "facts": 731
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 203,
+          "warm": 0,
+          "cold": 0,
+          "facts": 203
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 203,
+          "warm": 0,
+          "cold": 0,
+          "facts": 203
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 187,
+          "warm": 0,
+          "cold": 0,
+          "facts": 187
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 170,
+          "warm": 0,
+          "cold": 0,
+          "facts": 170
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": true,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 8,
+      "changedEntities": 6,
+      "totalFacts": 1506
+    },
+    "lastExtractMode": "startup",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 0,
+      "totalSquadMessages": 1,
+      "totalEntities": 7,
+      "totalFacts": 1189,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 25,
+      "updatedFacts": 1164,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    }
+  },
+  "metrics": {
+    "version": 1,
+    "updatedAt": 1772781027638,
+    "runs": 7,
+    "entities": 8,
+    "facts": 1531,
+    "lastRun": {
+      "at": 1772781027638,
+      "mode": "startup",
+      "shadowMode": true,
+      "extractedEntities": 7,
+      "extractedFacts": 1189,
+      "createdFacts": 25,
+      "updatedFacts": 1164,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "duplicateFactsSkipped": 0,
+    "bootstrapAt": 1772781021526,
+    "lastSynthesis": {
+      "at": 1772780847952,
+      "mode": "manual",
+      "changedEntities": 6,
+      "totalEntities": 8
+    },
+    "createdAt": 1772779033181
+  }
+}
+{
+  "at": "2026-03-06T07:10:28.613Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-06T07:10:28.678Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-06T07:10:28.740Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-06T07:10:35.661Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-06T07:00:05.110Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=5
+[pkm-bootstrap] complete {
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+  "qmdAvailable": true,
+  "qmdSetup": {
+    "available": true,
+    "results": [
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'life' already exists.\nUse a different name with --name <name>"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'memory' already exists.\nUse a different name with --name <name>"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "add_failed",
+        "output": "Collection 'agents' already exists.\nUse a different name with --name <name>"
+      }
+    ]
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772781338134,
+    "lastSynthesisAt": 1772781422190,
+    "lastQmdUpdateAt": null,
+    "mode": "startup",
+    "bootstrapAt": 1772781425765,
+    "qmdAvailable": true,
+    "updatedAt": 1772781425765,
+    "lastSynthesisMode": "weekly",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 743,
+          "warm": 0,
+          "cold": 0,
+          "facts": 743
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 215,
+          "warm": 0,
+          "cold": 0,
+          "facts": 215
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 215,
+          "warm": 0,
+          "cold": 0,
+          "facts": 215
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 199,
+          "warm": 0,
+          "cold": 0,
+          "facts": 199
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 182,
+          "warm": 0,
+          "cold": 0,
+          "facts": 182
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        },
+        {
+          "entityKey": "resources/pkm-supersession-test",
+          "changed": true,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 9,
+      "changedEntities": 6,
+      "totalFacts": 1568
+    },
+    "lastExtractMode": "daily",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 0,
+      "totalSquadMessages": 1,
+      "totalEntities": 7,
+      "totalFacts": 1187,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 35,
+      "updatedFacts": 1152,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    }
+  }
+}
+[pkm-extract] complete {
+  "mode": "startup",
+  "shadowMode": true,
+  "lookbackDays": 1,
+  "entityMentionThreshold": 3,
+  "createdFacts": 0,
+  "updatedFacts": 1187,
+  "supersededFacts": 0,
+  "skippedFacts": 0,
+  "extractedStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 0,
+    "totalSquadMessages": 1,
+    "totalEntities": 7,
+    "totalFacts": 1187,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06"
+  },
+  "paraCounts": {
+    "entities": 9,
+    "facts": 1573
+  },
+  "qmdAvailable": true,
+  "qmdUpdate": {
+    "ok": false,
+    "code": 1,
+    "output": "node:internal/modules/cjs/loader:1961\n  return process.dlopen(module, path.toNamespacedPath(filename));\n                 ^\n\nError: The module '/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/better-sqlite3/build/Release/better_sqlite3.node'\nwas compiled against a different Node.js version using\nNODE_MODULE_VERSION 127. This version of Node.js requires\nNODE_MODULE_VERSION 141. Please try re-compiling or re-installing\nthe module (for instance, using `npm rebuild` or `npm install`).\n    at Module._extensions..node (node:internal/modules/cjs/loader:1961:18)\n    at Module.load (node:internal/modules/cjs/loader:1524:32)\n    at Module._load (node:internal/modules/cjs/loader:1326:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:328:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)\n    at Module.require (node:internal/modules/cjs/loader:1547:12)\n    at require (node:internal/modules/helpers:152:16)\n    at bindings (/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/bindings/bindings.js:112:48)\n    at new Database (/Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/node_modules/better-sqlite3/lib/database.js:48:64)\n    at openDatabase (file:///Users/syphaoffice1/.nvm/versions/node/v22.22.0/lib/node_modules/@tobilu/qmd/dist/db.js:27:12) {\n  code: 'ERR_DLOPEN_FAILED'\n}\n\nNode.js v25.5.0"
+  },
+  "qmdEmbed": {
+    "ok": false,
+    "skipped": true,
+    "reason": "disabled"
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772781430751,
+    "lastSynthesisAt": 1772781422190,
+    "lastQmdUpdateAt": null,
+    "mode": "startup",
+    "bootstrapAt": 1772781425765,
+    "qmdAvailable": true,
+    "updatedAt": 1772781430751,
+    "lastSynthesisMode": "weekly",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 743,
+          "warm": 0,
+          "cold": 0,
+          "facts": 743
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 215,
+          "warm": 0,
+          "cold": 0,
+          "facts": 215
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 215,
+          "warm": 0,
+          "cold": 0,
+          "facts": 215
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 199,
+          "warm": 0,
+          "cold": 0,
+          "facts": 199
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 182,
+          "warm": 0,
+          "cold": 0,
+          "facts": 182
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        },
+        {
+          "entityKey": "resources/pkm-supersession-test",
+          "changed": true,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 9,
+      "changedEntities": 6,
+      "totalFacts": 1568
+    },
+    "lastExtractMode": "startup",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 0,
+      "totalSquadMessages": 1,
+      "totalEntities": 7,
+      "totalFacts": 1187,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 0,
+      "updatedFacts": 1187,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    }
+  },
+  "metrics": {
+    "version": 1,
+    "updatedAt": 1772781430751,
+    "runs": 10,
+    "entities": 9,
+    "facts": 1573,
+    "lastRun": {
+      "at": 1772781430751,
+      "mode": "startup",
+      "shadowMode": true,
+      "extractedEntities": 7,
+      "extractedFacts": 1187,
+      "createdFacts": 0,
+      "updatedFacts": 1187,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "duplicateFactsSkipped": 0,
+    "bootstrapAt": 1772781425765,
+    "lastSynthesis": {
+      "at": 1772781422190,
+      "mode": "weekly",
+      "changedEntities": 6,
+      "totalEntities": 9
+    },
+    "createdAt": 1772779033181
+  }
+}
+{
+  "at": "2026-03-06T07:17:11.554Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-06T07:17:11.617Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-06T07:17:11.677Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-06T07:17:17.070Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-06T07:10:38.032Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=5
+[pkm-bootstrap] complete {
+  "key": "primary",
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "enabled": true,
+  "qmdBin": "/opt/homebrew/bin/qmd",
+  "qmdCollections": [
+    "life",
+    "memory",
+    "agents"
+  ],
+  "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+  "qmdAvailable": true,
+  "qmdSetup": {
+    "available": true,
+    "results": [
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "exists"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "exists"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "exists"
+      }
+    ]
+  },
+  "lastBootstrapAt": 1772785266646,
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772785176711,
+    "lastSynthesisAt": 1772785169478,
+    "lastQmdUpdateAt": 1772785197479,
+    "mode": "startup",
+    "bootstrapAt": 1772785266646,
+    "qmdAvailable": true,
+    "updatedAt": 1772785266646,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/1045407142",
+          "changed": false,
+          "hot": 4,
+          "warm": 0,
+          "cold": 0,
+          "facts": 4
+        },
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 834,
+          "warm": 0,
+          "cold": 0,
+          "facts": 834
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 290,
+          "warm": 0,
+          "cold": 0,
+          "facts": 290
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 273,
+          "warm": 0,
+          "cold": 0,
+          "facts": 273
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        },
+        {
+          "entityKey": "resources/pkm-supersession-test",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 10,
+      "changedEntities": 5,
+      "totalFacts": 2027
+    },
+    "lastExtractMode": "manual",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 5,
+      "totalSquadMessages": 1,
+      "totalEntities": 8,
+      "totalFacts": 1187,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 15,
+      "updatedFacts": 1172,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "lastQmdEmbedAt": 1772785197479
+  },
+  "bootstrapReport": {
+    "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+    "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+    "qmdAvailable": true,
+    "qmdSetup": {
+      "available": true,
+      "results": [
+        {
+          "changed": false,
+          "skipped": false,
+          "reason": "exists"
+        },
+        {
+          "changed": false,
+          "skipped": false,
+          "reason": "exists"
+        },
+        {
+          "changed": false,
+          "skipped": false,
+          "reason": "exists"
+        }
+      ]
+    }
+  }
+}
+[pkm-extract] complete {
+  "key": "primary",
+  "mode": "startup",
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "enabled": true,
+  "shadowMode": true,
+  "lookbackDays": 1,
+  "entityMentionThreshold": 3,
+  "createdFacts": 10,
+  "updatedFacts": 1177,
+  "supersededFacts": 0,
+  "skippedFacts": 0,
+  "extractedStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 5,
+    "totalSquadMessages": 1,
+    "totalEntities": 8,
+    "totalFacts": 1187,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06"
+  },
+  "paraCounts": {
+    "entities": 10,
+    "facts": 2052
+  },
+  "qmdAvailable": true,
+  "qmdBin": "/opt/homebrew/bin/qmd",
+  "qmdCollections": [
+    "life",
+    "memory",
+    "agents"
+  ],
+  "entities": 10,
+  "facts": 2052,
+  "lastExtractAt": 1772785273940,
+  "lastQmdUpdateAt": 1772785274889,
+  "lastQmdEmbedAt": 1772785197479,
+  "qmdUpdate": {
+    "ok": true,
+    "code": 0,
+    "output": "Updating 3 collection(s)...\n\n[1/3] life (**/*.md)\nCollection: /Users/syphaoffice1/Mission-control-openclaw-25:02/life (**/*.md)\n\nIndexed: 0 new, 0 updated, 12 unchanged, 0 removed\n\n[2/3] memory (**/*.md)\nCollection: /Users/syphaoffice1/Mission-control-openclaw-25:02/memory (**/*.md)\n\nIndexed: 0 new, 0 updated, 2 unchanged, 0 removed\n\n[3/3] agents (**/*.md)\nCollection: /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents (**/*.md)\n\nIndexed: 0 new, 13 updated, 276 unchanged, 0 removed\nCleaned up 12 orphaned content hash(es)\n\n✓ All collections updated.\n\nRun 'qmd embed' to update embeddings (11 unique hashes need vectors)\n\u001b]9;4;3\u0007\u001b]9;4;1;8\u0007\rIndexing: 1/12        \u001b]9;4;1;17\u0007\rIndexing: 2/12        \u001b]9;4;1;25\u0007\rIndexing: 3/12 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 4/12 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 5/12 ETA: 0s        \u001b]9;4;1;50\u0007\rIndexing: 6/12 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 7/12 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 8/12 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 9/12 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 10/12 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 11/12 ETA: 0s        \u001b]9;4;1;100\u0007\rIndexing: 12/12 ETA: 0s        \u001b]9;4;0\u0007\u001b]9;4;3\u0007\u001b]9;4;1;50\u0007\rIndexing: 1/2        \u001b]9;4;1;100\u0007\rIndexing: 2/2        \u001b]9;4;0\u0007\u001b]9;4;3\u0007\u001b]9;4;1;0\u0007\rIndexing: 1/289        \u001b]9;4;1;1\u0007\rIndexing: 2/289        \u001b]9;4;1;1\u0007\rIndexing: 3/289 ETA: 0s        \u001b]9;4;1;1\u0007\rIndexing: 4/289 ETA: 0s        \u001b]9;4;1;2\u0007\rIndexing: 5/289 ETA: 0s        \u001b]9;4;1;2\u0007\rIndexing: 6/289 ETA: 0s        \u001b]9;4;1;2\u0007\rIndexing: 7/289 ETA: 0s        \u001b]9;4;1;3\u0007\rIndexing: 8/289 ETA: 0s        \u001b]9;4;1;3\u0007\rIndexing: 9/289 ETA: 0s        \u001b]9;4;1;3\u0007\rIndexing: 10/289 ETA: 0s        \u001b]9;4;1;4\u0007\rIndexing: 11/289 ETA: 0s        \u001b]9;4;1;4\u0007\rIndexing: 12/289 ETA: 0s        \u001b]9;4;1;4\u0007\rIndexing: 13/289 ETA: 0s        \u001b]9;4;1;5\u0007\rIndexing: 14/289 ETA: 0s        \u001b]9;4;1;5\u0007\rIndexing: 15/289 ETA: 0s        \u001b]9;4;1;6\u0007\rIndexing: 16/289 ETA: 0s        \u001b]9;4;1;6\u0007\rIndexing: 17/289 ETA: 0s        \u001b]9;4;1;6\u0007\rIndexing: 18/289 ETA: 0s        \u001b]9;4;1;7\u0007\rIndexing: 19/289 ETA: 0s        \u001b]9;4;1;7\u0007\rIndexing: 20/289 ETA: 0s        \u001b]9;4;1;7\u0007\rIndexing: 21/289 ETA: 0s        \u001b]9;4;1;8\u0007\rIndexing: 22/289 ETA: 0s        \u001b]9;4;1;8\u0007\rIndexing: 23/289 ETA: 0s        \u001b]9;4;1;8\u0007\rIndexing: 24/289 ETA: 0s        \u001b]9;4;1;9\u0007\rIndexing: 25/289 ETA: 0s        \u001b]9;4;1;9\u0007\rIndexing: 26/289 ETA: 0s        \u001b]9;4;1;9\u0007\rIndexing: 27/289 ETA: 0s        \u001b]9;4;1;10\u0007\rIndexing: 28/289 ETA: 0s        \u001b]9;4;1;10\u0007\rIndexing: 29/289 ETA: 0s        \u001b]9;4;1;10\u0007\rIndexing: 30/289 ETA: 0s        \u001b]9;4;1;11\u0007\rIndexing: 31/289 ETA: 0s        \u001b]9;4;1;11\u0007\rIndexing: 32/289 ETA: 0s        \u001b]9;4;1;11\u0007\rIndexing: 33/289 ETA: 0s        \u001b]9;4;1;12\u0007\rIndexing: 34/289 ETA: 0s        \u001b]9;4;1;12\u0007\rIndexing: 35/289 ETA: 0s        \u001b]9;4;1;12\u0007\rIndexing: 36/289 ETA: 0s        \u001b]9;4;1;13\u0007\rIndexing: 37/289 ETA: 0s        \u001b]9;4;1;13\u0007\rIndexing: 38/289 ETA: 0s        \u001b]9;4;1;13\u0007\rIndexing: 39/289 ETA: 0s        \u001b]9;4;1;14\u0007\rIndexing: 40/289 ETA: 0s        \u001b]9;4;1;14\u0007\rIndexing: 41/289 ETA: 0s        \u001b]9;4;1;15\u0007\rIndexing: 42/289 ETA: 0s        \u001b]9;4;1;15\u0007\rIndexing: 43/289 ETA: 0s        \u001b]9;4;1;15\u0007\rIndexing: 44/289 ETA: 0s        \u001b]9;4;1;16\u0007\rIndexing: 45/289 ETA: 0s        \u001b]9;4;1;16\u0007\rIndexing: 46/289 ETA: 0s        \u001b]9;4;1;16\u0007\rIndexing: 47/289 ETA: 0s        \u001b]9;4;1;17\u0007\rIndexing: 48/289 ETA: 0s        \u001b]9;4;1;17\u0007\rIndexing: 49/289 ETA: 0s        \u001b]9;4;1;17\u0007\rIndexing: 50/289 ETA: 0s        \u001b]9;4;1;18\u0007\rIndexing: 51/289 ETA: 0s        \u001b]9;4;1;18\u0007\rIndexing: 52/289 ETA: 0s        \u001b]9;4;1;18\u0007\rIndexing: 53/289 ETA: 0s        \u001b]9;4;1;19\u0007\rIndexing: 54/289 ETA: 0s        \u001b]9;4;1;19\u0007\rIndexing: 55/289 ETA: 0s        \u001b]9;4;1;19\u0007\rIndexing: 56/289 ETA: 0s        \u001b]9;4;1;20\u0007\rIndexing: 57/289 ETA: 0s        \u001b]9;4;1;20\u0007\rIndexing: 58/289 ETA: 0s        \u001b]9;4;1;20\u0007\rIndexing: 59/289 ETA: 0s        \u001b]9;4;1;21\u0007\rIndexing: 60/289 ETA: 0s        \u001b]9;4;1;21\u0007\rIndexing: 61/289 ETA: 0s        \u001b]9;4;1;21\u0007\rIndexing: 62/289 ETA: 0s        \u001b]9;4;1;22\u0007\rIndexing: 63/289 ETA: 0s        \u001b]9;4;1;22\u0007\rIndexing: 64/289 ETA: 0s        \u001b]9;4;1;22\u0007\rIndexing: 65/289 ETA: 0s        \u001b]9;4;1;23\u0007\rIndexing: 66/289 ETA: 0s        \u001b]9;4;1;23\u0007\rIndexing: 67/289 ETA: 0s        \u001b]9;4;1;24\u0007\rIndexing: 68/289 ETA: 0s        \u001b]9;4;1;24\u0007\rIndexing: 69/289 ETA: 0s        \u001b]9;4;1;24\u0007\rIndexing: 70/289 ETA: 0s        \u001b]9;4;1;25\u0007\rIndexing: 71/289 ETA: 0s        \u001b]9;4;1;25\u0007\rIndexing: 72/289 ETA: 0s        \u001b]9;4;1;25\u0007\rIndexing: 73/289 ETA: 0s        \u001b]9;4;1;26\u0007\rIndexing: 74/289 ETA: 0s        \u001b]9;4;1;26\u0007\rIndexing: 75/289 ETA: 0s        \u001b]9;4;1;26\u0007\rIndexing: 76/289 ETA: 0s        \u001b]9;4;1;27\u0007\rIndexing: 77/289 ETA: 0s        \u001b]9;4;1;27\u0007\rIndexing: 78/289 ETA: 0s        \u001b]9;4;1;27\u0007\rIndexing: 79/289 ETA: 0s        \u001b]9;4;1;28\u0007\rIndexing: 80/289 ETA: 0s        \u001b]9;4;1;28\u0007\rIndexing: 81/289 ETA: 0s        \u001b]9;4;1;28\u0007\rIndexing: 82/289 ETA: 0s        \u001b]9;4;1;29\u0007\rIndexing: 83/289 ETA: 0s        \u001b]9;4;1;29\u0007\rIndexing: 84/289 ETA: 0s        \u001b]9;4;1;29\u0007\rIndexing: 85/289 ETA: 0s        \u001b]9;4;1;30\u0007\rIndexing: 86/289 ETA: 0s        \u001b]9;4;1;30\u0007\rIndexing: 87/289 ETA: 0s        \u001b]9;4;1;30\u0007\rIndexing: 88/289 ETA: 0s        \u001b]9;4;1;31\u0007\rIndexing: 89/289 ETA: 0s        \u001b]9;4;1;31\u0007\rIndexing: 90/289 ETA: 0s        \u001b]9;4;1;31\u0007\rIndexing: 91/289 ETA: 0s        \u001b]9;4;1;32\u0007\rIndexing: 92/289 ETA: 0s        \u001b]9;4;1;32\u0007\rIndexing: 93/289 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 94/289 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 95/289 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 96/289 ETA: 0s        \u001b]9;4;1;34\u0007\rIndexing: 97/289 ETA: 0s        \u001b]9;4;1;34\u0007\rIndexing: 98/289 ETA: 0s        \u001b]9;4;1;34\u0007\rIndexing: 99/289 ETA: 0s        \u001b]9;4;1;35\u0007\rIndexing: 100/289 ETA: 0s        \u001b]9;4;1;35\u0007\rIndexing: 101/289 ETA: 0s        \u001b]9;4;1;35\u0007\rIndexing: 102/289 ETA: 0s        \u001b]9;4;1;36\u0007\rIndexing: 103/289 ETA: 0s        \u001b]9;4;1;36\u0007\rIndexing: 104/289 ETA: 0s        \u001b]9;4;1;36\u0007\rIndexing: 105/289 ETA: 0s        \u001b]9;4;1;37\u0007\rIndexing: 106/289 ETA: 0s        \u001b]9;4;1;37\u0007\rIndexing: 107/289 ETA: 0s        \u001b]9;4;1;37\u0007\rIndexing: 108/289 ETA: 0s        \u001b]9;4;1;38\u0007\rIndexing: 109/289 ETA: 0s        \u001b]9;4;1;38\u0007\rIndexing: 110/289 ETA: 0s        \u001b]9;4;1;38\u0007\rIndexing: 111/289 ETA: 0s        \u001b]9;4;1;39\u0007\rIndexing: 112/289 ETA: 0s        \u001b]9;4;1;39\u0007\rIndexing: 113/289 ETA: 0s        \u001b]9;4;1;39\u0007\rIndexing: 114/289 ETA: 0s        \u001b]9;4;1;40\u0007\rIndexing: 115/289 ETA: 0s        \u001b]9;4;1;40\u0007\rIndexing: 116/289 ETA: 0s        \u001b]9;4;1;40\u0007\rIndexing: 117/289 ETA: 0s        \u001b]9;4;1;41\u0007\rIndexing: 118/289 ETA: 0s        \u001b]9;4;1;41\u0007\rIndexing: 119/289 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 120/289 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 121/289 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 122/289 ETA: 0s        \u001b]9;4;1;43\u0007\rIndexing: 123/289 ETA: 0s        \u001b]9;4;1;43\u0007\rIndexing: 124/289 ETA: 0s        \u001b]9;4;1;43\u0007\rIndexing: 125/289 ETA: 0s        \u001b]9;4;1;44\u0007\rIndexing: 126/289 ETA: 0s        \u001b]9;4;1;44\u0007\rIndexing: 127/289 ETA: 0s        \u001b]9;4;1;44\u0007\rIndexing: 128/289 ETA: 0s        \u001b]9;4;1;45\u0007\rIndexing: 129/289 ETA: 0s        \u001b]9;4;1;45\u0007\rIndexing: 130/289 ETA: 0s        \u001b]9;4;1;45\u0007\rIndexing: 131/289 ETA: 0s        \u001b]9;4;1;46\u0007\rIndexing: 132/289 ETA: 0s        \u001b]9;4;1;46\u0007\rIndexing: 133/289 ETA: 0s        \u001b]9;4;1;46\u0007\rIndexing: 134/289 ETA: 0s        \u001b]9;4;1;47\u0007\rIndexing: 135/289 ETA: 0s        \u001b]9;4;1;47\u0007\rIndexing: 136/289 ETA: 0s        \u001b]9;4;1;47\u0007\rIndexing: 137/289 ETA: 0s        \u001b]9;4;1;48\u0007\rIndexing: 138/289 ETA: 0s        \u001b]9;4;1;48\u0007\rIndexing: 139/289 ETA: 0s        \u001b]9;4;1;48\u0007\rIndexing: 140/289 ETA: 0s        \u001b]9;4;1;49\u0007\rIndexing: 141/289 ETA: 0s        \u001b]9;4;1;49\u0007\rIndexing: 142/289 ETA: 0s        \u001b]9;4;1;49\u0007\rIndexing: 143/289 ETA: 0s        \u001b]9;4;1;50\u0007\rIndexing: 144/289 ETA: 0s        \u001b]9;4;1;50\u0007\rIndexing: 145/289 ETA: 0s        \u001b]9;4;1;51\u0007\rIndexing: 146/289 ETA: 0s        \u001b]9;4;1;51\u0007\rIndexing: 147/289 ETA: 0s        \u001b]9;4;1;51\u0007\rIndexing: 148/289 ETA: 0s        \u001b]9;4;1;52\u0007\rIndexing: 149/289 ETA: 0s        \u001b]9;4;1;52\u0007\rIndexing: 150/289 ETA: 0s        \u001b]9;4;1;52\u0007\rIndexing: 151/289 ETA: 0s        \u001b]9;4;1;53\u0007\rIndexing: 152/289 ETA: 0s        \u001b]9;4;1;53\u0007\rIndexing: 153/289 ETA: 0s        \u001b]9;4;1;53\u0007\rIndexing: 154/289 ETA: 0s        \u001b]9;4;1;54\u0007\rIndexing: 155/289 ETA: 0s        \u001b]9;4;1;54\u0007\rIndexing: 156/289 ETA: 0s        \u001b]9;4;1;54\u0007\rIndexing: 157/289 ETA: 0s        \u001b]9;4;1;55\u0007\rIndexing: 158/289 ETA: 0s        \u001b]9;4;1;55\u0007\rIndexing: 159/289 ETA: 0s        \u001b]9;4;1;55\u0007\rIndexing: 160/289 ETA: 0s        \u001b]9;4;1;56\u0007\rIndexing: 161/289 ETA: 0s        \u001b]9;4;1;56\u0007\rIndexing: 162/289 ETA: 0s        \u001b]9;4;1;56\u0007\rIndexing: 163/289 ETA: 0s        \u001b]9;4;1;57\u0007\rIndexing: 164/289 ETA: 0s        \u001b]9;4;1;57\u0007\rIndexing: 165/289 ETA: 0s        \u001b]9;4;1;57\u0007\rIndexing: 166/289 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 167/289 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 168/289 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 169/289 ETA: 0s        \u001b]9;4;1;59\u0007\rIndexing: 170/289 ETA: 0s        \u001b]9;4;1;59\u0007\rIndexing: 171/289 ETA: 0s        \u001b]9;4;1;60\u0007\rIndexing: 172/289 ETA: 0s        \u001b]9;4;1;60\u0007\rIndexing: 173/289 ETA: 0s        \u001b]9;4;1;60\u0007\rIndexing: 174/289 ETA: 0s        \u001b]9;4;1;61\u0007\rIndexing: 175/289 ETA: 0s        \u001b]9;4;1;61\u0007\rIndexing: 176/289 ETA: 0s        \u001b]9;4;1;61\u0007\rIndexing: 177/289 ETA: 0s        \u001b]9;4;1;62\u0007\rIndexing: 178/289 ETA: 0s        \u001b]9;4;1;62\u0007\rIndexing: 179/289 ETA: 0s        \u001b]9;4;1;62\u0007\rIndexing: 180/289 ETA: 0s        \u001b]9;4;1;63\u0007\rIndexing: 181/289 ETA: 0s        \u001b]9;4;1;63\u0007\rIndexing: 182/289 ETA: 0s        \u001b]9;4;1;63\u0007\rIndexing: 183/289 ETA: 0s        \u001b]9;4;1;64\u0007\rIndexing: 184/289 ETA: 0s        \u001b]9;4;1;64\u0007\rIndexing: 185/289 ETA: 0s        \u001b]9;4;1;64\u0007\rIndexing: 186/289 ETA: 0s        \u001b]9;4;1;65\u0007\rIndexing: 187/289 ETA: 0s        \u001b]9;4;1;65\u0007\rIndexing: 188/289 ETA: 0s        \u001b]9;4;1;65\u0007\rIndexing: 189/289 ETA: 0s        \u001b]9;4;1;66\u0007\rIndexing: 190/289 ETA: 0s        \u001b]9;4;1;66\u0007\rIndexing: 191/289 ETA: 0s        \u001b]9;4;1;66\u0007\rIndexing: 192/289 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 193/289 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 194/289 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 195/289 ETA: 0s        \u001b]9;4;1;68\u0007\rIndexing: 196/289 ETA: 0s        \u001b]9;4;1;68\u0007\rIndexing: 197/289 ETA: 0s        \u001b]9;4;1;69\u0007\rIndexing: 198/289 ETA: 0s        \u001b]9;4;1;69\u0007\rIndexing: 199/289 ETA: 0s        \u001b]9;4;1;69\u0007\rIndexing: 200/289 ETA: 0s        \u001b]9;4;1;70\u0007\rIndexing: 201/289 ETA: 0s        \u001b]9;4;1;70\u0007\rIndexing: 202/289 ETA: 0s        \u001b]9;4;1;70\u0007\rIndexing: 203/289 ETA: 0s        \u001b]9;4;1;71\u0007\rIndexing: 204/289 ETA: 0s        \u001b]9;4;1;71\u0007\rIndexing: 205/289 ETA: 0s        \u001b]9;4;1;71\u0007\rIndexing: 206/289 ETA: 0s        \u001b]9;4;1;72\u0007\rIndexing: 207/289 ETA: 0s        \u001b]9;4;1;72\u0007\rIndexing: 208/289 ETA: 0s        \u001b]9;4;1;72\u0007\rIndexing: 209/289 ETA: 0s        \u001b]9;4;1;73\u0007\rIndexing: 210/289 ETA: 0s        \u001b]9;4;1;73\u0007\rIndexing: 211/289 ETA: 0s        \u001b]9;4;1;73\u0007\rIndexing: 212/289 ETA: 0s        \u001b]9;4;1;74\u0007\rIndexing: 213/289 ETA: 0s        \u001b]9;4;1;74\u0007\rIndexing: 214/289 ETA: 0s        \u001b]9;4;1;74\u0007\rIndexing: 215/289 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 216/289 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 217/289 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 218/289 ETA: 0s        \u001b]9;4;1;76\u0007\rIndexing: 219/289 ETA: 0s        \u001b]9;4;1;76\u0007\rIndexing: 220/289 ETA: 0s        \u001b]9;4;1;76\u0007\rIndexing: 221/289 ETA: 0s        \u001b]9;4;1;77\u0007\rIndexing: 222/289 ETA: 0s        \u001b]9;4;1;77\u0007\rIndexing: 223/289 ETA: 0s        \u001b]9;4;1;78\u0007\rIndexing: 224/289 ETA: 0s        \u001b]9;4;1;78\u0007\rIndexing: 225/289 ETA: 0s        \u001b]9;4;1;78\u0007\rIndexing: 226/289 ETA: 0s        \u001b]9;4;1;79\u0007\rIndexing: 227/289 ETA: 0s        \u001b]9;4;1;79\u0007\rIndexing: 228/289 ETA: 0s        \u001b]9;4;1;79\u0007\rIndexing: 229/289 ETA: 0s        \u001b]9;4;1;80\u0007\rIndexing: 230/289 ETA: 0s        \u001b]9;4;1;80\u0007\rIndexing: 231/289 ETA: 0s        \u001b]9;4;1;80\u0007\rIndexing: 232/289 ETA: 0s        \u001b]9;4;1;81\u0007\rIndexing: 233/289 ETA: 0s        \u001b]9;4;1;81\u0007\rIndexing: 234/289 ETA: 0s        \u001b]9;4;1;81\u0007\rIndexing: 235/289 ETA: 0s        \u001b]9;4;1;82\u0007\rIndexing: 236/289 ETA: 0s        \u001b]9;4;1;82\u0007\rIndexing: 237/289 ETA: 0s        \u001b]9;4;1;82\u0007\rIndexing: 238/289 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 239/289 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 240/289 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 241/289 ETA: 0s        \u001b]9;4;1;84\u0007\rIndexing: 242/289 ETA: 0s        \u001b]9;4;1;84\u0007\rIndexing: 243/289 ETA: 0s        \u001b]9;4;1;84\u0007\rIndexing: 244/289 ETA: 0s        \u001b]9;4;1;85\u0007\rIndexing: 245/289 ETA: 0s        \u001b]9;4;1;85\u0007\rIndexing: 246/289 ETA: 0s        \u001b]9;4;1;85\u0007\rIndexing: 247/289 ETA: 0s        \u001b]9;4;1;86\u0007\rIndexing: 248/289 ETA: 0s        \u001b]9;4;1;86\u0007\rIndexing: 249/289 ETA: 0s        \u001b]9;4;1;87\u0007\rIndexing: 250/289 ETA: 0s        \u001b]9;4;1;87\u0007\rIndexing: 251/289 ETA: 0s        \u001b]9;4;1;87\u0007\rIndexing: 252/289 ETA: 0s        \u001b]9;4;1;88\u0007\rIndexing: 253/289 ETA: 0s        \u001b]9;4;1;88\u0007\rIndexing: 254/289 ETA: 0s        \u001b]9;4;1;88\u0007\rIndexing: 255/289 ETA: 0s        \u001b]9;4;1;89\u0007\rIndexing: 256/289 ETA: 0s        \u001b]9;4;1;89\u0007\rIndexing: 257/289 ETA: 0s        \u001b]9;4;1;89\u0007\rIndexing: 258/289 ETA: 0s        \u001b]9;4;1;90\u0007\rIndexing: 259/289 ETA: 0s        \u001b]9;4;1;90\u0007\rIndexing: 260/289 ETA: 0s        \u001b]9;4;1;90\u0007\rIndexing: 261/289 ETA: 0s        \u001b]9;4;1;91\u0007\rIndexing: 262/289 ETA: 0s        \u001b]9;4;1;91\u0007\rIndexing: 263/289 ETA: 0s        \u001b]9;4;1;91\u0007\rIndexing: 264/289 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 265/289 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 266/289 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 267/289 ETA: 0s        \u001b]9;4;1;93\u0007\rIndexing: 268/289 ETA: 0s        \u001b]9;4;1;93\u0007\rIndexing: 269/289 ETA: 0s        \u001b]9;4;1;93\u0007\rIndexing: 270/289 ETA: 0s        \u001b]9;4;1;94\u0007\rIndexing: 271/289 ETA: 0s        \u001b]9;4;1;94\u0007\rIndexing: 272/289 ETA: 0s        \u001b]9;4;1;94\u0007\rIndexing: 273/289 ETA: 0s        \u001b]9;4;1;95\u0007\rIndexing: 274/289 ETA: 0s        \u001b]9;4;1;95\u0007\rIndexing: 275/289 ETA: 0s        \u001b]9;4;1;96\u0007\rIndexing: 276/289 ETA: 0s        \u001b]9;4;1;96\u0007\rIndexing: 277/289 ETA: 0s        \u001b]9;4;1;96\u0007\rIndexing: 278/289 ETA: 0s        \u001b]9;4;1;97\u0007\rIndexing: 279/289 ETA: 0s        \u001b]9;4;1;97\u0007\rIndexing: 280/289 ETA: 0s        \u001b]9;4;1;97\u0007\rIndexing: 281/289 ETA: 0s        \u001b]9;4;1;98\u0007\rIndexing: 282/289 ETA: 0s        \u001b]9;4;1;98\u0007\rIndexing: 283/289 ETA: 0s        \u001b]9;4;1;98\u0007\rIndexing: 284/289 ETA: 0s        \u001b]9;4;1;99\u0007\rIndexing: 285/289 ETA: 0s        \u001b]9;4;1;99\u0007\rIndexing: 286/289 ETA: 0s        \u001b]9;4;1;99\u0007\rIndexing: 287/289 ETA: 0s        \u001b]9;4;1;100\u0007\rIndexing: 288/289 ETA: 0s        \u001b]9;4;1;100\u0007\rIndexing: 289/289 ETA: 0s        \u001b]9;4;0\u0007"
+  },
+  "qmdEmbed": {
+    "ok": false,
+    "skipped": true,
+    "reason": "disabled"
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772785273940,
+    "lastSynthesisAt": 1772785169478,
+    "lastQmdUpdateAt": 1772785274889,
+    "mode": "startup",
+    "bootstrapAt": 1772785266646,
+    "qmdAvailable": true,
+    "updatedAt": 1772785274889,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/1045407142",
+          "changed": false,
+          "hot": 4,
+          "warm": 0,
+          "cold": 0,
+          "facts": 4
+        },
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 834,
+          "warm": 0,
+          "cold": 0,
+          "facts": 834
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 290,
+          "warm": 0,
+          "cold": 0,
+          "facts": 290
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 273,
+          "warm": 0,
+          "cold": 0,
+          "facts": 273
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        },
+        {
+          "entityKey": "resources/pkm-supersession-test",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 10,
+      "changedEntities": 5,
+      "totalFacts": 2027
+    },
+    "lastExtractMode": "startup",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 5,
+      "totalSquadMessages": 1,
+      "totalEntities": 8,
+      "totalFacts": 1187,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 10,
+      "updatedFacts": 1177,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "lastQmdEmbedAt": 1772785197479
+  },
+  "metrics": {
+    "version": 1,
+    "updatedAt": 1772785273941,
+    "runs": 19,
+    "entities": 10,
+    "facts": 2052,
+    "lastRun": {
+      "at": 1772785273941,
+      "mode": "startup",
+      "shadowMode": true,
+      "extractedEntities": 8,
+      "extractedFacts": 1187,
+      "createdFacts": 10,
+      "updatedFacts": 1177,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "duplicateFactsSkipped": 0,
+    "bootstrapAt": 1772785266647,
+    "lastSynthesis": {
+      "at": 1772785169479,
+      "mode": "manual",
+      "changedEntities": 5,
+      "totalEntities": 10
+    },
+    "createdAt": 1772779033181
+  },
+  "lastExtractStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 5,
+    "totalSquadMessages": 1,
+    "totalEntities": 8,
+    "totalFacts": 1187,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06",
+    "createdFacts": 10,
+    "updatedFacts": 1177,
+    "supersededFacts": 0,
+    "skippedFacts": 0
+  }
+}
+{
+  "at": "2026-03-06T08:21:15.295Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-06T08:21:15.383Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-06T08:21:15.466Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-06T08:21:27.336Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-06T07:17:19.288Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=5
+[pkm-bootstrap] complete {
+  "key": "primary",
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "enabled": true,
+  "qmdBin": "/opt/homebrew/bin/qmd",
+  "qmdCollections": [
+    "life",
+    "memory",
+    "agents"
+  ],
+  "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+  "qmdAvailable": true,
+  "qmdSetup": {
+    "available": true,
+    "results": [
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "exists"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "exists"
+      },
+      {
+        "changed": false,
+        "skipped": false,
+        "reason": "exists"
+      }
+    ]
+  },
+  "lastBootstrapAt": 1772785466875,
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772785273940,
+    "lastSynthesisAt": 1772785169478,
+    "lastQmdUpdateAt": 1772785274889,
+    "mode": "startup",
+    "bootstrapAt": 1772785466875,
+    "qmdAvailable": true,
+    "updatedAt": 1772785466875,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/1045407142",
+          "changed": false,
+          "hot": 4,
+          "warm": 0,
+          "cold": 0,
+          "facts": 4
+        },
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 834,
+          "warm": 0,
+          "cold": 0,
+          "facts": 834
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 290,
+          "warm": 0,
+          "cold": 0,
+          "facts": 290
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 273,
+          "warm": 0,
+          "cold": 0,
+          "facts": 273
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        },
+        {
+          "entityKey": "resources/pkm-supersession-test",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 10,
+      "changedEntities": 5,
+      "totalFacts": 2027
+    },
+    "lastExtractMode": "startup",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 5,
+      "totalSquadMessages": 1,
+      "totalEntities": 8,
+      "totalFacts": 1187,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 10,
+      "updatedFacts": 1177,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "lastQmdEmbedAt": 1772785197479
+  },
+  "bootstrapReport": {
+    "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+    "tacitFile": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents/_shared/TACIT_KNOWLEDGE.md",
+    "qmdAvailable": true,
+    "qmdSetup": {
+      "available": true,
+      "results": [
+        {
+          "changed": false,
+          "skipped": false,
+          "reason": "exists"
+        },
+        {
+          "changed": false,
+          "skipped": false,
+          "reason": "exists"
+        },
+        {
+          "changed": false,
+          "skipped": false,
+          "reason": "exists"
+        }
+      ]
+    }
+  }
+}
+[pkm-extract] complete {
+  "key": "primary",
+  "mode": "startup",
+  "paraRoot": "/Users/syphaoffice1/Mission-control-openclaw-25:02/life",
+  "enabled": true,
+  "shadowMode": true,
+  "lookbackDays": 1,
+  "entityMentionThreshold": 3,
+  "createdFacts": 20,
+  "updatedFacts": 1167,
+  "supersededFacts": 0,
+  "skippedFacts": 0,
+  "extractedStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 5,
+    "totalSquadMessages": 1,
+    "totalEntities": 8,
+    "totalFacts": 1187,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06"
+  },
+  "paraCounts": {
+    "entities": 10,
+    "facts": 2072
+  },
+  "qmdAvailable": true,
+  "qmdBin": "/opt/homebrew/bin/qmd",
+  "qmdCollections": [
+    "life",
+    "memory",
+    "agents"
+  ],
+  "entities": 10,
+  "facts": 2072,
+  "lastExtractAt": 1772785473630,
+  "lastQmdUpdateAt": 1772785474499,
+  "lastQmdEmbedAt": 1772785197479,
+  "qmdUpdate": {
+    "ok": true,
+    "code": 0,
+    "output": "Updating 3 collection(s)...\n\n[1/3] life (**/*.md)\nCollection: /Users/syphaoffice1/Mission-control-openclaw-25:02/life (**/*.md)\n\nIndexed: 0 new, 0 updated, 12 unchanged, 0 removed\n\n[2/3] memory (**/*.md)\nCollection: /Users/syphaoffice1/Mission-control-openclaw-25:02/memory (**/*.md)\n\nIndexed: 0 new, 0 updated, 2 unchanged, 0 removed\n\n[3/3] agents (**/*.md)\nCollection: /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/agents (**/*.md)\n\nIndexed: 0 new, 4 updated, 285 unchanged, 0 removed\nCleaned up 3 orphaned content hash(es)\n\n✓ All collections updated.\n\nRun 'qmd embed' to update embeddings (11 unique hashes need vectors)\n\u001b]9;4;3\u0007\u001b]9;4;1;8\u0007\rIndexing: 1/12        \u001b]9;4;1;17\u0007\rIndexing: 2/12        \u001b]9;4;1;25\u0007\rIndexing: 3/12 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 4/12 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 5/12 ETA: 0s        \u001b]9;4;1;50\u0007\rIndexing: 6/12 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 7/12 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 8/12 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 9/12 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 10/12 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 11/12 ETA: 0s        \u001b]9;4;1;100\u0007\rIndexing: 12/12 ETA: 0s        \u001b]9;4;0\u0007\u001b]9;4;3\u0007\u001b]9;4;1;50\u0007\rIndexing: 1/2        \u001b]9;4;1;100\u0007\rIndexing: 2/2        \u001b]9;4;0\u0007\u001b]9;4;3\u0007\u001b]9;4;1;0\u0007\rIndexing: 1/289        \u001b]9;4;1;1\u0007\rIndexing: 2/289        \u001b]9;4;1;1\u0007\rIndexing: 3/289 ETA: 0s        \u001b]9;4;1;1\u0007\rIndexing: 4/289 ETA: 0s        \u001b]9;4;1;2\u0007\rIndexing: 5/289 ETA: 0s        \u001b]9;4;1;2\u0007\rIndexing: 6/289 ETA: 0s        \u001b]9;4;1;2\u0007\rIndexing: 7/289 ETA: 0s        \u001b]9;4;1;3\u0007\rIndexing: 8/289 ETA: 0s        \u001b]9;4;1;3\u0007\rIndexing: 9/289 ETA: 0s        \u001b]9;4;1;3\u0007\rIndexing: 10/289 ETA: 0s        \u001b]9;4;1;4\u0007\rIndexing: 11/289 ETA: 0s        \u001b]9;4;1;4\u0007\rIndexing: 12/289 ETA: 0s        \u001b]9;4;1;4\u0007\rIndexing: 13/289 ETA: 0s        \u001b]9;4;1;5\u0007\rIndexing: 14/289 ETA: 0s        \u001b]9;4;1;5\u0007\rIndexing: 15/289 ETA: 0s        \u001b]9;4;1;6\u0007\rIndexing: 16/289 ETA: 0s        \u001b]9;4;1;6\u0007\rIndexing: 17/289 ETA: 0s        \u001b]9;4;1;6\u0007\rIndexing: 18/289 ETA: 0s        \u001b]9;4;1;7\u0007\rIndexing: 19/289 ETA: 0s        \u001b]9;4;1;7\u0007\rIndexing: 20/289 ETA: 0s        \u001b]9;4;1;7\u0007\rIndexing: 21/289 ETA: 0s        \u001b]9;4;1;8\u0007\rIndexing: 22/289 ETA: 0s        \u001b]9;4;1;8\u0007\rIndexing: 23/289 ETA: 0s        \u001b]9;4;1;8\u0007\rIndexing: 24/289 ETA: 0s        \u001b]9;4;1;9\u0007\rIndexing: 25/289 ETA: 0s        \u001b]9;4;1;9\u0007\rIndexing: 26/289 ETA: 0s        \u001b]9;4;1;9\u0007\rIndexing: 27/289 ETA: 0s        \u001b]9;4;1;10\u0007\rIndexing: 28/289 ETA: 0s        \u001b]9;4;1;10\u0007\rIndexing: 29/289 ETA: 0s        \u001b]9;4;1;10\u0007\rIndexing: 30/289 ETA: 0s        \u001b]9;4;1;11\u0007\rIndexing: 31/289 ETA: 0s        \u001b]9;4;1;11\u0007\rIndexing: 32/289 ETA: 0s        \u001b]9;4;1;11\u0007\rIndexing: 33/289 ETA: 0s        \u001b]9;4;1;12\u0007\rIndexing: 34/289 ETA: 0s        \u001b]9;4;1;12\u0007\rIndexing: 35/289 ETA: 0s        \u001b]9;4;1;12\u0007\rIndexing: 36/289 ETA: 0s        \u001b]9;4;1;13\u0007\rIndexing: 37/289 ETA: 0s        \u001b]9;4;1;13\u0007\rIndexing: 38/289 ETA: 0s        \u001b]9;4;1;13\u0007\rIndexing: 39/289 ETA: 0s        \u001b]9;4;1;14\u0007\rIndexing: 40/289 ETA: 0s        \u001b]9;4;1;14\u0007\rIndexing: 41/289 ETA: 0s        \u001b]9;4;1;15\u0007\rIndexing: 42/289 ETA: 0s        \u001b]9;4;1;15\u0007\rIndexing: 43/289 ETA: 0s        \u001b]9;4;1;15\u0007\rIndexing: 44/289 ETA: 0s        \u001b]9;4;1;16\u0007\rIndexing: 45/289 ETA: 0s        \u001b]9;4;1;16\u0007\rIndexing: 46/289 ETA: 0s        \u001b]9;4;1;16\u0007\rIndexing: 47/289 ETA: 0s        \u001b]9;4;1;17\u0007\rIndexing: 48/289 ETA: 0s        \u001b]9;4;1;17\u0007\rIndexing: 49/289 ETA: 0s        \u001b]9;4;1;17\u0007\rIndexing: 50/289 ETA: 0s        \u001b]9;4;1;18\u0007\rIndexing: 51/289 ETA: 0s        \u001b]9;4;1;18\u0007\rIndexing: 52/289 ETA: 0s        \u001b]9;4;1;18\u0007\rIndexing: 53/289 ETA: 0s        \u001b]9;4;1;19\u0007\rIndexing: 54/289 ETA: 0s        \u001b]9;4;1;19\u0007\rIndexing: 55/289 ETA: 0s        \u001b]9;4;1;19\u0007\rIndexing: 56/289 ETA: 0s        \u001b]9;4;1;20\u0007\rIndexing: 57/289 ETA: 0s        \u001b]9;4;1;20\u0007\rIndexing: 58/289 ETA: 0s        \u001b]9;4;1;20\u0007\rIndexing: 59/289 ETA: 0s        \u001b]9;4;1;21\u0007\rIndexing: 60/289 ETA: 0s        \u001b]9;4;1;21\u0007\rIndexing: 61/289 ETA: 0s        \u001b]9;4;1;21\u0007\rIndexing: 62/289 ETA: 0s        \u001b]9;4;1;22\u0007\rIndexing: 63/289 ETA: 0s        \u001b]9;4;1;22\u0007\rIndexing: 64/289 ETA: 0s        \u001b]9;4;1;22\u0007\rIndexing: 65/289 ETA: 0s        \u001b]9;4;1;23\u0007\rIndexing: 66/289 ETA: 0s        \u001b]9;4;1;23\u0007\rIndexing: 67/289 ETA: 0s        \u001b]9;4;1;24\u0007\rIndexing: 68/289 ETA: 0s        \u001b]9;4;1;24\u0007\rIndexing: 69/289 ETA: 0s        \u001b]9;4;1;24\u0007\rIndexing: 70/289 ETA: 0s        \u001b]9;4;1;25\u0007\rIndexing: 71/289 ETA: 0s        \u001b]9;4;1;25\u0007\rIndexing: 72/289 ETA: 0s        \u001b]9;4;1;25\u0007\rIndexing: 73/289 ETA: 0s        \u001b]9;4;1;26\u0007\rIndexing: 74/289 ETA: 0s        \u001b]9;4;1;26\u0007\rIndexing: 75/289 ETA: 0s        \u001b]9;4;1;26\u0007\rIndexing: 76/289 ETA: 0s        \u001b]9;4;1;27\u0007\rIndexing: 77/289 ETA: 0s        \u001b]9;4;1;27\u0007\rIndexing: 78/289 ETA: 0s        \u001b]9;4;1;27\u0007\rIndexing: 79/289 ETA: 0s        \u001b]9;4;1;28\u0007\rIndexing: 80/289 ETA: 0s        \u001b]9;4;1;28\u0007\rIndexing: 81/289 ETA: 0s        \u001b]9;4;1;28\u0007\rIndexing: 82/289 ETA: 0s        \u001b]9;4;1;29\u0007\rIndexing: 83/289 ETA: 0s        \u001b]9;4;1;29\u0007\rIndexing: 84/289 ETA: 0s        \u001b]9;4;1;29\u0007\rIndexing: 85/289 ETA: 0s        \u001b]9;4;1;30\u0007\rIndexing: 86/289 ETA: 0s        \u001b]9;4;1;30\u0007\rIndexing: 87/289 ETA: 0s        \u001b]9;4;1;30\u0007\rIndexing: 88/289 ETA: 0s        \u001b]9;4;1;31\u0007\rIndexing: 89/289 ETA: 0s        \u001b]9;4;1;31\u0007\rIndexing: 90/289 ETA: 0s        \u001b]9;4;1;31\u0007\rIndexing: 91/289 ETA: 0s        \u001b]9;4;1;32\u0007\rIndexing: 92/289 ETA: 0s        \u001b]9;4;1;32\u0007\rIndexing: 93/289 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 94/289 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 95/289 ETA: 0s        \u001b]9;4;1;33\u0007\rIndexing: 96/289 ETA: 0s        \u001b]9;4;1;34\u0007\rIndexing: 97/289 ETA: 0s        \u001b]9;4;1;34\u0007\rIndexing: 98/289 ETA: 0s        \u001b]9;4;1;34\u0007\rIndexing: 99/289 ETA: 0s        \u001b]9;4;1;35\u0007\rIndexing: 100/289 ETA: 0s        \u001b]9;4;1;35\u0007\rIndexing: 101/289 ETA: 0s        \u001b]9;4;1;35\u0007\rIndexing: 102/289 ETA: 0s        \u001b]9;4;1;36\u0007\rIndexing: 103/289 ETA: 0s        \u001b]9;4;1;36\u0007\rIndexing: 104/289 ETA: 0s        \u001b]9;4;1;36\u0007\rIndexing: 105/289 ETA: 0s        \u001b]9;4;1;37\u0007\rIndexing: 106/289 ETA: 0s        \u001b]9;4;1;37\u0007\rIndexing: 107/289 ETA: 0s        \u001b]9;4;1;37\u0007\rIndexing: 108/289 ETA: 0s        \u001b]9;4;1;38\u0007\rIndexing: 109/289 ETA: 0s        \u001b]9;4;1;38\u0007\rIndexing: 110/289 ETA: 0s        \u001b]9;4;1;38\u0007\rIndexing: 111/289 ETA: 0s        \u001b]9;4;1;39\u0007\rIndexing: 112/289 ETA: 0s        \u001b]9;4;1;39\u0007\rIndexing: 113/289 ETA: 0s        \u001b]9;4;1;39\u0007\rIndexing: 114/289 ETA: 0s        \u001b]9;4;1;40\u0007\rIndexing: 115/289 ETA: 0s        \u001b]9;4;1;40\u0007\rIndexing: 116/289 ETA: 0s        \u001b]9;4;1;40\u0007\rIndexing: 117/289 ETA: 0s        \u001b]9;4;1;41\u0007\rIndexing: 118/289 ETA: 0s        \u001b]9;4;1;41\u0007\rIndexing: 119/289 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 120/289 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 121/289 ETA: 0s        \u001b]9;4;1;42\u0007\rIndexing: 122/289 ETA: 0s        \u001b]9;4;1;43\u0007\rIndexing: 123/289 ETA: 0s        \u001b]9;4;1;43\u0007\rIndexing: 124/289 ETA: 0s        \u001b]9;4;1;43\u0007\rIndexing: 125/289 ETA: 0s        \u001b]9;4;1;44\u0007\rIndexing: 126/289 ETA: 0s        \u001b]9;4;1;44\u0007\rIndexing: 127/289 ETA: 0s        \u001b]9;4;1;44\u0007\rIndexing: 128/289 ETA: 0s        \u001b]9;4;1;45\u0007\rIndexing: 129/289 ETA: 0s        \u001b]9;4;1;45\u0007\rIndexing: 130/289 ETA: 0s        \u001b]9;4;1;45\u0007\rIndexing: 131/289 ETA: 0s        \u001b]9;4;1;46\u0007\rIndexing: 132/289 ETA: 0s        \u001b]9;4;1;46\u0007\rIndexing: 133/289 ETA: 0s        \u001b]9;4;1;46\u0007\rIndexing: 134/289 ETA: 0s        \u001b]9;4;1;47\u0007\rIndexing: 135/289 ETA: 0s        \u001b]9;4;1;47\u0007\rIndexing: 136/289 ETA: 0s        \u001b]9;4;1;47\u0007\rIndexing: 137/289 ETA: 0s        \u001b]9;4;1;48\u0007\rIndexing: 138/289 ETA: 0s        \u001b]9;4;1;48\u0007\rIndexing: 139/289 ETA: 0s        \u001b]9;4;1;48\u0007\rIndexing: 140/289 ETA: 0s        \u001b]9;4;1;49\u0007\rIndexing: 141/289 ETA: 0s        \u001b]9;4;1;49\u0007\rIndexing: 142/289 ETA: 0s        \u001b]9;4;1;49\u0007\rIndexing: 143/289 ETA: 0s        \u001b]9;4;1;50\u0007\rIndexing: 144/289 ETA: 0s        \u001b]9;4;1;50\u0007\rIndexing: 145/289 ETA: 0s        \u001b]9;4;1;51\u0007\rIndexing: 146/289 ETA: 0s        \u001b]9;4;1;51\u0007\rIndexing: 147/289 ETA: 0s        \u001b]9;4;1;51\u0007\rIndexing: 148/289 ETA: 0s        \u001b]9;4;1;52\u0007\rIndexing: 149/289 ETA: 0s        \u001b]9;4;1;52\u0007\rIndexing: 150/289 ETA: 0s        \u001b]9;4;1;52\u0007\rIndexing: 151/289 ETA: 0s        \u001b]9;4;1;53\u0007\rIndexing: 152/289 ETA: 0s        \u001b]9;4;1;53\u0007\rIndexing: 153/289 ETA: 0s        \u001b]9;4;1;53\u0007\rIndexing: 154/289 ETA: 0s        \u001b]9;4;1;54\u0007\rIndexing: 155/289 ETA: 0s        \u001b]9;4;1;54\u0007\rIndexing: 156/289 ETA: 0s        \u001b]9;4;1;54\u0007\rIndexing: 157/289 ETA: 0s        \u001b]9;4;1;55\u0007\rIndexing: 158/289 ETA: 0s        \u001b]9;4;1;55\u0007\rIndexing: 159/289 ETA: 0s        \u001b]9;4;1;55\u0007\rIndexing: 160/289 ETA: 0s        \u001b]9;4;1;56\u0007\rIndexing: 161/289 ETA: 0s        \u001b]9;4;1;56\u0007\rIndexing: 162/289 ETA: 0s        \u001b]9;4;1;56\u0007\rIndexing: 163/289 ETA: 0s        \u001b]9;4;1;57\u0007\rIndexing: 164/289 ETA: 0s        \u001b]9;4;1;57\u0007\rIndexing: 165/289 ETA: 0s        \u001b]9;4;1;57\u0007\rIndexing: 166/289 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 167/289 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 168/289 ETA: 0s        \u001b]9;4;1;58\u0007\rIndexing: 169/289 ETA: 0s        \u001b]9;4;1;59\u0007\rIndexing: 170/289 ETA: 0s        \u001b]9;4;1;59\u0007\rIndexing: 171/289 ETA: 0s        \u001b]9;4;1;60\u0007\rIndexing: 172/289 ETA: 0s        \u001b]9;4;1;60\u0007\rIndexing: 173/289 ETA: 0s        \u001b]9;4;1;60\u0007\rIndexing: 174/289 ETA: 0s        \u001b]9;4;1;61\u0007\rIndexing: 175/289 ETA: 0s        \u001b]9;4;1;61\u0007\rIndexing: 176/289 ETA: 0s        \u001b]9;4;1;61\u0007\rIndexing: 177/289 ETA: 0s        \u001b]9;4;1;62\u0007\rIndexing: 178/289 ETA: 0s        \u001b]9;4;1;62\u0007\rIndexing: 179/289 ETA: 0s        \u001b]9;4;1;62\u0007\rIndexing: 180/289 ETA: 0s        \u001b]9;4;1;63\u0007\rIndexing: 181/289 ETA: 0s        \u001b]9;4;1;63\u0007\rIndexing: 182/289 ETA: 0s        \u001b]9;4;1;63\u0007\rIndexing: 183/289 ETA: 0s        \u001b]9;4;1;64\u0007\rIndexing: 184/289 ETA: 0s        \u001b]9;4;1;64\u0007\rIndexing: 185/289 ETA: 0s        \u001b]9;4;1;64\u0007\rIndexing: 186/289 ETA: 0s        \u001b]9;4;1;65\u0007\rIndexing: 187/289 ETA: 0s        \u001b]9;4;1;65\u0007\rIndexing: 188/289 ETA: 0s        \u001b]9;4;1;65\u0007\rIndexing: 189/289 ETA: 0s        \u001b]9;4;1;66\u0007\rIndexing: 190/289 ETA: 0s        \u001b]9;4;1;66\u0007\rIndexing: 191/289 ETA: 0s        \u001b]9;4;1;66\u0007\rIndexing: 192/289 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 193/289 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 194/289 ETA: 0s        \u001b]9;4;1;67\u0007\rIndexing: 195/289 ETA: 0s        \u001b]9;4;1;68\u0007\rIndexing: 196/289 ETA: 0s        \u001b]9;4;1;68\u0007\rIndexing: 197/289 ETA: 0s        \u001b]9;4;1;69\u0007\rIndexing: 198/289 ETA: 0s        \u001b]9;4;1;69\u0007\rIndexing: 199/289 ETA: 0s        \u001b]9;4;1;69\u0007\rIndexing: 200/289 ETA: 0s        \u001b]9;4;1;70\u0007\rIndexing: 201/289 ETA: 0s        \u001b]9;4;1;70\u0007\rIndexing: 202/289 ETA: 0s        \u001b]9;4;1;70\u0007\rIndexing: 203/289 ETA: 0s        \u001b]9;4;1;71\u0007\rIndexing: 204/289 ETA: 0s        \u001b]9;4;1;71\u0007\rIndexing: 205/289 ETA: 0s        \u001b]9;4;1;71\u0007\rIndexing: 206/289 ETA: 0s        \u001b]9;4;1;72\u0007\rIndexing: 207/289 ETA: 0s        \u001b]9;4;1;72\u0007\rIndexing: 208/289 ETA: 0s        \u001b]9;4;1;72\u0007\rIndexing: 209/289 ETA: 0s        \u001b]9;4;1;73\u0007\rIndexing: 210/289 ETA: 0s        \u001b]9;4;1;73\u0007\rIndexing: 211/289 ETA: 0s        \u001b]9;4;1;73\u0007\rIndexing: 212/289 ETA: 0s        \u001b]9;4;1;74\u0007\rIndexing: 213/289 ETA: 0s        \u001b]9;4;1;74\u0007\rIndexing: 214/289 ETA: 0s        \u001b]9;4;1;74\u0007\rIndexing: 215/289 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 216/289 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 217/289 ETA: 0s        \u001b]9;4;1;75\u0007\rIndexing: 218/289 ETA: 0s        \u001b]9;4;1;76\u0007\rIndexing: 219/289 ETA: 0s        \u001b]9;4;1;76\u0007\rIndexing: 220/289 ETA: 0s        \u001b]9;4;1;76\u0007\rIndexing: 221/289 ETA: 0s        \u001b]9;4;1;77\u0007\rIndexing: 222/289 ETA: 0s        \u001b]9;4;1;77\u0007\rIndexing: 223/289 ETA: 0s        \u001b]9;4;1;78\u0007\rIndexing: 224/289 ETA: 0s        \u001b]9;4;1;78\u0007\rIndexing: 225/289 ETA: 0s        \u001b]9;4;1;78\u0007\rIndexing: 226/289 ETA: 0s        \u001b]9;4;1;79\u0007\rIndexing: 227/289 ETA: 0s        \u001b]9;4;1;79\u0007\rIndexing: 228/289 ETA: 0s        \u001b]9;4;1;79\u0007\rIndexing: 229/289 ETA: 0s        \u001b]9;4;1;80\u0007\rIndexing: 230/289 ETA: 0s        \u001b]9;4;1;80\u0007\rIndexing: 231/289 ETA: 0s        \u001b]9;4;1;80\u0007\rIndexing: 232/289 ETA: 0s        \u001b]9;4;1;81\u0007\rIndexing: 233/289 ETA: 0s        \u001b]9;4;1;81\u0007\rIndexing: 234/289 ETA: 0s        \u001b]9;4;1;81\u0007\rIndexing: 235/289 ETA: 0s        \u001b]9;4;1;82\u0007\rIndexing: 236/289 ETA: 0s        \u001b]9;4;1;82\u0007\rIndexing: 237/289 ETA: 0s        \u001b]9;4;1;82\u0007\rIndexing: 238/289 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 239/289 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 240/289 ETA: 0s        \u001b]9;4;1;83\u0007\rIndexing: 241/289 ETA: 0s        \u001b]9;4;1;84\u0007\rIndexing: 242/289 ETA: 0s        \u001b]9;4;1;84\u0007\rIndexing: 243/289 ETA: 0s        \u001b]9;4;1;84\u0007\rIndexing: 244/289 ETA: 0s        \u001b]9;4;1;85\u0007\rIndexing: 245/289 ETA: 0s        \u001b]9;4;1;85\u0007\rIndexing: 246/289 ETA: 0s        \u001b]9;4;1;85\u0007\rIndexing: 247/289 ETA: 0s        \u001b]9;4;1;86\u0007\rIndexing: 248/289 ETA: 0s        \u001b]9;4;1;86\u0007\rIndexing: 249/289 ETA: 0s        \u001b]9;4;1;87\u0007\rIndexing: 250/289 ETA: 0s        \u001b]9;4;1;87\u0007\rIndexing: 251/289 ETA: 0s        \u001b]9;4;1;87\u0007\rIndexing: 252/289 ETA: 0s        \u001b]9;4;1;88\u0007\rIndexing: 253/289 ETA: 0s        \u001b]9;4;1;88\u0007\rIndexing: 254/289 ETA: 0s        \u001b]9;4;1;88\u0007\rIndexing: 255/289 ETA: 0s        \u001b]9;4;1;89\u0007\rIndexing: 256/289 ETA: 0s        \u001b]9;4;1;89\u0007\rIndexing: 257/289 ETA: 0s        \u001b]9;4;1;89\u0007\rIndexing: 258/289 ETA: 0s        \u001b]9;4;1;90\u0007\rIndexing: 259/289 ETA: 0s        \u001b]9;4;1;90\u0007\rIndexing: 260/289 ETA: 0s        \u001b]9;4;1;90\u0007\rIndexing: 261/289 ETA: 0s        \u001b]9;4;1;91\u0007\rIndexing: 262/289 ETA: 0s        \u001b]9;4;1;91\u0007\rIndexing: 263/289 ETA: 0s        \u001b]9;4;1;91\u0007\rIndexing: 264/289 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 265/289 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 266/289 ETA: 0s        \u001b]9;4;1;92\u0007\rIndexing: 267/289 ETA: 0s        \u001b]9;4;1;93\u0007\rIndexing: 268/289 ETA: 0s        \u001b]9;4;1;93\u0007\rIndexing: 269/289 ETA: 0s        \u001b]9;4;1;93\u0007\rIndexing: 270/289 ETA: 0s        \u001b]9;4;1;94\u0007\rIndexing: 271/289 ETA: 0s        \u001b]9;4;1;94\u0007\rIndexing: 272/289 ETA: 0s        \u001b]9;4;1;94\u0007\rIndexing: 273/289 ETA: 0s        \u001b]9;4;1;95\u0007\rIndexing: 274/289 ETA: 0s        \u001b]9;4;1;95\u0007\rIndexing: 275/289 ETA: 0s        \u001b]9;4;1;96\u0007\rIndexing: 276/289 ETA: 0s        \u001b]9;4;1;96\u0007\rIndexing: 277/289 ETA: 0s        \u001b]9;4;1;96\u0007\rIndexing: 278/289 ETA: 0s        \u001b]9;4;1;97\u0007\rIndexing: 279/289 ETA: 0s        \u001b]9;4;1;97\u0007\rIndexing: 280/289 ETA: 0s        \u001b]9;4;1;97\u0007\rIndexing: 281/289 ETA: 0s        \u001b]9;4;1;98\u0007\rIndexing: 282/289 ETA: 0s        \u001b]9;4;1;98\u0007\rIndexing: 283/289 ETA: 0s        \u001b]9;4;1;98\u0007\rIndexing: 284/289 ETA: 0s        \u001b]9;4;1;99\u0007\rIndexing: 285/289 ETA: 0s        \u001b]9;4;1;99\u0007\rIndexing: 286/289 ETA: 0s        \u001b]9;4;1;99\u0007\rIndexing: 287/289 ETA: 0s        \u001b]9;4;1;100\u0007\rIndexing: 288/289 ETA: 0s        \u001b]9;4;1;100\u0007\rIndexing: 289/289 ETA: 0s        \u001b]9;4;0\u0007"
+  },
+  "qmdEmbed": {
+    "ok": false,
+    "skipped": true,
+    "reason": "disabled"
+  },
+  "checkpoint": {
+    "version": 1,
+    "createdAt": 1772779033180,
+    "lastExtractAt": 1772785473630,
+    "lastSynthesisAt": 1772785169478,
+    "lastQmdUpdateAt": 1772785474499,
+    "mode": "startup",
+    "bootstrapAt": 1772785466875,
+    "qmdAvailable": true,
+    "updatedAt": 1772785474499,
+    "lastSynthesisMode": "manual",
+    "lastSynthesisStats": {
+      "entities": [
+        {
+          "entityKey": "areas/people/1045407142",
+          "changed": false,
+          "hot": 4,
+          "warm": 0,
+          "cold": 0,
+          "facts": 4
+        },
+        {
+          "entityKey": "areas/people/project-manager",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "areas/people/vaibhav-ambulkar",
+          "changed": false,
+          "hot": 5,
+          "warm": 0,
+          "cold": 0,
+          "facts": 5
+        },
+        {
+          "entityKey": "projects/build-a-real-time-collaborative-project-management-platform-where-anyone",
+          "changed": true,
+          "hot": 834,
+          "warm": 0,
+          "cold": 0,
+          "facts": 834
+        },
+        {
+          "entityKey": "projects/build-a-web-application-where-teams-can-collaborate-on-daily-work-anyone",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-and-deliver-a-production-grade-multi-department-workforce-command-",
+          "changed": true,
+          "hot": 306,
+          "warm": 0,
+          "cold": 0,
+          "facts": 306
+        },
+        {
+          "entityKey": "projects/build-pulsedesk-an-ai-powered-internal-it-helpdesk-platform-design-a-dar",
+          "changed": true,
+          "hot": 290,
+          "warm": 0,
+          "cold": 0,
+          "facts": 290
+        },
+        {
+          "entityKey": "projects/create-text-file-with-hello-world-text-on-desktop",
+          "changed": true,
+          "hot": 273,
+          "warm": 0,
+          "cold": 0,
+          "facts": 273
+        },
+        {
+          "entityKey": "resources/pkm-smoke-entity",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        },
+        {
+          "entityKey": "resources/pkm-supersession-test",
+          "changed": false,
+          "hot": 1,
+          "warm": 0,
+          "cold": 0,
+          "facts": 2
+        }
+      ],
+      "totalEntities": 10,
+      "changedEntities": 5,
+      "totalFacts": 2027
+    },
+    "lastExtractMode": "startup",
+    "shadowMode": true,
+    "lastExtractStats": {
+      "totalTasks": 5,
+      "totalMessages": 163,
+      "totalActivities": 500,
+      "totalExecutionEvents": 500,
+      "totalTelegramEvents": 5,
+      "totalSquadMessages": 1,
+      "totalEntities": 8,
+      "totalFacts": 1187,
+      "lookbackStart": "2026-03-05",
+      "lookbackEnd": "2026-03-06",
+      "createdFacts": 20,
+      "updatedFacts": 1167,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "lastQmdEmbedAt": 1772785197479
+  },
+  "metrics": {
+    "version": 1,
+    "updatedAt": 1772785473630,
+    "runs": 20,
+    "entities": 10,
+    "facts": 2072,
+    "lastRun": {
+      "at": 1772785473630,
+      "mode": "startup",
+      "shadowMode": true,
+      "extractedEntities": 8,
+      "extractedFacts": 1187,
+      "createdFacts": 20,
+      "updatedFacts": 1167,
+      "supersededFacts": 0,
+      "skippedFacts": 0
+    },
+    "duplicateFactsSkipped": 0,
+    "bootstrapAt": 1772785466876,
+    "lastSynthesis": {
+      "at": 1772785169479,
+      "mode": "manual",
+      "changedEntities": 5,
+      "totalEntities": 10
+    },
+    "createdAt": 1772779033181
+  },
+  "lastExtractStats": {
+    "totalTasks": 5,
+    "totalMessages": 163,
+    "totalActivities": 500,
+    "totalExecutionEvents": 500,
+    "totalTelegramEvents": 5,
+    "totalSquadMessages": 1,
+    "totalEntities": 8,
+    "totalFacts": 1187,
+    "lookbackStart": "2026-03-05",
+    "lookbackEnd": "2026-03-06",
+    "createdFacts": 20,
+    "updatedFacts": 1167,
+    "supersededFacts": 0,
+    "skippedFacts": 0
+  }
+}
+{
+  "at": "2026-03-06T08:24:34.893Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-06T08:24:34.968Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-06T08:24:35.044Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-06T08:24:42.919Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-06T08:21:29.942Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=5

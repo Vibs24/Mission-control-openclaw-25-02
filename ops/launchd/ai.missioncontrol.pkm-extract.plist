@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>ai.missioncontrol.pkm-extract</string>
+    <key>StartInterval</key>
+    <integer>900</integer>
+    <key>WorkingDirectory</key>
+    <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/zsh</string>
+      <string>-lc</string>
+      <string>/opt/homebrew/bin/node /Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/scripts/pkm-extract.mjs --mode daily</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>HOME</key>
+      <string>/Users/syphaoffice1</string>
+      <key>PATH</key>
+      <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/logs/pkm-extract.launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/logs/pkm-extract.launchd.err.log</string>
+  </dict>
+</plist>

@@ -1,7 +1,7 @@
 # RUNTIME_CONFIG.md
 
-- Generated At: 2026-03-05T18:40:07.252Z
-- Sync Mode: daily
+- Generated At: 2026-03-06T08:24:24.881Z
+- Sync Mode: startup
 
 ## Runtime Config Snapshot
 

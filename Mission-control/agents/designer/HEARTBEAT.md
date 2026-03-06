@@ -81,4 +81,6 @@ Run these once per day:
 
 ### Special Focus
 - Task context: [done/approved] Build a real-time collaborative project management platform where anyone can reg -> Completed via PM parallel workflow
+- Task context: [done/approved] Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m -> Completed via PM parallel workflow
+- Activity: Chief moved 'Build "PulseDesk" — an AI-powered internal IT helpdesk platform. Design a dark-m' to done
 <!-- END MC_SYNC:daily_focus -->

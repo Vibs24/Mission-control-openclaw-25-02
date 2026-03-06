@@ -436,4 +436,29 @@ export default defineSchema({
     .index("by_task_created", ["taskId", "createdAt"])
     .index("by_actor_created", ["actorAgentId", "createdAt"])
     .index("by_task_kind", ["taskId", "kind"]),
+
+  pkmState: defineTable({
+    key: v.string(),
+    paraRoot: v.string(),
+    enabled: v.boolean(),
+    shadowMode: v.optional(v.boolean()),
+    qmdAvailable: v.optional(v.boolean()),
+    qmdBin: v.optional(v.string()),
+    qmdCollections: v.optional(v.array(v.string())),
+    entities: v.optional(v.number()),
+    facts: v.optional(v.number()),
+    lastBootstrapAt: v.optional(v.number()),
+    lastExtractAt: v.optional(v.number()),
+    lastSynthesisAt: v.optional(v.number()),
+    lastQmdUpdateAt: v.optional(v.number()),
+    lastQmdEmbedAt: v.optional(v.number()),
+    checkpoint: v.optional(v.any()),
+    metrics: v.optional(v.any()),
+    lastExtractStats: v.optional(v.any()),
+    lastSynthesisStats: v.optional(v.any()),
+    bootstrapReport: v.optional(v.any()),
+    updatedAt: v.number(),
+  })
+    .index("by_key", ["key"])
+    .index("by_updated_at", ["updatedAt"]),
 });
