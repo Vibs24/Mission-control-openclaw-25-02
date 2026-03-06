@@ -1,0 +1,11 @@
+const express=require('express');
+const cors=require('cors');
+const http=require('http');
+const {WebSocketServer}=require('ws');
+const {router}=require('./routes');
+const app=express();
+app.use(cors());app.use(express.json());app.use('/api',router);app.get('/health',(_,res)=>res.json({ok:true}));
+const server=http.createServer(app);
+const wss=new WebSocketServer({server,path:'/ws'});
+wss.on('connection',ws=>ws.send(JSON.stringify({type:'connected'})));
+server.listen(8080,()=>console.log('backend on 8080'));

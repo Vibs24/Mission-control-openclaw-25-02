@@ -1,0 +1,8 @@
+openapi: 3.0.3
+info: {title: PulseDesk API, version: 1.0.0}
+paths:
+  /api/auth/login:
+    post: {summary: Login, responses: {'200': {description: OK}}}
+  /api/tickets:
+    get: {summary: List tickets, responses: {'200': {description: OK}}}
+    post: {summary: Create ticket, responses: {'201': {description: Created}}}

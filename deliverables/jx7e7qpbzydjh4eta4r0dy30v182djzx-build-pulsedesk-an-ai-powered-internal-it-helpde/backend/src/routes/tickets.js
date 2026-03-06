@@ -1,0 +1,10 @@
+const express=require('express');
+const {triage}=require('../services/triageService');
+const ticketRouter=express.Router();
+let tickets=[];
+ticketRouter.get('/',(_,res)=>res.json(tickets));
+ticketRouter.post('/',async(req,res)=>{const ai=await triage(req.body);const t={id:tickets.length+1,...req.body,...ai};tickets.push(t);res.status(201).json(t)});
+ticketRouter.get('/:id',(req,res)=>res.json(tickets.find(t=>t.id===Number(req.params.id))||null));
+ticketRouter.put('/:id',(req,res)=>{tickets=tickets.map(t=>t.id===Number(req.params.id)?{...t,...req.body}:t);res.json({ok:true});});
+ticketRouter.delete('/:id',(req,res)=>{tickets=tickets.filter(t=>t.id!==Number(req.params.id));res.status(204).send();});
+module.exports={ticketRouter};

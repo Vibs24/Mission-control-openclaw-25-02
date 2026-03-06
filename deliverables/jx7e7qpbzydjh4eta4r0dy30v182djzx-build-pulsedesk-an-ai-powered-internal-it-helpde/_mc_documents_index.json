@@ -1,0 +1,34 @@
+{
+  "generatedAt": 1772776036638,
+  "generatedAtIso": "2026-03-06T05:47:16.638Z",
+  "taskId": "jx7e7qpbzydjh4eta4r0dy30v182djzx",
+  "taskTitle": "Build \"PulseDesk\" — an AI-powered internal IT helpdesk platform. Design a dark-m",
+  "source": "mission-control-orchestrator",
+  "internalSystemFilesExcludedFromProof": true,
+  "documents": [
+    {
+      "id": "jh7d0xys63a2bvn9fv41j4tvv582dqnv",
+      "title": "Execution Context — Designer execution completed",
+      "fileName": "jh7d0xys63a2bvn9fv41j4tvv582dqnv-execution-context-designer-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde/_mc_documents/jh7d0xys63a2bvn9fv41j4tvv582dqnv-execution-context-designer-execution-completed.md"
+    },
+    {
+      "id": "jh716jzacbmea9vtz218tx3k9x82dbeq",
+      "title": "Execution Context — Backend execution completed",
+      "fileName": "jh716jzacbmea9vtz218tx3k9x82dbeq-execution-context-backend-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde/_mc_documents/jh716jzacbmea9vtz218tx3k9x82dbeq-execution-context-backend-execution-completed.md"
+    },
+    {
+      "id": "jh75g0kzf9fs8q40b4w3mqq68s82dkzj",
+      "title": "Execution Context — Frontend execution completed",
+      "fileName": "jh75g0kzf9fs8q40b4w3mqq68s82dkzj-execution-context-frontend-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde/_mc_documents/jh75g0kzf9fs8q40b4w3mqq68s82dkzj-execution-context-frontend-execution-completed.md"
+    },
+    {
+      "id": "jh7fkr8chhh84975b8mrjbtzyd82ch77",
+      "title": "Execution Context — Operations execution completed",
+      "fileName": "jh7fkr8chhh84975b8mrjbtzyd82ch77-execution-context-operations-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde/_mc_documents/jh7fkr8chhh84975b8mrjbtzyd82ch77-execution-context-operations-execution-completed.md"
+    }
+  ]
+}

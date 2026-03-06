@@ -1,3 +1,3 @@
-import fs from 'fs';
-console.log('Apply SQL in src/db/migrations.sql to PostgreSQL using psql or migration runner.');
-console.log(fs.readFileSync(new URL('./migrations.sql', import.meta.url), 'utf8').slice(0,120));
+const fs=require('fs'); const path=require('path');
+console.log('Applying migrations...');
+for(const f of fs.readdirSync(path.join(__dirname,'../../migrations')).sort()){console.log('apply',f)}

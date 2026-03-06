@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { DashboardPage } from './pages/DashboardPage';
-const qc=new QueryClient();
-ReactDOM.createRoot(document.getElementById('root')!).render(<QueryClientProvider client={qc}><DashboardPage/></QueryClientProvider>);
+import { Dashboard } from './pages/Dashboard';
+import './styles/theme.css';
+const qc = new QueryClient();
+createRoot(document.getElementById('root')!).render(<QueryClientProvider client={qc}><Dashboard/></QueryClientProvider>);

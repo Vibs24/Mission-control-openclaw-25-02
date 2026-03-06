@@ -1,0 +1,14 @@
+README.md OK
+docker-compose.yml OK
+docs/openapi.yaml OK
+docs/onboarding.md OK
+docs/user-manual.md OK
+docs/architecture.md OK
+docs/wireframes.md OK
+docs/component-library.md OK
+frontend/src/main.tsx OK
+backend/src/server.js OK
+backend/migrations/001_init.sql OK
+.github/workflows/ci.yml OK
+infra/prometheus/prometheus.yml OK
+review/security_audit_report.md OK

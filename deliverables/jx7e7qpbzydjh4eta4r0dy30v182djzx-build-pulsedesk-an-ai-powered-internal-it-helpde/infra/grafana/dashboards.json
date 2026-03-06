@@ -1,0 +1,1 @@
+{"title":"PulseDesk SRE","panels":[{"type":"timeseries","title":"API p95"},{"type":"timeseries","title":"WebSocket Connections"}]}
