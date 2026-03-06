@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "disabled": {
+    "999000123": {
+      "reason": "chat_not_found",
+      "taskId": "jx77wrtf9s9weg5cd0xq2wzd0s81wm84",
+      "at": 1772195159159
+    },
+    "999000124": {
+      "reason": "chat_not_found",
+      "taskId": "jx76fwxzr6jpeb61ha4rrcbng181xty0",
+      "at": 1772195162652
+    },
+    "-999999999999": {
+      "reason": "chat_not_found",
+      "taskId": null,
+      "at": 1772177396055
+    }
+  }
+}

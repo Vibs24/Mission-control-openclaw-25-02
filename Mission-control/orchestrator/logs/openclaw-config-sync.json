@@ -1,0 +1,76 @@
+{
+  "at": "2026-03-05T17:00:03.572Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}

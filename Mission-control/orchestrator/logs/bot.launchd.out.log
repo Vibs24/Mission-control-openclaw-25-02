@@ -1,0 +1,2273 @@
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-02T07:56:25.545Z
+[artifact-backfill] completed: patched=0, verified=1, snapshotted=1, total=2
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-02T08:07:10.422Z
+[artifact-backfill] completed: patched=0, verified=4, snapshotted=0, total=4
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-02T10:25:33.299Z
+[artifact-backfill] completed: patched=0, verified=4, snapshotted=0, total=4
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-02T10:29:30.393Z
+[artifact-backfill] completed: patched=0, verified=4, snapshotted=0, total=4
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-02T10:52:35.987Z
+[artifact-backfill] completed: patched=0, verified=2, snapshotted=3, total=5
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-03T07:44:17.419Z
+[artifact-backfill] completed: patched=0, verified=2, snapshotted=3, total=5
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T06:32:13.151Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=3, total=6
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T07:28:55.113Z
+[artifact-backfill] completed: patched=0, verified=2, snapshotted=3, total=5
+{
+  "at": "2026-03-04T11:37:48.472Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "existingAgents": [],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T11:38:03.703Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T08:37:16.162Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=3, total=6
+{
+  "at": "2026-03-04T11:45:39.912Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T11:45:43.757Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T11:38:06.089Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=3, total=6
+{
+  "at": "2026-03-04T11:52:11.185Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T11:52:14.928Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T11:45:46.054Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=3, total=6
+{
+  "at": "2026-03-04T12:22:32.979Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T12:22:36.976Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [
+    {
+      "taskId": "jx76pzc38732ekbxadskdy4tvx828aa4",
+      "action": "set_project_manager_agent",
+      "projectManagerAgentId": "j9779zvqqt3f0gpcszmrt74wcx829s1x"
+    }
+  ],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T11:52:17.362Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=3, total=7
+{
+  "at": "2026-03-04T17:11:27.873Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T17:11:34.309Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T12:22:40.659Z
+[artifact-backfill] completed: patched=0, verified=2, snapshotted=5, total=7
+{
+  "at": "2026-03-04T18:24:01.678Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T18:24:07.747Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T17:11:36.827Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=5, total=8
+{
+  "at": "2026-03-04T19:54:47.830Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-04T19:54:54.882Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T18:24:10.280Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=5, total=8
+{
+  "at": "2026-03-05T01:20:28.462Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T01:20:35.332Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-04T19:54:57.172Z
+[artifact-backfill] completed: patched=0, verified=4, snapshotted=5, total=9
+{
+  "at": "2026-03-05T09:56:28.913Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T09:56:35.302Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T01:20:38.239Z
+[artifact-backfill] completed: patched=0, verified=2, snapshotted=0, total=2
+{
+  "at": "2026-03-05T11:12:17.819Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T11:12:17.890Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T11:12:17.988Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T11:12:25.846Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T09:56:38.214Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T11:25:26.082Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T11:25:26.145Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T11:25:26.219Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T11:25:31.469Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T11:12:28.713Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T11:26:03.846Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T11:26:03.919Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T11:26:03.984Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T11:26:09.883Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T11:25:34.534Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T12:30:04.435Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T12:30:08.071Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T12:30:11.066Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T12:30:53.561Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T11:26:12.570Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T12:56:03.745Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T12:56:03.815Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T12:56:03.885Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T12:56:10.883Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T12:30:57.043Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T16:06:54.258Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T16:06:54.328Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T16:06:54.392Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T16:07:04.819Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T12:56:14.348Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T16:57:31.142Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T16:57:31.234Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T16:57:31.309Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T16:57:37.861Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T16:07:09.974Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3
+{
+  "at": "2026-03-05T17:00:03.572Z",
+  "mode": "startup",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "targetHomes": [
+    "/Users/syphaoffice1/.openclaw",
+    "/Users/syphaoffice1/.openclaw-mc2",
+    "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw"
+  ],
+  "changedTargets": 0,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "changed": false,
+      "backupPath": "",
+      "changedKeys": [],
+      "providerBaseUrl": "https://api.openai.com/v1",
+      "providerFingerprint": "***29c6c219",
+      "authMode": "oauth",
+      "authProvider": "openai-codex",
+      "authSecretFingerprint": "unavailable",
+      "primaryModel": "openai-codex/gpt-5.3-codex",
+      "fallbackCount": 2,
+      "telegramTokenPreserved": true
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "canonical": {
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "modelPrimary": "openai-codex/gpt-5.3-codex",
+    "modelFallbacks": [
+      "openai-codex/gpt-5.2-codex",
+      "openai/gpt-5.2-codex"
+    ],
+    "providerBaseUrl": "https://api.openai.com/v1",
+    "providerFingerprint": "***29c6c219",
+    "authMode": "oauth",
+    "authProvider": "openai-codex",
+    "authSecretFingerprint": "unavailable"
+  }
+}
+{
+  "at": "2026-03-05T17:00:03.652Z",
+  "mode": "startup",
+  "strict": true,
+  "autoHeal": true,
+  "providerKey": "openai-codex",
+  "authProfileKey": "openai-codex:default",
+  "canonicalConfigPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+  "driftDetected": false,
+  "healed": false,
+  "unresolved": false,
+  "targets": [
+    {
+      "home": "/Users/syphaoffice1/.openclaw",
+      "configPath": "/Users/syphaoffice1/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/.openclaw-mc2",
+      "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    },
+    {
+      "home": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw",
+      "configPath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/.openclaw-home/.openclaw/openclaw.json",
+      "drift": false,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
+{
+  "at": "2026-03-05T17:00:03.720Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}
+{
+  "at": "2026-03-05T17:00:15.145Z",
+  "strictRoleRouting": true,
+  "ensured": {
+    "canonicalCount": 9,
+    "inserted": 0,
+    "updated": 9
+  },
+  "retired": {
+    "retired": 6
+  },
+  "updatedTasks": [],
+  "remappedNodes": [],
+  "skippedTasks": [],
+  "violations": []
+}
+[orchestrator] starting
+[orchestrator] convex: https://secret-fox-493.convex.cloud
+[orchestrator] webhook: false 8787
+[orchestrator] polling: true
+[orchestrator] telegram digest: enabled (interval=15m, loop=60s, include_done=true, done_limit=10)
+[orchestrator] blocked auto-recovery: enabled (cooldown=2m, max_attempts=4)
+[orchestrator] task artifacts: auto-managed (root=/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables, mirror_external=true)
+[orchestrator] chief->pm parallel workflow: enabled (default=chief_pm_parallel, heartbeat=2m, retry_budget=2)
+[openclaw] workspace compatibility: direct artifact writes enabled (/Users/syphaoffice1/Mission-control-openclaw-25:02)
+[orchestrator] openclaw model lock: ok (primary=openai-codex/gpt-5.3-codex)
+[orchestrator] openclaw runtime profile: profile=mc2 home=/Users/syphaoffice1/.openclaw-mc2 provider=openai-codex baseUrl=https://api.openai.com/v1
+[orchestrator] openclaw config sync: enabled=true strict_startup=true canonical_home=/Users/syphaoffice1/.openclaw-mc2
+[orchestrator] workflow shadow mode: disabled
+[orchestrator] resuming with saved state from 2026-03-05T16:57:40.948Z
+[artifact-backfill] completed: patched=0, verified=3, snapshotted=0, total=3

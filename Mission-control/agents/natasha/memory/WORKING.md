@@ -1,0 +1,28 @@
+# WORKING.md — Natasha
+
+<!-- BEGIN MC_SYNC:working_state -->
+## Current Working State
+
+### Active Tasks
+- [in_progress/pending] Build and deliver an enterprise-grade Mission Control Reliability & Autonomy Upg -> Awaiting Natasha implementation evidence with Output Path/Stored Location after watchdog redispatch
+
+### Immediate Directives
+- Task context: [done/approved] Simulate a Sev-2 support incident: user login failures and delayed task updates. -> Completed and approved
+
+### Chief Directives
+- Chief follow-up: No recent assignee update; requesting progress update. Please post concrete status, next action, and blockers.
+- ### Chief Triage (Jarvis)
+- Workflow: incident
+- Priority: urgent
+- Assumptions: Best-effort classification from Telegram intake / task context
+- Expected output: Concrete findings + status updates + evidence in comments/docs
+- Next action: Sequential delegation planned (one agent at a time): Natasha -> Bruce -> Steve -> Peter
+- Review gate: Reviewer validates correctness before done
+
+### User Instructions
+- ????
+- Natasha support heartbeat check: no new support incidents or recurring ticket pattern observed in queue right now. This task remains a development request (not incident triage). From support side: awaiting concrete implementation/progress update from Dev, then I’ll validate requester-facing triage/status and coordinate any follow-up.
+
+### Evidence Paths
+- /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-enterprise-reliability-pack
+<!-- END MC_SYNC:working_state -->

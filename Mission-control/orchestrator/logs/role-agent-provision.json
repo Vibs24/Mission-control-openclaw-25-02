@@ -1,0 +1,51 @@
+{
+  "at": "2026-03-05T17:00:03.720Z",
+  "openclawBin": "openclaw",
+  "openclawProfile": "mc2",
+  "openclawHome": "/Users/syphaoffice1/.openclaw-mc2",
+  "sharedWorkspace": "/Users/syphaoffice1/Mission-control-openclaw-25:02",
+  "strictRoleRouting": true,
+  "createdAgents": [],
+  "existingAgents": [
+    "chief",
+    "project-manager",
+    "frontend",
+    "designer",
+    "database",
+    "backend",
+    "documentation",
+    "operations",
+    "reviewer"
+  ],
+  "missingAfterProvision": [],
+  "roleStubs": [
+    "/Users/syphaoffice1/.openclaw-mc2/agents/chief/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/project-manager/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/frontend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/designer/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/database/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/backend/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/documentation/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/operations/agent/ROLE_AGENT.md",
+    "/Users/syphaoffice1/.openclaw-mc2/agents/reviewer/agent/ROLE_AGENT.md"
+  ],
+  "dryRun": {
+    "enabled": false,
+    "hardFail": false,
+    "passed": [],
+    "failed": []
+  },
+  "authPreflight": {
+    "enabled": true,
+    "autoRepairEnabled": true,
+    "probeAgentId": "chief",
+    "sourceHome": "/Users/syphaoffice1/.openclaw-mc2",
+    "sourceMode": "canonical_default",
+    "attemptedRepair": false,
+    "repaired": false,
+    "healthy": true,
+    "before": "ok",
+    "after": ""
+  },
+  "errors": []
+}

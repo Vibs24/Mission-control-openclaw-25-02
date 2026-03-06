@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "process": {
+    "pid": 58060,
+    "cwd": "/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control",
+    "lastStartedAt": 1772730017425,
+    "running": true,
+    "node": "v25.5.0",
+    "lastStopSignalAt": 1772729996242
+  },
+  "telegram": {
+    "lastInboundUpdateId": 334572450,
+    "lastInboundAt": 1772705463501,
+    "lastInboundVia": "poller",
+    "lastUpdateId": 334572450,
+    "offsetSavedAt": 1772705464694,
+    "digestEnabled": true,
+    "digestIntervalMs": 900000,
+    "digestLoopIntervalMs": 60000,
+    "digestIncludeDone": true,
+    "digestDoneLimit": 10,
+    "digestByChat": {
+      "999000123": {
+        "lastSentAt": 1772376473163,
+        "lastFingerprint": "040aa8135875",
+        "lastSummary": "digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:1 alerts:0"
+      },
+      "999000124": {
+        "lastSentAt": 1772376473386,
+        "lastFingerprint": "eb9d726aa564",
+        "lastSummary": "digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:1 alerts:0"
+      },
+      "1045407142": {
+        "lastSentAt": 1772771769237,
+        "lastFingerprint": "c40b6aa35d77",
+        "lastSummary": "digest_15m inbox:0 assigned:0 in_progress:0 review:0 waiting:0 blocked:0 done:3 alerts:0"
+      }
+    },
+    "lastDigestAt": 1772771773109
+  },
+  "loops": {
+    "chiefTriage": {
+      "at": 1772772157137,
+      "status": "loop"
+    },
+    "chiefWatchdog": {
+      "at": 1772772132434,
+      "status": "loop"
+    },
+    "statusNotifier": {
+      "at": 1772277675317,
+      "status": "stopped"
+    },
+    "poller": {
+      "at": 1772772140780,
+      "status": "polling",
+      "offset": 334572450
+    },
+    "outboxReplay": {
+      "at": 1772772149420,
+      "status": "loop"
+    },
+    "telegramDigest": {
+      "at": 1772772135094,
+      "status": "loop"
+    },
+    "pmScheduler": {
+      "at": 1772772155360,
+      "status": "loop"
+    }
+  },
+  "blockedRecovery": {
+    "jx7e962r379eypv58t47n1ys0981wtyg": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376292371,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "blocked_no_verifiable_file_evidence"
+    },
+    "jx75p8j277mgebwh45spkf6c6n821dr1": {
+      "attempts": 6,
+      "lastAttemptAt": 1772291106319,
+      "lastReasonCode": "output_path_not_found",
+      "lastOutcome": "recovery_started"
+    },
+    "jx79cz2qy6pyddkqz68f7ye22n821er6": {
+      "attempts": 1,
+      "lastAttemptAt": 1772296876599,
+      "lastReasonCode": "agent_unavailable",
+      "lastOutcome": "recovery_started"
+    },
+    "jx76envwev6hq9krw4bmsfvnks8228hf": {
+      "attempts": 1,
+      "lastAttemptAt": 1772339658749,
+      "lastReasonCode": "output_path_not_found",
+      "lastOutcome": "blocked_no_verifiable_file_evidence"
+    },
+    "jx709czxa5bj6yxtksq5rxgcjx8232w7": {
+      "attempts": 1,
+      "lastAttemptAt": 1772342743199,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "recovery_started"
+    },
+    "jx78cz35xkhpt1evprx7q6p63n823gc4": {
+      "attempts": 4,
+      "lastAttemptAt": 1772342428932,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "recovery_started"
+    },
+    "jx7ct9fqmzyea8p9dw8nsfd5cs822ngz": {
+      "attempts": 4,
+      "lastAttemptAt": 1772342779253,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "recovery_started"
+    },
+    "jx79p5a3f2savffazytyjrsk2d8223fj": {
+      "attempts": 2,
+      "lastAttemptAt": 1772343490147,
+      "lastReasonCode": "agent_unavailable",
+      "lastOutcome": "recovery_started"
+    },
+    "jx770hbea8qbsa880cxfaeakfs8238hk": {
+      "attempts": 2,
+      "lastAttemptAt": 1772343512677,
+      "lastReasonCode": "agent_unavailable",
+      "lastOutcome": "recovery_started"
+    },
+    "jx795e3t9x2bg515zv0t5ga64d822act": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376337997,
+      "lastReasonCode": "agent_unavailable",
+      "lastOutcome": "agent_busy_elsewhere"
+    },
+    "jx75k3fhcax5c3d16x2kfpyqt58230rr": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376340922,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "blocked_no_verifiable_file_evidence"
+    },
+    "jx7e3m7npspft33t6xaeqbg01s823msr": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376316173,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "blocked_no_verifiable_file_evidence"
+    },
+    "jx7873m30s70ajm6mba1kbyhm9823h07": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376426754,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "recovery_continues:no_verifiable_file_evidence"
+    },
+    "jx7feejzkdyndwcqv1xn8bx5k1823vrq": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376213086,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "blocked_no_verifiable_file_evidence"
+    },
+    "jx73935evbhabhz08kgdyfjdr58226rk": {
+      "attempts": 4,
+      "lastAttemptAt": 1772376240519,
+      "lastReasonCode": "no_verifiable_file_evidence",
+      "lastOutcome": "blocked_no_verifiable_file_evidence"
+    },
+    "jx78pg76rstk6n58bzrgbhw3m1823c7r": {
+      "attempts": 4,
+      "lastAttemptAt": 1772383725633,
+      "lastReasonCode": "agent_unavailable",
+      "lastOutcome": "recovery_paused_repeated_output_path_not_found",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/demo-mc-ops-dashboard",
+      "repeatedMissingPathCount": 36
+    },
+    "jx7fmt479cyjjm16j9yhr4e6yh822q3q": {
+      "attempts": 4,
+      "lastAttemptAt": 1772383173376,
+      "lastReasonCode": "agent_unavailable",
+      "lastOutcome": "agent_busy_elsewhere",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/mc-enterprise-reliability-pack",
+      "repeatedMissingPathCount": 13
+    },
+    "jx7cyqx7hz0cdhxw5mjvajpj6n8226ts": {
+      "attempts": 4,
+      "lastAttemptAt": 1772429352996,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "agent_busy_elsewhere",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/car-sales-dashboard-html-css|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/car-sales-dashboard-html-css/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/car-sales-dashboard-html-css/index.html|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/car-sales-dashboard-html-css/styles.css|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7cyqx7hz0cdhxw5mjvajpj6n8226ts-create-a-modern-and-responsive-car-sales-dashboa|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7cyqx7hz0cdhxw5mjvajpj6n8226ts-create-a-modern-and-responsive-car-sales-dashboa/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7cyqx7hz0cdhxw5mjvajpj6n8226ts-create-a-modern-and-responsive-car-sales-dashboa/index.html|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7cyqx7hz0cdhxw5mjvajpj6n8226ts-create-a-modern-and-responsive-car-sales-dashboa/styles.css",
+      "repeatedMissingPathCount": 8
+    },
+    "jx76aaabedx9h2g43n9v4gwf8s824zdm": {
+      "attempts": 4,
+      "lastAttemptAt": 1772429356947,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "agent_busy_elsewhere",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx76aaabedx9h2g43n9v4gwf8s824zdm-create-a-modern-and-responsive-car-sales-dashboa|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx76aaabedx9h2g43n9v4gwf8s824zdm-create-a-modern-and-responsive-car-sales-dashboa/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx76aaabedx9h2g43n9v4gwf8s824zdm-create-a-modern-and-responsive-car-sales-dashboa/index.html|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx76aaabedx9h2g43n9v4gwf8s824zdm-create-a-modern-and-responsive-car-sales-dashboa/styles.css",
+      "repeatedMissingPathCount": 9
+    },
+    "jx7ebpz875jpfxhkxkwjkc3zsh824dpd": {
+      "attempts": 1,
+      "lastAttemptAt": 1772423460239,
+      "lastReasonCode": "artifact_folder_empty",
+      "lastOutcome": "recovery_started"
+    },
+    "jx75hy8ajryxr1s6nh1j86fhdn82462g": {
+      "attempts": 4,
+      "lastAttemptAt": 1772426941989,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "recovery_continues:no_assignee_progress",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/app.py|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/requirements.txt|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/static/styles.css|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/templates/accounts.html|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/templates/dashboard.html|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx75hy8ajryxr1s6nh1j86fhdn82462g-build-fully-working-and-functional-bank-manageme/templates/transactions.html",
+      "repeatedMissingPathCount": 8
+    },
+    "jx77j4ycnrcz2bgwrepc1sawe582348f": {
+      "attempts": 4,
+      "lastAttemptAt": 1772429360089,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "agent_busy_elsewhere",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx77j4ycnrcz2bgwrepc1sawe582348f-smoke-auto-artifact-task-a-1772394005513|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx77j4ycnrcz2bgwrepc1sawe582348f-smoke-auto-artifact-task-a-1772394005513/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx77j4ycnrcz2bgwrepc1sawe582348f-smoke-auto-artifact-task-a-1772394005513/artifact-manifest.json|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx77j4ycnrcz2bgwrepc1sawe582348f-smoke-auto-artifact-task-a-1772394005513/smoke-verification.txt",
+      "repeatedMissingPathCount": 8
+    },
+    "jx7e8s7mxd9fe9cv2s9gfgzhs1822wjm": {
+      "attempts": 4,
+      "lastAttemptAt": 1772429363248,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "agent_busy_elsewhere",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e8s7mxd9fe9cv2s9gfgzhs1822wjm-smoke-auto-artifact-task-b-1772394005805|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e8s7mxd9fe9cv2s9gfgzhs1822wjm-smoke-auto-artifact-task-b-1772394005805/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e8s7mxd9fe9cv2s9gfgzhs1822wjm-smoke-auto-artifact-task-b-1772394005805/artifact-manifest.json|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e8s7mxd9fe9cv2s9gfgzhs1822wjm-smoke-auto-artifact-task-b-1772394005805/smoke-verification.txt",
+      "repeatedMissingPathCount": 8
+    },
+    "jx71pya5dyyg37n2mfvpdprwnn824gby": {
+      "attempts": 1,
+      "lastAttemptAt": 1772431990177,
+      "lastReasonCode": "invalid_worklog_schema",
+      "lastOutcome": "recovery_started"
+    },
+    "jx7ak26at4xt0c159yaqwh79rx825aaw": {
+      "attempts": 4,
+      "lastAttemptAt": 1772436883509,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "recovery_continues:no_assignee_progress",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/README.md|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/app.py|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/requirements.txt|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/seed.py|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/static/app.js|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/static/styles.css|/Users/syphaoffice1/.openclaw/workspace/.mission-control-artifacts/jx7ak26at4xt0c159yaqwh79rx825aaw-jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/templates/index.html|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/app.py|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/requirements.txt|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/seed.py|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/static/app.js|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/static/styles.css|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7ak26at4xt0c159yaqwh79rx825aaw-build-a-complete-project-issue-tracker-using-fla/templates/index.html",
+      "repeatedMissingPathCount": 7
+    },
+    "jx7dabc7frhvv5z7aj5bded7jn824hdk": {
+      "attempts": 4,
+      "lastAttemptAt": 1772443149143,
+      "lastReasonCode": "no_assignee_progress",
+      "lastOutcome": "recovery_continues:no_assignee_progress",
+      "lastMissingPathFingerprint": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/README.md|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/app.py|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/requirements.txt|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/seed.py|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/static/app.js|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/static/styles.css|/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7dabc7frhvv5z7aj5bded7jn824hdk-build-a-complete-team-notes-dashboard-using-flas/templates/index.html",
+      "repeatedMissingPathCount": 18
+    },
+    "jx7b6pwrtqwhgqpcag0femy98n825edw": {
+      "attempts": 2,
+      "lastAttemptAt": 1772445295104,
+      "lastReasonCode": "dispatch_failed",
+      "lastOutcome": "recovery_started"
+    }
+  },
+  "startupPreflight": {
+    "ok": true,
+    "checkedAt": 1772730017424,
+    "profile": "mc2",
+    "home": "/Users/syphaoffice1/.openclaw-mc2",
+    "configPath": "/Users/syphaoffice1/.openclaw-mc2/openclaw.json",
+    "provider": "openai-codex",
+    "baseUrl": "https://api.openai.com/v1",
+    "authProfileKey": "openai-codex:default",
+    "primaryModel": "openai-codex/gpt-5.3-codex",
+    "reason": ""
+  },
+  "degraded": false,
+  "degradedSince": null,
+  "lastReplayAt": 1772772149421,
+  "outboxSize": 0,
+  "lastError": {
+    "scope": "degraded",
+    "at": 1772769738036,
+    "message": "convex.query:transient_failure"
+  },
+  "workflowShadow": {
+    "enabled": false,
+    "active": false,
+    "startedAt": null,
+    "hours": 24,
+    "strictGateEnabled": true
+  }
+}

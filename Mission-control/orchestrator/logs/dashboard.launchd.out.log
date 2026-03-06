@@ -1,0 +1,224 @@
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+
+> mission-control@0.1.0 dev
+> vite --host 127.0.0.1 --port 5174 --strictPort
+
+[dashboard] port 5174 already in use; waiting for it to become free
+
+  VITE v5.4.21  ready in 153 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+11:20:54 PM [vite] hmr update /src/App.tsx, /src/index.css
+11:21:10 PM [vite] hmr update /src/components/tasks/MissionQueue.tsx, /src/index.css
+11:21:28 PM [vite] hmr update /src/components/tasks/KanbanBoard.tsx, /src/index.css
+11:21:48 PM [vite] hmr update /src/index.css
+11:32:59 PM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+11:43:22 PM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+11:43:22 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:43:22 PM [vite] hmr update /src/components/layout/Topbar.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 252 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 249 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 205 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 184 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:58:49 AM [vite] page reload src/types/index.ts
+11:07:59 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:08:26 AM [vite] hmr update /src/components/agents/AgentProfilePanel.tsx, /src/index.css
+11:08:49 AM [vite] hmr update /src/components/agents/AgentCard.tsx, /src/index.css
+11:09:19 AM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+11:10:33 AM [vite] page reload src/types/index.ts
+11:17:20 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 193 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 140 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 284 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 336 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 140 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 255 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+11:34:40 AM [vite] hmr update /src/components/tasks/MissionQueue.tsx, /src/index.css
+11:35:03 AM [vite] hmr update /src/components/tasks/KanbanBoard.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 181 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 208 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 436 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 187 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 187 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 196 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+1:34:54 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+1:35:16 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+1:35:50 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+1:36:19 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+1:36:39 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+1:43:24 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+2:45:28 PM [vite] page reload src/types/index.ts
+3:18:34 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+3:19:14 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+3:19:46 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+3:20:19 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+3:21:12 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+3:21:59 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+3:22:31 PM [vite] hmr update /src/components/agents/AgentProfilePanel.tsx, /src/index.css
+3:23:11 PM [vite] hmr update /src/components/agents/AgentCard.tsx, /src/index.css
+3:23:44 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+3:31:39 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 155 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+4:18:46 PM [vite] page reload src/types/index.ts
+4:19:06 PM [vite] hmr update /src/components/agents/AgentProfilePanel.tsx, /src/index.css
+8:38:22 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 209 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:05:49 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 205 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:48:37 PM [vite] page reload src/types/index.ts
+10:49:36 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:49:55 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+1:02:20 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+
+  VITE v5.4.21  ready in 157 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:09:02 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:43:56 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:47:02 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+4:16:33 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:16:19 AM [vite] page reload src/types/index.ts
+11:18:03 AM [vite] hmr update /src/App.tsx, /src/index.css
+11:18:57 AM [vite] hmr update /src/components/feed/FeedItem.tsx, /src/index.css
+11:20:21 AM [vite] hmr update /src/components/feed/LiveFeed.tsx, /src/index.css
+11:21:25 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:22:04 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:22:51 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:23:26 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+11:24:10 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+12:19:38 PM [vite] hmr update /src/components/feed/LiveFeed.tsx, /src/index.css
+12:39:31 PM [vite] hmr update /src/components/layout/Topbar.tsx, /src/index.css, /src/components/layout/Sidebar.tsx, /src/components/chat/SquadChat.tsx, /src/components/agents/AgentProfilePanel.tsx, /src/components/docs/DocumentPanel.tsx, /src/components/feed/LiveFeed.tsx, /src/components/tasks/MissionQueue.tsx, /src/components/tasks/TaskDetailPanel.tsx, /src/components/tasks/KanbanBoard.tsx, /src/components/tasks/TaskCard.tsx, /src/components/feed/ExecutionEventPanel.tsx
+
+  VITE v5.4.21  ready in 178 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:06:36 AM [vite] page reload src/types/index.ts
+10:07:06 AM [vite] page reload src/types/index.ts
+10:24:30 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:25:06 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:25:57 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:26:35 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:33:58 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+Re-optimizing dependencies because lockfile has changed
+
+  VITE v5.4.21  ready in 17275 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+1:30:42 PM [vite] page reload src/types/index.ts
+1:44:01 PM [vite] page reload src/types/index.ts
+4:01:32 PM [vite] page reload src/types/index.ts
+4:24:02 PM [vite] hmr update /src/components/layout/Sidebar.tsx, /src/index.css
+4:24:33 PM [vite] hmr update /src/components/agents/AgentCard.tsx, /src/index.css
+4:25:06 PM [vite] hmr update /src/components/agents/AgentProfilePanel.tsx, /src/index.css
+4:26:17 PM [vite] hmr update /src/components/layout/Topbar.tsx, /src/index.css
+4:26:17 PM [vite] hmr update /src/components/feed/LiveFeed.tsx, /src/index.css
+4:26:17 PM [vite] hmr update /src/components/tasks/TaskCard.tsx, /src/index.css
+4:26:17 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+4:56:24 PM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css, /src/components/layout/Sidebar.tsx, /src/components/feed/ExecutionEventPanel.tsx, /src/components/agents/AgentProfilePanel.tsx, /src/components/layout/Topbar.tsx, /src/components/docs/DocumentPanel.tsx, /src/components/tasks/MissionQueue.tsx, /src/components/feed/LiveFeed.tsx, /src/components/tasks/TaskDetailPanel.tsx, /src/components/tasks/KanbanBoard.tsx, /src/components/tasks/TaskCard.tsx
+
+  VITE v5.4.21  ready in 163 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 138 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 171 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 157 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 139 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  VITE v5.4.21  ready in 163 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+10:35:32 AM [vite] hmr update /src/components/tasks/MissionQueue.tsx, /src/index.css
+10:36:20 AM [vite] hmr update /src/App.tsx, /src/index.css
+10:37:22 AM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+10:38:07 AM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
+10:55:28 AM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+11:12:46 AM [vite] hmr update /src/components/chat/SquadChat.tsx, /src/index.css
+1:52:12 PM [vite] hmr update /src/components/tasks/TaskDetailPanel.tsx, /src/index.css
