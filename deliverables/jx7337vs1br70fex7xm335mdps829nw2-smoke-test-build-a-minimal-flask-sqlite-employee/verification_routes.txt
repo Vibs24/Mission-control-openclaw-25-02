@@ -1,9 +1,0 @@
-/
-/employees
-/employees/<int:eid>/delete
-/login
-/logout
-/notes
-/notes/<int:nid>/delete
-/notes/<int:nid>/edit
-/static/<path:filename>

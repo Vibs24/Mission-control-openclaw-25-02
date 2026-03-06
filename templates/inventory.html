@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Inventory</h2>
+<form><input name="q" value="{{ q }}" placeholder="Search SKU/name/category"/><button>Filter</button><a href="{{ url_for('inventory_csv') }}">CSV</a></form>
+<table><tr><th>SKU</th><th>Name</th><th>Category</th><th>Branch</th><th>Qty</th><th>Reorder</th><th>Cost</th><th>Sell</th></tr>
+{% for r in rows %}<tr class="{% if r.qty<=r.reorder_level %}warn{% endif %}"><td>{{ r.sku }}</td><td>{{ r.name }}</td><td>{{ r.category }}</td><td>{{ r.branch }}</td><td>{{ r.qty }}</td><td>{{ r.reorder_level }}</td><td>{{ r.cost_price }}</td><td>{{ r.sell_price }}</td></tr>{% endfor %}
+</table>{% include 'partials_pager.html' %}
+{% endblock %}

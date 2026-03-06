@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Sales</h2>
+<form><input name="q" value="{{ q }}" placeholder="Search sale/customer"/><button>Filter</button><a href="{{ url_for('sales_csv') }}">CSV</a></form>
+<table><tr><th>ID</th><th>Date</th><th>Branch</th><th>Customer</th><th>Total</th><th>Margin</th><th>Invoice</th></tr>
+{% for r in rows %}<tr><td>{{ r.id }}</td><td>{{ r.created_at }}</td><td>{{ r.branch }}</td><td>{{ r.customer or '-' }}</td><td>{{ r.total }}</td><td>{{ r.margin }}</td><td><a href="{{ url_for('invoice', sale_id=r.id) }}">View</a></td></tr>{% endfor %}
+</table>{% include 'partials_pager.html' %}
+{% endblock %}

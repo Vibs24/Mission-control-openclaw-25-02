@@ -1,1 +1,0 @@
-Seeded users: admin/admin123 manager/manager123 reviewer/reviewer123

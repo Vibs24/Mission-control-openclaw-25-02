@@ -1,0 +1,6 @@
+kanban_statuses: PASS
+drag_drop_fetch: PASS
+live_search: PASS
+notifications_panel: PASS
+modal_split: FAIL
+drawer: FAIL

@@ -1,1 +1,0 @@
-{% extends 'base.html' %}{% block content %}<h4>Audit Timeline</h4><ul>{% for a in rows.items %}<li>{{a.created_at}} — <strong>{{a.action}}</strong> — {{a.detail}}</li>{% endfor %}</ul>{% include '_p.html' %}{% endblock %}

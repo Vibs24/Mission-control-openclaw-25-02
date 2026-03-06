@@ -29,6 +29,18 @@
       <string>/Users/syphaoffice1</string>
       <key>PATH</key>
       <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+      <key>OPENCLAW_PROFILE</key>
+      <string>mc2</string>
+      <key>OPENCLAW_CONFIG_STRICT_STARTUP</key>
+      <string>true</string>
+      <key>OPENCLAW_CONFIG_CANONICAL_HOME</key>
+      <string>/Users/syphaoffice1/.openclaw-mc2</string>
+      <key>STRICT_ROLE_ROUTING</key>
+      <string>true</string>
+      <key>STRICT_PM_AGENT_REQUIRED</key>
+      <string>true</string>
+      <key>LEGACY_AGENT_ROUTING_ENABLED</key>
+      <string>false</string>
     </dict>
     <key>StandardOutPath</key>
     <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/logs/bot.launchd.out.log</string>
@@ -36,4 +48,3 @@
     <string>/Users/syphaoffice1/Mission-control-openclaw-25:02/Mission-control/orchestrator/logs/bot.launchd.err.log</string>
   </dict>
 </plist>
-

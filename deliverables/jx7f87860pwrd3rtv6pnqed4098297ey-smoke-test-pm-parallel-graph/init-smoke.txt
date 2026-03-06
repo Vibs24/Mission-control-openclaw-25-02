@@ -1,6 +1,0 @@
-[3] Static init smoke checks
-Wed Mar  4 07:16:21 UTC 2026
-PASS: orchestrator/index.mjs exists
-PASS: workflows/registry.mjs exists
-PASS: workflows/role-mapping.mjs exists
-PASS: workflows/parallel-planner.mjs exists

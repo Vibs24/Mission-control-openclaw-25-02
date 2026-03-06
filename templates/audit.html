@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Audit Timeline</h2>
+<form><input name="q" value="{{ q }}" placeholder="action/entity/details"><button>Filter</button></form>
+<table><tr><th>ID</th><th>Time</th><th>User</th><th>Action</th><th>Entity</th><th>ID</th><th>Details</th></tr>{% for r in rows %}<tr><td>{{r.id}}</td><td>{{r.created_at}}</td><td>{{r.username}}</td><td>{{r.action}}</td><td>{{r.entity}}</td><td>{{r.entity_id}}</td><td>{{r.details}}</td></tr>{% endfor %}</table>{% include 'partials_pager.html' %}
+{% endblock %}

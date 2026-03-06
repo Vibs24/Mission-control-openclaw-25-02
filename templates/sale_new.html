@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Create Sale</h2>
+<form method="post">
+<label>Branch</label><select name="branch_id">{% for b in branches %}<option value="{{b.id}}">{{b.name}}</option>{% endfor %}</select>
+<label>Customer</label><select name="customer_id"><option value="">Walk-in</option>{% for c in customers %}<option value="{{c.id}}">{{c.name}}</option>{% endfor %}</select>
+<div id="lines">
+<div class="line"><select name="product_id">{% for p in products %}<option value="{{p.id}}">{{p.name}} ({{p.branch}} stock {{p.qty}})</option>{% endfor %}</select><input type="number" min="1" name="qty" value="1"/></div>
+</div>
+<button type="button" onclick="addLine()">Add Item</button>
+<button>Create Invoice</button>
+</form>
+{% endblock %}

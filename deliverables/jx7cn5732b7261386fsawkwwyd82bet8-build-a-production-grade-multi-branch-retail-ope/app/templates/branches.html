@@ -1,4 +1,0 @@
-{% extends 'base.html' %}{% block content %}<h4>Branches</h4>
-<form method='post' class='row g-2 mb-3'><div class='col'><input class='form-control' name='name' placeholder='Branch name' required></div><div class='col'><input class='form-control' name='city' placeholder='City' required></div><div class='col-auto'><button class='btn btn-success'>Add</button></div></form>
-<table class='table table-sm'><tr><th>Name</th><th>City</th></tr>{% for r in rows.items %}<tr><td>{{r.name}}</td><td>{{r.city}}</td></tr>{% endfor %}</table>{% include '_p.html' %}
-{% endblock %}

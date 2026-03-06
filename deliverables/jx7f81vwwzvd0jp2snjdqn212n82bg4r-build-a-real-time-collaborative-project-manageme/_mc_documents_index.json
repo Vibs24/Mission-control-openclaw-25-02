@@ -1,6 +1,6 @@
 {
-  "generatedAt": 1772714925518,
-  "generatedAtIso": "2026-03-05T12:48:45.518Z",
+  "generatedAt": 1772729955441,
+  "generatedAtIso": "2026-03-05T16:59:15.441Z",
   "taskId": "jx7f81vwwzvd0jp2snjdqn212n82bg4r",
   "taskTitle": "Build a real-time collaborative project management platform where anyone can reg",
   "source": "mission-control-orchestrator",
@@ -17,6 +17,204 @@
       "title": "Execution Context — Backend execution completed",
       "fileName": "jh7ej8fk5ejkcz4nw9m52yvbs982bdnn-execution-context-backend-execution-completed.md",
       "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7ej8fk5ejkcz4nw9m52yvbs982bdnn-execution-context-backend-execution-completed.md"
+    },
+    {
+      "id": "jh72nrwrb9n8953b7hf8fzk96s82a09h",
+      "title": "Execution Context — Frontend execution completed",
+      "fileName": "jh72nrwrb9n8953b7hf8fzk96s82a09h-execution-context-frontend-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh72nrwrb9n8953b7hf8fzk96s82a09h-execution-context-frontend-execution-completed.md"
+    },
+    {
+      "id": "jh70rndq3nwftafmqg78b41bhd82bcxv",
+      "title": "Execution Context — Operations execution completed",
+      "fileName": "jh70rndq3nwftafmqg78b41bhd82bcxv-execution-context-operations-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh70rndq3nwftafmqg78b41bhd82bcxv-execution-context-operations-execution-completed.md"
+    },
+    {
+      "id": "jh7fjpzkcnrnyjhdcm3m8xjd7982bxx6",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7fjpzkcnrnyjhdcm3m8xjd7982bxx6-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7fjpzkcnrnyjhdcm3m8xjd7982bxx6-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh79ds4fwe71x2bbn53med983n82b532",
+      "title": "Execution Context — Reviewer execution completed",
+      "fileName": "jh79ds4fwe71x2bbn53med983n82b532-execution-context-reviewer-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh79ds4fwe71x2bbn53med983n82b532-execution-context-reviewer-execution-completed.md"
+    },
+    {
+      "id": "jh73fesebkfzz4r6jswh70xqd182a3k1",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh73fesebkfzz4r6jswh70xqd182a3k1-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh73fesebkfzz4r6jswh70xqd182a3k1-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7b0j7w4gms8e28w4x36hf1w182a03w",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7b0j7w4gms8e28w4x36hf1w182a03w-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7b0j7w4gms8e28w4x36hf1w182a03w-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh793fxffrtkh94djgafjje46h82an7g",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh793fxffrtkh94djgafjje46h82an7g-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh793fxffrtkh94djgafjje46h82an7g-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7311pps43qtn5seap1fah7q982bzc4",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7311pps43qtn5seap1fah7q982bzc4-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7311pps43qtn5seap1fah7q982bzc4-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh71cybasatmn4remjgd77ryj182a7kv",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh71cybasatmn4remjgd77ryj182a7kv-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh71cybasatmn4remjgd77ryj182a7kv-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh79zhmq19asvyqej6jnzqbn0182a7qg",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh79zhmq19asvyqej6jnzqbn0182a7qg-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh79zhmq19asvyqej6jnzqbn0182a7qg-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7fv9p85q3rx01bf1t9dqepns82bmhj",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7fv9p85q3rx01bf1t9dqepns82bmhj-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7fv9p85q3rx01bf1t9dqepns82bmhj-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh72gvgn9xfjdgwga0qg3vahvs82bhc8",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh72gvgn9xfjdgwga0qg3vahvs82bhc8-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh72gvgn9xfjdgwga0qg3vahvs82bhc8-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh703gz33aj12mark2w55ge3vs82ayk0",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh703gz33aj12mark2w55ge3vs82ayk0-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh703gz33aj12mark2w55ge3vs82ayk0-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7esce6wkc13dgpf23ty15dch82a5gy",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7esce6wkc13dgpf23ty15dch82a5gy-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7esce6wkc13dgpf23ty15dch82a5gy-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7f8s4ft555xgcjpncxdxcx2h82b558",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7f8s4ft555xgcjpncxdxcx2h82b558-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7f8s4ft555xgcjpncxdxcx2h82b558-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7eh8hrjt21arxb60zxrcvra182b71f",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7eh8hrjt21arxb60zxrcvra182b71f-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7eh8hrjt21arxb60zxrcvra182b71f-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh74d4qmznz1pkv0sqyytg5jr582bmhd",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh74d4qmznz1pkv0sqyytg5jr582bmhd-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh74d4qmznz1pkv0sqyytg5jr582bmhd-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7fwys9bdhbs1zb1z3nw816h582bsvj",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7fwys9bdhbs1zb1z3nw816h582bsvj-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7fwys9bdhbs1zb1z3nw816h582bsvj-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh76b9vm93a168b9xafxyydnns82bn2e",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh76b9vm93a168b9xafxyydnns82bn2e-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh76b9vm93a168b9xafxyydnns82bn2e-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7fta5hyp9h76efvp2vt2p2qs82bp85",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7fta5hyp9h76efvp2vt2p2qs82bp85-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7fta5hyp9h76efvp2vt2p2qs82bp85-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7abne9wm4ngqc1j3gw219mns82bnt4",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7abne9wm4ngqc1j3gw219mns82bnt4-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7abne9wm4ngqc1j3gw219mns82bnt4-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh75xk1mke7c79w9eggd4g46h182b1d2",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh75xk1mke7c79w9eggd4g46h182b1d2-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh75xk1mke7c79w9eggd4g46h182b1d2-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh793ktxvfkzq5m3eeytgjckg982a867",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh793ktxvfkzq5m3eeytgjckg982a867-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh793ktxvfkzq5m3eeytgjckg982a867-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7f38dn36n8e8mtarnzvy8v2h82ajpr",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7f38dn36n8e8mtarnzvy8v2h82ajpr-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7f38dn36n8e8mtarnzvy8v2h82ajpr-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh72b8sm6y7e1pc04xrwwz2jjh82a6dg",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh72b8sm6y7e1pc04xrwwz2jjh82a6dg-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh72b8sm6y7e1pc04xrwwz2jjh82a6dg-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7atbg4wk7xbt6ahbeyaxqz2s82ahzk",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7atbg4wk7xbt6ahbeyaxqz2s82ahzk-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7atbg4wk7xbt6ahbeyaxqz2s82ahzk-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh74s5erh8fy05z95g667xysgn82b2cz",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh74s5erh8fy05z95g667xysgn82b2cz-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh74s5erh8fy05z95g667xysgn82b2cz-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh76q9n7e2zg6r5h47gp5ghznn82as7d",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh76q9n7e2zg6r5h47gp5ghznn82as7d-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh76q9n7e2zg6r5h47gp5ghznn82as7d-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh77chscd6qt7v1qzchv0kwx2s82bvhb",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh77chscd6qt7v1qzchv0kwx2s82bvhb-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh77chscd6qt7v1qzchv0kwx2s82bvhb-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh73fp6svpnsjt4xsnjzy5b70s82a67j",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh73fp6svpnsjt4xsnjzy5b70s82a67j-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh73fp6svpnsjt4xsnjzy5b70s82a67j-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh77cw0weywmmbz7p04byv7tnd82awf4",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh77cw0weywmmbz7p04byv7tnd82awf4-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh77cw0weywmmbz7p04byv7tnd82awf4-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh7fyaxa0g5ja70v5bb9vft02n82aht8",
+      "title": "Execution Context — Documentation execution completed",
+      "fileName": "jh7fyaxa0g5ja70v5bb9vft02n82aht8-execution-context-documentation-execution-comple.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh7fyaxa0g5ja70v5bb9vft02n82aht8-execution-context-documentation-execution-comple.md"
+    },
+    {
+      "id": "jh74efy9sq1rr8dsh70e09a8rd82bxe0",
+      "title": "Execution Context — Reviewer execution completed",
+      "fileName": "jh74efy9sq1rr8dsh70e09a8rd82bxe0-execution-context-reviewer-execution-completed.md",
+      "filePath": "/Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7f81vwwzvd0jp2snjdqn212n82bg4r-build-a-real-time-collaborative-project-manageme/_mc_documents/jh74efy9sq1rr8dsh70e09a8rd82bxe0-execution-context-reviewer-execution-completed.md"
     }
   ]
 }

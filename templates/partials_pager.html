@@ -1,0 +1,4 @@
+<div class="pager">Page {{ page }} / {{ pages }}
+{% if page>1 %}<a href="?page={{ page-1 }}{% if q is defined %}&q={{ q }}{% endif %}">Prev</a>{% endif %}
+{% if page<pages %}<a href="?page={{ page+1 }}{% if q is defined %}&q={{ q }}{% endif %}">Next</a>{% endif %}
+</div>

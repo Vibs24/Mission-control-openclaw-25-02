@@ -1,1 +1,0 @@
-{% if rows.pages > 1 %}<nav><ul class='pagination'>{% for p in rows.iter_pages() %}{% if p %}<li class='page-item {% if p==rows.page %}active{% endif %}'><a class='page-link' href='?page={{p}}'>{{p}}</a></li>{% endif %}{% endfor %}</ul></nav>{% endif %}

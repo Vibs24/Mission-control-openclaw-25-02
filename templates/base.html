@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>RetailOps</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+<nav>
+  <a href="{{ url_for('dashboard') }}">Dashboard</a>
+  <a href="{{ url_for('inventory') }}">Inventory</a>
+  <a href="{{ url_for('sales') }}">Sales</a>
+  <a href="{{ url_for('sale_new') }}">New Sale</a>
+  <a href="{{ url_for('purchases') }}">Purchases</a>
+  <a href="{{ url_for('customers') }}">Customers</a>
+  <a href="{{ url_for('vendors') }}">Vendors</a>
+  <a href="{{ url_for('notifications') }}">Notifications</a>
+  <a href="{{ url_for('audit') }}">Audit</a>
+  <span class="meta">{{ current_user.get('username','guest') }} / {{ current_user.get('role','-') }} / {{ current_user.get('branch_name','-') }}</span>
+  {% if current_user.get('user_id') %}<a href="{{ url_for('logout') }}">Logout</a>{% endif %}
+</nav>
+<main>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, msg in messages %}<div class="flash {{ category }}">{{ msg }}</div>{% endfor %}
+  {% endwith %}
+  {% block body %}{% endblock %}
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

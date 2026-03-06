@@ -1,0 +1,39 @@
+app/static:
+total 24
+drwxr-xr-x@ 4 syphaoffice1  staff   128 Mar  5 15:16 .
+drwxr-xr-x@ 8 syphaoffice1  staff   256 Mar  5 18:29 ..
+-rw-r--r--@ 1 syphaoffice1  staff  5586 Mar  5 18:22 app.js
+-rw-r--r--@ 1 syphaoffice1  staff  3351 Mar  5 18:22 style.css
+
+app/templates:
+total 96
+drwxr-xr-x@ 14 syphaoffice1  staff   448 Mar  5 18:07 .
+drwxr-xr-x@  8 syphaoffice1  staff   256 Mar  5 18:29 ..
+-rw-r--r--@  1 syphaoffice1  staff  1841 Mar  5 18:07 activity.html
+-rw-r--r--@  1 syphaoffice1  staff   490 Mar  5 18:26 base.html
+-rw-r--r--@  1 syphaoffice1  staff   330 Mar  5 18:26 board.html
+-rw-r--r--@  1 syphaoffice1  staff   263 Mar  5 18:24 invite_accept.html
+-rw-r--r--@  1 syphaoffice1  staff   258 Mar  5 18:24 login.html
+-rw-r--r--@  1 syphaoffice1  staff   202 Mar  5 18:24 members.html
+-rw-r--r--@  1 syphaoffice1  staff   173 Mar  5 18:26 notifications.html
+-rw-r--r--@  1 syphaoffice1  staff   304 Mar  5 15:44 overview.html
+-rw-r--r--@  1 syphaoffice1  staff   255 Mar  5 18:24 signup.html
+-rw-r--r--@  1 syphaoffice1  staff   873 Mar  5 15:21 task.html
+-rw-r--r--@  1 syphaoffice1  staff  1397 Mar  5 15:44 task_detail.html
+-rw-r--r--@  1 syphaoffice1  staff   885 Mar  5 18:26 workspaces.html
+
+docs:
+total 24
+drwxr-xr-x@  5 syphaoffice1  staff  160 Mar  5 15:48 .
+drwxr-xr-x@ 24 syphaoffice1  staff  768 Mar  5 18:29 ..
+-rw-r--r--@  1 syphaoffice1  staff  340 Mar  5 18:23 ARCHITECTURE.md
+-rw-r--r--@  1 syphaoffice1  staff  423 Mar  5 15:48 DB_SCHEMA.md
+-rw-r--r--@  1 syphaoffice1  staff  262 Mar  5 15:45 QA_REPORT.md
+
+tests:
+total 16
+drwxr-xr-x@  5 syphaoffice1  staff   160 Mar  5 18:29 .
+drwxr-xr-x@ 24 syphaoffice1  staff   768 Mar  5 18:29 ..
+drwxr-xr-x@  4 syphaoffice1  staff   128 Mar  5 18:29 __pycache__
+-rw-r--r--@  1 syphaoffice1  staff   549 Mar  5 18:21 conftest.py
+-rw-r--r--@  1 syphaoffice1  staff  1920 Mar  5 18:22 test_app.py

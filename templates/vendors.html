@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Vendors</h2>
+<form method="post" class="inline"><input name="name" placeholder="name" required><input name="contact" placeholder="contact"><select name="branch_id">{% for b in branches %}<option value="{{b.id}}">{{b.name}}</option>{% endfor %}</select><button>Add</button></form>
+<form><input name="q" value="{{ q }}" placeholder="search"/><button>Filter</button></form>
+<table><tr><th>Name</th><th>Contact</th><th>Branch</th></tr>{% for r in rows %}<tr><td>{{r.name}}</td><td>{{r.contact}}</td><td>{{r.branch}}</td></tr>{% endfor %}</table>{% include 'partials_pager.html' %}
+{% endblock %}

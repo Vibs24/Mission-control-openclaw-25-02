@@ -1,0 +1,6 @@
+<!doctype html><html><head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head><body>
+<div class="card login"><h2>RetailOps Login</h2>
+<form method="post"><input name="username" placeholder="username" required/><input type="password" name="password" placeholder="password" required/><button>Login</button></form>
+<p>Demo: admin/admin123, manager1/manager123, staff1/staff123</p>
+{% with messages = get_flashed_messages(with_categories=true) %}{% for c,m in messages %}<div class="flash {{ c }}">{{ m }}</div>{% endfor %}{% endwith %}
+</div></body></html>

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block body %}
+<h2>Invoice #{{ sale.id }}</h2>
+<p>Date: {{ sale.created_at }} | Branch: {{ sale.branch }} | Customer: {{ sale.customer or 'Walk-in' }} | Seller: {{ sale.seller }}</p>
+<table><tr><th>Item</th><th>Qty</th><th>Unit Price</th><th>Line Total</th></tr>{% for i in items %}<tr><td>{{ i.product }}</td><td>{{ i.qty }}</td><td>{{ i.unit_price }}</td><td>{{ i.qty * i.unit_price }}</td></tr>{% endfor %}</table>
+<h3>Total: ₹{{ sale.total }}</h3><a href="{{ url_for('invoice_pdf', sale_id=sale.id) }}">Download PDF</a>
+{% endblock %}

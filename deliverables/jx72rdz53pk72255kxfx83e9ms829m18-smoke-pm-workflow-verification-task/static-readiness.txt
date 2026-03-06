@@ -1,7 +1,0 @@
-[3] Static file readiness
-Wed Mar  4 08:30:16 UTC 2026
-PASS: Mission-control/orchestrator/index.mjs
-PASS: Mission-control/orchestrator/workflows/registry.mjs
-PASS: Mission-control/orchestrator/workflows/parallel-planner.mjs
-PASS: Mission-control/orchestrator/workflows/role-mapping.mjs
-PASS: Mission-control/agents/_shared/LATEST_INSTRUCTIONS.md

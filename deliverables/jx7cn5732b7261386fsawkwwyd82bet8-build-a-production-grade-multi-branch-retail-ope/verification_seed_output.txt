@@ -1,1 +1,0 @@
-Seed complete: admin/admin123, manager/manager123, staff/staff123

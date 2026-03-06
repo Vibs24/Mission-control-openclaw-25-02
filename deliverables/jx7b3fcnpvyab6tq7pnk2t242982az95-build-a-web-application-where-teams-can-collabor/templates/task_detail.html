@@ -1,5 +1,0 @@
-{% extends 'base.html' %}{% block content %}<h2>{{task.title}}</h2><p>{{task.description}}</p><p>Status: {{task.status}} | Due: {{task.due_date}} | Assignee: {{task.assignee_email}}</p>
-<div class='grid'><div class='card'><h3>Add comment / note</h3><form method='post'><textarea name='comment' placeholder='Comment'></textarea><textarea name='note' placeholder='Note'></textarea><button>Save</button></form></div>
-<div class='card'><h3>History</h3><ul>{% for h in history %}<li>{{h.created_at}} · {{h.email}} · {{h.action}} · {{h.payload}}</li>{% endfor %}</ul></div></div>
-<div class='grid'><div class='card'><h3>Comments</h3><ul>{% for c in comments %}<li>{{c.email}}: {{c.content}}</li>{% endfor %}</ul></div><div class='card'><h3>Notes</h3><ul>{% for n in notes %}<li>{{n.email}}: {{n.content}}</li>{% endfor %}</ul></div></div>
-{% endblock %}

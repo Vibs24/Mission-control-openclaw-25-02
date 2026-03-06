@@ -1,4 +1,0 @@
-{% extends 'base.html' %}{% block content %}
-<div class='card'><h3>Vendor Management</h3><form method='post' class='inline'><input name='name' placeholder='Vendor name' required><input name='email' placeholder='Email'><button>Add</button></form></div>
-<div class='card'><table><thead><tr><th>Name</th><th>Email</th></tr></thead><tbody>{% for v in pagination.items %}<tr><td>{{v.name}}</td><td>{{v.email}}</td></tr>{% endfor %}</tbody></table>{% include '_pagination.html' %}</div>
-{% endblock %}

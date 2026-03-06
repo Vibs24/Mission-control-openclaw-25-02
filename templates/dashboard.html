@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block body %}
+<h2>KPI Dashboard</h2>
+<div class="grid">
+<div class="card"><h3>Daily Sales</h3><p>₹{{ sales_today }}</p></div>
+<div class="card"><h3>Total Margin</h3><p>₹{{ margin }}</p></div>
+<div class="card"><h3>Stock Turnover</h3><p>{{ turnover }}</p></div>
+<div class="card"><h3>Low-stock Alerts</h3><p>{{ low }}</p></div>
+</div>
+{% endblock %}
