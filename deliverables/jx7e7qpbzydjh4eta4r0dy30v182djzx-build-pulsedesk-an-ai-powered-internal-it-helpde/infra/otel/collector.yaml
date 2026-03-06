@@ -1,0 +1,3 @@
+receivers: {otlp: {protocols: {grpc: {}, http: {}}}}
+exporters: {logging: {}}
+service: {pipelines: {traces: {receivers: [otlp], exporters: [logging]}}}

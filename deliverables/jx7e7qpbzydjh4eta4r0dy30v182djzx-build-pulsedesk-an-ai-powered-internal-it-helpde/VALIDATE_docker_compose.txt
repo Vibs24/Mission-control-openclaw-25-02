@@ -1,0 +1,1 @@
+env file /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde/.env not found: stat /Users/syphaoffice1/Mission-control-openclaw-25:02/deliverables/jx7e7qpbzydjh4eta4r0dy30v182djzx-build-pulsedesk-an-ai-powered-internal-it-helpde/.env: no such file or directory

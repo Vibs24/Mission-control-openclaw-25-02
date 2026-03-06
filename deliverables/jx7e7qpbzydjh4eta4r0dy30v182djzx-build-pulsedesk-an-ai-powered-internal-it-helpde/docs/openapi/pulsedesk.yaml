@@ -1,0 +1,12 @@
+openapi: 3.0.3
+info: {title: PulseDesk API, version: 1.0.0}
+paths:
+  /api/tickets:
+    get: {responses: {'200': {description: OK}}}
+    post: {responses: {'201': {description: Created}}}
+  /api/tickets/{id}:
+    patch:
+      parameters: [{name: id, in: path, required: true, schema: {type: integer}}]
+      responses: {'200': {description: Updated}}
+  /health:
+    get: {responses: {'200': {description: Healthy}}}

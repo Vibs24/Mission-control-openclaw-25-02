@@ -1,0 +1,4 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: pulsedesk-backend-prod}
+spec: {replicas: 6, selector: {matchLabels: {app: pulsedesk-backend}}, template: {metadata: {labels: {app: pulsedesk-backend}}, spec: {containers: [{name: backend, image: ghcr.io/example/pulsedesk-backend:prod, ports: [{containerPort: 8080}]}]}}}
